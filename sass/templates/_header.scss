@@ -1,0 +1,66 @@
+.header {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+  width: 100%;
+
+  &__tel {
+    font-family: 'Nunito-800';
+    margin-right: 35px;
+    cursor: pointer;
+  }
+  &__cabinet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    &-text {
+      font-family: 'Nunito-600';
+      font-size: 16px;
+    }
+  }
+  &__basket {
+    cursor: pointer;
+  }
+  &__burger {
+    width: 25px;
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &-line {
+      width: 100%;
+      background-color: $purple;
+      height: 3px;
+      border-radius: 5px;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  &__link {
+    font-family: 'Nunito-600';
+    font-size: 16px;
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &--msc {
+      display: flex;
+      align-items: center;
+      margin-right: 50px;
+    }
+  }
+}

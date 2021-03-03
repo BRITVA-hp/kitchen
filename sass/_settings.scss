@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: normal;
+  font-style: normal;
+  color: $black;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+.section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.text {
+  &-green {
+    color: $green;
+  }
+  &-white {
+    color: $white;
+  }
+  &-purple {
+    color: $purple;
+  }
+}
+.align-center {
+  align-items: center;
+}
+.hover-text {
+  transition: .2s;
+  &:hover {
+    opacity: 0.6;
+  }
+}

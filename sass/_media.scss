@@ -1,0 +1,258 @@
+@media screen and (max-width: 1400px) {
+  .main {
+    &__leafs {
+      &--1 {
+        width: 190px;
+      }
+      &--7 {
+        right: 2%;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1300px) {
+  .main {
+    &__leafs {
+      &--6 {
+        right: 2%;
+      }
+      &--5 {
+        right: 2%;
+      }
+      &--7 {
+        bottom: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    padding-bottom: 80px;
+    &__title {
+      font-size: 47px;
+      line-height: 70%;
+      max-width: 460px;
+    }
+    &__img {
+      width: 400px;
+    }
+    &__leafs {
+      &--6 {
+        top: 10%;
+      }
+      &--5 {
+        width: 80px;
+      }
+      &--3 {
+        left: 49%;
+      }
+      &--4 {
+        left: 52%;
+      }
+      &--1 {
+        width: 140px;
+      }
+      &--7 {
+        width: 60px;
+        bottom: 3%;
+      }
+    }
+  }
+  .header {
+    &__tel {
+      margin-right: 20px;
+    }
+    &__logo {
+      width: 150px;
+    }
+  }
+  .nav {
+    &__link {
+      margin-right: 20px;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .main {
+    padding-bottom: 50px;
+    &__box {
+      margin-right: 20px;
+    }
+    &__button {
+      &--left {
+        margin-right: 10px;
+      }
+    }
+    &__leafs {
+      &--6 {
+        top: 3%;
+      }
+      &--3 {
+        left: 56%;
+      }
+      &--2 {
+        top: 0;
+      }
+      &--5 {
+        display: none;
+      }
+      &--4 {
+        display: none;
+      }
+      &--1 {
+        display: none;
+      }
+      &--7 {
+        bottom: -3%;
+      }
+    }
+    &__img {
+      width: 220px;
+    }
+    &__row {
+      justify-content: space-around;
+    }
+  }
+  .section {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .nav {
+    display: none;
+  }
+  .header {
+    &__tel {
+      display: none;
+    }
+    &__cabinet {
+      margin-right: 15px;
+      &-text {
+        display: none;
+      }
+    }
+    &__burger {
+      display: flex;
+    }
+    &__basket {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+    }
+    &__title {
+      font-size: 30px;
+      max-width: 300px;
+      line-height: 50%;
+    }
+    &__button {
+      width: 275px;
+      margin-left: 0;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__leaf {
+      &--text {
+        width: 30px;
+        transform: translateY(15px);
+      }
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+      max-width: 360px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .main {
+    padding-bottom: 0;
+    background: none;
+    background-color: $light;
+    overflow: hidden;
+    &__title {
+      margin-bottom: 10px;
+    }
+    &__button {
+      width: 100%;
+    }
+    &__box {
+      margin-right: 0;
+      width: 100%;
+    }
+    &__row {
+      justify-content: center;
+    }
+    &__text {
+      margin-bottom: 290px;
+    }
+    &__img {
+      display: none;
+      &--mobile {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-55%);
+        top: 150px;
+        width: 640px;
+      }
+    }
+    &__leafs {
+      &--7 {
+        width: 45px;
+        transform: rotate(280deg);
+        bottom: 24%;
+      }
+      &--2 {
+        display: none;
+      }
+      &--3 {
+        z-index: 3;
+        width: 25px;
+        left: 7%;
+        top: 40%;
+      }
+      &--4 {
+        display: block;
+        z-index: 3;
+        left: 22%;
+        top: 55%;
+        width: 70px;
+      }
+      &--6 {
+        transform: rotate(170deg);
+        top: 34%;
+        right: 6%;
+      }
+    }
+  }
+  .header {
+    background-color: $light;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    &__logo {
+      width: 120px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main {
+    &__img {
+      &--mobile {
+        transform: translateX(-63%);
+      }
+    }
+  }
+}
