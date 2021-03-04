@@ -1,0 +1,47 @@
+.advantages {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 240px;
+  background-color: $light;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  &__title {
+    text-align: center;
+    margin: 0 auto 60px auto;
+  }
+  &__olives {
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+  }
+  &__text {
+    font-family: 'Nunito-Bold';
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    max-width: 280px;
+    &--1 {
+      max-width: 255px;
+    }
+    &--4 {
+      max-width: 200px;
+    }
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  &__card {
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -2,7 +2,10 @@
   padding-top: 50px;
   padding-bottom: 115px;
   position: relative;
-  background: url(../img/main/bg.png) no-repeat center;
+  background-color: $white;
+  background-image: url(../img/main/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-position-y: 100%;
   &__row {
     display: flex;

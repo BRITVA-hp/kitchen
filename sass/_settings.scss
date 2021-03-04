@@ -10,6 +10,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: $black;
+  background-color: $light;
 }
 img {
   max-width: 100%;
@@ -22,6 +23,11 @@ a {
 .section {
   padding-left: 20px;
   padding-right: 20px;
+  &__title {
+    font-family: 'Nunito-900';
+    font-size: 48px;
+    line-height: 130%;
+  }
 }
 .text {
   &-green {

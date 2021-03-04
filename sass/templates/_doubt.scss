@@ -1,0 +1,47 @@
+.doubt {
+  position: relative;
+  background-color: transparent;
+  &__container {
+    background: url(../img/doubt/bg.png) no-repeat center;
+    background-size: contain;
+    border-radius: 15px;
+  }
+  &__img {
+    width: 34%;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__box {
+    margin-right: 115px;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-family: 'Nunito-Bold';
+    font-size: 30px;
+    line-height: 130%;
+    max-width: 530px;
+    margin-bottom: 25px;
+  }
+  &__leafs {
+    position: absolute;
+    z-index: 3;
+    &--1 {
+      left: 6%;
+      top: 11%;
+    }
+    &--2 {
+      right: 2%;
+      bottom: -11%;
+      width: 260px;
+    }
+    &--3 {
+      right: 3%;
+      bottom: 24%;
+    }
+  }
+}

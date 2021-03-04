@@ -355,7 +355,8 @@ body {
   line-height: 130%;
   font-weight: normal;
   font-style: normal;
-  color: #2D2D2D; }
+  color: #2D2D2D;
+  background-color: #F3F6FD; }
 
 img {
   max-width: 100%;
@@ -368,6 +369,10 @@ a {
 .section {
   padding-left: 20px;
   padding-right: 20px; }
+  .section__title {
+    font-family: 'Nunito-900';
+    font-size: 48px;
+    line-height: 130%; }
 
 .text-green {
   color: #039E25; }
@@ -396,6 +401,7 @@ button:focus {
   border-radius: 50px;
   border: 2px solid transparent;
   transition: .3s;
+  display: inline-block;
   cursor: pointer; }
   .button--green {
     background-color: #039E25;
@@ -467,7 +473,10 @@ button:focus {
   padding-top: 50px;
   padding-bottom: 115px;
   position: relative;
-  background: url(../img/main/bg.png) no-repeat center;
+  background-color: #ffffff;
+  background-image: url(../img/main/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-position-y: 100%; }
   .main__row {
     display: flex;
@@ -516,6 +525,7 @@ button:focus {
     display: none; }
 
 .step {
+  background-color: #fff;
   padding-top: 40px; }
   .step__title {
     font-family: 'Nunito-900';
@@ -523,6 +533,8 @@ button:focus {
     text-align: center;
     text-transform: uppercase;
     margin: 0 auto 60px auto; }
+  .step__card {
+    height: 300px; }
   .step__row {
     display: grid;
     grid-template-columns: 1fr 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr;
@@ -544,7 +556,102 @@ button:focus {
     align-items: center;
     justify-content: center; }
 
+.advantages {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 240px;
+  background-color: #F3F6FD;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom; }
+  .advantages__title {
+    text-align: center;
+    margin: 0 auto 60px auto; }
+  .advantages__olives {
+    position: absolute;
+    right: 25%;
+    bottom: 0; }
+  .advantages__text {
+    font-family: 'Nunito-Bold';
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    max-width: 280px; }
+    .advantages__text--1 {
+      max-width: 255px; }
+    .advantages__text--4 {
+      max-width: 200px; }
+  .advantages__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px; }
+  .advantages__card {
+    margin-right: 15px; }
+    .advantages__card:last-child {
+      margin-right: 0; }
+
+.doubt {
+  position: relative;
+  background-color: transparent; }
+  .doubt__container {
+    background: url(../img/doubt/bg.png) no-repeat center;
+    background-size: contain;
+    border-radius: 15px; }
+  .doubt__img {
+    width: 34%; }
+  .doubt__row {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .doubt__box {
+    margin-right: 115px; }
+  .doubt__title {
+    margin-bottom: 10px; }
+  .doubt__text {
+    font-family: 'Nunito-Bold';
+    font-size: 30px;
+    line-height: 130%;
+    max-width: 530px;
+    margin-bottom: 25px; }
+  .doubt__leafs {
+    position: absolute;
+    z-index: 3; }
+    .doubt__leafs--1 {
+      left: 6%;
+      top: 11%; }
+    .doubt__leafs--2 {
+      right: 2%;
+      bottom: -11%;
+      width: 260px; }
+    .doubt__leafs--3 {
+      right: 3%;
+      bottom: 24%; }
+
+@media screen and (max-width: 1650px) {
+  .doubt__leafs--1 {
+    top: 5%; }
+  .doubt__leafs--2 {
+    width: 160px;
+    right: 0;
+    bottom: 0; }
+  .doubt__leafs--3 {
+    right: 2%;
+    bottom: 40%; } }
+
 @media screen and (max-width: 1400px) {
+  .doubt__box {
+    margin-right: 70px; }
+  .doubt__leafs--1 {
+    width: 70px; }
+  .doubt__leafs--3 {
+    right: 0; }
+  .doubt__leafs--2 {
+    width: 130px; }
   .main__leafs--1 {
     width: 190px; }
   .main__leafs--7 {
@@ -559,6 +666,43 @@ button:focus {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .doubt__text {
+    font-size: 24px;
+    max-width: 500px; }
+  .doubt__box {
+    margin-right: 10px; }
+  .doubt__leafs--2 {
+    width: 115px; }
+  .doubt__leafs--1 {
+    top: 1%; }
+  .advantages {
+    padding-bottom: 160px; }
+    .advantages__text {
+      font-size: 16px; }
+      .advantages__text--4 {
+        max-width: 190px; }
+    .advantages__img {
+      width: 170px;
+      height: 160px;
+      margin-bottom: 20px; }
+    .advantages__olives {
+      width: 120px;
+      right: 20%; }
+  .section__title {
+    font-size: 36px; }
+  .step__img {
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px; }
+  .step__card {
+    height: 280px; }
+  .step__text {
+    font-size: 16px;
+    line-height: 130%; }
+  .step__title {
+    font-size: 30px;
+    margin-bottom: 45px; }
   .main {
     padding-bottom: 80px; }
     .main__title {
@@ -588,6 +732,31 @@ button:focus {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .doubt__container {
+    background-size: auto;
+    padding: 20px; }
+  .doubt__leafs--1 {
+    top: -13%; }
+  .doubt__leafs--3 {
+    bottom: auto;
+    top: -10%; }
+  .doubt__leafs--2 {
+    right: 45%; }
+  .advantages {
+    padding-bottom: 100px;
+    background-size: contain; }
+    .advantages__img {
+      width: 140px;
+      height: 130px; }
+    .advantages__olives {
+      width: 80px; }
+  .step__arrow {
+    display: none; }
+  .step__row {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px; }
+  .step__img {
+    width: 150px; }
   .main {
     padding-bottom: 50px; }
     .main__box {
@@ -629,6 +798,39 @@ button:focus {
     margin-right: 20px; } }
 
 @media screen and (max-width: 767px) {
+  .doubt__img {
+    width: 185px; }
+  .doubt__leafs--1 {
+    top: -20%; }
+  .doubt__leafs--2 {
+    right: 28%; }
+  .advantages__row {
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .advantages__text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 260px; }
+    .advantages__text--1 {
+      max-width: 220px; }
+    .advantages__text--4 {
+      max-width: 180px; }
+  .advantages__card:nth-child(2n) {
+    margin-right: 0; }
+  .advantages__card:nth-child(-n + 2) {
+    margin-bottom: 40px; }
+  .advantages__olives {
+    display: none; }
+  .advantages__card {
+    flex-basis: 40%; }
+  .step__row {
+    grid-template: 1fr 1fr/ 1fr 1fr;
+    grid-gap: 10px; }
+  .step__text {
+    max-width: 200px;
+    margin: auto; }
+  .step__img {
+    margin-bottom: 10px; }
   .main__buttons {
     display: flex;
     flex-direction: column; }
@@ -652,8 +854,74 @@ button:focus {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .doubt {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 55px; }
+    .doubt__container {
+      background: url(../img/doubt/bg-mobile.png) no-repeat center;
+      background-size: cover;
+      padding: 0;
+      padding-left: 30px;
+      padding-bottom: 30px; }
+    .doubt__button {
+      padding: 15px 40px; }
+    .doubt__leafs--3 {
+      width: 60px;
+      right: 2%;
+      top: auto;
+      bottom: 15%; }
+    .doubt__leafs--1 {
+      width: 60px;
+      transform: rotate(65deg);
+      top: 2%;
+      left: 10%; }
+    .doubt__leafs--2 {
+      right: auto;
+      left: -15px;
+      top: 10%; }
+    .doubt__img {
+      align-self: flex-end;
+      margin-right: -7px;
+      margin-top: -55px; }
+    .doubt__row {
+      flex-direction: column-reverse;
+      align-items: flex-start; }
+    .doubt__text {
+      font-size: 18px;
+      max-width: 220px; }
+    .doubt__title {
+      max-width: 230px; }
+    .doubt__button {
+      font-size: 16px; }
+  .advantages {
+    padding-bottom: 60px; }
+    .advantages__title {
+      margin-bottom: 30px; }
+    .advantages__text {
+      font-size: 14px; }
+    .advantages__img {
+      width: 110px;
+      height: 110px; }
+    .advantages__card {
+      margin-right: 0; }
+  .section__title {
+    font-size: 24px; }
+  .step {
+    background-color: #F3F6FD; }
+    .step__title {
+      font-size: 24px;
+      margin-bottom: 30px; }
+    .step__text {
+      font-size: 14px; }
+    .step__img {
+      margin-bottom: 20px;
+      width: 130px;
+      height: 140px; }
+    .step__card {
+      height: 220px; }
   .main {
-    padding-bottom: 0;
+    padding-bottom: 20px;
     background: none;
     background-color: #F3F6FD;
     overflow: hidden; }
