@@ -39,6 +39,9 @@ a {
   &-purple {
     color: $purple;
   }
+  &-bold {
+    font-family: 'Nunito-Bold';
+  }
 }
 .align-center {
   align-items: center;

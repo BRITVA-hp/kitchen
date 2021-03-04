@@ -383,6 +383,9 @@ a {
 .text-purple {
   color: #74029E; }
 
+.text-bold {
+  font-family: 'Nunito-Bold'; }
+
 .align-center {
   align-items: center; }
 
@@ -417,6 +420,18 @@ button:focus {
     .button--white:hover {
       background-color: #e6e6e6;
       border-color: #e6e6e6; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .header {
   background-color: #fff;
@@ -595,9 +610,147 @@ button:focus {
     .advantages__card:last-child {
       margin-right: 0; }
 
+.slider {
+  background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 106.03%);
+  border-radius: 0px 160px;
+  padding-bottom: 390px; }
+  .slider__row--title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 65px; }
+  .slider__row--tab {
+    margin-bottom: 40px; }
+  .slider__link {
+    font-family: 'Nunito';
+    font-size: 20px;
+    line-height: 130%;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline; }
+  .slider__tab {
+    width: 166px;
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: opacity .3s;
+    height: 116px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .slider__tab:hover {
+      opacity: 1;
+      border: 1px solid #74029E; }
+    .slider__tab--active {
+      opacity: 1;
+      border: 1px solid #74029E; }
+  .slider__container {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; }
+  .slider__box {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s; }
+    .slider__box--active {
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 0.7s;
+      animation-duration: 0.7s;
+      visibility: visible;
+      opacity: 1;
+      display: flex; }
+    .slider__box-img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 650px;
+      height: 400px;
+      border: 1px solid #B9CCD3;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-right: 50px; }
+      .slider__box-img-row {
+        position: absolute;
+        bottom: 3%;
+        left: 3%; }
+        .slider__box-img-row-logo {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px; }
+          .slider__box-img-row-logo:last-child {
+            margin-right: 0; }
+          .slider__box-img-row-logo-text {
+            font-family: 'Nunito-Bold';
+            font-size: 14px;
+            line-height: 13px;
+            text-align: center; }
+            .slider__box-img-row-logo-text--small {
+              font-family: 'Nunito-600';
+              font-size: 10px;
+              line-height: 14px;
+              text-align: center; }
+  .slider__content-text {
+    font-family: 'Nunito';
+    font-size: 14px;
+    line-height: 130%; }
+    .slider__content-text--ingredients {
+      max-width: 440px;
+      margin-bottom: 30px; }
+    .slider__content-text--description {
+      max-width: 440px;
+      margin-bottom: 30px; }
+  .slider__content-title {
+    font-family: 'Nunito-Bold';
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 10px; }
+  .slider__content-row {
+    margin-bottom: 25px;
+    justify-content: flex-start; }
+  .slider__content-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; }
+    .slider__content-logo img {
+      margin-right: 5px; }
+  .slider__content-link {
+    font-size: 14px;
+    line-height: 130%; }
+  .slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #74029E;
+    border: 1px solid #5A037A;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .slider__arrow--next {
+      right: -130px; }
+    .slider__arrow--prev {
+      left: -130px; }
+
 .doubt {
   position: relative;
-  background-color: transparent; }
+  background-color: transparent;
+  margin-top: -275px; }
   .doubt__container {
     background: url(../img/doubt/bg.png) no-repeat center;
     background-size: contain;
