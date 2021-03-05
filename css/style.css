@@ -620,7 +620,8 @@ button:focus {
     align-items: flex-end;
     margin-bottom: 65px; }
   .slider__row--tab {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    transition: 0.2s ease-out; }
   .slider__link {
     font-family: 'Nunito';
     font-size: 20px;
@@ -654,8 +655,7 @@ button:focus {
     opacity: 0;
     display: none;
     align-items: center;
-    justify-content: space-between;
-    transition: all 0.3s; }
+    justify-content: space-between; }
     .slider__box--active {
       -webkit-animation-name: fadeIn;
       animation-name: fadeIn;
@@ -673,7 +673,6 @@ button:focus {
       height: 400px;
       border: 1px solid #B9CCD3;
       border-radius: 20px;
-      overflow: hidden;
       margin-right: 50px; }
       .slider__box-img-row {
         position: absolute;
@@ -746,6 +745,14 @@ button:focus {
       right: -130px; }
     .slider__arrow--prev {
       left: -130px; }
+  .slider__wrap-img {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px; }
 
 .doubt {
   position: relative;
@@ -796,7 +803,34 @@ button:focus {
     right: 2%;
     bottom: 40%; } }
 
+@media screen and (max-width: 1500px) {
+  .slider__arrow--prev {
+    left: -100px; }
+  .slider__arrow--next {
+    right: -100px; } }
+
 @media screen and (max-width: 1400px) {
+  .slider__link {
+    font-size: 18px; }
+  .slider__arrow--prev {
+    left: 0; }
+  .slider__arrow--next {
+    right: 0; }
+  .slider__container {
+    padding-left: 75px;
+    padding-right: 75px; }
+  .slider__tab {
+    width: 130px;
+    height: 95px; }
+  .slider__box-img {
+    width: auto;
+    height: 360px;
+    flex-basis: 50%;
+    margin-right: 0; }
+  .slider__content {
+    flex-basis: 40%; }
+    .slider__content-link {
+      font-size: 14px; }
   .doubt__box {
     margin-right: 70px; }
   .doubt__leafs--1 {
@@ -819,15 +853,28 @@ button:focus {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
-  .doubt__text {
-    font-size: 24px;
-    max-width: 500px; }
-  .doubt__box {
-    margin-right: 10px; }
-  .doubt__leafs--2 {
-    width: 115px; }
-  .doubt__leafs--1 {
-    top: 1%; }
+  .slider {
+    padding-bottom: 80px; }
+    .slider__row--title {
+      margin-bottom: 45PX; }
+    .slider__content {
+      flex-basis: 42%; }
+    .slider__box-img {
+      height: 300px; }
+    .slider__tab {
+      width: 110px;
+      height: 82px; }
+  .doubt {
+    margin-top: 0; }
+    .doubt__text {
+      font-size: 24px;
+      max-width: 500px; }
+    .doubt__box {
+      margin-right: 10px; }
+    .doubt__leafs--2 {
+      width: 115px; }
+    .doubt__leafs--1 {
+      top: 1%; }
   .advantages {
     padding-bottom: 160px; }
     .advantages__text {
@@ -885,6 +932,41 @@ button:focus {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .slider__link {
+    font-size: 16px; }
+  .slider__tab {
+    width: 85px;
+    height: 64px;
+    border-radius: 15px; }
+  .slider__title {
+    max-width: 360px; }
+  .slider__box-img {
+    height: 255px; }
+    .slider__box-img-row {
+      left: 50%;
+      transform: translateX(-50%); }
+  .slider__arrow {
+    width: 40px;
+    height: 40px; }
+  .slider__container {
+    padding-left: 60px;
+    padding-right: 60px; }
+  .slider__content {
+    flex-basis: 45%; }
+    .slider__content-link {
+      font-size: 14px; }
+    .slider__content-row {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px; }
+    .slider__content-logo:nth-child(-n + 2) {
+      margin-bottom: 5px; }
+    .slider__content-title {
+      margin-bottom: 5px; }
+    .slider__content-text--ingredients {
+      margin-bottom: 10px; }
+    .slider__content-text--description {
+      margin-bottom: 20px; }
   .doubt__container {
     background-size: auto;
     padding: 20px; }
@@ -951,6 +1033,44 @@ button:focus {
     margin-right: 20px; } }
 
 @media screen and (max-width: 767px) {
+  .slider {
+    padding-right: 0;
+    border-radius: 0;
+    padding-bottom: 55px; }
+    .slider__row--title {
+      padding-right: 10px; }
+    .slider__row--tab {
+      margin-bottom: 20px;
+      width: 678px;
+      margin-left: auto;
+      margin-right: auto; }
+    .slider__wrap-img {
+      border-radius: 10px; }
+    .slider__wrap--tab {
+      overflow: hidden; }
+    .slider__tab {
+      width: 76px;
+      height: 53px;
+      border-radius: 10px; }
+    .slider__content {
+      flex-basis: 100%; }
+      .slider__content-row {
+        justify-content: flex-start; }
+    .slider__box {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 10px; }
+      .slider__box-img {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 337px;
+        margin-bottom: 20px;
+        border-radius: 10px; }
+    .slider__container {
+      padding: 0; }
+    .slider__arrow {
+      display: none; }
   .doubt__img {
     width: 185px; }
   .doubt__leafs--1 {
@@ -1007,6 +1127,36 @@ button:focus {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .slider {
+    padding-bottom: 30px;
+    background: #F3F6FD; }
+    .slider__link {
+      font-size: 14px; }
+    .slider__row--title {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px; }
+    .slider__title {
+      max-width: 280px;
+      margin-bottom: 10px; }
+    .slider__content-logo img {
+      width: 16px;
+      height: 16px; }
+    .slider__content-row {
+      align-items: flex-start; }
+    .slider__content-text {
+      font-size: 12px; }
+    .slider__content-title {
+      font-size: 16px; }
+    .slider__box {
+      position: relative; }
+      .slider__box-img {
+        max-height: 230px;
+        margin-bottom: 48px; }
+        .slider__box-img-row {
+          bottom: 0;
+          transform: translate(-50%, 50%);
+          z-index: 10; }
   .doubt {
     padding-left: 15px;
     padding-right: 15px;
@@ -1021,9 +1171,9 @@ button:focus {
       padding: 15px 40px; }
     .doubt__leafs--3 {
       width: 60px;
-      right: 2%;
+      right: 5%;
       top: auto;
-      bottom: 15%; }
+      bottom: -5%; }
     .doubt__leafs--1 {
       width: 60px;
       transform: rotate(65deg);
@@ -1129,3 +1279,7 @@ button:focus {
 @media screen and (max-width: 450px) {
   .main__img--mobile {
     transform: translateX(-63%); } }
+
+@media screen and (max-width: 400px) {
+  .slider__box-img {
+    max-height: 200px; } }

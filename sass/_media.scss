@@ -16,7 +16,54 @@
     }
   }
 }
+@media screen and (max-width: 1500px) {
+  .slider {
+    &__arrow {
+      &--prev {
+        left: -100px;
+      }
+      &--next {
+        right: -100px;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1400px) {
+  .slider {
+    &__link {
+      font-size: 18px;
+    }
+    &__arrow {
+      &--prev {
+        left: 0;
+      }
+      &--next {
+        right: 0;
+      }
+    }
+    &__container {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+    &__tab {
+      width: 130px;
+      height: 95px;
+    }
+    &__box {
+      &-img {
+        width: auto;
+        height: 360px;
+        flex-basis: 50%;
+        margin-right: 0;
+      }
+    }
+    &__content {
+      flex-basis: 40%;
+      &-link {
+        font-size: 14px;
+      }
+    }
+  }
   .doubt {
     &__box {
       margin-right: 70px;
@@ -62,7 +109,26 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .slider {
+    &__row--title {
+      margin-bottom: 45PX;
+    }
+    padding-bottom: 80px;
+    &__content {
+      flex-basis: 42%;
+    }
+    &__box {
+      &-img {
+        height: 300px;
+      }
+    }
+    &__tab {
+      width: 110px;
+      height: 82px;
+    }
+  }
   .doubt {
+    margin-top: 0;
     &__text {
       font-size: 24px;
       max-width: 500px;
@@ -168,6 +234,63 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .slider {
+    &__link {
+      font-size: 16px;
+    }
+    &__tab {
+      width: 85px;
+      height: 64px;
+      border-radius: 15px;
+    }
+    &__title {
+      max-width: 360px;
+    }
+    &__box {
+      &-img {
+        height: 255px;
+        &-row {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    &__arrow {
+      width: 40px;
+      height: 40px;
+    }
+    &__container {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+    &__content {
+      flex-basis: 45%;
+      &-link {
+        font-size: 14px;
+      }
+      &-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      &-logo {
+        &:nth-child(-n + 2) {
+          margin-bottom: 5px;
+        }
+      }
+      &-title {
+        margin-bottom: 5px;
+      }
+      &-text {
+        &--ingredients {
+          margin-bottom: 10px;
+        }
+        &--description {
+          margin-bottom: 20px;
+        }
+      } 
+    }
+  }
   .doubt {
     &__container {
       background-size: auto;
@@ -276,6 +399,62 @@
 }
 
 @media screen and (max-width: 767px) {
+  .slider {
+    &__row {
+      &--title {
+        padding-right: 10px;
+      }
+    }
+    padding-right: 0;
+    &__row {
+      &--tab {
+        margin-bottom: 20px;
+        width: 678px;
+        margin-left:auto;
+        margin-right: auto;
+      }
+    }
+    &__wrap {
+      &-img {
+        border-radius: 10px;
+      }
+      &--tab {
+        overflow: hidden;
+      }
+    }
+    &__tab {
+      width: 76px;
+      height: 53px;
+      border-radius: 10px;
+    }
+    border-radius: 0;
+    padding-bottom: 55px;
+    &__content {
+      flex-basis: 100%;
+      &-row {
+        justify-content: flex-start;
+      }
+    }
+    &__box {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 10px;
+      &-img {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 337px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+    }
+    &__container {
+      padding: 0;
+    }
+    &__arrow {
+      display: none;
+    }
+  }
   .doubt {
     &__img {
       width: 185px;
@@ -367,6 +546,52 @@
 }
 
 @media screen and (max-width: 575px) {
+  .slider {
+    &__link {
+      font-size: 14px;
+    }
+    padding-bottom: 30px;
+    &__row--title {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    &__title {
+      max-width: 280px;
+      margin-bottom: 10px
+    }
+    background: $light;
+    &__content {
+      &-logo {
+        img {
+          width: 16px;
+          height: 16px;
+        }
+        
+      }
+      &-row {
+        align-items: flex-start;
+      }
+      &-text {
+        font-size: 12px;
+      }
+      &-title {
+        font-size: 16px;
+      }
+    }
+    &__box {
+      position: relative;
+      &-img {
+        max-height: 230px;
+        margin-bottom: 48px;
+        &-row {
+          bottom: 0;
+          transform: translate(-50%, 50%);
+          z-index: 10;
+        }
+      }
+    }
+  }
   .doubt {
     padding-left: 15px;
     padding-right: 15px;
@@ -384,9 +609,9 @@
     &__leafs {
       &--3 {
         width: 60px;
-        right: 2%;
+        right: 5%;
         top: auto;
-        bottom: 15%;
+        bottom: -5%;
       }
       &--1 {
         width: 60px;
@@ -535,6 +760,16 @@
     &__img {
       &--mobile {
         transform: translateX(-63%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .slider {
+    &__box {
+      &-img {
+        max-height: 200px;
       }
     }
   }
