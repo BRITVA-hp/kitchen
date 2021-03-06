@@ -16,6 +16,28 @@
     }
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .stock {
+    &__card {
+      background-position-y: -40px;
+      width: 450px;
+      height: 360px;
+      padding: 25px;
+      &--comment {
+        .stock__img {
+          width: 220px;
+        }
+      }
+      &--cashback {
+        .stock__img {
+          width: 235px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .slider {
     &__arrow {
@@ -29,6 +51,38 @@
   }
 }
 @media screen and (max-width: 1400px) {
+  .stock {
+    &__card {
+      background-size: cover;
+      background-position-y: 0;
+      width: 380px;
+      height: 304px;
+      &--comment {
+        .stock__img {
+          width: 185px;
+        }
+      }
+      &--cashback {
+        .stock__img {
+          width: 200px;
+        }
+      }
+    }
+    &__title {
+      font-size: 36px;
+      max-width: 250px;
+    }
+    &__text {
+      font-size: 20px;
+      max-width: 200px;
+      &--small {
+        font-size: 16px;
+      }
+    }
+    &__subtitle {
+      font-size: 30px;
+    }
+  }
   .slider {
     &__link {
       font-size: 18px;
@@ -168,7 +222,63 @@
       font-size: 36px;
     }
   }
+  .stock {
+    padding-left: 10px;
+    padding-right: 10px;
+    &__leaf {
+      width: 50px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 100%;
+      max-width: 165px;
+      &-box {
+        margin-bottom: 10px;
+      }
+    }
+    &__link {
+      width: 25px;
+      height: 25px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 90%;
+      margin-bottom: 5px
+    }
+    &__card {
+      border-radius: 10px;
+      padding: 20px 15px;
+      width: 315px;
+      height: 252px;
+      &--comment {
+        .stock__img {
+          width: 155px;
+        }
+      }
+      &--cashback {
+        .stock__img {
+          width: 165px;
+        }
+      }
+    }
+    &__img {
+      width: 300px;
+      border-radius: 10px;
+    }
+    &__text {
+      font-size: 16px;
+      max-width: 160px;
+      &--price {
+        max-width: 110px;
+      }
+      &--small {
+        font-size: 14px;
+        max-width: 170px;
+      }
+    }
+  }
   .step {
+    padding-bottom: 190px;
     &__img {
       width: 170px;
       margin-left: auto;
@@ -234,6 +344,42 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .stock {
+    &__card {
+      width: 250px;
+      height: 200px;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &--comment {
+        .stock__img {
+          width: 122px;
+        }
+      }
+      &--cashback {
+        background-position-x: 10px;
+        .stock__img {
+          width: 130px;
+        }
+      }
+    }
+    &__text {
+      &--price {
+        max-width: 110px;
+      }
+      &--comment {
+        max-width: 100px;
+      }
+      &--small {
+        font-size: 12px;
+        max-width: 115px;
+      }
+    }
+    &__img {
+      width: 245px;
+    }
+  }
   .slider {
     &__link {
       font-size: 16px;
@@ -398,6 +544,26 @@
   }
 }
 
+@media screen and (max-width: 810px) {
+  .progress {
+    display: block;
+  }
+  .stock {
+    padding-right: 0;
+    &__wrap {
+      overflow: hidden;
+      margin-bottom: 30px;
+      height: 230px;
+      position: relative;
+    }
+    &__row {
+      width: 790px;
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   .slider {
     &__row {
@@ -546,6 +712,13 @@
 }
 
 @media screen and (max-width: 575px) {
+  .stock {
+    background-color: $light;
+    margin-top: 0;
+    &__row {
+      left: 0;
+    }
+  }
   .slider {
     &__link {
       font-size: 14px;
@@ -668,6 +841,7 @@
   }
   .step {
     background-color: $light;
+    padding-bottom: 30px;
     &__title {
       font-size: 24px;
       margin-bottom: 30px;

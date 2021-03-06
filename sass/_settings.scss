@@ -42,6 +42,9 @@ a {
   &-bold {
     font-family: 'Nunito-Bold';
   }
+  &-800 {
+    font-family: 'Nunito-800';
+  }
 }
 .align-center {
   align-items: center;
@@ -50,5 +53,19 @@ a {
   transition: .2s;
   &:hover {
     opacity: 0.6;
+  }
+}
+
+.progress {
+  margin: auto;
+  width: 300px;
+  height: 3px;
+  display: none;
+  background-color: #9AACB4;
+  &__inner {
+    transition: 0.3s;
+    width: 0;
+    height: 100%;
+    background-color: $purple;
   }
 }
