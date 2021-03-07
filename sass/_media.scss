@@ -18,6 +18,13 @@
 }
 
 @media screen and (max-width: 1600px) {
+  .open {
+    &__leaf {
+      &--3 {
+        display: none;
+      }
+    }
+  }
   .stock {
     &__card {
       background-position-y: -40px;
@@ -163,6 +170,30 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .open {
+    &__leaf {
+      &--1 {
+        width: 150px;
+        left: 7%;
+        top: 17%;
+      }
+    }
+    &__row {
+      grid-template-columns: auto 230px 230px;
+      grid-template-rows: repeat(11, 28px);
+      align-items: center;
+      justify-content: center;
+    }
+    &__img {
+      width: 230px;
+      height: 219px
+    }
+    &__bg {
+      &--2 {
+        display: none;
+      }
+    }
+  }
   .partners {
     &__title {
       margin-bottom: 55px;
@@ -363,6 +394,30 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .open {
+    &__leaf {
+      &--2 {
+        top: 9%;
+      }
+      &--1 {
+        top: 10%;
+      }
+    }
+    padding-top: 80px;
+    &__bg {
+      left: 0;
+      transform: translateY(-40%);
+    }
+    &__img {
+      width: 190px;
+      height: 180px;
+    }
+    &__row {
+      grid-template-columns: auto 190px 190px;
+      grid-template-rows: repeat(11, 28px);
+      grid-gap: 10px;
+    }
+  }
   .stock {
     &__card {
       width: 250px;
@@ -584,6 +639,86 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .open {
+    &__img {
+      margin: auto;
+    }
+    &__bg {
+      &--1 {
+        display: none;
+      }
+      &--3 {
+        display: block;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -45%);
+        width: 500px;
+      }
+    }
+    &__box {
+      padding: 30px 0 30px 0;
+    }
+    &__leaf {
+      &--1 {
+        right: 0;
+        left: auto;
+        top: 55%;
+        transform: rotate(40deg);
+      }
+      &--2 {
+        right: 0;
+        left: auto;
+        top: 45%;
+        transform: rotate(100deg);
+      }
+    }
+    &__row {
+      max-width: 430px;
+      margin-left: auto;
+      margin-right: auto;
+      grid-gap: 0;
+      grid-template-columns: 1fr 10px 1fr;
+      grid-template-rows: repeat(18, 10px) auto repeat(18, 10px);
+      grid-template-areas: 
+        'img1 . .'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        'img1 . img2'
+        '. . img2'
+        'box box box'
+        'img3 . .'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        'img3 . img4'
+        '. . img4';
+    }
+  }
   .partners {
     &__logo {
       &--5, &--6 {
@@ -738,6 +873,57 @@
 }
 
 @media screen and (max-width: 575px) {
+  .open {
+    &__row {
+      grid-template-rows: 117px auto 117px;
+      grid-template-areas: 
+        'img1 . img2'
+        'box box box'
+        'img3 . img4'
+      ;
+    }
+    &__bg {
+      border-radius: 20px;
+      overflow: hidden;
+      &--3 {
+        width: 290px;
+        height: 320px;
+        transform: translate(-50%, -40%);
+        img {
+          height: 100%
+        }
+      }
+    }
+    &__leaf {
+      &--1 {
+        width: 70px;
+      }
+      &--2 {
+        width: 50px;
+      }
+    }
+    &__row {
+      max-width: 260px;
+    }
+    &__box {
+      padding: 30px 0 30px 0;
+    }
+    &__img {
+      width: 121px;
+      height: 117px;
+      &--2, &--4 {
+        transform: translateY(10px);
+      }
+    }
+    &__title {
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+    &__button {
+      font-size: 16px;
+      padding: 15px 40px;
+    }
+  }
   .partners {
     &__title {
       margin-bottom: 30px;

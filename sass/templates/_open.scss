@@ -1,0 +1,80 @@
+.open {
+  padding-top: 150px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+  &__bg {
+    position: absolute;
+    left: -70px;
+    transform: translateY(-42%);
+    top: 50%;
+    z-index: -1;
+    &--2 {
+      left: auto;
+      right: -800px;
+    }
+    &--3 {
+      display: none;
+    }
+  }
+  &__leaf {
+    position: absolute;
+    &--1 {
+      top: 20%;
+      left: 1%;
+    }
+    &--2 {
+      left: 0%;
+      top: 17%
+    }
+    &--3 {
+      right: 0;
+      bottom: -10%;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    max-width: 500px;
+    margin-bottom: 40px;
+    span {
+      font-family: 'Nunito';
+      text-transform: none;
+    }
+  }
+  &__row {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto 326px 326px;
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-areas: 
+      '. img1 .'
+      '. img1 img2'
+      '. img1 img2'
+      'box img1 img2'
+      'box img1 img2'
+      'box img3 img2'
+      'box img3 img4'
+      'box img3 img4'
+      '. img3 img4'
+      '. img3 img4'
+      '. . img4';
+  }
+  &__box {
+    grid-area: box;
+  }
+  &__img {
+    display: block;
+    &--1 {
+      grid-area: img1;
+    }
+    &--2 {
+      grid-area: img2;
+    }
+    &--3 {
+      grid-area: img3;
+    }
+    &--4 {
+      grid-area: img4;
+    }
+  }
+}
