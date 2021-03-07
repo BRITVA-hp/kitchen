@@ -163,6 +163,25 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .partners {
+    &__title {
+      margin-bottom: 55px;
+    }
+    &__logo {
+      &--1 {
+        width: 55px;
+      }
+      &--2, &--5 {
+        width: 105px;
+      }
+      &--3, &--6 {
+        width: 130px;
+      }
+      &--4 {
+        width: 100px;
+      }
+    }
+  }
   .slider {
     &__row--title {
       margin-bottom: 45PX;
@@ -565,6 +584,13 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .partners {
+    &__logo {
+      &--5, &--6 {
+        display: none;
+      }
+    }
+  }
   .slider {
     &__row {
       &--title {
@@ -712,6 +738,23 @@
 }
 
 @media screen and (max-width: 575px) {
+  .partners {
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__row {
+      max-width: 300px;
+      margin: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__logo {
+      &:nth-child(2n-1) {
+        margin-right: 25px;
+      }
+    }
+
+  }
   .stock {
     background-color: $light;
     margin-top: 0;
