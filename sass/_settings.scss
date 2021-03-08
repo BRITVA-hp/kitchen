@@ -69,3 +69,9 @@ a {
     background-color: $purple;
   }
 }
+input {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
