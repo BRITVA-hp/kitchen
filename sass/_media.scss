@@ -45,7 +45,40 @@
   }
 }
 
+@media screen and (max-width: 1550px) {
+  .inst {
+    &__link {
+      font-size: 20px;
+    }
+    &__button {
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 18px;
+    }
+    &__logo {
+      img {
+        width: 180px;
+      }
+    }
+    &__card {
+      width: 280px;
+      height: 280px;
+      &--last {
+        width: 280px;
+        height: 280px;
+        padding: 40px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1500px) {
+  .faq {
+    &__container {
+      padding: 120px;
+    }
+  }
   .slider {
     &__arrow {
       &--prev {
@@ -58,6 +91,11 @@
   }
 }
 @media screen and (max-width: 1400px) {
+  .faq {
+    &__container {
+      padding: 100px;
+    }
+  }
   .stock {
     &__card {
       background-size: cover;
@@ -155,6 +193,30 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .faq {
+    &__leaf {
+      &--2 {
+        bottom: -27%;
+      }
+    }
+    &__container {
+      padding: 70px;
+    }
+    &__box {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .contacts {
+    &__box {
+      flex-basis: 40%;
+    }
+    &__map {
+      flex-basis: 58%;
+    }
+  }
   .main {
     &__leafs {
       &--6 {
@@ -170,6 +232,49 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .inst {
+    padding-bottom: 60px;
+    &__link {
+      font-size: 16px;
+    }
+    &__button {
+      font-size: 16px;
+      padding: 10px 0px;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__card {
+      width: 215px;
+      height: 215px;
+      &--last {
+        width: 215px;
+        height: 215px;
+        padding: 20px
+      }
+    }
+    &__logo {
+      img {
+        width: 130px;
+      }
+    }
+  }
+  .faq {
+    &__button {
+      font-size: 18px;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+  }
+  .contacts {
+    &__title {
+      margin-bottom: 45px;
+    }
+  }
   .open {
     &__leaf {
       &--1 {
@@ -394,6 +499,60 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .inst {
+    padding-top: 60px;
+  }
+  .faq {
+    padding-top: 100px;
+    &__leaf {
+      &--2 {
+        display: none;
+      }
+    }
+    &__container {
+      padding-top: 120px;
+    }
+    &__title {
+      position: absolute;
+      top: 50px;
+      left: 70px;
+    }
+    &__button {
+      display: block;
+      margin: auto;
+    }
+    &__text {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__box {
+      flex-basis: 100%;
+      margin-right: 0;
+      &--tabs {
+        order: -1;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .contacts {
+    padding-top: 30px;
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__map {
+      flex-basis: 100%;
+      order: -1;
+      margin-bottom: 30px;
+    }
+    &__box {
+      flex-basis: 50%;
+    }
+  }
   .open {
     &__leaf {
       &--2 {
@@ -618,6 +777,50 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .inst {
+    &__link {
+      &--mobile {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+    &__button {
+      &--mobile {
+        display: block;
+        max-width: 285px;
+        margin: auto;
+      }
+    }
+    padding-left: 0;
+    padding-right: 0;
+    &__title {
+      padding-left: 10px;
+    }
+    &__wrap {
+      margin-bottom: 30px;
+      overflow: hidden;
+      position: relative;
+      height: 216px
+    }
+    &__row {
+      width: 665px;
+      position: absolute;
+      left: 35%;
+      bottom: 0;
+    }
+    &__card {
+      &--last {
+        display: none;
+      }
+    }
+    &__progress {
+      display: block;
+      margin-bottom: 50px;
+    }
+  }
+}
 @media screen and (max-width: 810px) {
   .progress {
     display: block;
@@ -639,7 +842,35 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .contacts {
+    &__title {
+      margin-bottom: 80px;
+    }
+    &__tabs {
+      right: auto;
+      left: 0px;
+      top: -50px;
+      flex-wrap: wrap;
+      &-text {
+        font-size: 10px;
+      }
+      &-item {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &__box {
+      flex-basis: 100%;
+    }
+    &__map {
+      height: 300px;
+    }
+  }
   .open {
+    padding-bottom: 30px;
     &__img {
       margin: auto;
     }
@@ -873,6 +1104,94 @@
 }
 
 @media screen and (max-width: 575px) {
+  .inst {
+    &__row {
+      left: 10px;
+    }
+  }
+  .faq {
+    background-color: #fff;
+    padding-top: 40px;
+    &__button {
+      padding: 15px 30px;
+      width: 100%;
+    }
+    &__tab {
+      &-row {
+        padding: 15px 0px 15px 0;
+      }
+      &-title {
+        font-size: 16px;
+      }
+      &-content {
+        font-size: 12px;
+      }
+    }
+    &__title {
+      margin-bottom: 0;
+      top: 0;
+      left: 0px;
+    }
+    &__container {
+      border: none;
+      padding: 35px 0px 50px;
+    }
+    &__leaf {
+      display: none;
+    }
+  }
+  .contacts {
+    padding-bottom: 30px;
+    &__title {
+      margin-bottom: 100px;
+    }
+    &__tabs {
+      max-width: 300px;
+      top: -75px;
+    }
+    &__accord {
+      &-content {
+        display: flex;
+        &-text {
+          font-size: 10px;
+        }
+        &-box {
+          margin-bottom: 0;
+          margin-right: 30px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      &-row {
+        padding: 10px 0;
+      }
+    }
+    &__accord {
+      &-header {
+        &-title {
+          font-size: 14px;
+        }
+        &-text {
+          font-size: 10px;
+        }
+      }
+    }
+    &__map {
+      height: 200px
+    }
+    &__box {
+      border: none;
+      background-color: $light;
+      &-title {
+        padding-left: 0;
+        font-size: 16px;
+      }
+    }
+    &__wrap {
+      padding: 0;
+    }
+  }
   .open {
     &__row {
       grid-template-rows: 117px auto 117px;

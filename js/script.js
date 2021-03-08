@@ -6,12 +6,152 @@ window.addEventListener('DOMContentLoaded', () => {
         prev = document.querySelector('.slider__arrow--prev'),
         sliderWind = document.querySelector('.slider__wrap--tab'),
         sliderField = sliderWind.querySelector('.slider__row--tab'),
-        sliderFieldWidth = +window.getComputedStyle(sliderField).width.replace(/\D/g, '');
+        sliderFieldWidth = +window.getComputedStyle(sliderField).width.replace(/\D/g, ''),
+        accordions = document.querySelectorAll('.contacts__accord-row'),
+        accordionsFaq = document.querySelectorAll('.faq__tab-row'),
+        tabsMap = document.querySelectorAll('.contacts__tabs-item');
+
+  //Вспомогательные переменные
 
   let touchStart;
   let touchEnd;
   let counterForSwipe = 0;
   let counter = 0;
+
+  // Карта
+
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("contactsMap", {
+            center: [55.76, 37.64],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 10
+        });
+
+        // Метки на карту
+        const placeMarks = [
+                            [
+                              new ymaps.Placemark([55.757131, 37.617114], {           //Маназины
+                                  balloonContent: 'улица Охотный Ряд, 2'
+                                  }, {
+                                    iconLayout: 'default#image',
+                                    // Путь до нашей картинки
+                                    iconImageHref: '/img/contacts/plcmM.png',
+                                    iconImageSize: [64, 64]
+                                  }),
+                              new ymaps.Placemark([55.873309, 37.664842], {          //Маназины
+                                  balloonContent: 'г. Москва, ул. Енисейская, д. 29'
+                                  }, {
+                                    iconLayout: 'default#image',
+                                    // Путь до нашей картинки
+                                    iconImageHref: '/img/contacts/plcmM.png',
+                                    iconImageSize: [64, 64]
+                                  })
+                            ],
+                            [
+                              new ymaps.Placemark([55.759309, 37.616279], {          //Кафе
+                                  balloonContent: 'улица Охотный Ряд, 3, подъезд 7'
+                                  }, {
+                                    iconLayout: 'default#image',
+                                    // Путь до нашей картинки
+                                    iconImageHref: '/img/contacts/plcmC.png',
+                                    iconImageSize: [64, 64]
+                                  }),
+                              new ymaps.Placemark([55.860822, 37.661230], {          //Кафе
+                                  balloonContent: 'Енисейская улица, 10'
+                                  }, {
+                                    iconLayout: 'default#image',
+                                    // Путь до нашей картинки
+                                    iconImageHref: '/img/contacts/plcmC.png',
+                                    iconImageSize: [64, 64]
+                                  })
+                            ],
+                            [
+                              new ymaps.Placemark([55.756300, 37.618641], {            //АЗС
+                                  balloonContent: 'площадь Революции, 2/3'
+                                  }, {
+                                    iconLayout: 'default#image',
+                                    // Путь до нашей картинки
+                                    iconImageHref: '/img/contacts/plcmG.png',
+                                    iconImageSize: [64, 64]
+                                  }),
+                              new ymaps.Placemark([55.767139, 37.646723], {            //АЗС
+                                  balloonContent: 'Большой Козловский переулок, 6'
+                                  }, {
+                                    iconLayout: 'default#image',
+                                    // Путь до нашей картинки
+                                    iconImageHref: '/img/contacts/plcmG.png',
+                                    iconImageSize: [64, 64]
+                                  })
+                            ],
+                            [
+                              new ymaps.Placemark([55.764197, 37.629861], {            //Фитнес-клубы
+                                  balloonContent: 'улица Большая Лубянка, 20с2'
+                                  }, {
+                                    iconLayout: 'default#image',
+                                    // Путь до нашей картинки
+                                    iconImageHref: '/img/contacts/plcmF.png',
+                                    iconImageSize: [64, 64]
+                                  }),
+                              new ymaps.Placemark([55.732180, 37.611167], {            //Фитнес-клубы
+                                  balloonContent: 'улица Большая Якиманка, 50'
+                                  }, {
+                                    iconLayout: 'default#image',
+                                    // Путь до нашей картинки
+                                    iconImageHref: '/img/contacts/plcmF.png',
+                                    iconImageSize: [64, 64]
+                                  })
+                            ]
+                          ];
+      myMap.behaviors.disable('scrollZoom');
+
+      placeMarks[1].forEach(item => {
+        myMap.geoObjects.add(item);
+      });
+
+      tabsMap.forEach((tab, i) => {
+        tab.addEventListener('click', () => {
+          clearActiveClass(tabsMap, 'contacts__tabs-item--active');
+          tab.classList.add('contacts__tabs-item--active');
+          placeMarks.forEach((item1, y, arr) => {
+            arr[y].forEach((item2) => {
+              myMap.geoObjects.remove(item2);
+            });
+            if (i == y) {
+              arr[y].forEach((item3) => {
+                myMap.geoObjects.add(item3);
+              });
+            }
+          });
+        });
+      });
+    }
+
+  // Аккордион
+
+  function accordion(arr, activeClass, paddings = 0) {
+    arr.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle(activeClass);
+        if (item.classList.contains(activeClass)) {
+          item.nextElementSibling.style.maxHeight = item.nextElementSibling.scrollHeight + 'px';
+          item.parentElement.style.paddingBottom = paddings + 'px';
+          item.lastElementChild.lastElementChild.style.transform = 'rotate(90deg)';
+        } else {
+          item.nextElementSibling.style.maxHeight = '0px';
+          item.parentElement.style.paddingBottom = 0 + 'px';
+          item.lastElementChild.lastElementChild.style.transform = 'none';
+        }
+      });
+    });
+  }
+
+  accordion(accordions, 'contacts__accord-row--active', 20);
+  accordion(accordionsFaq, 'faq__tab-row--active', 20);
 
   //Свайп табов с прогрессом
 
@@ -47,7 +187,7 @@ window.addEventListener('DOMContentLoaded', () => {
     sliderProgressWind.addEventListener('touchend', (e) => {
       if (sliderProgressFieldPos == 'absolute') {
         touchProgressEnd = e.changedTouches[0].pageX - touchProgressStart;
-        if (Math.abs(touchProgressEnd) > 150) {
+        if (Math.abs(touchProgressEnd) > 100) {
           if (touchProgressEnd < 0) {
             sliderProgressField.style.transform = `translateX(-${slideWidth * counterSwipeProgress}px)`;
             counterSwipeProgress++;
@@ -71,7 +211,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  swipeProgress('.stock__wrap', '.stock__row', '.stock__card', '.progress__inner', 270);
+  swipeProgress('.stock__wrap', '.stock__row', '.stock__card', '.progress__inner--stock', 270);
+  swipeProgress('.inst__wrap', '.inst__row', '.inst__card', '.progress__inner--inst', 225);
 
   // свайп табов в секции slider
 

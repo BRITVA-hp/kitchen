@@ -1,0 +1,55 @@
+.inst {
+  background-color: $light;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  &__button {
+    &--mobile {
+      display: none;
+    }
+  }
+  &__row {
+    transition: 0.3s ease-out;
+  }
+  &__logo {
+    img {
+      display: block;
+      margin: auto;
+      margin-bottom: 15px;
+    }
+  }
+  &__link {
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-family: 'Nunito-Bold';
+    font-size: 24px;
+    line-height: 130%;
+    color: #74029E;
+    &--mobile {
+      display: none;
+    }
+  }
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__card {
+    width: 370px;
+    height: 370px;
+    border: 4px solid #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    &--last {
+      width: 370px;
+      height: 370px;
+      border: 4px solid #FFFFFF;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 70px 65px 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+    }
+  }
+}

@@ -2,7 +2,8 @@
   padding-top: 150px;
   position: relative;
   overflow: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 90px;
+  background-color: transparent;
   &__bg {
     position: absolute;
     left: -70px;
@@ -29,7 +30,7 @@
     }
     &--3 {
       right: 0;
-      bottom: -10%;
+      bottom: 0;
     }
   }
   &__title {

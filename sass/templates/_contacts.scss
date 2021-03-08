@@ -1,0 +1,135 @@
+.contacts {
+  padding-top: 60px;
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__tabs {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    right: 10px;
+    top: 50px;
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 6px 12px;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+      border-radius: 32px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition:  .3s;
+      &:last-child {
+        margin-right: 0;
+      }
+      &--active {
+        background-color: $purple;
+        color: $white;
+        path {
+          fill: #FFFFFF;
+        }
+      }
+    }
+    &-text {
+      font-size: 12px;
+      line-height: 130%;
+    }
+    &-svg {
+      margin-right: 5px;
+    }
+  }
+  &__map {
+    height: 434px;
+    flex-basis: 68%;
+    position: relative;
+    &-yandex {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+  }
+  &__box {
+    background-color: #FFFFFF;
+    border: 1px solid #B9CCD3;
+    border-radius: 15px;
+    flex-basis: 30%;
+    &-title {
+      font-family: 'Nunito-900';
+      font-size: 30px;
+      line-height: 130%;
+      padding: 15px 40px 10px 40px;
+      border-bottom: 1px solid #B9CCD3;
+    }
+  }
+  &__wrap {
+    padding: 0 40px;
+  }
+  &__accord {
+    border-bottom: 1px solid #B9CCD3;
+    &:last-child {
+      border-bottom: none;
+    }
+    &-content {
+      border-left: 1px solid #74029E;
+      padding-left: 12px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s;
+      &-text {
+        line-height: 130%;
+        color: #6F6F6F;
+      }
+      &-box {
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-img {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      position: relative;
+      &-hor {
+        width: 100%;
+        height: 1px;
+        background-color: #74029E;
+        position: absolute;
+        top: 50%;
+      }
+      &-vert {
+        width: 1px;
+        height: 100%;
+        background-color: #74029E;
+        position: absolute;
+        left: 50%;
+        transition: 0.3s;
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      cursor: pointer;
+      &--active {
+        .contacts__accord-header-title {
+          color: $purple;
+        }
+      }
+    }
+    &-header {
+      &-title {
+        font-family: 'Nunito-Bold';
+        font-size: 18px;
+        line-height: 130%;
+      }
+      &-text {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+  }
+}

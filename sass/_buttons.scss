@@ -30,4 +30,14 @@ button {
       border-color: darken(#fff, 10%);
     }
   }
+  &--purple {
+    color: $white;
+    background: #74029E;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+    border-color: $purple;
+    &:hover {
+      background-color: #fff;
+      color: purple;
+    }
+  }
 }
