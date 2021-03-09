@@ -9,7 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
         sliderFieldWidth = +window.getComputedStyle(sliderField).width.replace(/\D/g, ''),
         accordions = document.querySelectorAll('.contacts__accord-row'),
         accordionsFaq = document.querySelectorAll('.faq__tab-row'),
-        tabsMap = document.querySelectorAll('.contacts__tabs-item');
+        tabsMap = document.querySelectorAll('.contacts__tabs-item'),
+        footerMenu = document.querySelector('.footer__menu-header');
 
   //Вспомогательные переменные
 
@@ -17,6 +18,18 @@ window.addEventListener('DOMContentLoaded', () => {
   let touchEnd;
   let counterForSwipe = 0;
   let counter = 0;
+
+  // меню в футере
+
+  footerMenu.addEventListener('click', () => {
+    footerMenu.nextElementSibling.style.maxHeight = footerMenu.nextElementSibling.scrollHeight + 20 + 'px';
+    footerMenu.nextElementSibling.style.paddingBottom = 20 + 'px';
+    footerMenu.classList.toggle('footer__menu--active');
+    if (footerMenu.classList.contains('footer__menu--active')) {
+      footerMenu.nextElementSibling.style.maxHeight = 0 + 'px';
+      footerMenu.nextElementSibling.style.paddingBottom = 0 + 'px';
+    }
+  });
 
   // Карта
 

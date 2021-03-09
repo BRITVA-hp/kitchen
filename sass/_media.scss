@@ -91,6 +91,18 @@
   }
 }
 @media screen and (max-width: 1400px) {
+  .footer {
+    &__box {
+      &--left {
+        margin-right: 60px;
+      }
+    }
+    &__img {
+      width: 300px;
+      transform: none;
+      align-self: flex-end;
+    }
+  }
   .faq {
     &__container {
       padding: 100px;
@@ -232,6 +244,39 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .footer {
+    padding-bottom: 50px;
+    &__menu {
+      padding: 20px 30px 0;
+      height: 353px;  
+    }
+    &__box {
+      padding-top: 20px;
+      &--left {
+        margin-right: 40px;
+      }
+    }
+    &__img {
+      width: 200px;
+      align-self: center;
+    }
+    &__block {
+      margin-bottom: 20px;
+      &-box {
+        margin-right: 50px;
+      }
+      &-link {
+        margin-bottom: 15px;
+      }
+    }
+    &__link {
+      margin-bottom: 20px;
+    }
+    &__input {
+      margin-bottom: 20px;
+      width: 255px;
+    }
+  }
   .inst {
     padding-bottom: 60px;
     &__link {
@@ -499,6 +544,33 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .footer {
+    &__box {
+      &--left {
+        margin-right: 30px;
+      }
+    }
+    &__img {
+      display: none;
+    }
+    &__menu {
+      height: 338px;
+      &-link {
+        font-size: 16px;
+      }
+    }
+    &__block {
+      &-link {
+        font-size: 16px;
+      }
+    }
+    &__link {
+      font-size: 16px;
+    }
+    &__button {
+      font-size: 18px;
+    }
+  }
   .inst {
     padding-top: 60px;
   }
@@ -842,6 +914,42 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .footer {
+    &__row {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__menu {
+      height: auto;
+    }
+    &__label {
+      margin-bottom: 25px;
+    }
+    &__text {
+      margin-bottom: 25px;
+    }
+    &__wrap {
+      border-bottom: 1px solid #9B34E7;
+      padding-bottom: 15px;
+    }
+    &__box {
+      &--right {
+        width: 455px;
+      }
+    }
+    &__input {
+      width: 100%;
+    }
+    &__block {
+      justify-content: space-between;
+    }
+    &__link {
+      text-align: center;
+    }
+    &__button {
+      width: 100%;
+    }
+  }
   .contacts {
     &__title {
       margin-bottom: 80px;
@@ -1104,6 +1212,61 @@
 }
 
 @media screen and (max-width: 575px) {
+  .footer {
+    border: none;
+    &__link {
+      margin-bottom: 30px;
+    }
+    &__block {
+      border-bottom: 1px solid #9B34E7;
+      padding-bottom: 30px;
+      margin-bottom: 50px;
+    }
+    &__text {
+      &--gray {
+        display: none;
+      }
+    }
+    &__pay {
+      display: none;
+    }
+    &__box {
+      padding-top: 15px;
+      &--right {
+        padding-top: 30px;
+        width: 100%;
+      }
+    }
+    &__menu {
+      border-radius: 0px 0px 8px 8px;
+      padding: 20px;
+      padding-bottom: 0;
+      right: 0;
+      top: 0;
+      &-link {
+        margin-bottom: 10px;
+      }
+    }
+    &__wrap {
+      position: relative;
+      width: 100%;
+    }
+    &__menu {
+      position: absolute;
+      &-wrap {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+    }
+    &__label {
+      width: 140px;
+    }
+    &__text {
+      font-size: 12px;
+      max-width: 290px;
+    }
+  }
   .inst {
     &__row {
       left: 10px;

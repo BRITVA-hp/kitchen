@@ -56,6 +56,31 @@
         margin-bottom: 0;
       }
     }
+    &-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      &-title {
+      font-family: 'Nunito-600';
+      font-size: 16px;
+      line-height: 130%;
+      color: #FFFFFF;
+      margin-right: 10px;
+      }
+    }
+    &-burger {
+      width: 25px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &-line {
+        width: 100%;
+        height: 3px;
+        background: #FFFFFF;
+        border-radius: 5px;
+      }
+    }
   }
   &__wrap {
     display: flex;

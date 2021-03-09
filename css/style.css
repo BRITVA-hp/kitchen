@@ -1210,6 +1210,27 @@ button:focus {
       display: block; }
       .footer__menu-link:last-child {
         margin-bottom: 0; }
+    .footer__menu-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px; }
+      .footer__menu-header-title {
+        font-family: 'Nunito-600';
+        font-size: 16px;
+        line-height: 130%;
+        color: #FFFFFF;
+        margin-right: 10px; }
+    .footer__menu-burger {
+      width: 25px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .footer__menu-burger-line {
+        width: 100%;
+        height: 3px;
+        background: #FFFFFF;
+        border-radius: 5px; }
   .footer__wrap {
     display: flex; }
   .footer__block {
@@ -1300,6 +1321,12 @@ button:focus {
     right: -100px; } }
 
 @media screen and (max-width: 1400px) {
+  .footer__box--left {
+    margin-right: 60px; }
+  .footer__img {
+    width: 300px;
+    transform: none;
+    align-self: flex-end; }
   .faq__container {
     padding: 100px; }
   .stock__card {
@@ -1376,6 +1403,29 @@ button:focus {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .footer {
+    padding-bottom: 50px; }
+    .footer__menu {
+      padding: 20px 30px 0;
+      height: 353px; }
+    .footer__box {
+      padding-top: 20px; }
+      .footer__box--left {
+        margin-right: 40px; }
+    .footer__img {
+      width: 200px;
+      align-self: center; }
+    .footer__block {
+      margin-bottom: 20px; }
+      .footer__block-box {
+        margin-right: 50px; }
+      .footer__block-link {
+        margin-bottom: 15px; }
+    .footer__link {
+      margin-bottom: 20px; }
+    .footer__input {
+      margin-bottom: 20px;
+      width: 255px; }
   .inst {
     padding-bottom: 60px; }
     .inst__link {
@@ -1545,6 +1595,20 @@ button:focus {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .footer__box--left {
+    margin-right: 30px; }
+  .footer__img {
+    display: none; }
+  .footer__menu {
+    height: 338px; }
+    .footer__menu-link {
+      font-size: 16px; }
+  .footer__block-link {
+    font-size: 16px; }
+  .footer__link {
+    font-size: 16px; }
+  .footer__button {
+    font-size: 18px; }
   .inst {
     padding-top: 60px; }
   .faq {
@@ -1767,6 +1831,28 @@ button:focus {
       left: 25%; } }
 
 @media screen and (max-width: 767px) {
+  .footer__row {
+    flex-direction: column;
+    align-items: center; }
+  .footer__menu {
+    height: auto; }
+  .footer__label {
+    margin-bottom: 25px; }
+  .footer__text {
+    margin-bottom: 25px; }
+  .footer__wrap {
+    border-bottom: 1px solid #9B34E7;
+    padding-bottom: 15px; }
+  .footer__box--right {
+    width: 455px; }
+  .footer__input {
+    width: 100%; }
+  .footer__block {
+    justify-content: space-between; }
+  .footer__link {
+    text-align: center; }
+  .footer__button {
+    width: 100%; }
   .contacts__title {
     margin-bottom: 80px; }
   .contacts__tabs {
@@ -1913,6 +1999,45 @@ button:focus {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .footer {
+    border: none; }
+    .footer__link {
+      margin-bottom: 30px; }
+    .footer__block {
+      border-bottom: 1px solid #9B34E7;
+      padding-bottom: 30px;
+      margin-bottom: 50px; }
+    .footer__text--gray {
+      display: none; }
+    .footer__pay {
+      display: none; }
+    .footer__box {
+      padding-top: 15px; }
+      .footer__box--right {
+        padding-top: 30px;
+        width: 100%; }
+    .footer__menu {
+      border-radius: 0px 0px 8px 8px;
+      padding: 20px;
+      padding-bottom: 0;
+      right: 0;
+      top: 0; }
+      .footer__menu-link {
+        margin-bottom: 10px; }
+    .footer__wrap {
+      position: relative;
+      width: 100%; }
+    .footer__menu {
+      position: absolute; }
+      .footer__menu-wrap {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s; }
+    .footer__label {
+      width: 140px; }
+    .footer__text {
+      font-size: 12px;
+      max-width: 290px; }
   .inst__row {
     left: 10px; }
   .faq {
