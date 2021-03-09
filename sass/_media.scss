@@ -390,6 +390,9 @@
     &__title {
       margin-bottom: 45px;
     }
+    &__tabs {
+      top: 140px;
+    }
   }
   .open {
     &__leaf {
@@ -1035,7 +1038,7 @@
     &__tabs {
       right: auto;
       left: 0px;
-      top: -50px;
+      top: 80px;
       flex-wrap: wrap;
       &-text {
         font-size: 10px;
@@ -1494,7 +1497,7 @@
     }
     &__tabs {
       max-width: 300px;
-      top: -75px;
+      top: 55px;
     }
     &__accord {
       &-content {
