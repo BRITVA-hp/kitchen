@@ -10,7 +10,14 @@ window.addEventListener('DOMContentLoaded', () => {
         accordions = document.querySelectorAll('.contacts__accord-row'),
         accordionsFaq = document.querySelectorAll('.faq__tab-row'),
         tabsMap = document.querySelectorAll('.contacts__tabs-item'),
-        footerMenu = document.querySelector('.footer__menu-header');
+        footerMenu = document.querySelector('.footer__menu-header'),
+        minus = document.querySelectorAll('.offer__minus'),
+        plus = document.querySelectorAll('.offer__plus'),
+        offerTabItems = document.querySelectorAll('.offer__tabs-item'),
+        offerWraps = document.querySelectorAll('.offer__wrap'),
+        offerNext = document.querySelector('.offer__tabs-arrow--next'),
+        offerPrev = document.querySelector('.offer__tabs-arrow--prev');
+        
 
   //Вспомогательные переменные
 
@@ -18,6 +25,81 @@ window.addEventListener('DOMContentLoaded', () => {
   let touchEnd;
   let counterForSwipe = 0;
   let counter = 0;
+  let offerCount = 0;
+
+  // табы и слайдер в секции offer
+
+  offerNext.addEventListener('click', () => {
+    offerCount++;
+    offerTabItems.forEach((offerTabItem, i) => {
+      if (offerTabItem.classList.contains('offer__tabs-item--active')) {
+        offerWraps.forEach((offerWrap, y) => {
+          if (i === y) {
+            let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+            if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
+              offerCount--;
+            }
+            offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount + 20}px)`;
+          }
+        });
+      }
+    });
+  });
+
+  offerPrev.addEventListener('click', () => {
+    offerCount--;
+    offerTabItems.forEach((offerTabItem, i) => {
+      if (offerTabItem.classList.contains('offer__tabs-item--active')) {
+        offerWraps.forEach((offerWrap, y) => {
+          if (i === y) {
+            let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+            if (offerCount < 0) {
+              offerCount = 0;
+            }
+            offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount }px)`;
+          }
+        });
+      }
+    });
+  });
+
+  offerTabItems.forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      offerCount = 0;
+      offerWraps.forEach((offerWrap, y) => {
+        offerWrap.firstElementChild.style.transform = `translateX(0px)`;
+
+      });
+      clearActiveClass(offerTabItems, 'offer__tabs-item--active');
+      clearActiveClass(offerWraps, 'offer__wrap--active');
+      tab.classList.add('offer__tabs-item--active');
+      offerWraps.forEach((offerWrap, y) => {
+        if (i === y) {
+          offerWrap.classList.add('offer__wrap--active');
+        }
+      });
+    });
+  });
+
+
+  // количество в секции offer
+
+  plus.forEach(item => {
+    item.addEventListener('click', () => {
+      let countOffer = +item.previousElementSibling.getAttribute('value') + 1;
+      item.previousElementSibling.setAttribute('value', `${ countOffer}`); 
+    });
+  });
+
+  minus.forEach(item => {
+    item.addEventListener('click', () => {
+      let countOffer = +item.nextElementSibling.getAttribute('value') - 1;
+      if (countOffer  <= 1) {
+        countOffer = 1;
+      }
+      item.nextElementSibling.setAttribute('value', `${ countOffer}`);
+    });
+  });
 
   // меню в футере
 
@@ -166,7 +248,7 @@ window.addEventListener('DOMContentLoaded', () => {
   accordion(accordions, 'contacts__accord-row--active', 20);
   accordion(accordionsFaq, 'faq__tab-row--active', 20);
 
-  //Свайп табов с прогрессом
+  //Свайп слайдера с прогрессом
 
   function swipeProgress(slWind, slField, slSlides, slProgress, slideWidth) {
     const sliderProgressWind = document.querySelector(slWind),
@@ -261,6 +343,7 @@ window.addEventListener('DOMContentLoaded', () => {
   swipeTabs();
 
   // Переключение табов в секции slider
+
   tabs.forEach((tab, i) => {
     tab.addEventListener('click', () => {
       clearActiveClass(tabs, 'slider__tab--active');
