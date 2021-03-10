@@ -15,7 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
         offerTabItems = document.querySelectorAll('.offer__tabs-item'),
         offerWraps = document.querySelectorAll('.offer__wrap'),
         offerNext = document.querySelector('.offer__tabs-arrow--next'),
-        offerPrev = document.querySelector('.offer__tabs-arrow--prev');
+        offerPrev = document.querySelector('.offer__tabs-arrow--prev'),
+        filter = document.querySelector('.filter__text--mobile');
         
 
   //Вспомогательные переменные
@@ -26,40 +27,74 @@ window.addEventListener('DOMContentLoaded', () => {
   let counter = 0;
   let offerCount = 0;
 
+  // фильтр на мобилке
+
+  filter.addEventListener('click', () => {
+    filter.classList.toggle('filter__text--mobile-active');
+    if (filter.classList.contains('filter__text--mobile-active')) {
+      filter.parentElement.style.maxHeight = `${filter.parentElement.scrollHeight}px`;
+    } else {
+      filter.parentElement.style.maxHeight = `50px`;
+    }
+    
+  });
+
   // табы и слайдер в секции offer
 
   offerNext.addEventListener('click', () => {
     offerCount++;
-    offerTabItems.forEach((offerTabItem, i) => {
-      if (offerTabItem.classList.contains('offer__tabs-item--active')) {
-        offerWraps.forEach((offerWrap, y) => {
-          if (i === y) {
-            let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
-            if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
-              offerCount--;
+    if (offerTabItems.length > 0) {
+      offerTabItems.forEach((offerTabItem, i) => {
+        if (offerTabItem.classList.contains('offer__tabs-item--active')) {
+          offerWraps.forEach((offerWrap, y) => {
+            if (i === y) {
+              let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+              if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
+                offerCount--;
+              }
+              offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount + 20}px)`;
             }
-            offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount + 20}px)`;
+          });
+        }
+      });
+    } else {
+        offerWraps.forEach(offerWrap => {
+          let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+          if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
+            offerCount--;
           }
+          offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount + 20}px)`;
+      
         });
       }
-    });
   });
 
   offerPrev.addEventListener('click', () => {
     offerCount--;
-    offerTabItems.forEach((offerTabItem, i) => {
-      if (offerTabItem.classList.contains('offer__tabs-item--active')) {
-        offerWraps.forEach((offerWrap, y) => {
-          if (i === y) {
-            let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
-            if (offerCount < 0) {
-              offerCount = 0;
+    if (offerTabItems.length > 0) {
+      offerTabItems.forEach((offerTabItem, i) => {
+        if (offerTabItem.classList.contains('offer__tabs-item--active')) {
+          offerWraps.forEach((offerWrap, y) => {
+            if (i === y) {
+              let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+              if (offerCount < 0) {
+                offerCount = 0;
+              }
+              offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount }px)`;
             }
-            offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount }px)`;
-          }
-        });
-      }
-    });
+          });
+        }
+      });
+    } else {
+      offerWraps.forEach(offerWrap => {
+        let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+        if (offerCount < 0) {
+          offerCount = 0;
+        }
+        offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount }px)`;
+      
+      });
+    }
   });
 
   offerTabItems.forEach((tab, i) => {

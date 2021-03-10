@@ -90,6 +90,30 @@
 }
 
 @media screen and (max-width: 1500px) {
+  .filter {
+    height: 70px;
+    flex-wrap: wrap;
+    &__veg {
+      p {
+        margin-right: 10px;
+      }
+    }
+    &__input {
+      &-text {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__item {
+      padding: 0 25px;
+    }
+  }
   .faq {
     &__container {
       padding: 120px;
@@ -245,6 +269,22 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .filter {
+    height: auto;
+    display: block;
+    padding: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    &__item {
+      justify-content: center;
+      border: none;
+      margin-bottom: 15px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
   .faq {
     &__leaf {
       &--2 {
@@ -284,6 +324,16 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .element {
+    &__title {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+    &__row {
+      grid-template-columns: repeat(auto-fill, 277px);
+      column-gap: 2px;
+    }
+  }
   .categories {
     &__img {
       width: 230px;
@@ -674,6 +724,7 @@
 }
 @media screen and (max-width: 992px) {
   .categories {
+    background-image: none;
     &__leaf {
       &--1 {
         top: 18%;
@@ -1400,6 +1451,53 @@
 }
 
 @media screen and (max-width: 575px) {
+  .filter {
+    padding-top: 0;
+    max-height: 50px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    &__select, &__option {
+      font-size: 14px;
+    }
+    &__text {
+      font-size: 14px;
+      &--mobile {
+        padding-top: 15px;
+        display: block;
+        font-size: 16px;
+      }
+    }
+    &__item {
+      padding: 0;
+    }
+    &__select {
+      font-size: 14px;
+    }
+  }
+  .element {
+    padding-top: 40px;
+    &__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    &-offer {
+      &__row-top {
+        display: flex !important;
+        margin-bottom: 30px;
+      }
+      &__arrows {
+        display: none;
+      }
+    }
+    &__row {
+      grid-template-columns: repeat(auto-fill, 142px);
+      row-gap: 20px;
+    }
+  }
   .categories {
     &__arrow {
       svg {

@@ -1,6 +1,10 @@
 .categories {
   padding-top: 70px;
   position: relative;
+  background-color: $light;
+  background-image: url(../img/advantages/bg.png);
+  background-position-y: -130px;
+  background-repeat: no-repeat;
   &__leaf {
     position: absolute;
     z-index: 3;
