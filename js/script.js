@@ -5,8 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
         next = document.querySelector('.slider__arrow--next'),
         prev = document.querySelector('.slider__arrow--prev'),
         sliderWind = document.querySelector('.slider__wrap--tab'),
-        sliderField = sliderWind.querySelector('.slider__row--tab'),
-        sliderFieldWidth = +window.getComputedStyle(sliderField).width.replace(/\D/g, ''),
+        sliderField = document.querySelector('.slider__row--tab'),
         accordions = document.querySelectorAll('.contacts__accord-row'),
         accordionsFaq = document.querySelectorAll('.faq__tab-row'),
         tabsMap = document.querySelectorAll('.contacts__tabs-item'),
@@ -312,6 +311,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // свайп табов в секции slider
 
   function swipeTabs() {
+    let sliderFieldWidth = +window.getComputedStyle(sliderField).width.replace(/\D/g, '');
     sliderWind.addEventListener('touchstart', (e) => {
       touchStart = e.changedTouches[0].pageX;
     });

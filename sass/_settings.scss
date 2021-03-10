@@ -75,3 +75,35 @@ input {
     outline: none;
   }
 }
+.body {
+  &__nav {
+    display: flex;
+    padding-top: 40px;
+    align-items: center;
+    &-link {
+      font-size: 16px;
+      line-height: 130%;
+      color: #9AACB4;
+      cursor: pointer;
+    }
+    &-arrow {
+      margin-left: 10px;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.bg {
+  &-light {
+    background-color: $light;
+  }
+}
+.header--non-shadow {
+  box-shadow: none;
+}
+.border-bottom {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #CEE5EE;
+}

@@ -1,0 +1,129 @@
+.categories {
+  padding-top: 70px;
+  position: relative;
+  &__leaf {
+    position: absolute;
+    z-index: 3;
+    &--1 {
+      left: 2%;
+      bottom: 20%;
+    }
+    &--2 {
+      bottom: -9%;
+      left: 20%;
+    }
+    &--3 {
+      top: 42%;
+      left: 26%;
+    }
+  }
+  &__container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+    grid-gap: 25px;
+    grid-template-areas: 
+      'catTitle catTitle . .'
+      'catImg catCard-1 catCard-2 catCard-3'
+      'catImg catCard-4 catCard-5 catCard-6'
+    ;
+  }
+  &__img {
+    grid-area: catImg;
+    background: linear-gradient(63.11deg, #6A1DE9 0.21%, #8F31B1 59.16%);
+    border-radius: 10px;
+    padding: 70px 35px 0;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      width: 470px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &-title {
+      font-family: 'Nunito-900';
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 36px;
+      line-height: 130%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+    &-subtitle {
+      font-family: 'Nunito-600';
+      font-size: 24px;
+      line-height: 130%;
+      text-align: center;
+      text-transform: uppercase;
+      margin: auto;
+    }
+  }
+  &__title {
+    grid-area: catTitle;
+    margin-bottom: 20px;
+  }
+  &__card {
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    &--1 {
+      grid-area: catCard-1;
+    }
+    &--2 {
+      grid-area: catCard-2;
+    }
+    &--3 {
+      grid-area: catCard-3;
+    }
+    &--4 {
+      grid-area: catCard-4;
+    }
+    &--5 {
+      grid-area: catCard-5;
+    }
+    &--6 {
+      grid-area: catCard-6;
+    }
+    &:hover {
+      .categories__card-footer {
+        background-color: $green;
+        p {
+          color: #fff;
+        }
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    &-img {
+      width: 370px;
+      height: 228px;
+      border-radius: 10px 10px 0px 0px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-text {
+      transition: 0.3s;
+      font-family: 'Nunito-900';
+      font-size: 24px;
+      line-height: 130%;
+    }
+    &-footer {
+      background-color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+    }
+  }
+}
