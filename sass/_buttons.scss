@@ -12,6 +12,8 @@ button {
   transition: .3s;
   display: inline-block;
   cursor: pointer;
+  text-align: center;
+  font-family: "Nunito";
   &--green {
     background-color: $green;
     border-color: $green;

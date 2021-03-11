@@ -356,7 +356,9 @@ button:focus {
   border: 2px solid transparent;
   transition: .3s;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  text-align: center;
+  font-family: "Nunito"; }
   .button--green {
     background-color: #039E25;
     border-color: #039E25;
@@ -1622,6 +1624,305 @@ input[type=number] {
     font-size: 24px;
     line-height: 130%; }
 
+.product {
+  padding-top: 70px;
+  background-color: #F3F6FD;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: 111%;
+  padding-bottom: 75px; }
+  .product-comments {
+    display: none; }
+    .product-comments--active {
+      display: block;
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s; }
+  .product__hit-img {
+    margin-left: auto;
+    display: none; }
+  .product-offer {
+    margin-top: -480px;
+    background-color: transparent;
+    padding-bottom: 0; }
+  .product__tabs {
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 106.03%);
+    border-radius: 0 160px;
+    padding-bottom: 500px; }
+    .product__tabs__row {
+      margin-bottom: 55px; }
+    .product__tabs-comment {
+      border-bottom: 1px solid #CEE5EE;
+      padding-bottom: 50px;
+      margin-bottom: 30px; }
+      .product__tabs-comment:last-child {
+        margin-bottom: 0; }
+      .product__tabs-comment-img {
+        margin-right: 25px; }
+      .product__tabs-comment-date {
+        font-size: 18px;
+        line-height: 130%;
+        color: #CACACA;
+        margin-bottom: 15px; }
+      .product__tabs-comment-name {
+        font-family: 'Nunito-Bold';
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 25px; }
+      .product__tabs-comment-text {
+        font-size: 18px;
+        line-height: 130%;
+        max-width: 500px; }
+      .product__tabs-comment__row {
+        justify-content: flex-start; }
+        .product__tabs-comment__row--stars {
+          justify-content: flex-start;
+          margin-bottom: 15px; }
+          .product__tabs-comment__row--stars img {
+            margin-right: 10px; }
+            .product__tabs-comment__row--stars img:last-child {
+              margin-right: 0; }
+    .product__tabs-box {
+      flex-basis: 45%; }
+    .product__tabs-container {
+      margin-top: -50px; }
+    .product__tabs-advice {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid #B9CCD3;
+      border-radius: 8px;
+      padding: 25px 110px 15px 40px;
+      flex-basis: 51%;
+      align-items: flex-start; }
+      .product__tabs-advice__row {
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 20px; }
+      .product__tabs-advice--mobile {
+        background: #FFFFFF;
+        border: 1px solid #B9CCD3;
+        border-radius: 8px;
+        padding: 20px;
+        display: none; }
+      .product__tabs-advice--author {
+        display: none;
+        padding: 25px 40px; }
+      .product__tabs-advice-button {
+        padding: 10px 40px;
+        margin-left: auto; }
+      .product__tabs-advice-city {
+        justify-content: flex-start;
+        align-items: center; }
+        .product__tabs-advice-city-text {
+          font-family: 'Nunito-Bold';
+          font-size: 14px;
+          line-height: 19px;
+          text-transform: capitalize;
+          color: #6F6F6F; }
+        .product__tabs-advice-city img {
+          margin-right: 5px; }
+      .product__tabs-advice-img {
+        margin-right: 25px; }
+        .product__tabs-advice-img--mobile {
+          width: 68px;
+          height: 68px;
+          margin-right: 20px; }
+      .product__tabs-advice-title {
+        font-family: 'Nunito-900';
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 25px; }
+        .product__tabs-advice-title--mobile {
+          font-family: 'Nunito-900';
+          font-size: 16px;
+          line-height: 130%;
+          margin-bottom: 10px; }
+        .product__tabs-advice-title--author {
+          margin-bottom: 0; }
+      .product__tabs-advice-name {
+        font-family: 'Nunito-Bold';
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 5px; }
+        .product__tabs-advice-name--mobile {
+          font-family: 'Nunito-Bold';
+          font-size: 12px;
+          line-height: 130%;
+          max-width: 175px; }
+        .product__tabs-advice-name--author {
+          font-family: 'Nunito-Bold';
+          font-size: 16px;
+          line-height: 130%;
+          text-transform: capitalize;
+          color: #039E25;
+          margin-bottom: 15px; }
+      .product__tabs-advice-text {
+        font-family: 'Nunito';
+        font-style: italic;
+        font-size: 18px;
+        line-height: 130%;
+        max-width: 490px; }
+        .product__tabs-advice-text--mobile {
+          font-style: italic;
+          font-size: 12px;
+          line-height: 130%;
+          max-width: 260px; }
+    .product__tabs-text {
+      font-size: 18px;
+      line-height: 130%;
+      max-width: 710px;
+      display: none; }
+      .product__tabs-text--comment {
+        font-family: 'Nunito-Bold';
+        font-size: 24px;
+        line-height: 130%; }
+      .product__tabs-text--active {
+        display: block;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s; }
+    .product__tabs-title {
+      font-size: 24px;
+      line-height: 130%;
+      text-align: center;
+      color: #A1A8B9; }
+    .product__tabs-header {
+      justify-content: flex-start;
+      border-bottom: 1px solid #CEE5EE;
+      align-items: center;
+      margin-bottom: 45px; }
+    .product__tabs-tab {
+      margin-right: 60px;
+      display: flex;
+      align-items: center;
+      padding-bottom: 10px;
+      cursor: pointer; }
+      .product__tabs-tab--active {
+        color: #2D2D2D;
+        border-bottom: 2px solid #74029E; }
+        .product__tabs-tab--active p {
+          color: #2D2D2D; }
+      .product__tabs-tab-value {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: #74029E;
+        font-family: 'Nunito-Bold';
+        font-size: 12px;
+        line-height: 130%;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px; }
+      .product__tabs-tab:last-child {
+        margin-right: 0; }
+  .product__input {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 5px;
+    font-family: 'Nunito-Bold';
+    font-size: 22px;
+    line-height: 130%;
+    border: 1px solid #B9CCD3;
+    border-radius: 10px;
+    margin: 0 15px;
+    cursor: default; }
+  .product__price-button {
+    padding: 12px 45px; }
+  .product__price-quantity {
+    display: flex;
+    align-items: center; }
+  .product__price-text {
+    font-family: 'Nunito-Bold';
+    font-size: 22px;
+    line-height: 130%;
+    margin-left: auto;
+    margin-right: 70px; }
+  .product__box-text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 50px; }
+  .product__value-item {
+    width: 56px;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px solid #D4AAE3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; }
+    .product__value-item:last-child {
+      margin-right: 0; }
+    .product__value-item-text {
+      text-align: center;
+      font-family: 'Nunito-Bold';
+      font-size: 14px;
+      line-height: 100%;
+      color: #74029E; }
+      .product__value-item-text--small {
+        font-family: 'Nunito-600';
+        font-size: 10px;
+        color: #2D2D2D; }
+  .product__value-text {
+    max-width: 200px;
+    margin-right: 50px; }
+  .product__features__card {
+    margin-right: 35px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .product__features__card-title {
+      font-family: 'Nunito-600';
+      font-size: 12px;
+      line-height: 130%;
+      color: #6F6F6F; }
+    .product__features__card:last-child {
+      margin-right: 0; }
+  .product-offer__card-die {
+    font-size: 16px; }
+  .product__row {
+    justify-content: flex-start;
+    margin-bottom: 80px; }
+    .product__row--price {
+      align-items: center;
+      width: 630px; }
+    .product__row--value {
+      margin-bottom: 40px;
+      justify-content: flex-start; }
+    .product__row--features {
+      margin-bottom: 50px;
+      justify-content: flex-start; }
+    .product__row--hit {
+      margin-bottom: 20px;
+      justify-content: flex-start; }
+    .product__row--stars {
+      margin-bottom: 30px; }
+      .product__row--stars img {
+        width: 24px;
+        margin-right: 10px; }
+  .product__title {
+    font-family: 'Nunito-900';
+    font-size: 36px;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 50px; }
+  .product__img {
+    width: 700px;
+    height: 530px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    margin-right: 80px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -1793,6 +2094,23 @@ input {
     right: -100px; } }
 
 @media screen and (max-width: 1400px) {
+  .product__tabs-advice--say {
+    padding: 25px 40px; }
+  .product__box-text {
+    margin-bottom: 35px; }
+  .product__row--price {
+    width: auto; }
+  .product__row--hit {
+    margin-bottom: 15px; }
+  .product__row--stars {
+    margin-bottom: 25px; }
+  .product__row--features {
+    margin-bottom: 25px; }
+  .product__row--value {
+    margin-bottom: 30px; }
+  .product__img {
+    width: 500px;
+    height: 375px; }
   .categories__card {
     width: 255px; }
     .categories__card-footer {
@@ -1903,6 +2221,56 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .product__tabs-advice {
+    padding: 20px; }
+    .product__tabs-advice-text {
+      font-size: 14px; }
+    .product__tabs-advice-img {
+      margin-right: 20px; }
+    .product__tabs-advice-name {
+      font-size: 14px; }
+      .product__tabs-advice-name--author {
+        font-size: 14px; }
+    .product__tabs-advice-title {
+      font-size: 16px;
+      margin-bottom: 15px; }
+      .product__tabs-advice-title--author {
+        font-size: 16px; }
+  .product__tabs__row {
+    margin-bottom: 40px; }
+  .product__tabs-header {
+    margin-bottom: 30px; }
+  .product__tabs-tab-value {
+    font-size: 10px;
+    width: 21px;
+    height: 21px; }
+  .product__tabs-comment__row--stars img {
+    width: 20px; }
+  .product__tabs-comment-text {
+    font-size: 16px; }
+  .product__tabs-comment-date {
+    font-size: 14px;
+    margin-bottom: 5px; }
+  .product__tabs-comment-name {
+    font-size: 16px;
+    margin-bottom: 15px; }
+  .product__tabs-title {
+    font-size: 20px; }
+  .product__tabs-text {
+    font-size: 20px; }
+    .product__tabs-text--desc {
+      font-size: 16px; }
+  .product__price-text {
+    margin: 0; }
+  .product__title {
+    font-size: 26px;
+    margin-bottom: 40px; }
+  .product__img {
+    width: 430px;
+    height: 320px;
+    margin-right: 40px; }
+  .product__value-text {
+    margin-right: 25px; }
   .element__title {
     font-size: 28px;
     margin-bottom: 40px; }
@@ -2159,6 +2527,32 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .product {
+    background-position-y: 100%; }
+    .product__tabs-container {
+      margin-top: 0; }
+    .product__tabs-advice {
+      order: -1;
+      margin-bottom: 40px; }
+    .product__tabs__row {
+      flex-direction: column;
+      align-items: center; }
+    .product__value-text {
+      margin-bottom: 10px;
+      margin-right: 0; }
+    .product__img {
+      margin-right: 0;
+      margin-bottom: 25px;
+      width: 525px;
+      height: 350px; }
+    .product__title {
+      text-align: center; }
+    .product__row {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0; }
+      .product__row--value {
+        flex-direction: column; }
   .categories {
     background-image: none; }
     .categories__leaf--1 {
@@ -2601,6 +2995,128 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .path {
+    display: none; }
+  .product {
+    padding-bottom: 60px;
+    padding-top: 40px;
+    background-position-y: 125%; }
+    .product-offer {
+      margin-top: 0; }
+    .product__tabs {
+      padding-bottom: 0;
+      border-radius: 0;
+      background: #F3F6FD; }
+      .product__tabs__row {
+        margin-bottom: 20px; }
+      .product__tabs-text--desc {
+        font-size: 14px; }
+      .product__tabs-header {
+        margin-bottom: 20px; }
+      .product__tabs-box {
+        width: 100%; }
+      .product__tabs-text--comment {
+        display: none; }
+      .product__tabs-comment {
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px; }
+        .product__tabs-comment-box {
+          max-width: 230px; }
+        .product__tabs-comment-date {
+          font-size: 10px; }
+        .product__tabs-comment-name {
+          font-size: 14px;
+          margin-bottom: 10px; }
+        .product__tabs-comment-text {
+          margin-left: -69px;
+          font-size: 14px; }
+        .product__tabs-comment__row--stars {
+          margin-bottom: 5px; }
+          .product__tabs-comment__row--stars img {
+            width: 14px;
+            height: 14px;
+            margin-right: 5px; }
+        .product__tabs-comment-img {
+          width: 44px;
+          height: 44px; }
+      .product__tabs-tab {
+        margin-right: 20px; }
+        .product__tabs-tab-value {
+          display: none; }
+      .product__tabs-title {
+        font-size: 14px; }
+      .product__tabs-advice {
+        align-items: flex-start; }
+        .product__tabs-advice--mobile {
+          display: block;
+          order: -1;
+          margin-bottom: 40px; }
+        .product__tabs-advice--say {
+          display: none; }
+        .product__tabs-advice--author {
+          flex-wrap: wrap; }
+        .product__tabs-advice-title--author {
+          max-width: 160px; }
+        .product__tabs-advice-img {
+          width: 70px;
+          height: 70px; }
+        .product__tabs-advice-button {
+          margin: auto;
+          margin-top: 20px; }
+    .product__price-button {
+      margin-top: 35px; }
+    .product__input {
+      font-size: 18px; }
+    .product__hit-img {
+      display: block; }
+    .product__features__card {
+      margin-right: 25px;
+      height: 50px; }
+      .product__features__card:last-child {
+        display: none; }
+      .product__features__card-title {
+        font-size: 10px; }
+      .product__features__card-subtitle {
+        font-size: 10px;
+        font-family: "Nunito-600"; }
+    .product__value-text {
+      font-size: 12px;
+      max-width: 170px; }
+    .product__box {
+      display: flex;
+      flex-direction: column; }
+      .product__box-text {
+        order: 3;
+        font-size: 12px;
+        max-width: 290px;
+        margin-bottom: 25px; }
+    .product-offer__card-die {
+      font-size: 12px !important;
+      padding: 5px 10px !important; }
+    .product__row--hit {
+      margin-bottom: 10px; }
+    .product__row--stars img {
+      width: 14px !important;
+      height: 14px !important; }
+    .product__row--features {
+      order: 2; }
+    .product__row--value {
+      order: 1;
+      margin-bottom: 20px; }
+    .product__row--price {
+      order: 4;
+      flex-wrap: wrap;
+      max-width: 290px; }
+    .product__title {
+      font-size: 18px;
+      text-align: left;
+      max-width: 290px;
+      margin: auto;
+      margin-bottom: 25px; }
+    .product__img {
+      width: 290px;
+      height: 170px; }
   .filter {
     padding-top: 0;
     max-height: 50px;

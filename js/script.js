@@ -16,7 +16,10 @@ window.addEventListener('DOMContentLoaded', () => {
         offerWraps = document.querySelectorAll('.offer__wrap'),
         offerNext = document.querySelector('.offer__tabs-arrow--next'),
         offerPrev = document.querySelector('.offer__tabs-arrow--prev'),
-        filter = document.querySelector('.filter__text--mobile');
+        filter = document.querySelector('.filter__text--mobile'),
+        productTabs = document.querySelectorAll('.product__tabs-tab'),
+        productTabsTexts = document.querySelectorAll('.product__tabs-text'),
+        productComments = document.querySelector('.product-comments');
         
 
   //Вспомогательные переменные
@@ -27,17 +30,40 @@ window.addEventListener('DOMContentLoaded', () => {
   let counter = 0;
   let offerCount = 0;
 
+  // Табы на странице product
+
+  if (productTabs.length > 0) {
+    productTabs.forEach( (productTab, i) => {
+      productTab.addEventListener('click', () => {
+        clearActiveClass(productTabs, 'product__tabs-tab--active');
+        clearActiveClass(productTabsTexts, 'product__tabs-text--active');
+        if (i == 1) {
+          productComments.classList.add('product-comments--active');
+        } else {
+          productComments.classList.remove('product-comments--active');
+        }
+        productTab.classList.add('product__tabs-tab--active');
+        productTabsTexts.forEach((productTabsText, y) => {
+            if (i == y) {
+              productTabsText.classList.add('product__tabs-text--active');
+            }
+        });
+      });
+    });
+  }  
+
   // фильтр на мобилке
 
-  filter.addEventListener('click', () => {
-    filter.classList.toggle('filter__text--mobile-active');
-    if (filter.classList.contains('filter__text--mobile-active')) {
-      filter.parentElement.style.maxHeight = `${filter.parentElement.scrollHeight}px`;
-    } else {
-      filter.parentElement.style.maxHeight = `50px`;
-    }
-    
-  });
+  if (filter) {
+    filter.addEventListener('click', () => {
+      filter.classList.toggle('filter__text--mobile-active');
+      if (filter.classList.contains('filter__text--mobile-active')) {
+        filter.parentElement.style.maxHeight = `${filter.parentElement.scrollHeight}px`;
+      } else {
+        filter.parentElement.style.maxHeight = `50px`;
+      }
+    });
+  }
 
   // табы и слайдер в секции offer
 
@@ -151,7 +177,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    ymaps.ready(init);
+    if (document.querySelector('#contactsMap')) {
+      ymaps.ready(init);
+    }
     function init(){
         // Создание карты.
         var myMap = new ymaps.Map("contactsMap", {

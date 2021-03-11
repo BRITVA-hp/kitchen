@@ -59,263 +59,188 @@
           <div class="body__nav-arrow"><img src="img/arrowNav.png" alt="arrow"></div>
           <a href="./categories.html" class="body__nav-link hover-text">Меню</a>
           <div class="body__nav-arrow"><img src="img/arrowNav.png" alt="arrow"></div>
-          <a href="#" class="body__nav-link hover-text">Супы</a>
+          <a href="./element.html" class="body__nav-link hover-text">Супы</a>
+          <div class="body__nav-arrow"><img src="img/arrowNav.png" alt="arrow"></div>
+          <a href="#" class="body__nav-link hover-text">Томатный суп с печеным перцем</a>
         </nav>
       </div>
     </section>
-
-    <section class="section element">
+    
+    <section class="section product">
       <div class="container">
-        <h3 class="element__title">Супы</h3>
+        <h3 class="product__title">Томатный суп с печеным перцем</h3>
+        <div class="product__row row">
+          <div class="product__img"><img src="img/categories/soups.jpg" alt="soup"></div>
 
-        <form action="#" class="filter">
-          <p class="filter__text filter__text--mobile">Раскрыть фильтр</p>
-          <div class="filter__item">
-            <p class="filter__title">Фильтр</p>
-          </div>
-          <div class="filter__item">
-            <input type="text" class="filter__input-text"><input type="text" class="filter__input-text">
-          </div>
-          <div class="filter__item">
-            <label class="filter__hns" for="filterHit"><input checked id="filterHit" name="Hit" type="checkbox" class="filter__input-check"><p class="filter__hns-h">Хит</p></label>
-            <label class="filter__hns" for="filterNew"><input id="filterNew" name="new" type="checkbox" class="filter__input-check"><p class="filter__hns-n">Новинка</p></label>
-            <label class="filter__hns" for="filterStock"><input id="filterStock" name="stock" type="checkbox" class="filter__input-check"><p class="filter__hns-s">Акция</p></label>
-          </div>
-          <div class="filter__item">
-            
-            <label class="filter__veg" for="veg">
-              <img src="img/offer/lf.png" alt="leaf">
-              <p class="filter__text">Вегетарианское</p>
-              <input checked id="veg" type="checkbox" class="filter__input-check">
-              <div></div>
-            </label>
-            
-          </div>
-          <div class="filter__item">
-            <p class="filter__text filter__text--last">Сортировать:</p>
-            <select class="filter__select" name="#" id="#">
-              <option class="filter__option"> по возрастанию цены</option>
-              <option class="filter__option">по рейтингу</option>
-              <option class="filter__option">по еще чему-то</option>
-            </select>
-          </div>
-        </form>
-
-        <p class="element__subtitle">Для вас найдено 5 блюд</p>
-
-          <div class="element__row row">
-            <div class="offer__card element__card">
-              <div class="offer__card-wrap offer__card-wrap--top">
-                <div class="offer__card-img"><img src="img/offer/img.jpg" alt="soup"></div>
-                <div class="offer__row--stars row">
-                  <div class="offer__card-block">
-                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-die offer__card-hit">Хит</div>
-                    <div class="offer__card-die offer__card-new">Новинка</div>
-                    <div class="offer__card-die offer__card-stock">Акция</div>
-                  </div>
-                </div>
-  
-                <p class="offer__card-title">Крем-суп Цукини</p>
-                <p class="offer__card-text">Овощной суп простой в приготовлении, к тому же он вкусный и полезный для пищеварения.</p>
+          <div class="product__box">
+            <div class="product__row--hit row">
+              <div class="offer__card-die product-offer__card-die offer__card-new">Новинка</div>
+              <div class="offer__card-die product-offer__card-die offer__card-stock">Акция</div>
+              <img class="product__hit-img" src="img//offer/lf.png" alt="leaf">
+            </div>
+            <!-- /.product__row--hit -->
+            <div class="product__row--stars offer__card-block">
+              <img src="img/product/star.png" alt="star"><img src="img/product/star.png" alt="star"><img src="img/product/star.png" alt="star"><img src="img/product/star.png" alt="star"><img src="img/product/starEmpty.png" alt="star">
+            </div>
+            <!-- /.product__row--stars -->
+            <div class="product__row--features row">
+              <div class="product__features__card">
+                <div class="product__features__card-title">МАССА <br> ОДНОЙ ПОРЦИИ</div>
+                <div class="product__features__card-subtitle">300 г</div>
               </div>
-              <div class="offer__card-wrap">
-                <div class="offer__row--weight row align-center">
-                  <div class="offer__card-block align-center">
-                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
-                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
-                    <div class="offer__card-weight">300 г</div>
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-weight">226 ккал.</div>
-                  </div>
+              <div class="product__features__card">
+                <div class="product__features__card-title">СРОК <br> ХРАНЕНИЯ</div>
+                <div class="product__features__card-subtitle">48 ч</div>
+              </div>
+              <div class="product__features__card">
+                <div class="product__features__card-title">ТЕМПЕРАТУРА <br> ХРАНЕНИЯ</div>
+                <div class="product__features__card-subtitle">-5..+10 C</div>
+              </div>
+              <div class="product__features__card">
+                <div class="product__features__card-title"><img src="img/offer/lf.png" alt="leaf"></div>
+                <div class="product__features__card-subtitle">ДА</div>
+              </div>
+            </div>
+            <!-- /.product__row--features -->
+            <div class="row product__row--value">
+              <p class="product__value-text"><span class="text-bold">Пищевая ценность, на 100 г.</span> (и в % от суточной нормы)</p>
+              <div class="row product__value-box">
+                <div class="product__value-item">
+                  <p class="product__value-item-text">120 <br> ккал.</p>
                 </div>
-                <div class="offer__card-footer">
-                  <div class="offer__card-footer-item">
-                    <div class="offer__button offer__minus">-</div>
-                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
-                    <div class="offer__button offer__plus">+</div>
-                  </div>
-                  <div class="offer__card-footer-item">99.00 ₽</div>
-                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
+                <div class="product__value-item">
+                  <p class="product__value-item-text">20г. <br> <span class="product__value-item-text--small">Углеводы</span></p>
+                </div>
+                <div class="product__value-item">
+                  <p class="product__value-item-text">5г. <br> <span class="product__value-item-text--small">Белки</span></p>
+                </div>
+                <div class="product__value-item">
+                  <p class="product__value-item-text">4г. <br> <span class="product__value-item-text--small">Жиры</span></p>
                 </div>
               </div>
             </div>
+            <!-- /.row product__row--value -->
+            <p class="product__box-text"><span class="text-bold">Состав:</span><br>Томаты, вода, соус, перец, зелень, кориандр и другие специи и травы</p>
+            <!-- /.product__box-text -->
 
-            <div class="offer__card element__card">
-              <div class="offer__card-wrap offer__card-wrap--top">
-                <div class="offer__card-img"><img src="img/offer/img.jpg" alt="soup"></div>
-                <div class="offer__row--stars row">
-                  <div class="offer__card-block">
-                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-die offer__card-hit">Хит</div>
-                    <div class="offer__card-die offer__card-new">Новинка</div>
-                    <div class="offer__card-die offer__card-stock">Акция</div>
-                  </div>
-                </div>
-  
-                <p class="offer__card-title">Крем-суп Цукини</p>
-                <p class="offer__card-text">Овощной суп простой в приготовлении, к тому же он вкусный и полезный для пищеварения.</p>
+            <form class="row product__row--price">
+              <div class="product__price-quantity">
+                <div class="offer__button offer__minus">-</div>
+                <input readonly class="product__input" type="number" value="1" min="1" max="40" step="1">
+                <div class="offer__button offer__plus">+</div>
               </div>
-              <div class="offer__card-wrap">
-                <div class="offer__row--weight row align-center">
-                  <div class="offer__card-block align-center">
-                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
-                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
-                    <div class="offer__card-weight">300 г</div>
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-weight">226 ккал.</div>
-                  </div>
-                </div>
-                <div class="offer__card-footer">
-                  <div class="offer__card-footer-item">
-                    <div class="offer__button offer__minus">-</div>
-                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
-                    <div class="offer__button offer__plus">+</div>
-                  </div>
-                  <div class="offer__card-footer-item">99.00 ₽</div>
-                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
-                </div>
+              <p class="product__price-text">69.00 ₽</p>
+              <button class="button button--green product__price-button">В корзину</button>
+            </form>
+            <!-- /.row product__row--price -->
+          </div>
+          <!-- /.product__box -->
+        </div>
+        <!-- /.product__row -->
+      </div>
+    </section>
+    <!-- /.section product -->
+
+    <section class="section product__tabs">
+      <div class="product__tabs-container container">
+        <div class="product__tabs__row row">
+          <div class="product__tabs-box">
+            <div class="row product__tabs-header">
+              <p class="product__tabs-tab product__tabs-title product__tabs-tab--active">Описание</p>
+
+              <div class="product__tabs-tab">
+                <p class="product__tabs-title">Отзывы</p>
+                <div class="product__tabs-tab-value"><span>3</span></div>
               </div>
             </div>
-
-            <div class="offer__card element__card">
-              <div class="offer__card-wrap offer__card-wrap--top">
-                <div class="offer__card-img"><img src="img/offer/img.jpg" alt="soup"></div>
-                <div class="offer__row--stars row">
-                  <div class="offer__card-block">
-                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-die offer__card-hit">Хит</div>
-                    <div class="offer__card-die offer__card-new">Новинка</div>
-                    <div class="offer__card-die offer__card-stock">Акция</div>
-                  </div>
-                </div>
-  
-                <p class="offer__card-title">Крем-суп Цукини</p>
-                <p class="offer__card-text">Овощной суп простой в приготовлении, к тому же он вкусный и полезный для пищеварения.</p>
-              </div>
-              <div class="offer__card-wrap">
-                <div class="offer__row--weight row align-center">
-                  <div class="offer__card-block align-center">
-                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
-                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
-                    <div class="offer__card-weight">300 г</div>
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-weight">226 ккал.</div>
-                  </div>
-                </div>
-                <div class="offer__card-footer">
-                  <div class="offer__card-footer-item">
-                    <div class="offer__button offer__minus">-</div>
-                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
-                    <div class="offer__button offer__plus">+</div>
-                  </div>
-                  <div class="offer__card-footer-item">99.00 ₽</div>
-                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="offer__card element__card">
-              <div class="offer__card-wrap offer__card-wrap--top">
-                <div class="offer__card-img"><img src="img/offer/img.jpg" alt="soup"></div>
-                <div class="offer__row--stars row">
-                  <div class="offer__card-block">
-                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-die offer__card-hit">Хит</div>
-                    <div class="offer__card-die offer__card-new">Новинка</div>
-                    <div class="offer__card-die offer__card-stock">Акция</div>
-                  </div>
-                </div>
-  
-                <p class="offer__card-title">Крем-суп Цукини</p>
-                <p class="offer__card-text">Овощной суп простой в приготовлении, к тому же он вкусный и полезный для пищеварения.</p>
-              </div>
-              <div class="offer__card-wrap">
-                <div class="offer__row--weight row align-center">
-                  <div class="offer__card-block align-center">
-                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
-                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
-                    <div class="offer__card-weight">300 г</div>
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-weight">226 ккал.</div>
-                  </div>
-                </div>
-                <div class="offer__card-footer">
-                  <div class="offer__card-footer-item">
-                    <div class="offer__button offer__minus">-</div>
-                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
-                    <div class="offer__button offer__plus">+</div>
-                  </div>
-                  <div class="offer__card-footer-item">99.00 ₽</div>
-                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="offer__card element__card">
-              <div class="offer__card-wrap offer__card-wrap--top">
-                <div class="offer__card-img"><img src="img/offer/img.jpg" alt="soup"></div>
-                <div class="offer__row--stars row">
-                  <div class="offer__card-block">
-                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-die offer__card-hit">Хит</div>
-                    <div class="offer__card-die offer__card-new">Новинка</div>
-                    <div class="offer__card-die offer__card-stock">Акция</div>
-                  </div>
-                </div>
-  
-                <p class="offer__card-title">Крем-суп Цукини</p>
-                <p class="offer__card-text">Овощной суп простой в приготовлении, к тому же он вкусный и полезный для пищеварения.</p>
-              </div>
-              <div class="offer__card-wrap">
-                <div class="offer__row--weight row align-center">
-                  <div class="offer__card-block align-center">
-                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
-                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
-                    <div class="offer__card-weight">300 г</div>
-                  </div>
-                  <div class="offer__card-block">
-                    <div class="offer__card-weight">226 ккал.</div>
-                  </div>
-                </div>
-                <div class="offer__card-footer">
-                  <div class="offer__card-footer-item">
-                    <div class="offer__button offer__minus">-</div>
-                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
-                    <div class="offer__button offer__plus">+</div>
-                  </div>
-                  <div class="offer__card-footer-item">99.00 ₽</div>
-                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
-                </div>
-              </div>
+            <div class="product__tabs-content">
+              <p class="product__tabs-text product__tabs-text--desc product__tabs-text--active">Томатный суп — суп, приготовленный из томатов. Часто используется как ингредиент в более сложных блюдах, и, в отличие от множества других острых супов, может подаваться как горячим, так и холодным. Его обычно делают из кусочков томата, или из пюре томата, или из того и другого.</p>
+              <p class="product__tabs-text product__tabs-text--comment">Ниже можете ознакомится с отзывами наших покупателей</p>
             </div>
           </div>
+
+          <div class="product__tabs-advice product__tabs-advice--say">
+            <div class="product__tabs-advice-img product__tabs-advice-img--say"><img src="img/product/Sergey.png" alt="Sergey Pivovarov"></div>
+            <div class="product__tabs-advice-content">
+              <p class="product__tabs-advice-title product__tabs-advice-title--say">СОВЕТ ОТ ШЕФ-ПОВАРА</p>
+              <p class="product__tabs-advice-name product__tabs-advice-name--say">Сергей Пивоваров, повар кофейни-партнера</p>
+              <p class="product__tabs-advice-text">Этот суп идеально сочетается со сметаной, которую вы можете купить в фермерском каталоге нашего магазина!</p>
+            </div>
+          </div>
+
+          <div class="product__tabs-advice--mobile">
+            <p class="product__tabs-advice-title--mobile">СОВЕТ ОТ  ШЕФ-ПОВАРА</p>
+            <div class="product__tabs-advice__row row">
+              <div class="product__tabs-advice-img--mobile"><img src="img/product/Sergey.png" alt="Sergey"></div>
+              <p class="product__tabs-advice-name--mobile">Сергей Пивоваров, повар кофейни-партнера</p>
+            </div>
+            <p class="product__tabs-advice-text--mobile">Этот суп идеально сочетается со сметаной, которую вы можете купить в фермерском каталоге нашего магазина!</p>
+          </div>
+          <!-- /.product__tabs-advice -->
+
+          <div class="product__tabs-advice product__tabs-advice--author">
+            <div class="product__tabs-advice-img"><img src="img/product/Sergey.png" alt="Sergey Pivovarov"></div>
+            <div class="product__tabs-advice-content">
+              <p class="product__tabs-advice-title product__tabs-advice-title--author">Произведено на ферме</p>
+              <p class="product__tabs-advice-name product__tabs-advice-name--author">СЕРГЕЯ ПИВОВАРОВА</p>
+              <div class="row product__tabs-advice-city">
+                <img src="img/product/here.png" alt="here">
+                <p class="product__tabs-advice-city-text">Тверская область</p>
+              </div>
+            </div>
+            <button class="product__tabs-advice-button button button--green">Подробнее</button>
+          </div>
+          <!-- /.product__tabs-advice -->
+        </div>
+
+        <div class="product-comments">
+          <div class="product__tabs-comment">
+            <div class="row product__tabs-comment__row">
+              <div class="product__tabs-comment-img"><img src="img/product/photo.png" alt="photo"></div>
+            <div class="product__tabs-comment-box">
+              <div class="row product__tabs-comment__row--stars">
+                <img src="img/product/star.png" alt="star">
+                <img src="img/product/star.png" alt="star">
+                <img src="img/product/star.png" alt="star">
+                <img src="img/product/star.png" alt="star">
+                <img src="img/product/starEmpty.png" alt="star">
+              </div>
+              <p class="product__tabs-comment-date">12.12.2020</p>
+              <p class="product__tabs-comment-name">Ульяна Комарова</p>
+              <p class="product__tabs-comment-text">Этот суп идеально сочетается со сметаной, которую вы можете купить в фермерском каталоге нашего магазина!</p>
+            </div>
+            </div>
+          </div>
+          <!-- /.product__tabs-comment -->
+          <div class="product__tabs-comment">
+            <div class="row product__tabs-comment__row">
+              <div class="product__tabs-comment-img"><img src="img/product/photo1.png" alt="photo"></div>
+            <div class="product__tabs-comment-box">
+              <div class="row product__tabs-comment__row--stars">
+                <img src="img/product/star.png" alt="star">
+                <img src="img/product/star.png" alt="star">
+                <img src="img/product/star.png" alt="star">
+                <img src="img/product/star.png" alt="star">
+                <img src="img/product/starEmpty.png" alt="star">
+              </div>
+              <p class="product__tabs-comment-date">12.12.2020</p>
+              <p class="product__tabs-comment-name">Евгений Кудрявцев</p>
+              <p class="product__tabs-comment-text">Этот суп идеально сочетается со сметаной, которую вы можете купить в фермерском каталоге нашего магазина!</p>
+            </div>
+            </div>
+          </div>
+          <!-- /.product__tabs-comment -->
+        </div>
 
       </div>
     </section>
-    <!-- /.section element -->
 
-    <section class="section offer">
+    <section class="section product-offer offer">
       <div class="offer__container container">
-        <div class="offer__leaf offer__leaf--1"><img src="img/offer/leaf.png" alt="leaf"></div>
         <div class="offer__leaf offer__leaf--2"><img src="img/offer/leaf1.png" alt="leaf"></div>
 
           <div class="offer__tabs-block element-offer__row-top row align-center">
-            <h3 class="section__title">Ранее вы смотрели</h3>
+            <h3 class="section__title">Похожие товары</h3>
             <div class="element-offer__arrows d-flex">
               <div class="offer__tabs-arrow offer__tabs-arrow--prev">
                 <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -631,6 +556,5 @@
   <!-- /.footer section -->
   
   <script src="js/script.js"></script>
-
 </body>
 </html>
