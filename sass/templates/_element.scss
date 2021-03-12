@@ -92,6 +92,8 @@
     font-family: 'Nunito-Bold';
     font-size: 18px;
     line-height: 130%;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
     &--mobile {
       text-align: center;
       margin-bottom: 10px;

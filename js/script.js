@@ -20,7 +20,12 @@ window.addEventListener('DOMContentLoaded', () => {
         filtersWrap = document.querySelector('.filter'),
         productTabs = document.querySelectorAll('.product__tabs-tab'),
         productTabsTexts = document.querySelectorAll('.product__tabs-text'),
-        productComments = document.querySelector('.product-comments');
+        productComments = document.querySelector('.product-comments'),
+        header = document.querySelector('.header'),
+        headerBurger = document.querySelector('.header__burger'),
+        menu = document.querySelector('.menu'),
+        menuLinkMenu = document.querySelector('.menu__link--menu'),
+        menuInner = document.querySelector('.menu__inner');
         
 
   //Вспомогательные переменные
@@ -30,6 +35,39 @@ window.addEventListener('DOMContentLoaded', () => {
   let counterForSwipe = 0;
   let counter = 0;
   let offerCount = 0;
+
+  // появление меню при нажатии на бургер
+
+  menuLinkMenu.addEventListener('click', (e) => {
+    e.preventDefault();
+    menuLinkMenu.firstElementChild.classList.toggle('menu__arrow--active');
+    if (menuLinkMenu.firstElementChild.classList.contains('menu__arrow--active')) {
+      menuInner.style.maxHeight = `${menuInner.scrollHeight}px`;
+      menu.style.maxHeight = `${menu.scrollHeight + menuInner.scrollHeight}px`;
+    } else {
+      menuInner.style.maxHeight = `0px`;
+    }
+  });
+
+  headerBurger.addEventListener('click', () => {
+    headerBurger.classList.toggle('header__burger--active');
+    if (headerBurger.classList.contains('header__burger--active')) {
+      menu.style.maxHeight = `${menu.scrollHeight}px`;
+    } else {
+      menu.style.maxHeight = '0px';
+      menuLinkMenu.firstElementChild.classList.remove('menu__arrow--active');
+    }
+  });
+
+  // header при скролле
+
+  document.addEventListener('scroll', () => {
+    if (document.documentElement.scrollTop > 100) {
+      header.classList.add('header--active');
+    } else {
+      header.classList.remove('header--active');
+    }
+  });
 
   // Табы на странице product
 

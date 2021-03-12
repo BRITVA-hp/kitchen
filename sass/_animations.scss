@@ -6,3 +6,11 @@
     opacity: 1;
   }
 }
+@keyframes toTop {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
