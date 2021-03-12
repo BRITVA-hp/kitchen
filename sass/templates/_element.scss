@@ -4,9 +4,12 @@
   background-image: url(../img/advantages/bg.png);
   background-repeat: no-repeat;
   background-position-y: -100px;
-  &-offer__row-top {
-    padding-right: 20px;
-    margin-bottom: 70px;
+  &-offer {
+    padding-bottom: 20px !important;
+    &__row-top {
+      padding-right: 20px;
+      margin-bottom: 70px;
+    }
   }
   &__card {
     margin: 0 !important;
@@ -96,6 +99,12 @@
     }
     &--last {
       margin-right: 5px;
+    }
+    &--bottom {
+      display: none;
+      text-align: center;
+      padding-top: 15px;
+      border-top: 1px solid #B9CCD3;
     }
   }
   &__item {

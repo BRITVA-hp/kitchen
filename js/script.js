@@ -16,7 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
         offerWraps = document.querySelectorAll('.offer__wrap'),
         offerNext = document.querySelector('.offer__tabs-arrow--next'),
         offerPrev = document.querySelector('.offer__tabs-arrow--prev'),
-        filter = document.querySelector('.filter__text--mobile'),
+        filters = document.querySelectorAll('.filter__trigger'),
+        filtersWrap = document.querySelector('.filter'),
         productTabs = document.querySelectorAll('.product__tabs-tab'),
         productTabsTexts = document.querySelectorAll('.product__tabs-text'),
         productComments = document.querySelector('.product-comments');
@@ -54,14 +55,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // фильтр на мобилке
 
-  if (filter) {
-    filter.addEventListener('click', () => {
-      filter.classList.toggle('filter__text--mobile-active');
-      if (filter.classList.contains('filter__text--mobile-active')) {
-        filter.parentElement.style.maxHeight = `${filter.parentElement.scrollHeight}px`;
-      } else {
-        filter.parentElement.style.maxHeight = `50px`;
-      }
+  if (filters.length > 0) {
+    filters.forEach(filter => {
+      filter.addEventListener('click', () => {
+        filters.forEach(filter_ => {
+          filter_.classList.toggle('filter__text--mobile-active');
+        });
+        if (filter.classList.contains('filter__text--mobile-active')) {
+          filtersWrap.style.maxHeight = `${filtersWrap.scrollHeight}px`;
+          filters[0].style.display = 'none';
+        } else {
+          filtersWrap.style.maxHeight = `50px`;
+          filters[0].style.display = 'block';
+        }
+      });
     });
   }
 

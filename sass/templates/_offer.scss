@@ -88,6 +88,7 @@
       font-size: 18px;
       line-height: 130%;
       margin-bottom: 10px;
+      display: block;
     }
     &-text {
       font-size: 14px;
@@ -105,6 +106,7 @@
       justify-content: center;
       margin-top: -13px;
       margin-bottom: 30px;
+      cursor: pointer;
     }
     &-block {
       display: flex;
