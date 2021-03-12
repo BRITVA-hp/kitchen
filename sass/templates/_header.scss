@@ -40,11 +40,27 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    &--active {
+      .header__burger-line {
+        &:first-child {
+          transform-origin: right top;
+          transform: rotate(-45deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:last-child {
+          transform-origin: right bottom;
+          transform: rotate(45deg);
+        }
+      }
+    }
     &-line {
       width: 100%;
       background-color: $purple;
       height: 3px;
       border-radius: 5px;
+      transition: 0.3s;
     }
   }
   &__logo {
@@ -133,10 +149,7 @@
       position: relative;
       margin-top: 20px;
     }
-    &:nth-child(6) {
-      margin-bottom: 60px;
-    }
-    &:nth-child(7) {
+    &:nth-child(9) {
       margin-bottom: 20px;
       font-family: 'Nunito-Bold';
       font-size: 20px;

@@ -2470,22 +2470,22 @@
 }
 @media screen and (max-height: 500px) {
   .menu {
-    &__link:nth-child(6) {
-      margin-bottom: 10px;
+    &__inner {
+      a {
+        margin-bottom: 5px;
+      }
     }
-  }
-}
-@media screen and (max-height: 450px) {
-  .menu {
     &__button {
       margin-bottom: 5px;
-      padding: 10px 40px;
+      padding: 5px 30px;
+      font-size: 16px;
     }
     &__link {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 5px;
-      &:nth-child(7) {
+      &:nth-child(9) {
         margin-bottom: 5px;
+        font-size: 16px;
       }
       &:first-of-type {
         margin-top: 0px;
