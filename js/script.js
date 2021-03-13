@@ -36,6 +36,70 @@ window.addEventListener('DOMContentLoaded', () => {
   let counter = 0;
   let offerCount = 0;
 
+  // функция для табов (в секции recipes)
+
+  function swipeSimple(row) {
+    const row_ = document.querySelector(row);
+    let touchStart_;
+    let touchEnd_;
+    let supCount_ = 0;
+
+    if (row_) {
+      row_.addEventListener('touchstart', (e) => {
+        touchStart_ = e.changedTouches[0].pageX;
+      });
+
+      row_.addEventListener('touchmove', (e) => {
+        if (window.getComputedStyle(row_).position == 'absolute') {
+          let touchMove;
+          touchMove = e.changedTouches[0].pageX - touchStart_;
+          row_.style.transform = `translateX(${touchMove + supCount_}px)`;
+        } else {
+          row_.style.transform = `translateX(0px)`;
+        }
+        
+      });
+
+      row_.addEventListener('touchend', (e) => {
+        touchEnd_ = e.changedTouches[0].pageX - touchStart_;
+        supCount_ += touchEnd_;
+        if (row_.getBoundingClientRect().right < document.documentElement.clientWidth || (touchEnd_ < 0 && Math.abs(touchEnd_) > Math.abs(row_.getBoundingClientRect().right) - document.documentElement.clientWidth)) {
+          row_.style.transform = `translateX(-${+window.getComputedStyle(row_).width.replace(/\D/g, '') - document.documentElement.clientWidth + 20}px)`;
+          supCount_ = -((+window.getComputedStyle(row_).width.replace(/\D/g, '')) - document.documentElement.clientWidth + 20);
+        }
+        if (row_.getBoundingClientRect().left > 10 || (touchEnd_ > 0 && Math.abs(touchEnd_) > Math.abs(row_.getBoundingClientRect().left))) {
+          row_.style.transform = `translateX(0px)`;
+          supCount_ = 0;
+        }
+      });
+
+    }
+  }
+
+  function tabsSimple(tabs, contents, activeClassTab, activeClassCont) {
+   const tabs_ = document.querySelectorAll(tabs),
+         conetnts_ = document.querySelectorAll(contents);
+
+    if (tabs_.length > 0) {
+      tabs_.forEach((item, i) => {
+        item.addEventListener('click', () => {
+          clearActiveClass( tabs_, activeClassTab.slice(1));
+          clearActiveClass( conetnts_, activeClassCont.slice(1));
+          item.classList.add(activeClassTab.slice(1));
+          conetnts_.forEach((item_, y) => {
+            if (i == y) {
+              item_.classList.add(activeClassCont.slice(1));
+            }
+          });
+        });
+      });
+    }
+
+  }
+
+  tabsSimple('.recipes__tabs-item', '.recipes__row', '.recipes__tabs-item--active', '.recipes__row--active');
+  swipeSimple('.recipes__tabs');
+
   // появление меню при нажатии на бургер
 
   menuLinkMenu.addEventListener('click', (e) => {

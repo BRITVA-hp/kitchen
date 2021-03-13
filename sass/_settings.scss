@@ -27,6 +27,11 @@ a {
     font-family: 'Nunito-900';
     font-size: 48px;
     line-height: 130%;
+    &--small {
+      font-family: 'Nunito-900';
+      font-size: 36px;
+      line-height: 130%;
+    }
   }
 }
 .text {

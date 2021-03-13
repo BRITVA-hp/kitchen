@@ -335,6 +335,13 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .recipes {
+    &__tabs {
+      &-item {
+        font-size: 20px;
+      }
+    }
+  }
   .product {
     &__tabs {
       &-advice {
@@ -716,6 +723,9 @@
   .section {
     &__title {
       font-size: 36px;
+      &--small {
+        font-size: 30px;
+      }
     }
   }
   .stock {
@@ -1307,6 +1317,69 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .recipes {
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__row {
+      column-gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+      &--clock {
+        margin-bottom: 20px;
+      }
+    }
+    &__clock {
+      &-text {
+        font-size: 10px;
+      }
+      &-box {
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    &-slider__box-img-row {
+      bottom: 0;
+      transform: translate(-50%, 50%);
+      z-index: 10;
+    }
+    &__img {
+      margin-bottom: 55px;
+      margin-right: 0;
+      &-wrap {
+        width: 288px;
+        height: 180px;
+        border-radius: 10px;
+      }
+    }
+    &__card {
+      flex-direction: column;
+      &-title {
+        font-size: 16px;
+        max-width: 250px;
+      }
+      &-text {
+        font-size: 12px;
+        margin-bottom: 20px;
+        max-width: 260px;
+        &:last-of-type {
+          display: none;
+        }
+      }
+    }
+    &__tabs {
+      width: 343px;
+      &-wrap {
+        margin-bottom: 30px;
+      }
+      &-item {
+        font-size: 14px;
+        margin-right: 15px;
+        padding-bottom: 5px;
+      }
+    }
+  }
   .footer {
     &__row {
       flex-direction: column;
@@ -1605,6 +1678,21 @@
 }
 
 @media screen and (max-width: 575px) {
+  .recipes {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 40px;
+    &__tabs {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      &-wrap {
+        height: 30px;
+        overflow: hidden;
+        position: relative;
+      }
+    }
+  }
   .menu {
     background-color: $light;
   }
@@ -2351,6 +2439,9 @@
   .section {
     &__title {
       font-size: 24px;
+      &--small {
+        font-size: 24px;
+      }
     }
   }
   .step {

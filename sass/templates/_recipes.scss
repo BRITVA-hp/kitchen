@@ -1,0 +1,104 @@
+.recipes {
+  background-image: url(../img/advantages/bg.png );
+  background-repeat: no-repeat;
+  background-position-y: -150px;
+  &__row {
+    display: none;
+    column-gap: 20px;
+    row-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(760px, 1fr));
+    justify-items: center;
+    &--active {
+      display: grid;
+      animation-name: fadeIn;
+      animation-duration: 0.5s;
+    }
+    &--clock {
+      align-items: center;
+      margin-bottom: 25px;
+      justify-content: flex-start;
+    }
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    &-link {
+      text-decoration-line: underline;
+      color: #039E25;
+    }
+    &-text {
+      max-width: 320px;
+      margin-bottom: 25px;
+    }
+    &-title {
+      font-family: 'Nunito-Bold';
+      font-size: 18px;
+      line-height: 130%;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+  }
+  &__clock {
+    &-box {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+      img {
+        margin-right: 5px;
+      }
+    }
+    &-text {
+      font-family: 'Nunito-600';
+      font-size: 14px;
+      line-height: 130%;
+      color: #6F6F6F;
+    }
+  }
+  &__img {
+    position: relative;
+    margin-right: 20px;
+    &-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 20px;
+      width: 370px;
+      height: 324px;
+    }
+  }
+  padding-top: 70px;
+  &__title {
+    text-align: center;
+    margin-bottom: 55px;
+    text-transform: uppercase;
+  }
+  &__tabs {
+    transition: 0.3s ease-out;
+    &-wrap {
+      margin-bottom: 60px;
+    }
+    justify-content: flex-start;
+    border-bottom: 1px solid #CEE5EE;
+    &-item {
+      font-family: 'Nunito';
+      font-size: 24px;
+      line-height: 130%;
+      margin-right: 35px;
+      color: #A1A8B9;
+      padding-bottom: 10px;
+      cursor: pointer;
+      &--active {
+        font-family: 'Nunito-Bold';
+        color: #2D2D2D;
+        border-bottom: 2px solid #74029E;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -2023,6 +2023,93 @@ input[type=number] {
     border-radius: 10px;
     margin-right: 80px; }
 
+.recipes {
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: -150px;
+  padding-top: 70px; }
+  .recipes__row {
+    display: none;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(760px, 1fr));
+    justify-items: center; }
+    .recipes__row--active {
+      display: grid;
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s; }
+    .recipes__row--clock {
+      align-items: center;
+      margin-bottom: 25px;
+      justify-content: flex-start; }
+  .recipes__card {
+    display: flex;
+    align-items: center; }
+    .recipes__card-link {
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline;
+      color: #039E25; }
+    .recipes__card-text {
+      max-width: 320px;
+      margin-bottom: 25px; }
+    .recipes__card-title {
+      font-family: 'Nunito-Bold';
+      font-size: 18px;
+      line-height: 130%;
+      margin-bottom: 10px;
+      text-transform: uppercase; }
+  .recipes__clock-box {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; }
+    .recipes__clock-box:last-child {
+      margin-right: 0; }
+    .recipes__clock-box img {
+      margin-right: 5px; }
+  .recipes__clock-text {
+    font-family: 'Nunito-600';
+    font-size: 14px;
+    line-height: 130%;
+    color: #6F6F6F; }
+  .recipes__img {
+    position: relative;
+    margin-right: 20px; }
+    .recipes__img-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 20px;
+      width: 370px;
+      height: 324px; }
+  .recipes__title {
+    text-align: center;
+    margin-bottom: 55px;
+    text-transform: uppercase; }
+  .recipes__tabs {
+    transition: 0.3s ease-out;
+    justify-content: flex-start;
+    border-bottom: 1px solid #CEE5EE; }
+    .recipes__tabs-wrap {
+      margin-bottom: 60px; }
+    .recipes__tabs-item {
+      font-family: 'Nunito';
+      font-size: 24px;
+      line-height: 130%;
+      margin-right: 35px;
+      color: #A1A8B9;
+      padding-bottom: 10px;
+      cursor: pointer; }
+      .recipes__tabs-item--active {
+        font-family: 'Nunito-Bold';
+        color: #2D2D2D;
+        border-bottom: 2px solid #74029E; }
+      .recipes__tabs-item:last-child {
+        margin-right: 0; }
+
 * {
   margin: 0;
   padding: 0;
@@ -2052,6 +2139,10 @@ a {
     font-family: 'Nunito-900';
     font-size: 48px;
     line-height: 130%; }
+    .section__title--small {
+      font-family: 'Nunito-900';
+      font-size: 36px;
+      line-height: 130%; }
 
 .text-green {
   color: #039E25; }
@@ -2306,6 +2397,8 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .recipes__tabs-item {
+    font-size: 20px; }
   .product__tabs-advice {
     padding: 20px; }
     .product__tabs-advice-text {
@@ -2544,6 +2637,8 @@ input {
       right: 20%; }
   .section__title {
     font-size: 36px; }
+    .section__title--small {
+      font-size: 30px; }
   .stock {
     padding-left: 10px;
     padding-right: 10px; }
@@ -2929,6 +3024,49 @@ input {
       left: 25%; } }
 
 @media screen and (max-width: 767px) {
+  .recipes__title {
+    margin-bottom: 30px; }
+  .recipes__row {
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(288px, 1fr)); }
+    .recipes__row--clock {
+      margin-bottom: 20px; }
+  .recipes__clock-text {
+    font-size: 10px; }
+  .recipes__clock-box img {
+    width: 16px;
+    height: 16px; }
+  .recipes-slider__box-img-row {
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    z-index: 10; }
+  .recipes__img {
+    margin-bottom: 55px;
+    margin-right: 0; }
+    .recipes__img-wrap {
+      width: 288px;
+      height: 180px;
+      border-radius: 10px; }
+  .recipes__card {
+    flex-direction: column; }
+    .recipes__card-title {
+      font-size: 16px;
+      max-width: 250px; }
+    .recipes__card-text {
+      font-size: 12px;
+      margin-bottom: 20px;
+      max-width: 260px; }
+      .recipes__card-text:last-of-type {
+        display: none; }
+  .recipes__tabs {
+    width: 343px; }
+    .recipes__tabs-wrap {
+      margin-bottom: 30px; }
+    .recipes__tabs-item {
+      font-size: 14px;
+      margin-right: 15px;
+      padding-bottom: 5px; }
   .footer__row {
     flex-direction: column;
     align-items: center; }
@@ -3097,6 +3235,18 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .recipes {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 40px; }
+    .recipes__tabs {
+      position: absolute;
+      left: 10px;
+      top: 0; }
+      .recipes__tabs-wrap {
+        height: 30px;
+        overflow: hidden;
+        position: relative; }
   .menu {
     background-color: #F3F6FD; }
   .path {
@@ -3591,6 +3741,8 @@ input {
       margin-right: 0; }
   .section__title {
     font-size: 24px; }
+    .section__title--small {
+      font-size: 24px; }
   .step {
     background-color: #F3F6FD;
     padding-bottom: 30px; }
