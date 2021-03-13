@@ -1491,6 +1491,10 @@ input[type=number] {
   background-image: url(../img/advantages/bg.png);
   background-position-y: -130px;
   background-repeat: no-repeat; }
+  .categories__block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    grid-gap: 20px; }
   .categories-offer {
     padding-bottom: 20px !important; }
   .categories__leaf {
@@ -1508,19 +1512,20 @@ input[type=number] {
   .categories__container {
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr 1fr;
-    grid-gap: 25px;
-    grid-template-areas: 'catTitle catTitle . .' 'catImg catCard-1 catCard-2 catCard-3' 'catImg catCard-4 catCard-5 catCard-6'; }
+    grid-template-columns: 370px 3fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    align-items: start; }
   .categories__img {
-    grid-area: catImg;
     background: linear-gradient(63.11deg, #6A1DE9 0.21%, #8F31B1 59.16%);
     border-radius: 10px;
     padding: 70px 35px 0;
     position: relative;
     overflow: hidden;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    width: 370px;
+    height: 620px; }
     .categories__img img {
       width: 470px;
       position: absolute;
@@ -1544,25 +1549,13 @@ input[type=number] {
       text-transform: uppercase;
       margin: auto; }
   .categories__title {
-    grid-area: catTitle;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    grid-area: 1 / 1 / 2 /3; }
   .categories__card {
     margin: auto;
     display: block;
     border-radius: 10px;
     overflow: hidden; }
-    .categories__card--1 {
-      grid-area: catCard-1; }
-    .categories__card--2 {
-      grid-area: catCard-2; }
-    .categories__card--3 {
-      grid-area: catCard-3; }
-    .categories__card--4 {
-      grid-area: catCard-4; }
-    .categories__card--5 {
-      grid-area: catCard-5; }
-    .categories__card--6 {
-      grid-area: catCard-6; }
     .categories__card:hover .categories__card-footer {
       background-color: #039E25; }
       .categories__card:hover .categories__card-footer p {
@@ -1570,7 +1563,7 @@ input[type=number] {
       .categories__card:hover .categories__card-footer path {
         fill: #fff; }
     .categories__card-img {
-      width: 370px;
+      max-width: 370px;
       height: 228px;
       border-radius: 10px 10px 0px 0px;
       overflow: hidden;
@@ -2218,21 +2211,6 @@ input {
   .product__img {
     width: 500px;
     height: 375px; }
-  .categories__card {
-    width: 255px; }
-    .categories__card-footer {
-      padding: 15px; }
-    .categories__card-text {
-      font-size: 20px; }
-    .categories__card-img {
-      width: 255px;
-      height: 153px; }
-  .categories__img {
-    width: 255px; }
-    .categories__img-title {
-      font-size: 28px; }
-    .categories__img-subtitle {
-      font-size: 20px; }
   .footer__box--left {
     margin-right: 60px; }
   .footer__img {
@@ -2385,15 +2363,29 @@ input {
     grid-template-columns: repeat(auto-fill, 277px);
     -moz-column-gap: 2px;
     column-gap: 2px; }
+  .categories__container {
+    grid-template-columns: 230px 3fr;
+    grid-gap: 10px; }
+  .categories__block {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 10px; }
   .categories__img {
     width: 230px;
+    height: 406px;
     padding-top: 30px; }
+    .categories__img-title {
+      font-size: 26px; }
+    .categories__img-subtitle {
+      font-size: 20px; }
   .categories__card {
     width: 230px; }
+    .categories__card-footer {
+      padding: 15px 25px; }
+    .categories__card-text {
+      font-size: 18px; }
     .categories__card-img {
-      width: 230px; }
-  .categories__container {
-    grid-gap: 10px; }
+      width: 230px;
+      height: 140px; }
   .offer {
     padding-top: 80px;
     padding-bottom: 80px; }
@@ -2682,12 +2674,14 @@ input {
       margin-bottom: 30px;
       margin-left: auto;
       margin-right: auto;
-      text-align: center; }
+      text-align: center;
+      grid-area: 2 / 1 / 3 / 2; }
     .categories__img {
       margin: 0;
       width: 100%;
       padding-bottom: 200px;
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      height: 350px; }
       .categories__img-title {
         max-width: 390px;
         margin-bottom: 15px; }
@@ -2695,9 +2689,8 @@ input {
         width: 300px;
         bottom: -20px; }
     .categories__container {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto 1fr 1fr 1fr;
-      grid-template-areas: 'catImg catImg' 'catTitle catTitle' ' catCard-1 catCard-2 ' 'catCard-3 catCard-4' 'catCard-5 catCard-6'; }
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto; }
   .offer__row--top {
     padding-right: 10px; }
   .footer__box--left {
@@ -3271,6 +3264,8 @@ input {
     .element__row {
       grid-template-columns: repeat(auto-fill, 142px);
       row-gap: 20px; }
+  .categories__block {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
   .categories__arrow svg {
     width: 20px; }
   .categories__card {
@@ -3289,7 +3284,8 @@ input {
     max-width: 350px;
     text-align: left; }
   .categories__img {
-    padding-bottom: 155px; }
+    padding-bottom: 155px;
+    height: 250px; }
     .categories__img img {
       width: 275px; }
     .categories__img-title {

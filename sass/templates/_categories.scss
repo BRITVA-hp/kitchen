@@ -5,6 +5,11 @@
   background-image: url(../img/advantages/bg.png);
   background-position-y: -130px;
   background-repeat: no-repeat;
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    grid-gap: 20px;
+  }
   &-offer {
     padding-bottom: 20px !important;
   }
@@ -27,17 +32,12 @@
   &__container {
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr 1fr;
-    grid-gap: 25px;
-    grid-template-areas: 
-      'catTitle catTitle . .'
-      'catImg catCard-1 catCard-2 catCard-3'
-      'catImg catCard-4 catCard-5 catCard-6'
-    ;
+    grid-template-columns: 370px 3fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    align-items: start;
   }
   &__img {
-    grid-area: catImg;
     background: linear-gradient(63.11deg, #6A1DE9 0.21%, #8F31B1 59.16%);
     border-radius: 10px;
     padding: 70px 35px 0;
@@ -45,6 +45,8 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
+    width: 370px;
+    height: 620px;
     img {
       width: 470px;
       position: absolute;
@@ -72,32 +74,14 @@
     }
   }
   &__title {
-    grid-area: catTitle;
     margin-bottom: 20px;
+    grid-area: 1 / 1 / 2 /3;
   }
   &__card {
     margin: auto;
     display: block;
     border-radius: 10px;
     overflow: hidden;
-    &--1 {
-      grid-area: catCard-1;
-    }
-    &--2 {
-      grid-area: catCard-2;
-    }
-    &--3 {
-      grid-area: catCard-3;
-    }
-    &--4 {
-      grid-area: catCard-4;
-    }
-    &--5 {
-      grid-area: catCard-5;
-    }
-    &--6 {
-      grid-area: catCard-6;
-    }
     &:hover {
       .categories__card-footer {
         background-color: $green;
@@ -110,7 +94,7 @@
       }
     }
     &-img {
-      width: 370px;
+      max-width: 370px;
       height: 228px;
       border-radius: 10px 10px 0px 0px;
       overflow: hidden;
