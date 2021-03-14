@@ -306,6 +306,11 @@
 
 @media screen and (max-width: 1300px) {
   .recipe {
+    &__step {
+      &-text {
+        max-width: 500px;
+      }
+    }
     &__row {
       column-gap: 20px;
     }
@@ -373,6 +378,31 @@
 @media screen and (max-width: 1200px) {
   .recipe {
     padding-left: 20px;
+    &__step {
+      &-img {
+        width: 460px;
+        height: 320px;
+      }
+      &-tabs {
+        margin-bottom: 15px;
+      }
+      &-text {
+        font-size: 15px;
+        max-width: 415px;
+      }
+      &-item {
+        &-title {
+          font-size: 16px;
+        }
+      }
+      &-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+      }
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
     &__img {
       border-radius: 20px;
       width: 455px;
@@ -907,6 +937,19 @@
 }
 @media screen and (max-width: 992px) {
   .recipe {
+    &__step {
+      padding-top: 80px;
+      &-text {
+        max-width: 365px;
+      }
+      &-img {
+        width: 365px;
+        height: 290px;
+      }
+      &__row {
+        justify-content: space-between;
+      }
+    }
     &-product__row--value {
       flex-direction: row !important;
     }
@@ -1388,6 +1431,29 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .recipe {
+    &__main {
+      background-image: none;
+    }
+    &__step {
+      padding-top: 50px;
+      background: $light;
+      &-text {
+        margin-bottom: 20px;
+      }
+      &-content {
+        &-img {
+          display: flex;
+        }
+      }
+      &__row {
+        justify-content: center;
+      }
+      &-img {
+        display: none;
+      }
+    }
+  }
   .recipes {
     &__title {
       margin-bottom: 30px;
@@ -1753,8 +1819,34 @@
     padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
+    &__step {
+      &-content {
+        &-img {
+          width: 290px;
+          height: 182px;
+        }
+      }
+      &-text {
+        font-size: 12px;
+        padding-left: 10px;
+        max-width: 280px;
+      }
+      &-header {
+        padding-bottom: 15px;
+      }
+      &-item {
+        &-title {
+          font-size: 14px;
+        }
+      }
+      &-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
     &__row {
       max-width: 288px;
+      justify-items: start;
       &--ul {
         flex-direction: column;
       }
@@ -1777,6 +1869,7 @@
     }
     &__title {
       margin-right: auto;
+      margin-bottom: 0;
     }
   }
   .recipes {

@@ -6,8 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
         prev = document.querySelector('.slider__arrow--prev'),
         sliderWind = document.querySelector('.slider__wrap--tab'),
         sliderField = document.querySelector('.slider__row--tab'),
-        accordions = document.querySelectorAll('.contacts__accord-row'),
-        accordionsFaq = document.querySelectorAll('.faq__tab-row'),
         tabsMap = document.querySelectorAll('.contacts__tabs-item'),
         footerMenu = document.querySelector('.footer__menu-header'),
         minus = document.querySelectorAll('.offer__minus'),
@@ -182,79 +180,85 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // табы и слайдер в секции offer
 
-  offerNext.addEventListener('click', () => {
-    offerCount++;
-    if (offerTabItems.length > 0) {
-      offerTabItems.forEach((offerTabItem, i) => {
-        if (offerTabItem.classList.contains('offer__tabs-item--active')) {
-          offerWraps.forEach((offerWrap, y) => {
-            if (i === y) {
-              let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
-              if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
-                offerCount--;
+  if (offerNext) {
+    offerNext.addEventListener('click', () => {
+      offerCount++;
+      if (offerTabItems.length > 0) {
+        offerTabItems.forEach((offerTabItem, i) => {
+          if (offerTabItem.classList.contains('offer__tabs-item--active')) {
+            offerWraps.forEach((offerWrap, y) => {
+              if (i === y) {
+                let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+                if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
+                  offerCount--;
+                }
+                offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount + 20}px)`;
               }
-              offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount + 20}px)`;
+            });
+          }
+        });
+      } else {
+          offerWraps.forEach(offerWrap => {
+            let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+            if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
+              offerCount--;
             }
+            offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount + 20}px)`;
+        
           });
         }
-      });
-    } else {
+    });
+  }
+
+  if (offerPrev) {
+    offerPrev.addEventListener('click', () => {
+      offerCount--;
+      if (offerTabItems.length > 0) {
+        offerTabItems.forEach((offerTabItem, i) => {
+          if (offerTabItem.classList.contains('offer__tabs-item--active')) {
+            offerWraps.forEach((offerWrap, y) => {
+              if (i === y) {
+                let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+                if (offerCount < 0) {
+                  offerCount = 0;
+                }
+                offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount }px)`;
+              }
+            });
+          }
+        });
+      } else {
         offerWraps.forEach(offerWrap => {
           let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
-          if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
-            offerCount--;
+          if (offerCount < 0) {
+            offerCount = 0;
           }
-          offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount + 20}px)`;
-      
+          offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount }px)`;
+        
         });
       }
-  });
+    });
+  }
 
-  offerPrev.addEventListener('click', () => {
-    offerCount--;
-    if (offerTabItems.length > 0) {
-      offerTabItems.forEach((offerTabItem, i) => {
-        if (offerTabItem.classList.contains('offer__tabs-item--active')) {
-          offerWraps.forEach((offerWrap, y) => {
-            if (i === y) {
-              let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
-              if (offerCount < 0) {
-                offerCount = 0;
-              }
-              offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount }px)`;
-            }
-          });
-        }
-      });
-    } else {
-      offerWraps.forEach(offerWrap => {
-        let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
-        if (offerCount < 0) {
-          offerCount = 0;
-        }
-        offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount }px)`;
-      
-      });
-    }
-  });
-
-  offerTabItems.forEach((tab, i) => {
-    tab.addEventListener('click', () => {
-      offerCount = 0;
-      offerWraps.forEach((offerWrap, y) => {
-        offerWrap.firstElementChild.style.transform = `translateX(0px)`;
-
-      });
-      clearActiveClass(offerTabItems, 'offer__tabs-item--active');
-      clearActiveClass(offerWraps, 'offer__wrap--active');
-      tab.classList.add('offer__tabs-item--active');
-      offerWraps.forEach((offerWrap, y) => {
-        if (i === y) {
-          offerWrap.classList.add('offer__wrap--active');
-        }
+  if (offerTabItems.length > 0  ) {
+    offerTabItems.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        offerCount = 0;
+        offerWraps.forEach((offerWrap, y) => {
+          offerWrap.firstElementChild.style.transform = `translateX(0px)`;
+  
+        });
+        clearActiveClass(offerTabItems, 'offer__tabs-item--active');
+        clearActiveClass(offerWraps, 'offer__wrap--active');
+        tab.classList.add('offer__tabs-item--active');
+        offerWraps.forEach((offerWrap, y) => {
+          if (i === y) {
+            offerWrap.classList.add('offer__wrap--active');
+          }
+        });
       });
     });
-  });
+  }
 
 
   // количество в секции offer
@@ -406,7 +410,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // Аккордион
 
   function accordion(arr, activeClass, paddings = 0) {
-    arr.forEach(item => {
+    const arrAccord = document.querySelectorAll(arr);
+
+    arrAccord.forEach(item => {
       item.addEventListener('click', () => {
         item.classList.toggle(activeClass);
         if (item.classList.contains(activeClass)) {
@@ -422,8 +428,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  accordion(accordions, 'contacts__accord-row--active', 20);
-  accordion(accordionsFaq, 'faq__tab-row--active', 20);
+  accordion('.contacts__accord-row', 'contacts__accord-row--active', 20);
+  accordion('.faq__tab-row', 'faq__tab-row--active', 20);
+  accordion(".recipe__step-header", "recipe__step-header--active", 20);
 
   //Свайп слайдера с прогрессом
 
