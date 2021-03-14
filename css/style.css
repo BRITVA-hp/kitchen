@@ -2110,6 +2110,45 @@ input[type=number] {
       .recipes__tabs-item:last-child {
         margin-right: 0; }
 
+.recipe {
+  padding-top: 70px;
+  padding-right: 20px; }
+  .recipe-recipes__card-box {
+    grid-area: box; }
+  .recipe-product__row--value {
+    margin-bottom: 30px; }
+  .recipe__text {
+    font-size: 16px;
+    line-height: 130%; }
+  .recipe__title {
+    text-transform: uppercase;
+    grid-area: title; }
+  .recipe__row {
+    display: grid;
+    grid-template: auto auto / auto 1fr;
+    -moz-column-gap: 70px;
+    column-gap: 70px;
+    grid-template-areas: 'img title' 'img box'; }
+    .recipe__row--ul {
+      justify-content: flex-start; }
+  .recipe__img {
+    width: 1023px;
+    height: 443px;
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: img; }
+  .recipe__ul {
+    margin-right: 50px; }
+    .recipe__ul:last-of-type {
+      margin-right: 0; }
+    .recipe__ul--title {
+      margin-bottom: 5px; }
+  .recipe__li {
+    line-height: 140%; }
+
 * {
   margin: 0;
   padding: 0;
@@ -2131,6 +2170,9 @@ img {
 a {
   text-decoration: none;
   color: #2D2D2D; }
+
+ul {
+  list-style-type: none; }
 
 .section {
   padding-left: 20px;
@@ -2214,6 +2256,11 @@ input {
   display: flex; }
 
 @media screen and (max-width: 1650px) {
+  .recipe__img {
+    width: 900px; }
+  .recipe__row {
+    -moz-column-gap: 50px;
+    column-gap: 50px; }
   .categories__leaf--3 {
     left: 22%; }
   .categories__leaf--2 {
@@ -2263,6 +2310,9 @@ input {
       padding: 40px; } }
 
 @media screen and (max-width: 1500px) {
+  .recipe__img {
+    width: 800px;
+    height: 360px; }
   .filter {
     height: 70px;
     flex-wrap: wrap; }
@@ -2285,6 +2335,13 @@ input {
     right: -100px; } }
 
 @media screen and (max-width: 1400px) {
+  .recipe__ul {
+    margin-right: 30px; }
+  .recipe__row {
+    -moz-column-gap: 30px;
+    column-gap: 30px; }
+  .recipe__img {
+    width: 700px; }
   .product__tabs-advice--say {
     padding: 25px 40px; }
   .product__box-text {
@@ -2364,6 +2421,13 @@ input {
     right: 2%; } }
 
 @media screen and (max-width: 1300px) {
+  .recipe__row {
+    -moz-column-gap: 20px;
+    column-gap: 20px; }
+  .recipe__img {
+    width: 600px; }
+  .recipe-product__value-text {
+    margin-right: 30px; }
   .filter {
     height: auto;
     display: block;
@@ -2397,6 +2461,19 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .recipe {
+    padding-left: 20px; }
+    .recipe__img {
+      border-radius: 20px;
+      width: 455px;
+      height: 300px; }
+    .recipe-product__row--value {
+      margin-bottom: 25px; }
+    .recipe__row {
+      margin-right: auto;
+      margin-left: auto; }
+    .recipe__text {
+      font-size: 14px; }
   .recipes__tabs-item {
     font-size: 20px; }
   .product__tabs-advice {
@@ -2721,6 +2798,13 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .recipe-product__row--value {
+    flex-direction: row !important; }
+  .recipe__row {
+    grid-template: auto auto auto / 1fr;
+    justify-items: center;
+    row-gap: 20px;
+    grid-template-areas: 'title' 'img' 'box'; }
   .menu {
     height: auto; }
   .product {
@@ -2763,7 +2847,7 @@ input {
       transform: rotate(260deg);
       top: 5%;
       left: auto;
-      right: 2%; }
+      right: 4%; }
     .categories__title {
       max-width: 400px;
       margin-bottom: 30px;
@@ -3032,9 +3116,9 @@ input {
     grid-template-columns: repeat(auto-fill, minmax(288px, 1fr)); }
     .recipes__row--clock {
       margin-bottom: 20px; }
-  .recipes__clock-text {
+  .recipes__clock-text:not(.recipe-recipes__clock-text) {
     font-size: 10px; }
-  .recipes__clock-box img {
+  .recipes__clock-box img:not(.recipe-recipes__clock-img) {
     width: 16px;
     height: 16px; }
   .recipes-slider__box-img-row {
@@ -3235,6 +3319,26 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .recipe {
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .recipe__row {
+      max-width: 288px; }
+      .recipe__row--ul {
+        flex-direction: column; }
+    .recipe-product__row--value {
+      flex-direction: column !important; }
+    .recipe-recipes__clock-img {
+      width: 16px;
+      height: 16px; }
+    .recipe-recipes__clock-text {
+      font-size: 10px; }
+    .recipe__img {
+      width: 288px;
+      height: 180px; }
+    .recipe__title {
+      margin-right: auto; }
   .recipes {
     padding-left: 0;
     padding-right: 0;

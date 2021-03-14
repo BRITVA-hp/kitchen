@@ -1,0 +1,52 @@
+.recipe {
+  padding-top: 70px;
+  padding-right: 20px;
+  &-recipes__card-box {
+    grid-area: box;
+  }
+  &-product__row--value {
+    margin-bottom: 30px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 130%;
+  }
+  &__title {
+    text-transform: uppercase;
+    grid-area: title;
+  }
+  &__row {
+    display: grid;
+    grid-template: auto auto / auto 1fr;
+    column-gap: 70px;
+    grid-template-areas: 
+      'img title'
+      'img box'
+      ;
+    &--ul {
+      justify-content: flex-start;
+    }
+  }
+  &__img {
+    width: 1023px;
+    height: 443px;
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: img;
+  }
+  &__ul {
+    margin-right: 50px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &--title {
+      margin-bottom: 5px;
+    }
+  }
+  &__li {
+  line-height: 140%; 
+  }
+}
