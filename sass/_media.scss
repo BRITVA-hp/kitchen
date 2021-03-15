@@ -305,6 +305,14 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .cab-info {
+    &__user {
+      padding-right: 30px;
+    }
+    &__container {
+      padding: 0 30px;
+    }
+  }
   .recipe {
     &__step {
       &-text {
@@ -376,6 +384,30 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .cab-info {
+    &__container {
+      flex-direction: column;
+      padding: 0;
+    }
+    &__item {
+      padding: 15px 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid #B9CCD3;
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+    &__user {
+      border-right: none;
+      padding: 15px 10px;
+      width: 100%;
+      justify-content: center;
+      border-bottom: 1px solid #B9CCD3;
+    }
+  }
   .recipe {
     padding-left: 20px;
     &__step {
@@ -936,6 +968,51 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .cab-hist {
+    padding-bottom: 60px;
+    &__row {
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    }
+    &__block-text:not(.cab-hist__block-text--header) {
+      margin-bottom: 15px;
+    }
+    &__card {
+      padding: 20px;
+      width: 290px;
+      &-footer {
+        &-img {
+          width: 14px;
+        }
+        &-text {
+          font-size: 14px;
+        }
+      }
+    }
+    &__accord {
+      margin-bottom: 15px;
+      &-text {
+        max-width: 180px;
+        &--craft {
+          font-size: 12px;
+        }
+      }
+    }
+    &__text {
+      font-size: 14px;
+      &--number {
+        font-size: 16px;
+      }
+      &--bottom {
+        font-size: 12px;
+      }
+      &--status {
+        font-size: 12px;
+      }
+      &--date {
+        font-size: 12px;
+      }
+    }
+  }
   .other-recipe {
     &__row {
       &--arrows {
@@ -1847,6 +1924,36 @@
 }
 
 @media screen and (max-width: 575px) {
+  .cab-hist {
+    padding-top: 60px;
+    &__title {
+      margin-bottom: 35px;
+    }
+  }
+  .cab-info {
+    padding-top: 40px;
+    &__container {
+      border-radius: 10px;
+    }
+    &__change {
+      &-text {
+        font-size: 12px;
+      }
+    }
+    &__user {
+      justify-content: flex-start;
+      &-name {
+        font-size: 14px;
+      }
+      &-img {
+        width: 44px;
+        margin-right: 20px;
+      }
+    }
+    &__item {
+      align-items: flex-start;
+    }
+  }
   .recipe {
     padding-top: 40px;
     padding-left: 10px;

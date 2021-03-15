@@ -38,6 +38,9 @@ ul {
   }
 }
 .text {
+  &-red {
+    color: #EB001B;
+  }
   &-green {
     color: $green;
   }
@@ -46,6 +49,9 @@ ul {
   }
   &-purple {
     color: $purple;
+  }
+  &-gray {
+    color: #6F6F6F;
   }
   &-bold {
     font-family: 'Nunito-Bold';

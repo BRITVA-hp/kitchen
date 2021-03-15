@@ -23,7 +23,9 @@ window.addEventListener('DOMContentLoaded', () => {
         headerBurger = document.querySelector('.header__burger'),
         menu = document.querySelector('.menu'),
         menuLinkMenu = document.querySelector('.menu__link--menu'),
-        menuInner = document.querySelector('.menu__inner');
+        menuInner = document.querySelector('.menu__inner'),
+        cabHistAccordContents = document.querySelectorAll('.cab-hist__accord-content');
+
         
 
   //Вспомогательные переменные
@@ -34,7 +36,14 @@ window.addEventListener('DOMContentLoaded', () => {
   let counter = 0;
   let offerCount = 0;
 
-  // Функция для слайдера на странице recipe.html (desctop)
+  // Программно устанавливаем высоту контента состава заказа в личном кабинете (для плавной анимации)
+  if (cabHistAccordContents.length > 0) {
+    cabHistAccordContents.forEach(item => {
+      item.style.maxHeight = item.scrollHeight + 'px';
+    });
+  }
+
+  // Функция для слайдера на странице recipe.html
 
   function sliderWidthInner(innerSelector, slideSelector, arrowPrev, arrowNext, widthSlide, widthSlideMobile) {
     const inner_ = document.querySelector(innerSelector),
@@ -472,6 +481,7 @@ window.addEventListener('DOMContentLoaded', () => {
   accordion('.contacts__accord-row', 'contacts__accord-row--active', 20);
   accordion('.faq__tab-row', 'faq__tab-row--active', 20);
   accordion(".recipe__step-header", "recipe__step-header--active", 20);
+  accordion(".cab-hist__accord-header", "cab-hist__accord-header--active", 20);
 
   //Свайп слайдера с прогрессом
 
