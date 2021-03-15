@@ -2255,7 +2255,8 @@ input[type=number] {
     justify-content: space-between;
     padding: 0 100px 0 30px; }
   .cab-info__item-change {
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    cursor: pointer; }
   .cab-info__change {
     display: flex;
     align-items: center; }
@@ -2376,6 +2377,15 @@ input[type=number] {
     font-family: 'Nunito-Bold';
     font-size: 16px;
     line-height: 130%; }
+
+#cabInfoDate {
+  max-width: 155px; }
+
+#cabInfoTel {
+  max-width: 155px; }
+
+#cabInfoName {
+  max-width: 155px; }
 
 * {
   margin: 0;
