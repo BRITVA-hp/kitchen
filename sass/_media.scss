@@ -936,6 +936,13 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .other-recipe {
+    &__row {
+      &--arrows {
+        padding-right: 10px;
+      }
+    }
+  }
   .recipe {
     &__step {
       padding-top: 80px;
@@ -1431,6 +1438,30 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .other-recipe {
+    margin-top: 0;
+    padding-bottom: 60px;
+    &__title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    &__window {
+      margin-bottom: 60px;
+      position: relative;
+      height: 420px;
+    }
+    &__inner {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    &-offer__tabs-arrow {
+      display: none;
+    }
+    &__progress {
+      display: block !important;
+    }
+  }
   .recipe {
     &__main {
       background-image: none;
@@ -1438,6 +1469,7 @@
     &__step {
       padding-top: 50px;
       background: $light;
+      padding-bottom: 60px;
       &-text {
         margin-bottom: 20px;
       }

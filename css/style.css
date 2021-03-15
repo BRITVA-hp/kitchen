@@ -2062,7 +2062,8 @@ input[type=number] {
       font-size: 18px;
       line-height: 130%;
       margin-bottom: 10px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      max-width: 331px; }
   .recipes__clock-box {
     display: flex;
     align-items: center;
@@ -2122,7 +2123,7 @@ input[type=number] {
   .recipe__step {
     background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 106.03%);
     border-radius: 0px 160px;
-    padding-bottom: 330px;
+    padding-bottom: 350px;
     padding-top: 120px; }
     .recipe__step__row {
       justify-content: space-around; }
@@ -2226,6 +2227,22 @@ input[type=number] {
       margin-bottom: 5px; }
   .recipe__li {
     line-height: 140%; }
+
+.other-recipe {
+  padding-bottom: 150px;
+  margin-top: -180px;
+  padding-right: 0 !important; }
+  .other-recipe__progress {
+    display: none !important; }
+  .other-recipe__row--arrows {
+    padding-right: 20px; }
+  .other-recipe__inner {
+    position: static;
+    transition: 0.3s; }
+  .other-recipe__title {
+    margin-bottom: 60px; }
+  .other-recipe__window {
+    overflow: hidden; }
 
 * {
   margin: 0;
@@ -2893,6 +2910,8 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .other-recipe__row--arrows {
+    padding-right: 10px; }
   .recipe__step {
     padding-top: 80px; }
     .recipe__step-text {
@@ -3212,11 +3231,30 @@ input {
       left: 25%; } }
 
 @media screen and (max-width: 767px) {
+  .other-recipe {
+    margin-top: 0;
+    padding-bottom: 60px; }
+    .other-recipe__title {
+      font-size: 24px;
+      margin-bottom: 30px; }
+    .other-recipe__window {
+      margin-bottom: 60px;
+      position: relative;
+      height: 420px; }
+    .other-recipe__inner {
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+    .other-recipe-offer__tabs-arrow {
+      display: none; }
+    .other-recipe__progress {
+      display: block !important; }
   .recipe__main {
     background-image: none; }
   .recipe__step {
     padding-top: 50px;
-    background: #F3F6FD; }
+    background: #F3F6FD;
+    padding-bottom: 60px; }
     .recipe__step-text {
       margin-bottom: 20px; }
     .recipe__step-content-img {

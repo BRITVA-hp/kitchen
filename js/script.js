@@ -34,6 +34,45 @@ window.addEventListener('DOMContentLoaded', () => {
   let counter = 0;
   let offerCount = 0;
 
+  // Функция для слайдера на странице recipe.html (desctop)
+
+  function sliderWidthInner(innerSelector, slideSelector, arrowPrev, arrowNext, widthSlide, widthSlideMobile) {
+    const inner_ = document.querySelector(innerSelector),
+          slides_ = document.querySelectorAll(slideSelector),
+          arrowPrev_ = document.querySelector(arrowPrev),
+          arrowNext_ = document.querySelector(arrowNext);
+
+    if (inner_) {
+      if (window.getComputedStyle(inner_).position == 'absolute') {
+        inner_.style.width = `${widthSlideMobile * slides_.length + 15 * (slides_.length - 1)}px`;
+        swipeProgress(".other-recipe__window", '.other-recipe__inner', '.recipes__card', '.progress__inner--other-recipe', 303);
+      } else {
+        let counter_ = 0;
+
+        inner_.style.width = `${widthSlide * slides_.length + 55 * (slides_.length - 1)}px`;
+        arrowNext_.addEventListener('click', () => {
+          counter_++;
+          if (counter_ >= slides_.length) {
+            counter_ = slides_.length - 1;
+          }
+          inner_.style.transform = `translateX(-${(widthSlide + 55) * counter_}px)`;
+        });
+        arrowPrev_.addEventListener('click', () => {
+          counter_--;
+          if (counter_ <= 0) {
+            counter_ = 0;
+          }
+          inner_.style.transform = `translateX(-${(widthSlide + 55) * counter_}px)`;
+        });
+      }
+    }
+  }
+
+  sliderWidthInner('.other-recipe__inner', '.recipes__card', '.offer__tabs-arrow--prev', '.offer__tabs-arrow--next', 721, 288);
+  window.addEventListener('resize', () => {
+    sliderWidthInner('.other-recipe__inner', '.recipes__card', '.offer__tabs-arrow--prev', '.offer__tabs-arrow--next', 721, 288);
+  });
+
   // функция для табов (в секции recipes)
 
   function swipeSimple(row) {
@@ -412,20 +451,22 @@ window.addEventListener('DOMContentLoaded', () => {
   function accordion(arr, activeClass, paddings = 0) {
     const arrAccord = document.querySelectorAll(arr);
 
-    arrAccord.forEach(item => {
-      item.addEventListener('click', () => {
-        item.classList.toggle(activeClass);
-        if (item.classList.contains(activeClass)) {
-          item.nextElementSibling.style.maxHeight = item.nextElementSibling.scrollHeight + 'px';
-          item.parentElement.style.paddingBottom = paddings + 'px';
-          item.lastElementChild.lastElementChild.style.transform = 'rotate(90deg)';
-        } else {
-          item.nextElementSibling.style.maxHeight = '0px';
-          item.parentElement.style.paddingBottom = 0 + 'px';
-          item.lastElementChild.lastElementChild.style.transform = 'none';
-        }
+    if (arrAccord.length > 0) {
+      arrAccord.forEach(item => {
+        item.addEventListener('click', () => {
+          item.classList.toggle(activeClass);
+          if (item.classList.contains(activeClass)) {
+            item.nextElementSibling.style.maxHeight = item.nextElementSibling.scrollHeight + 'px';
+            item.parentElement.style.paddingBottom = paddings + 'px';
+            item.lastElementChild.lastElementChild.style.transform = 'rotate(90deg)';
+          } else {
+            item.nextElementSibling.style.maxHeight = '0px';
+            item.parentElement.style.paddingBottom = 0 + 'px';
+            item.lastElementChild.lastElementChild.style.transform = 'none';
+          }
+        });
       });
-    });
+    }
   }
 
   accordion('.contacts__accord-row', 'contacts__accord-row--active', 20);
@@ -441,53 +482,55 @@ window.addEventListener('DOMContentLoaded', () => {
           sliderProgress = document.querySelector(slProgress),
           progressStep = 100 / sliderProgressSlides.length;
 
-    let sliderProgressFieldPos;
-    let touchProgressStart;
-    let touchProgressEnd;
-    let counterSwipeProgress = 1;
-
-    sliderProgress.style.width = `${progressStep}%`;
-
-    sliderProgressWind.addEventListener('touchstart', (e) => {
-      touchProgressStart = e.changedTouches[0].pageX;
-    });
+    if (sliderProgressWind) {
+      let sliderProgressFieldPos;
+      let touchProgressStart;
+      let touchProgressEnd;
+      let counterSwipeProgress = 1;
   
-    sliderProgressWind.addEventListener('touchmove', (e) => {
-      sliderProgressFieldPos = window.getComputedStyle(sliderProgressField).position;
-      if (sliderProgressFieldPos == 'absolute') {
-        let touchProgressMove;
-        touchProgressMove = e.changedTouches[0].pageX - touchProgressStart;
-        sliderProgressField.style.transform = `translateX(${touchProgressMove - slideWidth * (counterSwipeProgress - 1)}px)`;
-      } else {
-        sliderProgressField.style.transform = `translateX(0px)`;
-      }
-    });
+      sliderProgress.style.width = `${progressStep}%`;
   
-    sliderProgressWind.addEventListener('touchend', (e) => {
-      if (sliderProgressFieldPos == 'absolute') {
-        touchProgressEnd = e.changedTouches[0].pageX - touchProgressStart;
-        if (Math.abs(touchProgressEnd) > 100) {
-          if (touchProgressEnd < 0) {
-            sliderProgressField.style.transform = `translateX(-${slideWidth * counterSwipeProgress}px)`;
-            counterSwipeProgress++;
-            if (counterSwipeProgress >= sliderProgressSlides.length) {
-              sliderProgressField.style.transform = `translateX(-${slideWidth * (sliderProgressSlides.length - 1)}px)`;
-              counterSwipeProgress = sliderProgressSlides.length;
-            }   
-          } else {
-              counterSwipeProgress--;
-              sliderProgressField.style.transform = `translateX(-${slideWidth * (counterSwipeProgress - 1)}px)`;
-              if (counterSwipeProgress <= 1) {
-              sliderProgressField.style.transform = `translateX(0px)`;
-              counterSwipeProgress = 1;
-            }
-          }
+      sliderProgressWind.addEventListener('touchstart', (e) => {
+        touchProgressStart = e.changedTouches[0].pageX;
+      });
+    
+      sliderProgressWind.addEventListener('touchmove', (e) => {
+        sliderProgressFieldPos = window.getComputedStyle(sliderProgressField).position;
+        if (sliderProgressFieldPos == 'absolute') {
+          let touchProgressMove;
+          touchProgressMove = e.changedTouches[0].pageX - touchProgressStart;
+          sliderProgressField.style.transform = `translateX(${touchProgressMove - slideWidth * (counterSwipeProgress - 1)}px)`;
         } else {
-          sliderProgressField.style.transform = `translateX(-${slideWidth * (counterSwipeProgress - 1)}px)`;
+          sliderProgressField.style.transform = `translateX(0px)`;
         }
-      }
-      sliderProgress.style.width = `${progressStep * counterSwipeProgress}%`;
-    });
+      });
+    
+      sliderProgressWind.addEventListener('touchend', (e) => {
+        if (sliderProgressFieldPos == 'absolute') {
+          touchProgressEnd = e.changedTouches[0].pageX - touchProgressStart;
+          if (Math.abs(touchProgressEnd) > 100) {
+            if (touchProgressEnd < 0) {
+              sliderProgressField.style.transform = `translateX(-${slideWidth * counterSwipeProgress}px)`;
+              counterSwipeProgress++;
+              if (counterSwipeProgress >= sliderProgressSlides.length) {
+                sliderProgressField.style.transform = `translateX(-${slideWidth * (sliderProgressSlides.length - 1)}px)`;
+                counterSwipeProgress = sliderProgressSlides.length;
+              }   
+            } else {
+                counterSwipeProgress--;
+                sliderProgressField.style.transform = `translateX(-${slideWidth * (counterSwipeProgress - 1)}px)`;
+                if (counterSwipeProgress <= 1) {
+                sliderProgressField.style.transform = `translateX(0px)`;
+                counterSwipeProgress = 1;
+              }
+            }
+          } else {
+            sliderProgressField.style.transform = `translateX(-${slideWidth * (counterSwipeProgress - 1)}px)`;
+          }
+        }
+        sliderProgress.style.width = `${progressStep * counterSwipeProgress}%`;
+      });
+    }
   }
 
   swipeProgress('.stock__wrap', '.stock__row', '.stock__card', '.progress__inner--stock', 270);
@@ -496,70 +539,78 @@ window.addEventListener('DOMContentLoaded', () => {
   // свайп табов в секции slider
 
   function swipeTabs() {
-    let sliderFieldWidth = +window.getComputedStyle(sliderField).width.replace(/\D/g, '');
-    sliderWind.addEventListener('touchstart', (e) => {
-      touchStart = e.changedTouches[0].pageX;
-    });
-  
-    sliderWind.addEventListener('touchmove', (e) => {
-      if (sliderFieldWidth + 10 > document.documentElement.clientWidth) {
-        let touchMove;
-        touchMove = e.changedTouches[0].pageX - touchStart;
-        sliderField.style.transform = `translateX(${touchMove + counterForSwipe}px)`;
-      } else {
-        sliderField.style.transform = `translateX(0px)`;
-      }
-    });
-  
-    sliderWind.addEventListener('touchend', (e) => {
-      let clientWidth = document.documentElement.clientWidth;
-      touchEnd = e.changedTouches[0].pageX - touchStart;
-      counterForSwipe += touchEnd;
-      if (sliderField.getBoundingClientRect().right < clientWidth || (touchEnd < 0 && Math.abs(touchEnd) > Math.abs(sliderField.getBoundingClientRect().right) - clientWidth)) {
-        sliderField.style.transform = `translateX(-${sliderFieldWidth - clientWidth + 20}px)`;
-        counterForSwipe = -(sliderFieldWidth - clientWidth + 10);
-      }
-      if (sliderField.getBoundingClientRect().left > 0 || (touchEnd > 0 && Math.abs(touchEnd) > Math.abs(sliderField.getBoundingClientRect().left))) {
-        sliderField.style.transform = `translateX(0px)`;
-        counterForSwipe = 0;
-      }
-    });
+    if (sliderWind) {
+      let sliderFieldWidth = +window.getComputedStyle(sliderField).width.replace(/\D/g, '');
+      sliderWind.addEventListener('touchstart', (e) => {
+        touchStart = e.changedTouches[0].pageX;
+      });
+    
+      sliderWind.addEventListener('touchmove', (e) => {
+        if (sliderFieldWidth + 10 > document.documentElement.clientWidth) {
+          let touchMove;
+          touchMove = e.changedTouches[0].pageX - touchStart;
+          sliderField.style.transform = `translateX(${touchMove + counterForSwipe}px)`;
+        } else {
+          sliderField.style.transform = `translateX(0px)`;
+        }
+      });
+    
+      sliderWind.addEventListener('touchend', (e) => {
+        let clientWidth = document.documentElement.clientWidth;
+        touchEnd = e.changedTouches[0].pageX - touchStart;
+        counterForSwipe += touchEnd;
+        if (sliderField.getBoundingClientRect().right < clientWidth || (touchEnd < 0 && Math.abs(touchEnd) > Math.abs(sliderField.getBoundingClientRect().right) - clientWidth)) {
+          sliderField.style.transform = `translateX(-${sliderFieldWidth - clientWidth + 20}px)`;
+          counterForSwipe = -(sliderFieldWidth - clientWidth + 10);
+        }
+        if (sliderField.getBoundingClientRect().left > 0 || (touchEnd > 0 && Math.abs(touchEnd) > Math.abs(sliderField.getBoundingClientRect().left))) {
+          sliderField.style.transform = `translateX(0px)`;
+          counterForSwipe = 0;
+        }
+      });
+    }
   }
   swipeTabs();
 
   // Переключение табов в секции slider
 
-  tabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => {
+  if (tabs.length > 0) {
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        clearActiveClass(tabs, 'slider__tab--active');
+        clearActiveClass(slides, 'slider__box--active');
+        tab.classList.add('slider__tab--active');
+        addActiveClass(slides, 'slider__box--active', i);
+        counter = i;
+      });
+    });
+  }
+
+  if (next) {
+    next.addEventListener('click', () => {
+      counter++;
+      if (counter == tabs.length) {
+        counter = 0;
+      }
       clearActiveClass(tabs, 'slider__tab--active');
       clearActiveClass(slides, 'slider__box--active');
-      tab.classList.add('slider__tab--active');
-      addActiveClass(slides, 'slider__box--active', i);
-      counter = i;
+      addActiveClass(tabs, 'slider__tab--active', counter);
+      addActiveClass(slides, 'slider__box--active', counter);
     });
-  });
+  }
 
-  next.addEventListener('click', () => {
-    counter++;
-    if (counter == tabs.length) {
-      counter = 0;
-    }
-    clearActiveClass(tabs, 'slider__tab--active');
-    clearActiveClass(slides, 'slider__box--active');
-    addActiveClass(tabs, 'slider__tab--active', counter);
-    addActiveClass(slides, 'slider__box--active', counter);
-  });
-
-  prev.addEventListener('click', () => {
-    counter--;
-    if (counter < 0) {
-      counter = tabs.length - 1;
-    }
-    clearActiveClass(tabs, 'slider__tab--active');
-    clearActiveClass(slides, 'slider__box--active');
-    addActiveClass(tabs, 'slider__tab--active', counter);
-    addActiveClass(slides, 'slider__box--active', counter);
-  });
+  if (prev) {
+    prev.addEventListener('click', () => {
+      counter--;
+      if (counter < 0) {
+        counter = tabs.length - 1;
+      }
+      clearActiveClass(tabs, 'slider__tab--active');
+      clearActiveClass(slides, 'slider__box--active');
+      addActiveClass(tabs, 'slider__tab--active', counter);
+      addActiveClass(slides, 'slider__box--active', counter);
+    });
+  }
 
   function addActiveClass(arr, activeClass, count) {
     arr.forEach((item, i) => {
