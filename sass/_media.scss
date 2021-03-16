@@ -65,6 +65,11 @@
 }
 
 @media screen and (max-width: 1550px) {
+  .basket {
+    &__box {
+      padding: 50px;
+    }
+  }
   .categories {
     &__img {
       padding: 70px 15px 0;
@@ -145,6 +150,15 @@
   }
 }
 @media screen and (max-width: 1400px) {
+  .basket {
+    &__box {
+      &-header {
+        &-line {
+          flex-basis: 45%;
+        }
+      }
+    }
+  }
   .recipe {
     &__ul {
       margin-right: 30px;
@@ -305,6 +319,15 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .basket {
+    &__gift {
+      &-text {
+        &--bottom {
+          max-width: 300px;
+        }
+      }
+    }
+  }
   .cab-info {
     &__user {
       padding-right: 30px;
@@ -384,6 +407,67 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .basket {
+    &__card {
+      width: 455px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    &__row {
+      flex-direction: column;
+    }
+    &__form {
+      &-price {
+        font-size: 26px;
+      }
+      &-text {
+        &--input {
+          &-green {
+            font-size: 12px;
+            max-width: 180px;
+          }
+        }
+      }
+    }
+    &__item {
+      &-box {
+        &--left {
+          width: 355px;
+        }
+      }
+      &-img {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+      }
+      &-text {
+        &--bottom {
+          font-size: 14px;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 45px;
+    }
+    &__box {
+      width: 100%;
+      margin-bottom: 50px;
+      &--right {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      &-header {
+        &-price {
+          font-size: 20px;
+        }
+        &-text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
   .cab-info {
     &__container {
       flex-direction: column;
@@ -968,6 +1052,60 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .basket {
+    &__progress {
+      &-text {
+        max-width: 260px;
+        text-align: center;
+      }
+    }
+    &__card {
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      flex-direction: column;
+      margin-bottom: 20px;
+      margin: 0px 10px 30px 10px;
+      &-button {
+        padding: 0;
+        background-color: transparent;
+        span {
+          display: none;
+        }
+        img {
+          display: block;
+        }
+      }
+      &-img {
+        width: 113px;
+        height: 113px;
+        background-color: rgba(116, 2, 158, 0.1);
+        border-radius: 50%;
+        margin-bottom: 25px;
+        img {
+          transform: translateY(-20px);
+          width: 128px;
+          height: 128px;
+        }
+      }
+      &-box {
+        align-items: center;
+      }
+      &-text {
+        font-family: 'Nunito-900';
+        text-align: center;
+        color: #74029E;
+      }
+    }
+    &__gift {
+      &-text {
+        &--bottom {
+          max-width: 290px;
+        }
+      }
+    }
+  }
   .cab-hist {
     padding-bottom: 60px;
     &__row {
@@ -1515,6 +1653,142 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .basket {
+    padding-top: 40px;
+    &__window {
+      overflow: hidden;
+      flex-basis: auto;
+      width: 100%;
+      position: relative;
+      height: 300px;
+      display: flex;
+      align-items: flex-end;
+    }
+    &__box {
+      &--right {
+        justify-content: flex-start;
+        position: absolute;
+        left: 0;
+        bottom: 45px;
+      }
+    }
+    &__card {
+      margin-bottom: 0;
+    }
+    &__dots {
+      display: flex;
+    }
+    &__input {
+      font-size: 12px;
+      &-group {
+        margin-right: 10px;
+      }
+    }
+    &__form {
+      &-button {
+        span {
+          &:first-of-type {
+            display: none;
+          }
+          &:last-of-type {
+            display: block;
+          }
+        }
+      }
+      &-price {
+        font-size: 24px;
+      }
+      &-text {
+        font-size: 16px;
+        &--input {
+          &-green {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    &__progress {
+      &-text {
+        font-size: 12px;
+        color: $black;
+        width: 240px;
+        text-align: center;
+        top: -35px;
+        transform: translateX(-50%);
+      }
+    }
+    &__gift {
+      &-box {
+        grid-template: auto auto auto/ auto 1fr;
+      }
+      &-price {
+        padding-left: 0;
+        grid-area: 2/2/3/3;
+      }
+      &-text {
+        grid-area: 1/2/2/3;
+        &--bottom {
+          font-size: 12px;
+          grid-area: 3/1/4/3;
+        }
+      }
+      &-img {
+        width: 58px;
+        height: 58px;
+        margin-right: 15px;
+        grid-area: 1/1/3/2;
+      }
+    }
+    &__item {
+      &-box {
+        &--left {
+          width: 310px;
+        }
+      }
+      &-price {
+        font-size: 16px;
+        margin-right: 15px;
+      }
+      &-img {
+        width: 55px;
+        height: 55px;
+      }
+      &-text {
+        font-size: 14px;
+        &--bottom {
+          font-size: 12px;
+        }
+      }
+    }
+    &__box {
+      position: relative;
+      padding: 20px;
+      &-header {
+        position: absolute;
+        top: -66px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        &-price {
+          font-size: 18px;
+        }
+        &-line {
+          display: none;
+        }
+        &-text {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    &__title {
+      font-size: 24px;
+      margin-bottom: 100px;
+    }
+  }
   .other-recipe {
     margin-top: 0;
     padding-bottom: 60px;
@@ -1924,6 +2198,103 @@
 }
 
 @media screen and (max-width: 575px) {
+  .basket {
+    &__products {
+      margin-bottom: 20px;
+    }
+    &__box {
+      padding-bottom: 40px;
+      &-header {
+        width: 195px;
+      }
+    }
+    &__input {
+      width: calc(100% - 40px);
+      &-group {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
+    &__form {
+      grid-template: auto auto auto/ auto;
+      justify-items: center;
+      grid-gap: 30px;
+      &-button {
+        padding: 15px 45px;
+        width: 100%;
+      }
+      &__row {
+        &--input {
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+      &-box {
+        &--input {
+          width: 100%;
+        }
+        &--text {
+          justify-self: center;
+          p {
+            text-align: center;
+          }
+        }
+      }
+      &-text {
+        &--input {
+          display: none;
+        }
+      }
+    }
+    &__progress {
+      height: 20px;
+      &-wrap {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #B9CCD3;
+      }
+    }
+    &__gift {
+      flex-direction: column;
+      &-box {
+        margin-bottom: 15px;
+      }
+    }
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      &-text {
+        max-width: 180px;
+      }
+      &-img {
+        margin-right: 15px;
+      }
+      &-value {
+        display: block;
+        margin-right: auto;
+        margin-left: 75px;
+      }
+      &-price {
+        span {
+          display: inline-block;
+          font-size: 10px;
+          margin-right: 3px;
+        }
+      }
+      &-box {
+        &--right {
+          width: 100%;
+          justify-content: flex-end;
+        }
+        &--left {
+          width: auto;
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
   .cab-hist {
     padding-top: 60px;
     &__title {

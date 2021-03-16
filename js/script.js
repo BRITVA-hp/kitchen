@@ -35,13 +35,64 @@ window.addEventListener('DOMContentLoaded', () => {
   let counterForSwipe = 0;
   let counter = 0;
   let offerCount = 0;
+  let dotsInBasket;
+
+  // При изменении размера экрана
+
+  window.addEventListener('resize', () => {
+    sliderWidthInner('.other-recipe__inner', '.recipes__card', '.offer__tabs-arrow--prev', '.offer__tabs-arrow--next', 721, 288);
+      slideDots('.basket__card', '.basket__box--right', '.basket__window');
+  });
 
   // Программно устанавливаем высоту контента состава заказа в личном кабинете (для плавной анимации)
+
   if (cabHistAccordContents.length > 0) {
     cabHistAccordContents.forEach(item => {
       item.style.maxHeight = item.scrollHeight + 'px';
     });
   }
+
+  // слайдер с точками на странице basket.html
+
+  function renderDots(slidesDots, dotClass, dotClassActive, wrapDots) {
+    const slidesDots_ = document.querySelectorAll(slidesDots);
+    if (slidesDots_.length > 0) {
+      slidesDots_.forEach((item, i) => {
+        const dot = document.createElement( "div" );
+        dot.classList.add(dotClass);
+        document.querySelector(wrapDots).appendChild(dot);
+        if (i == 0) {
+          dot.classList.add(dotClassActive);
+        }
+      });
+      dotsInBasket = document.querySelectorAll('.basket__dot');
+    }
+  }
+
+  function slideDots(slidesDots, innerDot, windowDot) {
+    const slidesDots_ = document.querySelectorAll(slidesDots),
+          innerDot_ = document.querySelector(innerDot),
+          windowDot_ =  document.querySelector(windowDot);
+    let widthItemDot = 0;
+
+    if (slidesDots_.length > 0 && window.getComputedStyle(innerDot_).position == 'absolute') {
+      slidesDots_.forEach(item => {
+        widthItemDot += item.clientWidth;
+      });
+      innerDot_.style.width = `${widthItemDot + 20 * slidesDots_.length}px`;
+    } else {
+      if (innerDot_) {
+        innerDot_.style.width = `auto`;
+        innerDot_.style.transform = 'translateX(0)';
+
+      }
+    }
+    swipeProgress(windowDot, innerDot, slidesDots, '.hello', (widthItemDot/slidesDots_.length + 20), dotsInBasket, 'basket__dot--active');
+  }
+
+  renderDots('.basket__card', 'basket__dot', 'basket__dot--active', '.basket__dots');
+  slideDots('.basket__card', '.basket__box--right', '.basket__window');
+
 
   // Функция для слайдера на странице recipe.html
 
@@ -78,9 +129,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   sliderWidthInner('.other-recipe__inner', '.recipes__card', '.offer__tabs-arrow--prev', '.offer__tabs-arrow--next', 721, 288);
-  window.addEventListener('resize', () => {
-    sliderWidthInner('.other-recipe__inner', '.recipes__card', '.offer__tabs-arrow--prev', '.offer__tabs-arrow--next', 721, 288);
-  });
 
   // функция для табов (в секции recipes)
 
@@ -485,7 +533,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //Свайп слайдера с прогрессом
 
-  function swipeProgress(slWind, slField, slSlides, slProgress, slideWidth) {
+  function swipeProgress(slWind, slField, slSlides, slProgress, slideWidth, dots, activeClassDot) {
     const sliderProgressWind = document.querySelector(slWind),
           sliderProgressField = document.querySelector(slField),
           sliderProgressSlides = document.querySelectorAll(slSlides),
@@ -498,7 +546,9 @@ window.addEventListener('DOMContentLoaded', () => {
       let touchProgressEnd;
       let counterSwipeProgress = 1;
   
-      sliderProgress.style.width = `${progressStep}%`;
+      if (sliderProgress) {
+        sliderProgress.style.width = `${progressStep}%`;
+      }
   
       sliderProgressWind.addEventListener('touchstart', (e) => {
         touchProgressStart = e.changedTouches[0].pageX;
@@ -538,7 +588,18 @@ window.addEventListener('DOMContentLoaded', () => {
             sliderProgressField.style.transform = `translateX(-${slideWidth * (counterSwipeProgress - 1)}px)`;
           }
         }
-        sliderProgress.style.width = `${progressStep * counterSwipeProgress}%`;
+        // console.log(counterSwipeProgress);
+        if (dots) {
+          dots.forEach((item, i) => {
+            if (counterSwipeProgress - 1 == i) {
+              clearActiveClass(dots, activeClassDot);
+              item.classList.add(activeClassDot);
+            }
+          });
+        }
+        if (sliderProgress) {
+          sliderProgress.style.width = `${progressStep * counterSwipeProgress}%`;
+        }
       });
     }
   }

@@ -2387,6 +2387,271 @@ input[type=number] {
 #cabInfoName {
   max-width: 155px; }
 
+.basket {
+  padding-top: 70px;
+  padding-bottom: 100px; }
+  .basket__dots {
+    display: none;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto; }
+  .basket__dot {
+    width: 11px;
+    height: 11px;
+    background-color: rgba(116, 2, 158, 0.3);
+    border-radius: 50%;
+    margin: 0 5px 0 10px;
+    cursor: pointer; }
+    .basket__dot--active {
+      background-color: #74029E; }
+  .basket__window {
+    flex-basis: 32%; }
+  .basket__card {
+    background: #039E25;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+    margin-bottom: 15px; }
+    .basket__card--purple {
+      background-color: #74029E; }
+    .basket__card--orange {
+      background-color: #F17F30; }
+    .basket__card-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+    .basket__card-button {
+      padding: 10px 45px;
+      font-size: 20px;
+      line-height: 130%;
+      background-color: #fff;
+      border-radius: 50px;
+      transition: 0.3s; }
+      .basket__card-button img {
+        display: none; }
+      .basket__card-button:hover {
+        background-color: #cccccc; }
+    .basket__card-text {
+      font-family: 'Nunito-Bold';
+      max-width: 300px;
+      font-size: 24px;
+      line-height: 130%;
+      text-align: right;
+      color: #FFFFFF;
+      margin-bottom: 15px; }
+  .basket__input {
+    font-size: 14px;
+    line-height: 130%;
+    color: #6F6F6F;
+    padding: 10px 0 10px 20px;
+    border: 1px solid #B9CCD3;
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+    height: 40px; }
+    .basket__input-group {
+      display: flex;
+      align-items: flex-start;
+      margin-right: 25px; }
+  .basket__form {
+    display: grid;
+    grid-template: auto auto/auto auto;
+    row-gap: 50px;
+    justify-items: start;
+    align-items: start; }
+    .basket__form-price {
+      font-family: 'Nunito-Bold';
+      font-size: 30px;
+      line-height: 130%; }
+      .basket__form-price--old {
+        font-family: 'Nunito-Bold';
+        -webkit-text-decoration-line: line-through;
+        text-decoration-line: line-through; }
+    .basket__form__row--input {
+      align-items: center;
+      justify-content: flex-start; }
+    .basket__form-box--text {
+      justify-self: end; }
+    .basket__form-button span:last-of-type {
+      display: none; }
+    .basket__form-button--input {
+      border: 1px solid #039E25;
+      border-radius: 0 8px 8px 0;
+      height: 40px;
+      width: 40px;
+      background-color: #039E25;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.3s; }
+      .basket__form-button--input:hover {
+        background-color: #FFFFFF; }
+        .basket__form-button--input:hover path {
+          fill: #039E25; }
+    .basket__form-text {
+      font-family: 'Nunito-Bold';
+      font-size: 18px;
+      line-height: 130%; }
+      .basket__form-text--input {
+        margin-bottom: 40px; }
+        .basket__form-text--input-green {
+          font-size: 14px;
+          line-height: 130%;
+          color: #039E25;
+          max-width: 245px; }
+  .basket__products {
+    margin-bottom: 55px; }
+  .basket__progress {
+    width: 100%;
+    height: 32px;
+    border: 1px solid #CEE5EE;
+    border-radius: 61px;
+    overflow: hidden; }
+    .basket__progress-wrap {
+      position: relative;
+      margin-bottom: 35px; }
+    .basket__progress-inner {
+      height: 100%;
+      width: 90%;
+      background-color: #74029E;
+      transition: 0.3s; }
+    .basket__progress-text {
+      color: #fff;
+      font-family: 'Nunito-Bold';
+      font-size: 14px;
+      line-height: 130%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+  .basket__gift {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #CEE5EE;
+    border-bottom: 1px solid #CEE5EE;
+    margin-bottom: 50px; }
+    .basket__gift-button {
+      padding: 12px 34px;
+      font-size: 20px;
+      line-height: 130%;
+      color: #A4AEC6;
+      background-color: #DEE3EE;
+      border-radius: 50px;
+      transition: 0.3s; }
+      .basket__gift-button:hover {
+        background-color: #5771a9; }
+    .basket__gift-img {
+      grid-area: 1 / 1 / 3 / 2;
+      margin-right: 30px; }
+    .basket__gift-box {
+      display: grid;
+      grid-template: auto auto / auto auto 1fr; }
+    .basket__gift-text {
+      font-family: 'Nunito-600';
+      font-size: 18px;
+      line-height: 130%;
+      grid-area: 1/2/2/3;
+      align-self: end; }
+      .basket__gift-text--bottom {
+        grid-area: 2/2/3/4;
+        align-self: start; }
+    .basket__gift-price {
+      font-family: 'Nunito-900';
+      font-size: 24px;
+      line-height: 120%;
+      color: #039E25;
+      grid-area: 1/3/2/4;
+      align-self: end;
+      padding-left: 20px; }
+  .basket__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px; }
+    .basket__item-value {
+      display: none;
+      font-family: 'Nunito-Bold';
+      font-size: 14px;
+      line-height: 130%;
+      color: #6F6F6F; }
+    .basket__item:last-of-type {
+      margin-bottom: 0; }
+    .basket__item-price {
+      font-family: 'Nunito-Bold';
+      font-size: 18px;
+      line-height: 130%;
+      margin-right: 40px; }
+      .basket__item-price span {
+        display: none; }
+    .basket__item-box--left {
+      display: flex;
+      align-items: center;
+      width: 380px; }
+    .basket__item-box--right {
+      display: flex;
+      align-items: center; }
+      .basket__item-box--right-wrap {
+        display: flex;
+        align-items: center; }
+    .basket__item-img {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #B9CCD3;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin-right: 25px; }
+    .basket__item-text {
+      font-family: 'Nunito-600';
+      font-size: 16px;
+      line-height: 130%; }
+      .basket__item-text--price {
+        text-align: center; }
+        .basket__item-text--price-old {
+          font-family: 'Nunito-600';
+          font-size: 12px;
+          line-height: 130%;
+          -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+          color: #74029E; }
+  .basket__title {
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase; }
+  .basket__box {
+    background: #FFFFFF;
+    border: 1px solid #B9CCD3;
+    border-radius: 16px;
+    padding: 45px 80px 75px 50px;
+    flex-basis: 66%; }
+    .basket__box--right {
+      transition: 0.3s; }
+    .basket__box-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px; }
+      .basket__box-header-text {
+        font-family: 'Nunito-600';
+        font-size: 18px;
+        line-height: 130%; }
+      .basket__box-header-line {
+        height: 1px;
+        background-color: #CEE5EE;
+        flex-basis: 50%;
+        align-self: flex-end; }
+      .basket__box-header-price {
+        font-family: 'Nunito-Bold';
+        font-size: 24px;
+        line-height: 130%; }
+
 * {
   margin: 0;
   padding: 0;
@@ -2423,6 +2688,9 @@ ul {
       font-family: 'Nunito-900';
       font-size: 36px;
       line-height: 130%; }
+
+.text-alignR {
+  text-align: right; }
 
 .text-red {
   color: #EB001B; }
@@ -2534,6 +2802,8 @@ input {
       width: 235px; } }
 
 @media screen and (max-width: 1550px) {
+  .basket__box {
+    padding: 50px; }
   .categories__img {
     padding: 70px 15px 0; }
   .inst__link {
@@ -2579,6 +2849,8 @@ input {
     right: -100px; } }
 
 @media screen and (max-width: 1400px) {
+  .basket__box-header-line {
+    flex-basis: 45%; }
   .recipe__ul {
     margin-right: 30px; }
   .recipe__row {
@@ -2665,6 +2937,8 @@ input {
     right: 2%; } }
 
 @media screen and (max-width: 1300px) {
+  .basket__gift-text--bottom {
+    max-width: 300px; }
   .cab-info__user {
     padding-right: 30px; }
   .cab-info__container {
@@ -2711,6 +2985,39 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .basket__card {
+    width: 455px;
+    margin-right: 10px;
+    margin-left: 10px; }
+  .basket__row {
+    flex-direction: column; }
+  .basket__form-price {
+    font-size: 26px; }
+  .basket__form-text--input-green {
+    font-size: 12px;
+    max-width: 180px; }
+  .basket__item-box--left {
+    width: 355px; }
+  .basket__item-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px; }
+  .basket__item-text--bottom {
+    font-size: 14px; }
+  .basket__title {
+    margin-bottom: 45px; }
+  .basket__box {
+    width: 100%;
+    margin-bottom: 50px; }
+    .basket__box--right {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .basket__box-header-price {
+      font-size: 20px; }
+    .basket__box-header-text {
+      font-size: 16px; }
   .cab-info__container {
     flex-direction: column;
     padding: 0; }
@@ -3081,6 +3388,42 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .basket__progress-text {
+    max-width: 260px;
+    text-align: center; }
+  .basket__card {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin: 0px 10px 30px 10px; }
+    .basket__card-button {
+      padding: 0;
+      background-color: transparent; }
+      .basket__card-button span {
+        display: none; }
+      .basket__card-button img {
+        display: block; }
+    .basket__card-img {
+      width: 113px;
+      height: 113px;
+      background-color: rgba(116, 2, 158, 0.1);
+      border-radius: 50%;
+      margin-bottom: 25px; }
+      .basket__card-img img {
+        transform: translateY(-20px);
+        width: 128px;
+        height: 128px; }
+    .basket__card-box {
+      align-items: center; }
+    .basket__card-text {
+      font-family: 'Nunito-900';
+      text-align: center;
+      color: #74029E; }
+  .basket__gift-text--bottom {
+    max-width: 290px; }
   .cab-hist {
     padding-bottom: 60px; }
     .cab-hist__row {
@@ -3431,6 +3774,95 @@ input {
       left: 25%; } }
 
 @media screen and (max-width: 767px) {
+  .basket {
+    padding-top: 40px; }
+    .basket__window {
+      overflow: hidden;
+      flex-basis: auto;
+      width: 100%;
+      position: relative;
+      height: 300px;
+      display: flex;
+      align-items: flex-end; }
+    .basket__box--right {
+      justify-content: flex-start;
+      position: absolute;
+      left: 0;
+      bottom: 45px; }
+    .basket__card {
+      margin-bottom: 0; }
+    .basket__dots {
+      display: flex; }
+    .basket__input {
+      font-size: 12px; }
+      .basket__input-group {
+        margin-right: 10px; }
+    .basket__form-button span:first-of-type {
+      display: none; }
+    .basket__form-button span:last-of-type {
+      display: block; }
+    .basket__form-price {
+      font-size: 24px; }
+    .basket__form-text {
+      font-size: 16px; }
+      .basket__form-text--input-green {
+        font-size: 10px; }
+    .basket__progress-text {
+      font-size: 12px;
+      color: #2D2D2D;
+      width: 240px;
+      text-align: center;
+      top: -35px;
+      transform: translateX(-50%); }
+    .basket__gift-box {
+      grid-template: auto auto auto/ auto 1fr; }
+    .basket__gift-price {
+      padding-left: 0;
+      grid-area: 2/2/3/3; }
+    .basket__gift-text {
+      grid-area: 1/2/2/3; }
+      .basket__gift-text--bottom {
+        font-size: 12px;
+        grid-area: 3/1/4/3; }
+    .basket__gift-img {
+      width: 58px;
+      height: 58px;
+      margin-right: 15px;
+      grid-area: 1/1/3/2; }
+    .basket__item-box--left {
+      width: 310px; }
+    .basket__item-price {
+      font-size: 16px;
+      margin-right: 15px; }
+    .basket__item-img {
+      width: 55px;
+      height: 55px; }
+    .basket__item-text {
+      font-size: 14px; }
+      .basket__item-text--bottom {
+        font-size: 12px; }
+    .basket__box {
+      position: relative;
+      padding: 20px; }
+      .basket__box-header {
+        position: absolute;
+        top: -66px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0; }
+        .basket__box-header-price {
+          font-size: 18px; }
+        .basket__box-header-line {
+          display: none; }
+        .basket__box-header-text {
+          font-size: 14px;
+          margin-bottom: 5px; }
+    .basket__title {
+      font-size: 24px;
+      margin-bottom: 100px; }
   .other-recipe {
     margin-top: 0;
     padding-bottom: 60px; }
@@ -3674,6 +4106,67 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .basket__products {
+    margin-bottom: 20px; }
+  .basket__box {
+    padding-bottom: 40px; }
+    .basket__box-header {
+      width: 195px; }
+  .basket__input {
+    width: calc(100% - 40px); }
+    .basket__input-group {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%; }
+  .basket__form {
+    grid-template: auto auto auto/ auto;
+    justify-items: center;
+    grid-gap: 30px; }
+    .basket__form-button {
+      padding: 15px 45px;
+      width: 100%; }
+    .basket__form__row--input {
+      flex-direction: column;
+      width: 100%; }
+    .basket__form-box--input {
+      width: 100%; }
+    .basket__form-box--text {
+      justify-self: center; }
+      .basket__form-box--text p {
+        text-align: center; }
+    .basket__form-text--input {
+      display: none; }
+  .basket__progress {
+    height: 20px; }
+    .basket__progress-wrap {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #B9CCD3; }
+  .basket__gift {
+    flex-direction: column; }
+    .basket__gift-box {
+      margin-bottom: 15px; }
+  .basket__item {
+    flex-direction: column;
+    align-items: flex-start; }
+    .basket__item-text {
+      max-width: 180px; }
+    .basket__item-img {
+      margin-right: 15px; }
+    .basket__item-value {
+      display: block;
+      margin-right: auto;
+      margin-left: 75px; }
+    .basket__item-price span {
+      display: inline-block;
+      font-size: 10px;
+      margin-right: 3px; }
+    .basket__item-box--right {
+      width: 100%;
+      justify-content: flex-end; }
+    .basket__item-box--left {
+      width: auto; }
+    .basket__item-box:nth-child(2) {
+      display: none; }
   .cab-hist {
     padding-top: 60px; }
     .cab-hist__title {

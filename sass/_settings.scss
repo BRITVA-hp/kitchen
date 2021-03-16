@@ -38,6 +38,9 @@ ul {
   }
 }
 .text {
+  &-alignR {
+    text-align: right;
+  }
   &-red {
     color: #EB001B;
   }
