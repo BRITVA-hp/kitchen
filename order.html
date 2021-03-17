@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <header class="border-bottom header--non-shadow section header bg-light">
+    <div class="container">
+      <div class="align-center row">
+        <nav class="nav">
+          <a href="#" class="hover-text nav__link nav__link--msc text-green"><img src="img/here.png" alt="here">&nbsp; Москва</a>
+          <a href="#" class="hover-text nav__link">Меню</a>
+          <a href="#" class="hover-text nav__link">Акции</a>
+          <a href="#" class="hover-text nav__link">О нас</a>
+          <a href="#" class="hover-text nav__link">Вопрос-Ответ</a>
+        </nav>
+
+        <a class="header__logo" href="./index.html"><img src="img/logo.png" alt="Кухня здоровья"></a>
+
+        <div class="header__box">
+          <div class="align-center row">
+            <a href="tel:+78002007762" class="header__tel hover-text">+7 (800) 200 77 62</a>
+
+            <a href="./cabinet.html" class="header__cabinet">
+              <img src="img/cabinet.png" alt="cabinet">
+              &nbsp;&nbsp;
+              <p class="header__cabinet-text text-purple hover-text">Личный кабинет</p>
+            </a>
+
+            <a href="./basket.html" class="header__basket"><img src="img/basket.png" alt="basket"></a>
+
+            <div class="header__burger">
+              <div class="header__burger-line"></div>
+              <div class="header__burger-line"></div>
+              <div class="header__burger-line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light menu">
+      <a href="#" class="menu__link--menu menu__link">
+        Меню
+        <img class="menu__arrow" src="img/menu.png" alt="arrow">
+        <div class="menu__inner">
+          <a href="./element.html">Супы</a>
+          <a href="./element.html">Салаты</a>
+          <a href="./element.html">Горячее</a>
+          <a href="./element.html">Сандвичи</a>
+          <a href="./element.html">Десерты</a>
+          <a href="./element.html">Напитки</a>
+        </div>
+      </a>
+      <a href="#" class="menu__link">Акции</a>
+      <a href="#" class="menu__link">О нас</a>
+      <a href="#" class="menu__link">Вопрос-Ответ</a>
+      <a href="./recipes.html" class="menu__link">Рецепты</a>
+      <a href="#" class="menu__link">Вакансии</a>
+      <a href="#" class="menu__link">Команда</a>
+      <a href="#" class="menu__link">@kuhnyazdorovyaopt</a>
+      <a href="#" class="button button--purple menu__button">Подписаться</a>
+    </div>
+  </header>
+  <!-- /.section header -->
+
+  <main>
+
+    <section class="section path">
+      <div class="container">
+        <nav class="body__nav">
+          <a href="./index.html" class="body__nav-link hover-text">Главная </a>
+          <div class="body__nav-arrow"><img src="img/arrowNav.png" alt="arrow"></div>
+          <a href="./basket.html" class="body__nav-link hover-text">Ваша корзина</a>
+          <div class="body__nav-arrow"><img src="img/arrowNav.png" alt="arrow"></div>
+          <a href="./order.html" class="body__nav-link hover-text">Оформление заказа</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section order">
+      <div class="container">
+        <h3 class="section__title--small order__title">Оформление заказа</h3>
+
+        <form class="order__form row">
+
+          <div class="order__box order__box--left">
+            <div class="order__step order__step--1">
+              <div class="order__step__header">
+                <div class="order__step__number"><p>1</p></div>
+                <p class="order__step__title">Укажите адрес доставки</p>
+              </div>
+              <input placeholder="Адрес доставки" class="order__input order__input--address" type="text">
+            </div>
+            <!-- /.order__step order__step--1 -->
+  
+            <div class="order__step order__step--2">
+              <div class="order__step__header">
+                <div class="order__step__number"><p>2</p></div>
+                <p class="order__step__title">Выберите дату и время доставки</p>
+              </div>
+              <p class="order__text">
+                Доставка за МКАД осуществляется с 9.00 до 19.00 в течение дня (выбранный интервал времени в данном случае не работает). При заказе в Москву и Московскую область удаленностью до 10 км за МКАД доставка бесплатная. Свыше 10 км доставка составляет 30 Р за 1 км начиная от МКАД. Рассчет доставки будет произведен автоматически.
+              </p>
+              <div class="order__input-group order__input-group--time">
+                <input class="order__input order__input--date" type="date" name="calendar" value="" max="2022-03-17" min="2021-03-17">
+                <label class="order__label order__label--day" for="day">09:00 - 19:00  (в течении дня)<input id="day" checked type="radio" name="time" class="order__radio"><div class="order__circle"><div class="order__dot"></div></div></label>
+                <label class="order__label order__label--9-12" for="9-12">09:00 - 12:00<input id="9-12" type="radio" name="time" class="order__radio"><div class="order__circle"><div class="order__dot"></div></div></label>
+                <label class="order__label order__label--12-15" for="12-15">12:00 - 15:00<input id="12-15" type="radio" name="time" class="order__radio"><div class="order__circle"><div class="order__dot"></div></div></label>
+                <label class="order__label order__label--19-22" for="19-22">19:00 -22:00<input id="19-22" type="radio" name="time" class="order__radio"><div class="order__circle"><div class="order__dot"></div></div></label>
+                <div class="order__select__wrap">
+                  <select class="order__select" name="time" id="time">
+                    <option selected class="order__option" value="">09:00 - 19:00  (в течении дня)</option>
+                    <option class="order__option" value="">09:00 - 12:00</option>
+                    <option class="order__option" value="">12:00 - 15:00</option>
+                    <option class="order__option" value="">19:00 -22:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- /.order__step order__step--2 -->
+
+            <div class="order__step order__step--3">
+              <div class="order__step__header">
+                <div class="order__step__number"><p>3</p></div>
+                <p class="order__step__title">Выберите способ оплаты</p>
+              </div>
+              <div class="order__input-group--pay">
+                <label class="order__label order__label--card" for="card">
+                  <div class="order__pay">
+                    <p class="order__pay__title">Онлайн на сайте</p>
+                    <div class="order__row--pay row">
+                      <img src="img/order/logo.png" alt="visa">
+                      <img src="img/order/logo1.png" alt="mastercard">
+                      <img src="img/order/logo2.png" alt="qiwi">
+                      <img src="img/order/logo3.png" alt="sberbank">
+                    </div>
+                  </div>
+                  <input id="card" checked type="radio" name="pay" class="order__radio"><div class="order__circle order__circle--card"><div class="order__dot"></div></div></label>
+                <label class="order__label" for="courier">Курьеру<input id="courier" type="radio" name="pay" class="order__radio"><div class="order__circle"><div class="order__dot"></div></div></label>
+              </div>
+            </div>
+            <!-- /.order__step order__step--3 -->
+
+            <div class="order__step order__step--4">
+              <div class="order__step__header">
+                <div class="order__step__number"><p>4</p></div>
+                <p class="order__step__title">Напишите при необходимости комментарий</p>
+              </div>
+              <textarea class="order__comment" placeholder="Ваш комментарий" name="comment" id="" cols="30" rows="10"></textarea>
+            </div>
+            <!-- /.order__step order__step--4 -->
+          </div>
+
+          <div class="order__box order__box--end">
+            <div class="order__box--right">
+              <div class="order__box__wrap">
+                <p class="order__box__text order__box__text--top">Заказ на имя</p>
+                <p class="order__box__text order__box__text--name text-gray">Ивановой Марии Викторовны</p>
+                <div class="order__row--sum row">
+                  <p class="order__box__text">Сумма заказа</p>
+                  <p class="order__box__text order__box__text--price text-gray">1543,00 ₽</p>
+                </div>
+                <div class="row">
+                  <p class="order__box__text">Доставка</p>
+                  <p class="order__box__text order__box__text--price text-gray">0,00 ₽</p>
+                </div>
+              </div>
+              <div class="order__box__footer">
+                <p class="order__box__footer__text">Итого</p>
+                <p class="order__box__footer__text order__box__footer__text--price">1543,00 ₽</p>
+              </div>
+            </div>
+
+            <div class="order__row--button row">
+              <a class="order__link" href="./basket.html">Вернуться в корзину</a>
+              <button class="button button--green order__button">Оформить заказ</button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+    <!-- /.section order -->
+
+  </main>
+
+  <footer class="footer section">
+    <div class="container">
+      <div class="footer__row row">
+        <div class="footer__wrap">
+          <div class="footer__box footer__box--left">
+            <a href="./index.html" class="footer__label"><img src="img/footer/label.png" alt="Кухня здоровья"></a>
+            <p class="footer__text text-white">Мы готовим и доставляем любые блюда: каши, блинчики, сырники, блюда из рыбы и мяса, десерты, супы, роллы, готовые сеты.</p>
+            <div class="footer__pay">
+              <div class="footer__logo"><img src="img/footer/logo.png" alt="Visa"></div>
+              <div class="footer__logo"><img src="img/footer/logo1.png" alt="MaserCard"></div>
+              <div class="footer__logo"><img src="img/footer/logo2.png" alt="Pay"></div>
+            </div>
+            <a href="#" class="footer__text--gray hover-text">Доставка и оплата</a>
+            <a href="#" class="footer__text--gray hover-text">Пользовательское соглашение</a>
+          </div>
+
+          <div class="footer__menu">
+            <div class="footer__menu-header">
+              <p class="footer__menu-header-title">Меню</p>
+              <div class="footer__menu-burger">
+                <div class="footer__menu-burger-line"></div>
+                <div class="footer__menu-burger-line"></div>
+                <div class="footer__menu-burger-line"></div>
+              </div>
+            </div>
+            <div class="footer__menu-wrap">
+              <a href="./element.html" class="footer__menu-link hover-text">Супы</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Салаты</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Горячее</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Сандвичи</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Десерты</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Напитки</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__img"><img src="img/footer/girl.png" alt="girl"></div>
+
+        <div class="footer__box footer__box--right">
+          <div class="footer__block">
+            <div class="footer__block-box">
+              <a href="#" class="footer__block-link hover-text">Меню</a>
+              <a href="#" class="footer__block-link hover-text">Акции</a>
+              <a href="#" class="footer__block-link hover-text">О нас</a>
+              <a href="./recipes.html" class="footer__block-link hover-text">Рецепты</a>
+            </div>
+            <div class="footer__block-box footer__block-box--right">
+              <a href="#" class="footer__block-link hover-text">Вопрос-Ответ</a>
+              <a href="#" class="footer__block-link hover-text">Команда</a>
+              <a href="#" class="footer__block-link hover-text">Вакансии</a>
+              <a href="#" class="footer__block-link hover-text">Блог</a>
+            </div>
+          </div>
+          <a href="#" class="footer__link hover-text">Подписаться на новости</a>
+          <form action="#" class="footer__form">
+            <input placeholder="Введите вашу почту" type="text" class="footer__input">
+            <button class="button button--green footer__button">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /.footer section -->
+
+  <script src="js/script.js"></script>
+  
+</body>
+</html>

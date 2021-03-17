@@ -103,6 +103,11 @@
 }
 
 @media screen and (max-width: 1500px) {
+  .order {
+    &__text {
+      max-width: 840px;
+    }
+  }
   .recipe {
     &__img {
       width: 800px;
@@ -150,6 +155,24 @@
   }
 }
 @media screen and (max-width: 1400px) {
+  .order {
+    &__pay {
+      &__title {
+        font-size: 16px;
+      }
+    }
+    &__input-group {
+      &--pay {
+        column-gap: 15px;
+      }
+      &--time {
+        grid-gap: 15px;
+      }
+    }
+    &__text {
+      max-width: 640px;
+    }
+  }
   .basket {
     &__box {
       &-header {
@@ -407,6 +430,73 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .order {
+    padding-bottom: 100px;
+    &__title {
+      margin-bottom: 50px;
+    }
+    &__link {
+      margin-right: 0;
+    }
+    &__button {
+      margin-bottom: 20px;
+      order: -1;
+    }
+    &__row {
+      &--button {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+    &__label {
+      &--card {
+        grid-area: auto;
+      }
+      &--day {
+        grid-area: auto;
+        width: auto;
+      }
+    }
+    &__input-group {
+      &--pay {
+        align-items: start;
+        grid-template: auto/ 1fr 1fr;
+      }
+      &--time {
+        grid-template: repeat(3, 1fr)/ 1fr 1fr;
+      }
+    }
+    &__box {
+      &--right {
+        width: 400px;
+      }
+      &__wrap {
+        padding: 40px;
+        padding-bottom: 20px;
+      }
+      &__text {
+        &--name {
+          font-size: 16px;
+        }
+      }
+    }
+    &__text {
+      font-size: 14px;
+    }
+    &__step {
+      &__number {
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+        p {
+          font-size: 20px;
+        }
+      }
+      &__title {
+        font-size: 20px;
+      }
+    }
+  }
   .basket {
     &__card {
       width: 455px;
@@ -1052,6 +1142,26 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .order {
+    &__comment {
+      width: 100%;
+    }
+    &__input {
+      &--address {
+        width: 100%;
+      }
+    }
+    &__box {
+      &--left {
+        margin-right: 0;
+        margin-bottom: 60px;
+      }
+    }
+    &__form {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   .basket {
     &__progress {
       &-text {
@@ -2198,6 +2308,110 @@
 }
 
 @media screen and (max-width: 575px) {
+  .order {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    &__select {
+      &__wrap {
+        display: block;
+      }
+    }
+    &__button {
+      width: 100%;
+    }
+    &__row {
+      &--sum {
+        margin-bottom: 10px;
+      }
+    }
+    &__box {
+      &__footer {
+        padding: 20px 30px 20px 20px;
+        &__text{
+          font-size: 16px;
+          &--price {
+            font-size: 18px;
+          }
+        }
+      }
+      &__wrap {
+        padding: 20px 30px 20px 20px;
+      }
+      &__text {
+        &--top {
+          margin-bottom: 0;
+        }
+        &:not(.order__box__text--price) {
+          font-size: 16px;
+        }
+        &--name {
+          font-size: 14px !important;
+          margin-bottom: 15px;
+        }
+      }
+      &--right {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+      &--end {
+        width: 100%;
+      }
+    }
+    &__pay {
+      &__title {
+        font-size: 14px;
+      }
+    }
+    &__input-group {
+      &--pay {
+        grid-template: auto auto/1fr;
+        grid-gap: 6px;
+      }
+      &--time {
+        grid-template: 1fr 1fr/1fr;
+        grid-gap: 6px;
+      }
+    }
+    &__label {
+      &--day, &--9-12, &--12-15, &--19-22 {
+        display: none;
+      }
+    }
+    &__text {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    &__step {
+      margin-bottom: 30px;
+    }
+    &__input {
+      font-size: 12px;
+      &--date {
+        font-size: 14px;
+      }
+    }
+    &__step {
+      &__title {
+        font-size: 16px;
+        max-width: 250px;
+      }
+      &__number {
+        width: 27px;
+        height: 27px;
+        margin-right: 10px;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 30px;
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   .basket {
     &__products {
       margin-bottom: 20px;
