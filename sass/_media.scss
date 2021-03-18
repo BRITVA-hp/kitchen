@@ -1185,6 +1185,9 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .headb {
+    display: none;
+  }
   .quest-footer {
     padding-bottom: 60px;
     &__button {

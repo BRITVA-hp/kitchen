@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', () => {
     sliderWidthInner('.other-recipe__inner', '.recipes__card', '.offer__tabs-arrow--prev', '.offer__tabs-arrow--next', 721, 288);
-      slideDots('.basket__card', '.basket__box--right', '.basket__window');
+    slideDots('.basket__card', '.basket__box--right', '.basket__window', false, 'basket__dot--active', 'basket__dot', 320, 320);
   });
 
   // Программно устанавливаем высоту контента состава заказа в личном кабинете (для плавной анимации)
@@ -78,32 +78,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // слайдер с точками на странице basket.html
 
-  function renderDots(slidesDots, dotClass, dotClassActive, wrapDots) {
-    const slidesDots_ = document.querySelectorAll(slidesDots);
-    if (slidesDots_.length > 0) {
-      slidesDots_.forEach((item, i) => {
-        const dot = document.createElement( "div" );
-        dot.classList.add(dotClass);
-        document.querySelector(wrapDots).appendChild(dot);
-        if (i == 0) {
-          dot.classList.add(dotClassActive);
-        }
-      });
-      dotsInBasket = document.querySelectorAll('.basket__dot');
-    }
-  }
-
-  function slideDots(slidesDots, innerDot, windowDot) {
+  function slideDots(slidesDots, innerDot, windowDot, wrapDots, dotClassActive, dotClass, slideWidthDots, swipeWidthDots) {
     const slidesDots_ = document.querySelectorAll(slidesDots),
-          innerDot_ = document.querySelector(innerDot),
-          windowDot_ =  document.querySelector(windowDot);
-    let widthItemDot = 0;
+          innerDot_ = document.querySelector(innerDot);
+
+    if (wrapDots) {
+      if (slidesDots_.length > 0) {
+        slidesDots_.forEach((item, i) => {
+          const dot = document.createElement( "div" );
+          dot.classList.add(dotClass);
+          document.querySelector(wrapDots).appendChild(dot);
+          if (i == 0) {
+            dot.classList.add(dotClassActive);
+          }
+        });
+      }
+    }
 
     if (slidesDots_.length > 0 && window.getComputedStyle(innerDot_).position == 'absolute') {
-      slidesDots_.forEach(item => {
-        widthItemDot += item.clientWidth;
-      });
-      innerDot_.style.width = `${widthItemDot + 20 * slidesDots_.length}px`;
+      innerDot_.style.width = `${slideWidthDots * slidesDots_.length + 20 * (slidesDots_.length - 1)}px`;
     } else {
       if (innerDot_) {
         innerDot_.style.width = `auto`;
@@ -111,11 +104,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
       }
     }
-    swipeProgress(windowDot, innerDot, slidesDots, '.hello', (widthItemDot/slidesDots_.length + 20), dotsInBasket, 'basket__dot--active');
+    swipeProgress(windowDot, innerDot, slidesDots, '.hello', swipeWidthDots, dotClass, dotClassActive);
   }
 
-  renderDots('.basket__card', 'basket__dot', 'basket__dot--active', '.basket__dots');
-  slideDots('.basket__card', '.basket__box--right', '.basket__window');
+  slideDots('.basket__card', '.basket__box--right', '.basket__window','.basket__dots', 'basket__dot--active', 'basket__dot', 320, 320);
+  slideDots('.headb__slider__card', '.headb__inner', '.headb__window', '.headb__slider__dots', 'headb__dot--active', 'headb__dot', 155, 175);
 
 
   // Функция для слайдера на странице recipe.html
@@ -557,14 +550,15 @@ window.addEventListener('DOMContentLoaded', () => {
   accordion(".cab-hist__accord-header", "cab-hist__accord-header--active", 20);
   accordion(".questions__accord__header", "questions__accord__header--active", 20);
 
-  //Свайп слайдера с прогрессом
+  //Свайп слайдера с прогрессом и точками
 
   function swipeProgress(slWind, slField, slSlides, slProgress, slideWidth, dots, activeClassDot) {
     const sliderProgressWind = document.querySelector(slWind),
           sliderProgressField = document.querySelector(slField),
           sliderProgressSlides = document.querySelectorAll(slSlides),
           sliderProgress = document.querySelector(slProgress),
-          progressStep = 100 / sliderProgressSlides.length;
+          progressStep = 100 / sliderProgressSlides.length,
+          dots_ = document.querySelectorAll('.' + dots);
 
     if (sliderProgressWind) {
       let sliderProgressFieldPos;
@@ -615,10 +609,10 @@ window.addEventListener('DOMContentLoaded', () => {
           }
         }
         // console.log(counterSwipeProgress);
-        if (dots) {
-          dots.forEach((item, i) => {
+        if (dots_) {
+          dots_.forEach((item, i) => {
             if (counterSwipeProgress - 1 == i) {
-              clearActiveClass(dots, activeClassDot);
+              clearActiveClass(dots_, activeClassDot);
               item.classList.add(activeClassDot);
             }
           });

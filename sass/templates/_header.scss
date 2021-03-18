@@ -31,7 +31,16 @@
     }
   }
   &__basket {
-    cursor: pointer;
+    &-wrap {
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        .headb {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
   }
   &__burger {
     width: 25px;
@@ -155,6 +164,286 @@
       font-size: 20px;
       line-height: 130%;
       color: #74029E;
+    }
+  }
+}
+.headb {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #FFFFFF;
+  border: 1px solid #B9CCD3;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  &__dot {
+    width: 11px; 
+    height: 11px; 
+    background-color: rgba(116, 2, 158, 0.3);
+    border-radius: 50%;
+    margin: 0 5px 0 10px;
+    cursor: pointer;
+    &--active {
+      background-color: #74029E;
+    }
+  }
+  &__content {
+    max-height: 190px;
+    overflow: auto;
+  }
+  &__input-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  &__button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $green;
+    background-color: $green;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background-color: darken($green, 10%)
+    }
+  }
+  &__input {
+    font-size: 12px;
+    line-height: 130%;
+    color: #6F6F6F;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #B9CCD3;
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+    padding-left: 20px;
+    width: 190px;
+  }
+  &__footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &__price {
+      font-family: 'Nunito-Bold';
+      font-size: 30px;
+      line-height: 130%;
+      text-align: right;
+      &--old {
+        font-family: 'Nunito-Bold';
+        font-size: 14px;
+        line-height: 130%;
+        text-align: right;
+        text-decoration-line: line-through;
+        color: #74029E;
+      }
+    }
+    &__sum {
+      font-family: 'Nunito-Bold';
+      font-size: 18px;
+      line-height: 130%;
+      text-align: right;
+      margin-bottom: 5px;
+    }
+    &__subtitle {
+      max-width: 210px;
+      font-size: 12px;
+      line-height: 130%;
+      color: #039E25;
+    }
+  }
+  &__progress {
+    padding: 20px 0;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    margin-bottom: 20px;
+    
+    &__inner {
+      width: 80%;
+      transition: 0.3s;
+      height: 100%;
+      background-color: $purple;
+    }
+    &__wrap {
+      position: relative;
+      height: 32px;
+      border: 1px solid #CEE5EE;
+      box-sizing: border-box;
+      border-radius: 61px;
+      overflow: hidden;
+    }
+    &__text {
+      top: 50%;
+      left: 15%;
+      z-index: 3;
+      transform: translateY(-50%);
+      position: absolute;
+      font-family: 'Nunito-Bold';
+      font-size: 12px;
+      line-height: 130%;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+  &__number {
+    max-width: 60px;
+    padding: 0 !important;
+    border: none !important;
+    margin-right: 20px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    &__price {
+      font-family: 'Nunito-Bold';
+      font-size: 16px;
+      line-height: 130%;
+      margin-right: 12px;
+    }
+    &__box {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__img {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #B9CCD3;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F0F0F0;
+    margin-bottom: 10px;
+  }
+  &__close {
+    display: flex;
+    align-items: center;
+    p {
+      color: #74029E;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+  &__text {
+    font-family: 'Nunito-600';
+  }
+  &__window {
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 155px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    bottom: 26px;
+    transition: 0.3s;
+  }
+  &__slider {
+    padding-bottom: 40px;
+    &__dots {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 155px;
+    }
+    &__text {
+      font-family: 'Nunito-900';
+      font-size: 24px;
+      line-height: 110%;
+      text-align: center;
+      color: #74029E;
+      max-width: 155px;
+    }
+    &__img {
+      width: 113px;
+      height: 113px;
+      border-radius: 50%;
+      background-color: rgba(116, 2, 158, 0.1);
+      margin-bottom: 20px;
+      img {
+        width: 128px;
+        height: 128px;
+        transform: translateY(-20px);
+      }
+    }
+  }
+  &__box {
+    &--right {
+      padding: 30px 30px 40px 30px;
+      width: 590px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &--left {
+      border-right: 1px solid #B9CCD3;
+      width: 260px;
+    }
+  }
+  &__gift {
+    background-color: #FFFEEA;
+    border-bottom: 1px solid #B9CCD3;
+    padding: 30px;
+    &__text {
+      font-family: 'Nunito-600';
+      font-size: 12px;
+      line-height: 130%;
+    }
+    &__row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      &__title {
+        font-family: 'Nunito-600';
+        font-size: 18px;
+        line-height: 130%;
+        width: 125px;
+        span {
+          font-family: 'Nunito-900';
+          font-size: 24px;
+          line-height: 130%;
+          color: #039E25;
+        }
+      }
+      &__img {
+        width: 58px;
+        height: 58px;
+        margin-right: 15px;
+      }
     }
   }
 }
