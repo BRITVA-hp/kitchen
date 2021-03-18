@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <header class="border-bottom header--non-shadow section header bg-light">
+    <div class="container">
+      <div class="align-center row">
+        <nav class="nav">
+          <a href="#" class="hover-text nav__link nav__link--msc text-green"><img src="img/here.png" alt="here">&nbsp; Москва</a>
+          <a href="#" class="hover-text nav__link">Меню</a>
+          <a href="#" class="hover-text nav__link">Акции</a>
+          <a href="#" class="hover-text nav__link">О нас</a>
+          <a href="./questions.html" class="hover-text nav__link">Вопрос-Ответ</a>
+        </nav>
+
+        <a class="header__logo" href="./index.html"><img src="img/logo.png" alt="Кухня здоровья"></a>
+
+        <div class="header__box">
+          <div class="align-center row">
+            <a href="tel:+78002007762" class="header__tel hover-text">+7 (800) 200 77 62</a>
+
+            <a href="./cabinet.html" class="header__cabinet">
+              <img src="img/cabinet.png" alt="cabinet">
+              &nbsp;&nbsp;
+              <p class="header__cabinet-text text-purple hover-text">Личный кабинет</p>
+            </a>
+
+            <a href="./basket.html" class="header__basket"><img src="img/basket.png" alt="basket"></a>
+
+            <div class="header__burger">
+              <div class="header__burger-line"></div>
+              <div class="header__burger-line"></div>
+              <div class="header__burger-line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light menu">
+      <a href="#" class="menu__link--menu menu__link">
+        Меню
+        <img class="menu__arrow" src="img/menu.png" alt="arrow">
+        <div class="menu__inner">
+          <a href="./element.html">Супы</a>
+          <a href="./element.html">Салаты</a>
+          <a href="./element.html">Горячее</a>
+          <a href="./element.html">Сандвичи</a>
+          <a href="./element.html">Десерты</a>
+          <a href="./element.html">Напитки</a>
+        </div>
+      </a>
+      <a href="#" class="menu__link">Акции</a>
+      <a href="#" class="menu__link">О нас</a>
+      <a href="./questions.html" class="menu__link">Вопрос-Ответ</a>
+      <a href="./recipes.html" class="menu__link">Рецепты</a>
+      <a href="#" class="menu__link">Вакансии</a>
+      <a href="#" class="menu__link">Команда</a>
+      <a href="#" class="menu__link">@kuhnyazdorovyaopt</a>
+      <a href="#" class="button button--purple menu__button">Подписаться</a>
+    </div>
+  </header>
+  <!-- /.section header -->
+
+  <main>
+
+    <section class="section path">
+      <div class="container">
+        <nav class="body__nav">
+          <a href="./index.html" class="body__nav-link hover-text">Главная </a>
+          <div class="body__nav-arrow"><img src="img/arrowNav.png" alt="arrow"></div>
+          <a href="./questions.html" class="body__nav-link hover-text">Вопросы и ответы</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section questions">
+      <div class="questions__container container">
+        <div class="questions__leaf questions__leaf--1"><img src="img/questions/leaf.png" alt="leaf"></div>
+        <div class="questions__leaf questions__leaf--2"><img src="img/questions/leaf1.png" alt="leaf"></div>
+        <div class="questions__leaf questions__leaf--3"><img src="img/questions/leaf2.png" alt="leaf"></div>
+        <div class="questions__leaf questions__leaf--4"><img src="img/questions/leaf3.png" alt="leaf"></div>
+        <h3 class="section__title--small questions__title">Вопросы и ответы</h3>
+        <div class="questions__box">
+
+          <div class="questions__window">
+            <div class="questions__header">
+              <div class="questions__header__item questions__header__item--active">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="questions__path questions__path--products" d="M31.9839 10.7609L30.642 18.4594C30.4765 19.3098 29.7989 19.8269 29.0175 19.8366H9.45333L9.0649 22.0261H27.7109C28.6927 22.1007 29.3587 22.7963 29.3707 23.6859C29.2993 24.6657 28.6038 25.3335 27.7109 25.3457H7.08728C5.97189 25.2453 5.3068 24.3562 5.42749 23.3681L6.31034 18.5653L4.9684 5.07515L1.15445 3.87454C0.222424 3.50448 -0.157976 2.66134 0.0597039 1.79099C0.421651 0.883922 1.28893 0.469495 2.14325 0.696242L7.01664 2.25008C7.67317 2.49619 8.05085 3.0336 8.14669 3.66267L8.4292 6.34656L30.536 8.81856C31.5518 9.03859 32.1032 9.84315 31.9839 10.7609ZM12.1406 28.8307C12.1406 30.2301 11.0062 31.3645 9.60677 31.3645C8.20738 31.3645 7.07298 30.2301 7.07298 28.8307C7.07298 27.4313 8.20741 26.2969 9.60677 26.2969C11.0062 26.2969 12.1406 27.4313 12.1406 28.8307ZM27.2673 28.8307C27.2673 30.2301 26.1329 31.3645 24.7335 31.3645C23.3341 31.3645 22.1997 30.2301 22.1997 28.8307C22.1997 27.4313 23.3341 26.2969 24.7335 26.2969C26.1329 26.2969 27.2673 27.4313 27.2673 28.8307Z" fill="#A1A8B9"/>
+                </svg>
+                <p class="questions__header__text">Продукты</p>
+              </div>
+  
+              <div class="questions__header__item">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="questions__path questions__path--pay" d="M15.9997 13.3333C21.301 13.3333 26.6663 11.5013 26.6663 7.99996C26.6663 4.49863 21.301 2.66663 15.9997 2.66663C10.6983 2.66663 5.33301 4.49863 5.33301 7.99996C5.33301 11.5013 10.6983 13.3333 15.9997 13.3333Z" fill="#A1A8B9"/>
+                  <path class="questions__path questions__path--pay" d="M5.33301 13.3333C5.33301 16.8346 10.6983 18.6666 15.9997 18.6666C21.301 18.6666 26.6663 16.8346 26.6663 13.3333V10.6666C26.6663 14.168 21.301 16 15.9997 16C10.6983 16 5.33301 14.168 5.33301 10.6666V13.3333Z" fill="#A1A8B9"/>
+                  <path class="questions__path questions__path--pay" d="M5.33301 18.6667C5.33301 22.168 10.6983 24 15.9997 24C21.301 24 26.6663 22.168 26.6663 18.6667V16C26.6663 19.5013 21.301 21.3333 15.9997 21.3333C10.6983 21.3333 5.33301 19.5013 5.33301 16V18.6667Z" fill="#A1A8B9"/>
+                  <path class="questions__path questions__path--pay" d="M5.33301 24C5.33301 27.5014 10.6983 29.3334 15.9997 29.3334C21.301 29.3334 26.6663 27.5014 26.6663 24V21.3334C26.6663 24.8347 21.301 26.6667 15.9997 26.6667C10.6983 26.6667 5.33301 24.8347 5.33301 21.3334V24Z" fill="#A1A8B9"/>
+                </svg>
+                <p class="questions__header__text">Оплата и доставка</p>
+              </div>
+  
+              <div class="questions__header__item">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="questions__path questions__path--save" d="M22.4815 9.29624C24.3333 11.1481 25.2593 13.3827 25.2593 15.9999C25.2593 18.6172 24.3333 20.8518 22.4815 22.7036C20.6296 24.5555 18.3951 25.4814 15.7778 25.4814C13.1605 25.4814 10.9383 24.5432 9.11111 22.6666L15.7778 15.9999V6.51846C18.3951 6.51846 20.6296 7.44439 22.4815 9.29624ZM15.8148 0.222168C20.1852 0.222168 23.9136 1.76538 27 4.8518C30.0864 7.93822 31.6296 11.6543 31.6296 15.9999C31.6296 20.3456 30.0864 24.0617 27 27.1481C23.9136 30.2345 20.1852 31.7777 15.8148 31.7777C11.4444 31.7777 7.71605 30.2345 4.62963 27.1481C1.54321 24.0617 0 20.3456 0 15.9999C0 11.6543 1.54321 7.93822 4.62963 4.8518C7.71605 1.76538 11.4444 0.222168 15.8148 0.222168ZM15.8148 28.6666C19.2963 28.6666 22.2716 27.432 24.7407 24.9629C27.2099 22.4938 28.4444 19.5061 28.4444 15.9999C28.4444 12.4938 27.2099 9.50612 24.7407 7.03698C22.2716 4.56785 19.2963 3.33328 15.8148 3.33328C12.3333 3.33328 9.35802 4.56785 6.88889 7.03698C4.41975 9.50612 3.18519 12.4938 3.18519 15.9999C3.18519 19.5061 4.41975 22.4938 6.88889 24.9629C9.35802 27.432 12.3333 28.6666 15.8148 28.6666Z" fill="#A1A8B9"/>
+                </svg>                                
+                <p class="questions__header__text">Хранение и упаковка</p>
+              </div>
+  
+              <div class="questions__header__item">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="questions__path questions__path--serv" d="M28.9508 13.9733L25.973 13.0844C25.7671 12.3656 25.484 11.6712 25.1285 11.0133L26.5863 8.28442C26.641 8.18141 26.661 8.06351 26.6434 7.94822C26.6258 7.83293 26.5715 7.72639 26.4885 7.64442L24.3641 5.51108C24.2821 5.42812 24.1756 5.37381 24.0603 5.35619C23.945 5.33858 23.8271 5.35861 23.7241 5.41331L21.013 6.8622C20.3486 6.48945 19.6451 6.19134 18.9152 5.97331L18.0263 3.03108C17.9887 2.92265 17.9177 2.82895 17.8234 2.76346C17.7292 2.69797 17.6166 2.66407 17.5019 2.66664H14.4974C14.382 2.66718 14.2698 2.70454 14.177 2.77328C14.0843 2.84203 14.0159 2.93857 13.9819 3.04886L13.093 5.9822C12.357 6.19906 11.6474 6.4972 10.9774 6.87108L8.31076 5.43108C8.20775 5.37638 8.08986 5.35636 7.97456 5.37397C7.85927 5.39158 7.75273 5.4459 7.67076 5.52886L5.51076 7.63553C5.4278 7.7175 5.37348 7.82404 5.35587 7.93933C5.33825 8.05463 5.35828 8.17252 5.41298 8.27553L6.85298 10.9422C6.4797 11.6094 6.18158 12.3159 5.96409 13.0489L3.02187 13.9378C2.91158 13.9718 2.81504 14.0402 2.74629 14.1329C2.67755 14.2256 2.64019 14.3379 2.63965 14.4533V17.4578C2.64019 17.5732 2.67755 17.6854 2.74629 17.7782C2.81504 17.8709 2.91158 17.9392 3.02187 17.9733L5.98187 18.8622C6.20173 19.5829 6.4998 20.2774 6.87076 20.9333L5.41298 23.7244C5.35828 23.8274 5.33825 23.9453 5.35587 24.0606C5.37348 24.1759 5.4278 24.2824 5.51076 24.3644L7.6352 26.4889C7.71718 26.5718 7.82372 26.6261 7.93901 26.6438C8.0543 26.6614 8.1722 26.6413 8.2752 26.5866L11.0219 25.12C11.6716 25.4706 12.357 25.7507 13.0663 25.9555L13.9552 28.9511C13.9893 29.0614 14.0576 29.1579 14.1504 29.2267C14.2431 29.2954 14.3553 29.3328 14.4708 29.3333H17.4752C17.5906 29.3328 17.7029 29.2954 17.7956 29.2267C17.8883 29.1579 17.9567 29.0614 17.9908 28.9511L18.8796 25.9466C19.5829 25.7407 20.2623 25.4606 20.9063 25.1111L23.6708 26.5866C23.7738 26.6413 23.8917 26.6614 24.007 26.6438C24.1222 26.6261 24.2288 26.5718 24.3108 26.4889L26.4352 24.3644C26.5182 24.2824 26.5725 24.1759 26.5901 24.0606C26.6077 23.9453 26.5877 23.8274 26.533 23.7244L25.0574 20.9689C25.4106 20.3224 25.6937 19.64 25.9019 18.9333L28.8974 18.0444C29.0077 18.0104 29.1043 17.942 29.173 17.8493C29.2418 17.7565 29.2791 17.6443 29.2796 17.5289V14.4978C29.2849 14.3872 29.2562 14.2777 29.1974 14.184C29.1386 14.0902 29.0525 14.0167 28.9508 13.9733ZM15.9996 20.8889C15.0327 20.8889 14.0875 20.6021 13.2835 20.0649C12.4796 19.5277 11.8529 18.7642 11.4829 17.8709C11.1129 16.9775 11.0161 15.9946 11.2047 15.0462C11.3933 14.0978 11.859 13.2267 12.5427 12.543C13.2264 11.8593 14.0975 11.3937 15.0459 11.205C15.9942 11.0164 16.9772 11.1132 17.8705 11.4832C18.7639 11.8533 19.5274 12.4799 20.0646 13.2839C20.6018 14.0878 20.8885 15.033 20.8885 16C20.8885 17.2966 20.3735 18.5401 19.4566 19.4569C18.5398 20.3738 17.2963 20.8889 15.9996 20.8889Z" fill="#A1A8B9"/>
+                  </svg>
+                <p class="questions__header__text">Сервис</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="questions__accord questions__accord--active">
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Где вы это всё готовите?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Почему доставка только утром?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Сколько хранится еда?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Как часто будет повторяться меню?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Можно ли разогревать блюда в контейнерах?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="questions__accord">
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Где вы это всё готовите?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Почему доставка только утром?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Сколько хранится еда?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Как часто будет повторяться меню?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Можно ли разогревать блюда в контейнерах?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="questions__accord">
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Где вы это всё готовите?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Почему доставка только утром?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Сколько хранится еда?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Как часто будет повторяться меню?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Можно ли разогревать блюда в контейнерах?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="questions__accord">
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Где вы это всё готовите?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Почему доставка только утром?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Сколько хранится еда?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Как часто будет повторяться меню?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+            <div class="questions__accord__item">
+              <div class="questions__accord__header">
+                <p class="questions__accord__title">Можно ли разогревать блюда в контейнерах?</p>
+                <div class="questions__accord__plus">
+                  <div class="questions__accord__hor"></div>
+                  <div class="questions__accord__vert"></div>
+                </div>
+              </div>
+              <div class="questions__accord__content">
+                <p class="questions__accord__text">
+                  Все блюда мы готовим на собственных производствах, расположенных в каждом городе присутствия, с использованием новейшего и современного оборудования. Так вы получаете самые вкусные блюда прямиком из-под ножа.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.section questions -->
+
+    <section class="section quest-footer">
+      <div class="quest-footer__container">
+        <div class="quest-footer__title">У вас остались вопросы? Задайте их нам!</div>
+        <div class="row quest-footer__row">
+          <div class="quest-footer__box">
+            <a href="tel:88002007762" class="quest-footer__link">
+              <img src="img/questions/icon.png" alt="tel">
+              <p class="quest-footer__text hover-text">8 800 200 77 62</p>
+            </a>
+            <a href="mailto:support@кухняздоровья.рф" class="quest-footer__link">
+              <img src="img/questions/icon1.png" alt="mail">
+              <p class="quest-footer__text hover-text">support@кухняздоровья.рф</p>
+            </a>
+          </div>
+
+          <div class="quest-footer__box">
+            <a href="#" class="quest-footer__link">
+              <img src="img/questions/icon2.png" alt="vk">
+              <p class="quest-footer__text hover-text">kuhnya_zdorovya</p>
+            </a>
+            <a href="mailto:support@кухняздоровья.рф" class="quest-footer__link">
+              <img src="img/questions/icon3.png" alt="facebook">
+              <p class="quest-footer__text hover-text">kuhnyazdorovya</p>
+            </a>
+          </div>
+
+          <button class="button quest-footer__button button--green">Заказать звонок</button>
+        </div>
+      </div>
+    </section>
+    <!-- /.section quest-footer -->
+
+  </main>
+
+
+  <footer class="footer section">
+    <div class="container">
+      <div class="footer__row row">
+        <div class="footer__wrap">
+          <div class="footer__box footer__box--left">
+            <a href="./index.html" class="footer__label"><img src="img/footer/label.png" alt="Кухня здоровья"></a>
+            <p class="footer__text text-white">Мы готовим и доставляем любые блюда: каши, блинчики, сырники, блюда из рыбы и мяса, десерты, супы, роллы, готовые сеты.</p>
+            <div class="footer__pay">
+              <div class="footer__logo"><img src="img/footer/logo.png" alt="Visa"></div>
+              <div class="footer__logo"><img src="img/footer/logo1.png" alt="MaserCard"></div>
+              <div class="footer__logo"><img src="img/footer/logo2.png" alt="Pay"></div>
+            </div>
+            <a href="#" class="footer__text--gray hover-text">Доставка и оплата</a>
+            <a href="#" class="footer__text--gray hover-text">Пользовательское соглашение</a>
+          </div>
+
+          <div class="footer__menu">
+            <div class="footer__menu-header">
+              <p class="footer__menu-header-title">Меню</p>
+              <div class="footer__menu-burger">
+                <div class="footer__menu-burger-line"></div>
+                <div class="footer__menu-burger-line"></div>
+                <div class="footer__menu-burger-line"></div>
+              </div>
+            </div>
+            <div class="footer__menu-wrap">
+              <a href="./element.html" class="footer__menu-link hover-text">Супы</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Салаты</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Горячее</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Сандвичи</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Десерты</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Напитки</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__img"><img src="img/footer/girl.png" alt="girl"></div>
+
+        <div class="footer__box footer__box--right">
+          <div class="footer__block">
+            <div class="footer__block-box">
+              <a href="#" class="footer__block-link hover-text">Меню</a>
+              <a href="#" class="footer__block-link hover-text">Акции</a>
+              <a href="#" class="footer__block-link hover-text">О нас</a>
+              <a href="./recipes.html" class="footer__block-link hover-text">Рецепты</a>
+            </div>
+            <div class="footer__block-box footer__block-box--right">
+              <a href="./questions.html" class="footer__block-link hover-text">Вопрос-Ответ</a>
+              <a href="#" class="footer__block-link hover-text">Команда</a>
+              <a href="#" class="footer__block-link hover-text">Вакансии</a>
+              <a href="#" class="footer__block-link hover-text">Блог</a>
+            </div>
+          </div>
+          <a href="#" class="footer__link hover-text">Подписаться на новости</a>
+          <form action="#" class="footer__form">
+            <input placeholder="Введите вашу почту" type="text" class="footer__input">
+            <button class="button button--green footer__button">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /.footer section -->
+
+  <script src="js/script.js"></script>
+  
+</body>
+</html>

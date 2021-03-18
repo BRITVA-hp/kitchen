@@ -37,6 +37,30 @@ window.addEventListener('DOMContentLoaded', () => {
   let offerCount = 0;
   let dotsInBasket;
 
+  // Функция для табов (универсальная) на странице questions.html
+
+  function tabsUni(selectorTabs, selectorContents, activeClassTab, activeClassContent) {
+    const tabs_ = document.querySelectorAll(selectorTabs),
+          contents_ = document.querySelectorAll(selectorContents);
+
+    if (tabs_.length > 0) {
+      tabs_.forEach((tab, i) => {
+        tab.addEventListener('click', () => {
+          clearActiveClass(tabs_, activeClassTab);
+          clearActiveClass(contents_, activeClassContent);
+          tab.classList.add(activeClassTab);
+          contents_.forEach((content, y)=> {
+            if (i == y) {
+              content.classList.add(activeClassContent);
+            }
+          });
+        });
+      });
+    }
+  }
+
+  tabsUni('.questions__header__item', '.questions__accord', 'questions__header__item--active', 'questions__accord--active');
+
   // При изменении размера экрана
 
   window.addEventListener('resize', () => {
@@ -163,7 +187,7 @@ window.addEventListener('DOMContentLoaded', () => {
           touchEnd_ = e.changedTouches[0].pageX - touchStart_;
           supCount_ += touchEnd_;
           if (row_.getBoundingClientRect().right < document.documentElement.clientWidth || (touchEnd_ < 0 && Math.abs(touchEnd_) > Math.abs(row_.getBoundingClientRect().right) - document.documentElement.clientWidth)) {
-            row_.style.transform = `translateX(-${+window.getComputedStyle(row_).width.replace(/\D/g, '') - document.documentElement.clientWidth + 20}px)`;
+            row_.style.transform = `translateX(-${+window.getComputedStyle(row_).width.replace(/\D/g, '') - document.documentElement.clientWidth + 40}px)`;
             supCount_ = -((+window.getComputedStyle(row_).width.replace(/\D/g, '')) - document.documentElement.clientWidth + 20);
           }
           if (row_.getBoundingClientRect().left > 10 || (touchEnd_ > 0 && Math.abs(touchEnd_) > Math.abs(row_.getBoundingClientRect().left))) {
@@ -199,6 +223,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   tabsSimple('.recipes__tabs-item', '.recipes__row', '.recipes__tabs-item--active', '.recipes__row--active');
   swipeSimple('.recipes__tabs');
+  swipeSimple('.questions__header');
 
   // появление меню при нажатии на бургер
 
@@ -530,6 +555,7 @@ window.addEventListener('DOMContentLoaded', () => {
   accordion('.faq__tab-row', 'faq__tab-row--active', 20);
   accordion(".recipe__step-header", "recipe__step-header--active", 20);
   accordion(".cab-hist__accord-header", "cab-hist__accord-header--active", 20);
+  accordion(".questions__accord__header", "questions__accord__header--active", 20);
 
   //Свайп слайдера с прогрессом
 
