@@ -437,6 +437,35 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .other-art__title {
+    text-align: center;
+  }
+  .article {
+    &__block {
+      &--center {
+        margin-bottom: 70px;
+      }
+      &--top {
+        margin-bottom: 70px;
+      }
+    }
+    &__img {
+      &--top {
+        margin-bottom: 30px;
+      }
+    }
+    &__block {
+      &__title {
+        font-size: 18px;
+      }
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
   .blog {
     &__box {
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -1205,6 +1234,36 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .other-art {
+    display: none;
+  }
+  .article {
+    &__img {
+      &--center {
+        flex-basis: auto;
+        order: -1;
+        margin-bottom: 30px;
+        max-width: 400px;
+        width: auto;
+      }
+    }
+    &__block {
+      &__box {
+        flex-basis: auto;
+      }
+      &--top {
+        margin-bottom: 50px;
+      }
+      &--center {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+    }
+    &__footer {
+      padding-bottom: 60px;
+    }
+  }
   .blog {
     padding-top: 40px;
     &__link {
@@ -1911,6 +1970,7 @@
 }
 @media screen and (max-width: 767px) {
   .blog {
+    background-image: none;
     &__tabs {
       justify-content: center;
     }
@@ -2497,6 +2557,48 @@
 }
 
 @media screen and (max-width: 575px) {
+  .article {
+    padding-top: 40px;
+    &__title {
+      font-size: 18px !important;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    &__img {
+      &--center {
+        border-radius: 16px;
+      }
+      &--top {
+        margin-bottom: 20px;
+        border-radius: 6px;
+      }
+    }
+    &__block {
+      &__title {
+        font-size: 16px;
+      }
+      &--top {
+        margin-bottom: 30px;
+      }
+      &--center {
+        margin-bottom: 30px;
+      }
+      &--bottom {
+        padding-left: 20px;
+      }
+    }
+    &__text {
+      font-size: 14px;
+    }
+    &__container {
+      margin-bottom: 0;
+      border: none;
+      padding-bottom: 60px;
+    }
+    &__footer {
+      display: none;
+    }
+  }
   .quest-footer {
     &__title {
       font-size: 16px;
@@ -3699,6 +3801,13 @@
 }
 
 @media screen and (max-width: 400px) {
+  .article {
+    &__img {
+      &--center {
+        max-width: 100%;
+      }
+    }
+  }
   .slider {
     &__box {
       &-img {
