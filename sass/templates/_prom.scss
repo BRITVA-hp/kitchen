@@ -1,0 +1,19 @@
+.prom {
+  padding-top: 70px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  &__title {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    column-gap: 20px;
+    row-gap: 30px;
+    justify-items: center;
+  }
+  &__card {
+    margin: 0 !important;
+  }
+}

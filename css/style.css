@@ -894,7 +894,11 @@ button:focus {
     flex-direction: column;
     justify-content: space-between;
     border-radius: 20px;
-    position: relative; }
+    position: relative;
+    transition: 0.5s; }
+    .stock__card:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
     .stock__card--comment {
       background-color: #F1761D;
       background-image: url(../img/stock/img1.png);
@@ -3464,6 +3468,23 @@ input[type=number] {
   .other-art__title {
     margin-bottom: 60px; }
 
+.prom {
+  padding-top: 70px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat; }
+  .prom__title {
+    text-align: center;
+    margin-bottom: 100px; }
+  .prom__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 30px;
+    justify-items: center; }
+  .prom__card {
+    margin: 0 !important; }
+
 * {
   margin: 0;
   padding: 0;
@@ -3663,6 +3684,11 @@ input {
     right: -100px; } }
 
 @media screen and (max-width: 1400px) {
+  .prom__box {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    row-gap: 20px; }
   .order__pay__title {
     font-size: 16px; }
   .order__input-group--pay {
@@ -3810,6 +3836,10 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .prom__box {
+    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr)); }
+  .prom__title {
+    margin-bottom: 80px; }
   .other-art__title {
     text-align: center; }
   .article__block--center {
@@ -4298,6 +4328,10 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .prom__title {
+    margin-bottom: 60px; }
+  .prom__box {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
   .other-art {
     display: none; }
   .article__img--center {
@@ -4606,6 +4640,9 @@ input {
     width: 250px;
     height: 200px;
     margin-right: 20px; }
+    .stock__card:hover {
+      transform: none;
+      box-shadow: none; }
     .stock__card:last-child {
       margin-right: 0; }
     .stock__card--comment .stock__img {
@@ -5130,6 +5167,17 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .prom {
+    padding-top: 40px;
+    background-image: none; }
+    .prom__box {
+      grid-template-columns: 1fr; }
+    .prom__card {
+      display: none; }
+      .prom__card:nth-child(-n + 3) {
+        display: flex; }
+    .prom__title {
+      margin-bottom: 50px; }
   .article {
     padding-top: 40px; }
     .article__title {

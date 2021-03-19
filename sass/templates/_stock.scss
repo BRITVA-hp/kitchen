@@ -31,6 +31,11 @@
     justify-content: space-between;
     border-radius: 20px;
     position: relative;
+    transition: 0.5s;
+    &:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
     &--comment {
       background-color: #F1761D;
       background-image: url(../img/stock/img1.png);

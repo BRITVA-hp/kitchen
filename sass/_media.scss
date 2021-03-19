@@ -155,6 +155,13 @@
   }
 }
 @media screen and (max-width: 1400px) {
+  .prom {
+    &__box {
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      column-gap: 10px;
+      row-gap: 20px;
+    }
+  }
   .order {
     &__pay {
       &__title {
@@ -437,6 +444,14 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .prom {
+    &__box {
+      grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+    }
+    &__title {
+      margin-bottom: 80px;
+    }
+  }
   .other-art__title {
     text-align: center;
   }
@@ -1234,6 +1249,14 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .prom {
+    &__title {
+      margin-bottom: 60px;
+    }
+    &__box {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
   .other-art {
     display: none;
   }
@@ -1709,6 +1732,10 @@
       width: 250px;
       height: 200px;
       margin-right: 20px;
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -2557,6 +2584,22 @@
 }
 
 @media screen and (max-width: 575px) {
+  .prom {
+    padding-top: 40px;
+    background-image: none;
+    &__box {
+      grid-template-columns: 1fr;
+    }
+    &__card {
+      display: none;
+      &:nth-child(-n + 3) {
+        display: flex;
+      }
+    }
+    &__title {
+      margin-bottom: 50px;
+    }
+  }
   .article {
     padding-top: 40px;
     &__title {
