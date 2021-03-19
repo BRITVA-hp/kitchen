@@ -60,6 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   tabsUni('.questions__header__item', '.questions__accord', 'questions__header__item--active', 'questions__accord--active');
+  tabsUni('.blog__tabs__item', '.blog__box', 'blog__tabs__item--active', 'blog__box--active');
 
   // При изменении размера экрана
 

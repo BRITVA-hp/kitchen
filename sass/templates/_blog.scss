@@ -1,0 +1,113 @@
+.blog {
+  padding-top: 70px;
+  &__link {
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #039E25;
+    margin: auto;
+    display: block;
+  }
+  &__box {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    column-gap: 20px;
+    row-gap: 30px;
+    margin-bottom: 60px;
+    justify-items: center;
+    &--active {
+      display: grid;
+      animation-name: fadeIn;
+      animation-duration: 0.5s;
+    }
+  }
+  &__card {
+    background: #FFFFFF;
+    border: 1px solid #B9CCD3;
+    border-radius: 10px;
+    width: 500px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+    overflow: hidden;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 0 0 10px 10px;
+      width: 100%;
+      height: auto;
+    }
+    &__box {
+      padding: 30px;
+    }
+    &__link {
+      font-size: 16px;
+      line-height: 130%;
+      text-decoration-line: underline;
+      color: #039E25;
+    }
+    &__title {
+      font-family: 'Nunito-Bold';
+      font-size: 18px;
+      line-height: 130%;
+      max-width: 350px;
+      &--bottom {
+        margin-bottom: 20px;
+      }
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    &__status {
+      font-family: 'Nunito-Bold';
+    }
+    &__date {
+      color: #959595;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  &__tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    &__item {
+      font-family: 'Nunito-600';
+      font-size: 18px;
+      line-height: 130%;
+      background: #FFFFFF;
+      border: 1px solid #CBE0E9;
+      border-radius: 50px;
+      padding: 12px 32px;
+      margin-right: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        color: #fff;
+        background-color: $purple;
+        border-color: $purple;
+      }
+      &--active {
+        color: #fff;
+        background-color: $purple;
+        border-color: $purple;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
