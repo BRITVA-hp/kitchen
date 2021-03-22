@@ -113,6 +113,12 @@
 }
 
 @media screen and (max-width: 1500px) {
+  .we-fr {
+    padding-left: 45px;
+    &__card {
+      margin-right: 30px;
+    }
+  }
   .fabr {
     &__img {
       width: 980px;
@@ -178,6 +184,17 @@
   }
 }
 @media screen and (max-width: 1400px) {
+  .we-fr {
+    justify-content: space-around;
+    &__card {
+      margin: 0;
+      margin-bottom: 30px;
+    }
+    &__row {
+      flex-wrap: wrap;
+      max-width: 500px;
+    }
+  }
   .fabr {
     &__img {
       width: 885px;
@@ -487,6 +504,41 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .we {
+    &-fr {
+      justify-content: space-between;
+    }
+    &-adv {
+      margin-bottom: 100px;
+      &__card {
+        &__text {
+          font-size: 16px;
+        }
+        &__title {
+          font-size: 20px;
+        }
+      }
+      &__title {
+        margin-bottom: 80px;
+      }
+    }
+    &__leaf {
+      &--2 {
+        width: 200px;
+        bottom: -140px;
+      }
+    }
+    &__box {
+      margin-bottom: 120px;
+      &__text {
+        font-size: 22px;
+        max-width: 610px;
+      }
+    }
+    &__title {
+      margin-bottom: 55px;
+    }
+  }
   .fabr {
     &__img {
       width: 625px;
@@ -1354,6 +1406,46 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .we {
+    padding-bottom: 100px;
+    &__footer {
+      &__title {
+        font-size: 24px;
+        max-width: 850px;
+      }
+      &__text {
+        font-size: 20px;
+        margin-bottom: 90px;
+      }
+    }
+  }
+  .we-fr {
+    flex-direction: column;
+    &__title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+  }
+  .we-adv {
+    &__card {
+      flex-basis: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+      &:first-of-type {
+        margin-right: 15px;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
   .fabr {
     padding-left: 10px;
     padding-right: 10px;
@@ -2187,7 +2279,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+
   .fabr {
+    background-image: none;
     &__img {
       height: 260px;
     }
@@ -2785,6 +2879,115 @@
 }
 
 @media screen and (max-width: 575px) {
+  .we {
+    background-image: none;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    &__footer {
+      &__title {
+        font-size: 18px;
+      }
+      &__text {
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 60px;
+      }
+    }
+    &-fr {
+      padding: 30px 15px;
+      margin-bottom: 25px;
+      &__card {
+        margin-bottom: 15px;
+      }
+      &__weight {
+        right: 10px;
+        bottom: auto;
+        top: 12px;
+      }
+      &__img {
+        width: 250px;
+        height: 145px;
+      }
+      &__row {
+        flex-direction: column;
+      }
+      &__title {
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 10px;
+        max-width: 255px;
+      }
+    }
+    &-adv {
+      margin-bottom: 55px;
+      &__row {
+        flex-direction: column;
+        align-items: center;
+      }
+      &__card {
+        margin-right: 0 !important;
+        flex-basis: auto;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 70px;
+          height: 1px;
+          background-color: #CEE5EE;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -20px;
+        }
+        &:last-of-type {
+          &::after {
+            display: none;
+          }
+        }
+        &__box {
+          height: 40px;
+        }
+        &__text {
+          font-size: 14px;
+          max-width: 290px;
+        }
+        &__title {
+          font-size: 16px;
+        }
+      }
+      &__title {
+        margin-bottom: 60px;
+      }
+    }
+    &__leaf {
+      &--2 {
+        width: 100px;
+        bottom: -65px;
+      }
+      &--3 {
+        width: 40px;
+      }
+      &--1 {
+        width: 50px;
+        top: -30px;
+        left: 0;
+      }
+    }
+    &__box {
+      padding: 35px 0;
+      margin-bottom: 70px;
+      &__text {
+        font-size: 16px;
+        margin-bottom: 20px;
+        max-width: 280px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
   .fabr {
     padding-top: 40px;
     &__value {
