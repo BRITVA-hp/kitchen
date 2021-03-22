@@ -37,6 +37,11 @@
 }
 
 @media screen and (max-width: 1600px) {
+  .prom1 {
+    &__img {
+      width: 900px;
+    }
+  }
   .open {
     &__leaf {
       &--3 {
@@ -103,6 +108,14 @@
 }
 
 @media screen and (max-width: 1500px) {
+  .prom1 {
+    &__img {
+      width: 800px;
+    }
+    &__container {
+      column-gap: 50px;
+    }
+  }
   .order {
     &__text {
       max-width: 840px;
@@ -349,6 +362,11 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .prom1 {
+    &__img {
+      width: 700px;
+    }
+  }
   .questions {
     &__leaf {
       &--3 {
@@ -444,6 +462,30 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .prom1 {
+    padding-bottom: 150px;
+    &-offer__wrap {
+      height: 1000px !important;
+    }
+    &__title {
+      max-width: 320px;
+    }
+    &__img {
+      width: 570px;
+      height: 350px;
+    }
+    &__date {
+      margin-bottom: 20px;
+    }
+    &__text {
+      font-size: 16px;
+      max-width: 500px;
+    }
+    &__container {
+      column-gap: 30px;
+      row-gap: 20px;
+    }
+  }
   .prom {
     &__box {
       grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
@@ -1249,6 +1291,40 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .prom1 {
+    padding-left: 10px !important;
+    padding-bottom: 40px;
+    &__description {
+      justify-self: start;
+    }
+    &__date {
+      text-align: center;
+    }
+    &__title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &__container {
+      grid-template: repeat(3, auto)/1fr;
+      grid-template-areas: 
+      'prom1Header'
+      'prom1Img'
+      'prom1Desc'
+      ;
+      justify-items: center;
+      grid-gap: 0;
+    }
+    &__img {
+      border: 1px solid #B9CCD3;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      width: 100%;
+      height: 300px;
+    }
+    &__leaf {
+      display: none;
+    }
+  }
   .prom {
     &__title {
       margin-bottom: 60px;
@@ -1996,6 +2072,11 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .prom1 {
+    &__img {
+      height: 250px;
+    }
+  }
   .blog {
     background-image: none;
     &__tabs {
@@ -2584,6 +2665,40 @@
 }
 
 @media screen and (max-width: 575px) {
+  .prom1 {
+    padding-top: 40px;
+    background-image: none;
+    &__sale {
+      font-size: 10px;
+      padding: 4px 10px;
+      right: 6%;
+    }
+    &-offer__wrap {
+      height: auto !important; 
+    }
+    &__row {
+      &--inner {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      &--second {
+        display: none;
+      }
+    }
+    &__text {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &__img {
+      height: 150px;
+    }
+    &__date {
+      font-size: 14px;
+    }
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
   .prom {
     padding-top: 40px;
     background-image: none;

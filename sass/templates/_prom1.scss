@@ -1,0 +1,97 @@
+.prom1 {
+  padding-top: 70px;
+  padding-bottom: 230px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  padding-left: 0 !important;
+  position: relative;
+  &__sale {
+    position: absolute;
+    font-family: 'Nunito-Bold';
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 8px 22px;
+    background: #74029E;
+    border-radius: 58px;
+    right: 10%;
+    top: 0;
+  }
+  &-offer__card {
+    position: relative;
+  }
+  &-offer__wrap {
+    height: 1150px;
+    padding-top: 15px;
+  }
+  &__row {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__leaf {
+    position: absolute;
+    &--1 {
+      right: 25%;
+      bottom: -40px;
+    }
+    &--2 {
+      right: 17%;
+      bottom: -10px;
+    }
+  }
+  &__container {
+    display: grid;
+    grid-template: auto auto/auto 1fr;
+    column-gap: 70px;
+    row-gap: 30px;
+    grid-template-areas: 
+      'prom1Img prom1Header'
+      'prom1Img prom1Desc'
+    ;
+  }
+  &__header {
+    grid-area: prom1Header;
+    align-self: flex-end;
+  }
+  &__date {
+    font-family: 'Nunito-Bold';
+    font-size: 16px;
+    line-height: 22px;
+    color: #6F6F6F;
+    margin-bottom: 30px;
+  }
+  &__title {
+    max-width: 440px;
+  }
+  &__description {
+    grid-area: prom1Desc;
+  }
+  &__text {
+    font-family: 'Nunito';
+    font-size: 18px;
+    line-height: 130%;
+    max-width: 555px;
+    margin-bottom: 20px;
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    border: 1px solid #B9CCD3;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 1068px;
+    height: 443px;
+    grid-area: prom1Img;
+  }
+}

@@ -303,7 +303,7 @@ window.addEventListener('DOMContentLoaded', () => {
           if (offerTabItem.classList.contains('offer__tabs-item--active')) {
             offerWraps.forEach((offerWrap, y) => {
               if (i === y) {
-                let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+                let offerCardWidth = window.getComputedStyle(offerWrap.querySelector('.offer__card')).width;
                 if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
                   offerCount--;
                 }
@@ -314,12 +314,12 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       } else {
           offerWraps.forEach(offerWrap => {
-            let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+            let offerCardWidth = window.getComputedStyle(offerWrap.querySelector('.offer__card')).width;
             if (offerWrap.firstElementChild.getBoundingClientRect().right < document.documentElement.clientWidth) {
               offerCount--;
             }
             offerWrap.firstElementChild.style.transform = `translateX(-${+offerCardWidth.replace(/\D/g, '') * offerCount + 20}px)`;
-        
+
           });
         }
     });
@@ -327,13 +327,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (offerPrev) {
     offerPrev.addEventListener('click', () => {
+      console.log(offerCount);
       offerCount--;
       if (offerTabItems.length > 0) {
         offerTabItems.forEach((offerTabItem, i) => {
           if (offerTabItem.classList.contains('offer__tabs-item--active')) {
             offerWraps.forEach((offerWrap, y) => {
               if (i === y) {
-                let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+                let offerCardWidth = window.getComputedStyle(offerWrap.querySelector('.offer__card')).width;
                 if (offerCount < 0) {
                   offerCount = 0;
                 }
@@ -344,7 +345,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       } else {
         offerWraps.forEach(offerWrap => {
-          let offerCardWidth = window.getComputedStyle(offerWrap.firstElementChild.firstElementChild).width;
+          let offerCardWidth = window.getComputedStyle(offerWrap.querySelector('.offer__card')  ).width;
           if (offerCount < 0) {
             offerCount = 0;
           }
