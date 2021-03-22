@@ -3732,6 +3732,60 @@ input[type=number] {
     text-align: center;
     margin-bottom: 70px; }
 
+.team {
+  padding-top: 70px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: -185px; }
+  .team__post {
+    transition: 0.3s; }
+  .team__name {
+    font-family: 'Nunito-Bold';
+    font-size: 20px;
+    line-height: 130%;
+    transition: 0.3s; }
+  .team__box {
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 0 0 16px 16px;
+    transform: translateY(-15px);
+    border-bottom: 1px solid #B9CCD3;
+    transition: 0.3s; }
+  .team__img {
+    width: 368px;
+    height: 350px;
+    overflow: hidden;
+    transform: translateY(-15px);
+    position: relative; }
+    .team__img img {
+      max-width: none;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+  .team__card {
+    border: 1px solid #B9CCD3;
+    border-radius: 16px;
+    width: 370px;
+    height: 420px;
+    background-color: #DEE3EE; }
+    .team__card:hover .team__box {
+      background-color: #039E25; }
+    .team__card:hover .team__name, .team__card:hover .team__post {
+      color: #ffffff; }
+  .team__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    justify-items: center;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 85px; }
+  .team__title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 110px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -4116,6 +4170,8 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .team__title {
+    margin-bottom: 60px; }
   .we-fr {
     justify-content: space-between; }
   .we-adv {
@@ -4666,6 +4722,30 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .team__title {
+    font-size: 24px;
+    margin-bottom: 35px; }
+  .team__row {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    row-gap: 30px; }
+  .team__box {
+    padding: 6px 10px;
+    transform: translateY(-7px); }
+  .team__img {
+    width: 138px;
+    height: 130px;
+    transform: translateY(-7px); }
+    .team__img img {
+      max-width: 130%; }
+  .team__card {
+    width: 140px;
+    height: 170px; }
+  .team__post {
+    font-size: 10px; }
+  .team__name {
+    font-size: 12px; }
   .we {
     padding-bottom: 100px; }
     .we__footer__title {
@@ -5594,6 +5674,9 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .team {
+    background-image: none;
+    padding-top: 40px; }
   .we {
     background-image: none;
     padding-top: 40px;

@@ -1,0 +1,65 @@
+.team {
+  padding-top: 70px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: -185px;
+  &__post {
+    transition: 0.3s;
+  }
+  &__name {
+    font-family: 'Nunito-Bold';
+    font-size: 20px;
+    line-height: 130%;
+    transition: 0.3s;
+  }
+  &__box {
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 0 0 16px 16px;
+    transform: translateY(-15px);
+    border-bottom: 1px solid #B9CCD3;
+    transition: 0.3s;
+  }
+  &__img {
+    width: 368px;
+    height: 350px;
+    overflow: hidden;
+    transform: translateY(-15px);
+    position: relative;
+    img {
+      max-width: none;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__card {
+    border: 1px solid #B9CCD3;
+    border-radius: 16px;
+    width: 370px;
+    height: 420px;
+    background-color: #DEE3EE;
+    &:hover {
+      .team__box {
+        background-color: $green;
+      }
+      .team__name, .team__post {
+        color: #ffffff;
+      }
+    }
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    justify-items: center;
+    column-gap: 20px;
+    row-gap: 85px;
+  }
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 110px;
+  }
+}

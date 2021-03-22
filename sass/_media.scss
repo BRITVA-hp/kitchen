@@ -504,6 +504,11 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .team {
+    &__title {
+      margin-bottom: 60px;
+    }
+  }
   .we {
     &-fr {
       justify-content: space-between;
@@ -1406,6 +1411,39 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .team {
+    &__title {
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
+    &__row {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      column-gap: 10px;
+      row-gap: 30px;
+    }
+    &__box {
+      padding: 6px 10px;
+      transform: translateY(-7px);
+    }
+    &__img {
+      width: 138px;
+      height: 130px;
+      transform: translateY(-7px);
+      img {
+        max-width: 130%;
+      }
+    }
+    &__card {
+      width: 140px;
+      height: 170px;
+    }
+    &__post {
+      font-size: 10px;
+    }
+    &__name {
+      font-size: 12px;
+    }
+  }
   .we {
     padding-bottom: 100px;
     &__footer {
@@ -2879,6 +2917,10 @@
 }
 
 @media screen and (max-width: 575px) {
+  .team {
+    background-image: none;
+    padding-top: 40px;
+  }
   .we {
     background-image: none;
     padding-top: 40px;
