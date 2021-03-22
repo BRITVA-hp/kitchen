@@ -3564,6 +3564,51 @@ input[type=number] {
     height: 443px;
     grid-area: prom1Img; }
 
+.fabr {
+  padding-top: 70px;
+  padding-right: 20px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: center; }
+  .fabr__box__title {
+    font-family: 'Nunito-Bold';
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 45px; }
+  .fabr__photo {
+    margin-bottom: 10px; }
+  .fabr__row--top {
+    align-items: center;
+    margin-bottom: 80px; }
+  .fabr__container {
+    max-width: 1600px; }
+    .fabr__container--micro {
+      padding-left: 20px; }
+  .fabr__name {
+    font-family: 'Nunito-Bold';
+    font-size: 30px;
+    line-height: 130%;
+    margin-bottom: 20px; }
+  .fabr__text {
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 20px;
+    max-width: 821px; }
+    .fabr__text--name {
+      max-width: 370px; }
+    .fabr__text:last-of-type {
+      margin-bottom: 0; }
+  .fabr__img {
+    border: 1px solid #B9CCD3;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 1115px;
+    height: 444px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -3716,6 +3761,8 @@ input {
       width: 235px; } }
 
 @media screen and (max-width: 1550px) {
+  .fabr__img {
+    width: 1035px; }
   .basket__box {
     padding: 50px; }
   .categories__img {
@@ -3738,6 +3785,8 @@ input {
       padding: 40px; } }
 
 @media screen and (max-width: 1500px) {
+  .fabr__img {
+    width: 980px; }
   .prom1__img {
     width: 800px; }
   .prom1__container {
@@ -3770,6 +3819,9 @@ input {
     right: -100px; } }
 
 @media screen and (max-width: 1400px) {
+  .fabr__img {
+    width: 885px;
+    height: 430px; }
   .prom__box {
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     -moz-column-gap: 10px;
@@ -3872,6 +3924,11 @@ input {
     right: 2%; } }
 
 @media screen and (max-width: 1300px) {
+  .fabr__text:not(.fabr__text--name) {
+    max-width: 750px; }
+  .fabr__img {
+    width: 790px;
+    height: 380px; }
   .prom1__img {
     width: 700px; }
   .questions__leaf--3 {
@@ -3924,6 +3981,26 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .fabr__img {
+    width: 625px;
+    height: 300px;
+    margin-right: 20px; }
+  .fabr__row--top {
+    margin-bottom: 60px;
+    justify-content: flex-start; }
+  .fabr__name {
+    font-size: 24px;
+    max-width: 360px; }
+  .fabr__box__title {
+    font-size: 20px;
+    margin-bottom: 35px; }
+  .fabr__text:not(.fabr__text--name) {
+    font-size: 16px;
+    max-width: 640px; }
+  .fabr__text--name {
+    max-width: 325px; }
+  .fabr__card {
+    max-width: 275px; }
   .prom1 {
     padding-bottom: 150px; }
     .prom1-offer__wrap {
@@ -4199,13 +4276,13 @@ input {
       display: none; }
     .offer__wrap {
       height: 485px; }
-    .offer__row--stars {
+    .offer__row--stars:not(.fabr-offer__row--stars) {
       flex-direction: column-reverse;
       align-items: flex-start; }
-      .offer__row--stars .offer__card-block {
-        margin-bottom: 10px; }
-        .offer__row--stars .offer__card-block:first-child {
-          margin-bottom: 0; }
+    .offer__row--stars .offer__card-block {
+      margin-bottom: 10px; }
+      .offer__row--stars .offer__card-block:first-child {
+        margin-bottom: 0; }
     .offer__row--top {
       margin-bottom: 40px; }
     .offer__input {
@@ -4434,6 +4511,39 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .fabr {
+    padding-left: 10px;
+    padding-right: 10px; }
+    .fabr__text--name {
+      max-width: 370px; }
+    .fabr__photo {
+      margin-right: 25px; }
+    .fabr__wrap {
+      display: flex;
+      align-items: flex-end; }
+    .fabr__box--text {
+      margin-bottom: 60px; }
+    .fabr__box__title {
+      text-align: center; }
+    .fabr__box--name {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .fabr__container--micro {
+      padding: 0; }
+    .fabr__img {
+      border-radius: 10px;
+      border: 1px solid #B9CCD3;
+      margin-bottom: 20px;
+      margin-right: 0;
+      max-width: 767px;
+      width: auto; }
+    .fabr__row--bottom {
+      flex-direction: column;
+      align-items: center; }
+    .fabr__row--top {
+      flex-direction: column;
+      margin-bottom: 40px; }
   .prom1 {
     padding-left: 10px !important;
     padding-bottom: 40px; }
@@ -4936,6 +5046,8 @@ input {
       left: 25%; } }
 
 @media screen and (max-width: 767px) {
+  .fabr__img {
+    height: 260px; }
   .prom1__img {
     height: 250px; }
   .blog {
@@ -5298,6 +5410,29 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .fabr {
+    padding-top: 40px; }
+    .fabr__value {
+      display: flex !important; }
+    .fabr__row--top {
+      align-items: flex-start; }
+    .fabr__text {
+      font-size: 14px;
+      margin-bottom: 10px; }
+      .fabr__text--name {
+        max-width: 300px; }
+    .fabr__name {
+      font-size: 18px; }
+    .fabr__box__title {
+      font-size: 18px;
+      text-align: left;
+      margin-bottom: 30px; }
+    .fabr__box--name {
+      align-items: flex-start; }
+    .fabr__photo {
+      width: 74px; }
+    .fabr__img {
+      height: 145px; }
   .prom1 {
     padding-top: 40px;
     background-image: none; }
@@ -5794,57 +5929,57 @@ input {
     .offer__wrap {
       height: auto;
       overflow: visible; }
-    .offer__card {
+    .offer__card:not(.fabr__card) {
       display: none;
       margin-right: 0;
       margin-right: 10px;
       height: 315px;
       border-radius: 6px;
       margin-bottom: 25px; }
-      .offer__card:nth-child(-n + 4) {
-        display: flex; }
-      .offer__card-footer-item {
-        font-size: 14px; }
-        .offer__card-footer-item img {
-          width: 16px;
-          height: 16px; }
-        .offer__card-footer-item:first-child {
-          display: none; }
-      .offer__card-wrap--top {
-        padding-left: 5px;
-        padding-right: 5px; }
-      .offer__card-weight {
-        font-size: 10px;
-        margin-right: 5px; }
-        .offer__card-weight img {
-          width: 10px;
-          height: 10px; }
-      .offer__card-title {
-        font-size: 12px;
-        margin-bottom: 5px; }
-      .offer__card-text {
-        font-size: 10px;
-        max-width: 130px; }
-      .offer__card-img {
-        margin-top: -8px;
-        border-radius: 6px;
-        width: 130px;
-        height: 80px;
-        margin-bottom: 10px; }
-      .offer__card-block > img {
-        width: 9px;
-        height: 9px; }
-      .offer__card-die {
-        font-size: 9px;
-        margin-right: 5px;
-        padding: 2px 5px; }
-    .offer__row--weight {
+    .offer__card:nth-child(-n + 4) {
+      display: flex; }
+    .offer__card-footer-item:not(.fabr-offer__card-footer-item) {
+      font-size: 14px; }
+    .offer__card-footer-item img:not(.fabr__basket) {
+      width: 16px;
+      height: 16px; }
+    .offer__card-footer-item:first-child {
+      display: none; }
+    .offer__card-wrap--top:not(.fabr-offer__card-wrap--top) {
+      padding-left: 5px;
+      padding-right: 5px; }
+    .offer__card-weight:not(.fabr-offer__card-weight) {
+      font-size: 10px;
+      margin-right: 5px; }
+    .offer__card-weight img:not(.fabr__logo) {
+      width: 10px;
+      height: 10px; }
+    .offer__card-title:not(.fabr-offer__card-title) {
+      font-size: 12px;
+      margin-bottom: 5px; }
+    .offer__card-text:not(.fabr-offer__card-text) {
+      font-size: 10px;
+      max-width: 130px; }
+    .offer__card-img:not(.fabr-offer__card-img) {
+      margin-top: -8px;
+      border-radius: 6px;
+      width: 130px;
+      height: 80px;
+      margin-bottom: 10px; }
+    .offer__card-block > img:not(.fabr__star) {
+      width: 9px;
+      height: 9px; }
+    .offer__card-die:not(.fabr-offer__card-die) {
+      font-size: 9px;
+      margin-right: 5px;
+      padding: 2px 5px; }
+    .offer__row--weight:not(.fabr-offer__row--weight) {
       padding-left: 5px;
       padding-right: 5px;
       margin-bottom: 10px; }
     .offer__row--top {
       margin-bottom: 25px; }
-    .offer__row--stars {
+    .offer__row--stars:not(.fabr-offer__row--stars) {
       margin-bottom: 10px; }
     .offer__title {
       margin-bottom: 30px; }

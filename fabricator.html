@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <header class="border-bottom header--non-shadow section header bg-light">
+    <div class="container">
+      <div class="align-center row">
+        <nav class="nav">
+          <a href="#" class="hover-text nav__link nav__link--msc text-green"><img src="img/here.png" alt="here">&nbsp; Москва</a>
+          <a href="#" class="hover-text nav__link">Меню</a>
+          <a href="./promotions.html" class="hover-text nav__link">Акции</a>
+          <a href="#" class="hover-text nav__link">О нас</a>
+          <a href="./questions.html" class="hover-text nav__link">Вопрос-Ответ</a>
+        </nav>
+
+        <a class="header__logo" href="./index.html"><img src="img/logo.png" alt="Кухня здоровья"></a>
+
+        <div class="header__box">
+          <div class="align-center row">
+            <a href="tel:+78002007762" class="header__tel hover-text">+7 (800) 200 77 62</a>
+
+            <a href="./cabinet.html" class="header__cabinet">
+              <img src="img/cabinet.png" alt="cabinet">
+              &nbsp;&nbsp;
+              <p class="header__cabinet-text text-purple hover-text">Личный кабинет</p>
+            </a>
+
+            <div class="header__basket-wrap">
+              <a href="./basket.html" class="header__basket">
+                <img src="img/basket.png" alt="basket">
+              </a>
+              <form action="#" class="headb">
+                <div class="headb__box headb__box--left">
+                  <div class="headb__gift">
+                    <div class="headb__gift__row">
+                      <div class="headb__gift__row__img"><img src="img/basket/gift.png" alt="gift"></div>
+                      <p class="headb__gift__row__title">Потратьте <br> еще на &nbsp; <span>46 ₽</span></p>
+                    </div>
+                    <p class="headb__gift__text">и получите возможность выбрать подарок!</p>
+                  </div>
+
+                  <div class="headb__slider">
+                    <div class="headb__window">
+                      <div class="headb__inner">
+                        <div class="headb__slider__card">
+                          <div class="headb__slider__img"><img src="img/basket/drink.png" alt="drink"></div>
+                          <p class="headb__slider__text">Попробуйте вместе с напитком!</p>
+                        </div>
+                        <div class="headb__slider__card">
+                          <div class="headb__slider__img"><img src="img/basket/sauce.png" alt="sauce"></div>
+                          <p class="headb__slider__text">Суп лучше с фермерской сметаной</p>
+                        </div>
+                        <div class="headb__slider__card">
+                          <div class="headb__slider__img"><img src="img/basket/two.png" alt="two"></div>
+                          <p class="headb__slider__text">Возьми с собой второе блюдо</p>
+                        </div>
+                      </div>
+                      <div class="headb__slider__dots"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="headb__box--right">
+                  <div class="headb__box--right__wrap">
+                    <div class="headb__header">
+                      <p class="headb__text">В корзине 4 товара</p>
+                      <a href="#" class="headb__close">
+                        <img src="img/basket/close.png" alt="close">
+                        <p class="headb__close__text hover-text">Очистить корзину</p>
+                      </a>
+                  </div>
+                  <div class="headb__content">
+                    <div class="headb__item">
+                      <div class="headb__item__box">
+                        <div class="headb__img"><img src="img/basket/img.jpg" alt="soup"></div>
+                        <div class="head__item__wrap">
+                          <div class="headb__text">Томатный суп с печеным перцем</div>
+                          <div class="headb__text text-gray">300 г</div>
+                          <div class="headb__text text-gray">Крафт 48 часов</div>
+                        </div>
+                      </div>
+
+                      <div class="headb__item__box headb__item__box--right">
+                        <div class="headb__number offer__card-footer-item">
+                          <div class="offer__button offer__minus">-</div>
+                          <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
+                          <div class="offer__button offer__plus">+</div>
+                        </div>
+                        <p class="headb__item__price">99,00 ₽</p>
+                        <a href="#" class="headb__delete"><img src="img/basket/delete.png" alt="delete"></a>
+                      </div>
+                    </div>
+
+                    <div class="headb__item">
+                      <div class="headb__item__box">
+                        <div class="headb__img"><img src="img/basket/img1.jpg" alt="soup"></div>
+                        <div class="head__item__wrap">
+                          <div class="headb__text">Грибной суп</div>
+                          <div class="headb__text text-gray">300 г</div>
+                          <div class="headb__text text-gray">Крафт 48 часов</div>
+                        </div>
+                      </div>
+                      <div class="headb__item__box headb__item__box--right">
+                        <div class="headb__number offer__card-footer-item">
+                          <div class="offer__button offer__minus">-</div>
+                          <input readonly class="offer__input" type="number" value="3" min="1" max="40" step="1">
+                          <div class="offer__button offer__plus">+</div>
+                        </div>
+                        <p class="headb__item__price">237,00 ₽</p>
+                        <a href="#" class="headb__delete"><img src="img/basket/delete.png" alt="delete"></a>
+                      </div>
+                    </div>
+
+                    <div class="headb__item">
+                      <div class="headb__item__box">
+                        <div class="headb__img"><img src="img/basket/img2.jpg" alt="soup"></div>
+                        <div class="head__item__wrap">
+                          <div class="headb__text">Яйца</div>
+                          <div class="headb__text text-gray">10 шт</div>
+                        </div>
+                      </div>
+                      <div class="headb__item__box headb__item__box--right">
+                        <div class="headb__number offer__card-footer-item">
+                          <div class="offer__button offer__minus">-</div>
+                          <input readonly class="offer__input" type="number" value="10" min="1" max="40" step="1">
+                          <div class="offer__button offer__plus">+</div>
+                        </div>
+                        <p class="headb__item__price">990,00 ₽</p>
+                        <a href="#" class="headb__delete"><img src="img/basket/delete.png" alt="delete"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="headb__progress">
+                    <div class="headb__progress__wrap">
+                      <p class="headb__progress__text">Для бесплатной доставки по Москве осталось 46 ₽</p>
+                      <div class="headb__progress__inner"></div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="headb__footer">
+                    <div class="headb__footer__box">
+                      <div class="headb__input-group">
+                        <input type="text" placeholder="Промокод" class="headb__input"><button class="headb__button"><img src="img/basket/arrow.png" alt="arrow"></button>
+                      </div>
+                      <p class="headb__footer__subtitle">Здесь будет отображаться успешное применение промокода и его скидка</p>
+                    </div>
+
+                    <div class="headb__footer__box">
+                      <p class="headb__footer__sum">Сумма заказа</p>
+                      <p class="headb__footer__price--old">1584,00 ₽</p>
+                      <p class="headb__footer__price">1454,00 ₽</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="header__burger">
+              <div class="header__burger-line"></div>
+              <div class="header__burger-line"></div>
+              <div class="header__burger-line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light menu">
+      <a href="#" class="menu__link--menu menu__link">
+        Меню
+        <img class="menu__arrow" src="img/menu.png" alt="arrow">
+        <div class="menu__inner">
+          <a href="./element.html">Супы</a>
+          <a href="./element.html">Салаты</a>
+          <a href="./element.html">Горячее</a>
+          <a href="./element.html">Сандвичи</a>
+          <a href="./element.html">Десерты</a>
+          <a href="./element.html">Напитки</a>
+        </div>
+      </a>
+      <a href="./promotions.html" class="menu__link">Акции</a>
+      <a href="#" class="menu__link">О нас</a>
+      <a href="./questions.html" class="menu__link">Вопрос-Ответ</a>
+      <a href="./recipes.html" class="menu__link">Рецепты</a>
+      <a href="#" class="menu__link">Вакансии</a>
+      <a href="#" class="menu__link">Команда</a>
+      <a href="#" class="menu__link">@kuhnyazdorovyaopt</a>
+      <a href="#" class="button button--purple menu__button">Подписаться</a>
+    </div>
+  </header>
+  <!-- /.section header -->
+
+  <main>
+
+    <section class="section path">
+      <div class="container">
+        <nav class="body__nav">
+          <a href="./index.html" class="body__nav-link hover-text">Главная </a>
+          <div class="body__nav-arrow"><img src="img/arrowNav.png" alt="arrow"></div>
+          <a href="./fabricator.html" class="body__nav-link hover-text">Производители</a>
+          <div class="body__nav-arrow"><img src="img/arrowNav.png" alt="arrow"></div>
+          <a href="./fabricator.html" class="body__nav-link hover-text">Сергей Пивоваров</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="fabr">
+      <div class="fabr__container">
+        <div class="row fabr__row--top">
+          <div class="fabr__img"><img src="img/fabricator/img.jpg" alt="image"></div>
+        <div class="fabr__box fabr__box--name">
+          <div class="fabr__wrap">
+            <img class="fabr__photo" src="img/fabricator/photo.png" alt="photo">
+            <p class="fabr__name">Сергей Пивоваров</p>
+          </div>
+          <p class="fabr__text fabr__text--name"><span class="text-bold">Сейчас на ферме около 25 голов дойного стада</span> – все коровы айширской породы. Каждую буренку привезли на ферму из Карелии.</p>
+        </div>
+        </div>
+      </div>
+
+      <div class="fabr__container--micro container-micro">
+        <div class="row fabr__row--bottom">
+          <div class="fabr__box fabr__box--text">
+            <p class="fabr__box__title">О поставщике</p>
+            <p class="fabr__text">Хозяйство Сергея Пивоварова располагается в Калязинском районе Тверской области в деревне Никольское. Это очень молодая и прогрессивная ферма, с которой мы сотрудничаем с 2016 года. Сергей стремится к тому, чтобы все продукты, произведенные на ферме, имели не просто хорошее качество, а могли носить гордое звание «премиум». Фермер систематически отвозит свое молоко на проверку в Сергиево-Посадскую лабораторию: «Результаты испытаний нашего молока – высший сорт!».</p>
+            <p class="fabr__text">Сейчас на ферме около 25 голов дойного стада – все коровы айширской породы. Каждую буренку привезли на ферму из Карелии. К вопросу расширения фермер подходит ответственно: большое дело нужно строить по кирпичику, то есть отработать все процессы на малых объемах, достичь совершенства и только затем расширяться</p>
+            <p class="fabr__text">На ферме работает более 10 человек. Все животные находятся в новых, недавно отстроенных просторных и чистых коровниках. Также на ферме Сергея есть собственный производственный цех, прошедший аттестацию в локальном ветеринарном контроле СББЖ.</p>
+            <p class="fabr__text">Здесь производят натуральные молочные продукты: молоко и сметану, вкуснейшие питьевые йогурты, сливочное масло и мягкие сыры. В составе всех продуктов только натуральные ингредиенты, в основе которых качественное молоко от собственного стада</p>
+          </div>
+
+          <div class="fabr__box fabr__box--card">
+            <p class="fabr__box__title">Популярный товар</p>
+
+            <div class="offer__card fabr__card prom1-offer__card">
+              <div class="prom1__sale">-20%</div>
+              <div class="offer__card-wrap fabr-offer__card-wrap--top offer__card-wrap--top">
+                <a href="./product.html" class="fabr-offer__card-img offer__card-img"><img src="img/offer/img2.jpg" alt="soup"></a>
+                <div class="fabr-offer__row--stars offer__row--stars row">
+                  <div class="offer__card-block">
+                    <img class="fabr__star" src="img/offer/star.png" alt="star">
+                    <img class="fabr__star" src="img/offer/star.png" alt="star">
+                    <img class="fabr__star" src="img/offer/star.png" alt="star">
+                    <img class="fabr__star" src="img/offer/star.png" alt="star">
+                    <img class="fabr__star" src="img/offer/star.png" alt="star">
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="fabr-offer__card-die offer__card-die offer__card-hit">Хит</div>
+                  </div>
+                </div>
+  
+                <a href="./product.html" class="hover-text fabr-offer__card-title offer__card-title">Сэндвич с курицей</a>
+                <p class="fabr-offer__card-text offer__card-text">Это закуска, которую не стыдно взять на работу и сытно пообедать или предложить дома многочисленным гостям.</p>
+              </div>
+              <div class="offer__card-wrap">
+                <div class="fabr-offer__row--weight offer__row--weight row align-center">
+                  <div class="offer__card-block align-center">
+                    <div class="fabr-offer__card-weight offer__card-weight"><img class="fabr__logo" src="img/offer/lf.png" alt="leaf"></div>
+                    <div class="offer__card-weight fabr-offer__card-weight"><img class="fabr__logo" src="img/offer/basket.png" alt="basket"></div>
+                    <div class="offer__card-weight fabr-offer__card-weight">180 г</div>
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-weight fabr-offer__card-weight">226 ккал.</div>
+                  </div>
+                </div>
+                <div class="offer__card-footer">
+                  <div class="fabr__value offer__card-footer-item">
+                    <div class="offer__button offer__minus">-</div>
+                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
+                    <div class="offer__button offer__plus">+</div>
+                  </div>
+                  <div class="fabr-offer__card-footer-item offer__card-footer-item">69.00 ₽</div>
+                  <div class="offer__card-footer-item"><a href="#"><img class="fabr__basket" src="img/offer/basket1.png" alt="basket"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.fabricator -->
+
+    <section class="section offer">
+      <div class="offer__container container">
+        <div class="offer__leaf offer__leaf--2"><img src="img/offer/leaf1.png" alt="leaf"></div>
+
+          <div class="offer__tabs-block element-offer__row-top row align-center">
+            <h3 class="section__title">От производителя</h3>
+            <div class="element-offer__arrows d-flex">
+              <div class="offer__tabs-arrow offer__tabs-arrow--prev">
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.65318 0.797651C9.76376 0.90782 9.8515 1.0387 9.91137 1.18278C9.97123 1.32687 10.002 1.48134 10.002 1.63734C10.002 1.79334 9.97123 1.94781 9.91137 2.0919C9.8515 2.23598 9.76376 2.36686 9.65318 2.47703L3.36655 8.75336L9.65318 15.0297C9.76359 15.1399 9.85117 15.2709 9.91092 15.4149C9.97067 15.559 10.0014 15.7134 10.0014 15.8694C10.0014 16.0253 9.97067 16.1797 9.91092 16.3238C9.85117 16.4679 9.76359 16.5988 9.65318 16.7091C9.54277 16.8193 9.41169 16.9068 9.26744 16.9665C9.12318 17.0262 8.96857 17.0569 8.81243 17.0569C8.65628 17.0569 8.50167 17.0262 8.35741 16.9665C8.21316 16.9068 8.08208 16.8193 7.97168 16.7091L0.846675 9.59305C0.736088 9.48288 0.648348 9.352 0.588483 9.20791C0.528617 9.06382 0.497803 8.90936 0.497803 8.75336C0.497803 8.59735 0.528617 8.44289 0.588483 8.2988C0.648348 8.15471 0.736088 8.02383 0.846675 7.91367L7.97168 0.797651C8.08198 0.687203 8.21303 0.599574 8.3573 0.539784C8.50156 0.479994 8.65623 0.449219 8.81243 0.449219C8.96862 0.449219 9.12329 0.479994 9.26756 0.539784C9.41183 0.599574 9.54287 0.687203 9.65318 0.797651Z" fill="#fff"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6875 8.75339C1.6875 8.43884 1.81261 8.13717 2.03531 7.91476C2.25801 7.69234 2.56006 7.56738 2.875 7.56738H18.3125C18.6274 7.56738 18.9295 7.69234 19.1522 7.91476C19.3749 8.13717 19.5 8.43884 19.5 8.75339C19.5 9.06793 19.3749 9.3696 19.1522 9.59202C18.9295 9.81444 18.6274 9.93939 18.3125 9.93939H2.875C2.56006 9.93939 2.25801 9.81444 2.03531 9.59202C1.81261 9.3696 1.6875 9.06793 1.6875 8.75339Z" fill="#fff"/>
+                  </svg>                
+              </div>
+              <div class="offer__tabs-arrow offer__tabs-arrow--next">
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3468 0.797651C10.2362 0.90782 10.1485 1.0387 10.0886 1.18278C10.0288 1.32687 9.99795 1.48134 9.99795 1.63734C9.99795 1.79334 10.0288 1.94781 10.0886 2.0919C10.1485 2.23598 10.2362 2.36686 10.3468 2.47703L16.6335 8.75336L10.3468 15.0297C10.2364 15.1399 10.1488 15.2709 10.0891 15.4149C10.0293 15.559 9.99858 15.7134 9.99858 15.8694C9.99858 16.0253 10.0293 16.1797 10.0891 16.3238C10.1488 16.4679 10.2364 16.5988 10.3468 16.7091C10.4572 16.8193 10.5883 16.9068 10.7326 16.9665C10.8768 17.0262 11.0314 17.0569 11.1876 17.0569C11.3437 17.0569 11.4983 17.0262 11.6426 16.9665C11.7868 16.9068 11.9179 16.8193 12.0283 16.7091L19.1533 9.59305C19.2639 9.48288 19.3517 9.352 19.4115 9.20791C19.4714 9.06382 19.5022 8.90936 19.5022 8.75336C19.5022 8.59735 19.4714 8.44289 19.4115 8.2988C19.3517 8.15471 19.2639 8.02383 19.1533 7.91367L12.0283 0.797651C11.918 0.687203 11.787 0.599574 11.6427 0.539784C11.4984 0.479994 11.3438 0.449219 11.1876 0.449219C11.0314 0.449219 10.8767 0.479994 10.7324 0.539784C10.5882 0.599574 10.4571 0.687203 10.3468 0.797651Z" fill="white"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3125 8.75339C18.3125 8.43884 18.1874 8.13717 17.9647 7.91476C17.742 7.69234 17.4399 7.56738 17.125 7.56738H1.6875C1.37255 7.56738 1.07051 7.69234 0.847809 7.91476C0.625111 8.13717 0.5 8.43884 0.5 8.75339C0.5 9.06793 0.625111 9.3696 0.847809 9.59202C1.07051 9.81444 1.37255 9.93939 1.6875 9.93939H17.125C17.4399 9.93939 17.742 9.81444 17.9647 9.59202C18.1874 9.3696 18.3125 9.06793 18.3125 8.75339Z" fill="white"/>
+                </svg>
+              </div> 
+            </div>             
+          </div>
+
+        <div class="offer__wrap offer__wrap--active">
+          <div class="offer__row row">
+            <div class="offer__card">
+              <div class="offer__card-wrap offer__card-wrap--top">
+                <a href="./product.html" class="offer__card-img"><img src="img/offer/img.jpg" alt="soup"></a>
+                <div class="offer__row--stars row">
+                  <div class="offer__card-block">
+                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-die offer__card-hit">Хит</div>
+                    <div class="offer__card-die offer__card-new">Новинка</div>
+                    <div class="offer__card-die offer__card-stock">Акция</div>
+                  </div>
+                </div>
+  
+                <a href="./product.html" class="hover-text offer__card-title">Крем-суп Цукини</a>
+                <p class="offer__card-text">Овощной суп простой в приготовлении, к тому же он вкусный и полезный для пищеварения.</p>
+              </div>
+              <div class="offer__card-wrap">
+                <div class="offer__row--weight row align-center">
+                  <div class="offer__card-block align-center">
+                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
+                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
+                    <div class="offer__card-weight">300 г</div>
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-weight">226 ккал.</div>
+                  </div>
+                </div>
+                <div class="offer__card-footer">
+                  <div class="offer__card-footer-item">
+                    <div class="offer__button offer__minus">-</div>
+                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
+                    <div class="offer__button offer__plus">+</div>
+                  </div>
+                  <div class="offer__card-footer-item">99.00 ₽</div>
+                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="offer__card">
+              <div class="offer__card-wrap offer__card-wrap--top">
+                <a class="offer__card-img"><img src="img/offer/img1.jpg" alt="soup"></a>
+                <div class="offer__row--stars row">
+                  <div class="offer__card-block">
+                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-die offer__card-hit">Хит</div>
+                  </div>
+                </div>
+  
+                <a href="./product.html" class="hover-text offer__card-title">Сырники</a>
+                <p class="offer__card-text">Нежные, воздушные и очень вкусные сырники с румяной корочкой. С пылу, с жару!</p>
+              </div>
+              <div class="offer__card-wrap">
+                <div class="offer__row--weight row align-center">
+                  <div class="offer__card-block align-center">
+                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
+                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
+                    <div class="offer__card-weight">250 г</div>
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-weight">226 ккал.</div>
+                  </div>
+                </div>
+                <div class="offer__card-footer">
+                  <div class="offer__card-footer-item">
+                    <div class="offer__button offer__minus">-</div>
+                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
+                    <div class="offer__button offer__plus">+</div>
+                  </div>
+                  <div class="offer__card-footer-item">99.00 ₽</div>
+                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="offer__card">
+              <div class="offer__card-wrap offer__card-wrap--top">
+                <a href="./product.html" class="offer__card-img"><img src="img/offer/img2.jpg" alt="soup"></a>
+                <div class="offer__row--stars row">
+                  <div class="offer__card-block">
+                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-die offer__card-hit">Хит</div>
+                  </div>
+                </div>
+  
+                <a href="./product.html" class="hover-text offer__card-title">Сэндвич с курицей</a>
+                <p class="offer__card-text">Это закуска, которую не стыдно взять на работу и сытно пообедать или предложить дома многочисленным гостям.</p>
+              </div>
+              <div class="offer__card-wrap">
+                <div class="offer__row--weight row align-center">
+                  <div class="offer__card-block align-center">
+                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
+                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
+                    <div class="offer__card-weight">180 г</div>
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-weight">226 ккал.</div>
+                  </div>
+                </div>
+                <div class="offer__card-footer">
+                  <div class="offer__card-footer-item">
+                    <div class="offer__button offer__minus">-</div>
+                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
+                    <div class="offer__button offer__plus">+</div>
+                  </div>
+                  <div class="offer__card-footer-item">69.00 ₽</div>
+                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="offer__card">
+              <div class="offer__card-wrap offer__card-wrap--top">
+                <a href="./product.html" class="offer__card-img"><img src="img/offer/img3.jpg" alt="soup"></a>
+                <div class="offer__row--stars row">
+                  <div class="offer__card-block">
+                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-die offer__card-hit">Хит</div>
+                  </div>
+                </div>
+  
+                <a href="./product.html" class="hover-text offer__card-title">Греческий салат</a>
+                <p class="offer__card-text">Легкий, вкусный и ароматный греческий салат добавит энергии, легкости и сытости организму, а также поднимет настроение в непогожий день.</p>
+              </div>
+              <div class="offer__card-wrap">
+                <div class="offer__row--weight row align-center">
+                  <div class="offer__card-block align-center">
+                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
+                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
+                    <div class="offer__card-weight">280 г</div>
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-weight">226 ккал.</div>
+                  </div>
+                </div>
+                <div class="offer__card-footer">
+                  <div class="offer__card-footer-item">
+                    <div class="offer__button offer__minus">-</div>
+                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
+                    <div class="offer__button offer__plus">+</div>
+                  </div>
+                  <div class="offer__card-footer-item">169.00 ₽</div>
+                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="offer__card">
+              <div class="offer__card-wrap offer__card-wrap--top">
+                <a href="./product.html" class="offer__card-img"><img src="img/offer/img.jpg" alt="soup"></a>
+                <div class="offer__row--stars row">
+                  <div class="offer__card-block">
+                    <img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star"><img src="img/offer/star.png" alt="star">
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-die offer__card-hit">Хит</div>
+                    <div class="offer__card-die offer__card-new">Новинка</div>
+                    <div class="offer__card-die offer__card-stock">Акция</div>
+                  </div>
+                </div>
+  
+                <a href="./product.html" class="hover-text offer__card-title">Крем-суп Цукини</a>
+                <p class="offer__card-text">Овощной суп простой в приготовлении, к тому же он вкусный и полезный для пищеварения.</p>
+              </div>
+              <div class="offer__card-wrap">
+                <div class="offer__row--weight row align-center">
+                  <div class="offer__card-block align-center">
+                    <div class="offer__card-weight"><img src="img/offer/lf.png" alt="leaf"></div>
+                    <div class="offer__card-weight"><img src="img/offer/basket.png" alt="basket"></div>
+                    <div class="offer__card-weight">300 г</div>
+                  </div>
+                  <div class="offer__card-block">
+                    <div class="offer__card-weight">226 ккал.</div>
+                  </div>
+                </div>
+                <div class="offer__card-footer">
+                  <div class="offer__card-footer-item">
+                    <div class="offer__button offer__minus">-</div>
+                    <input readonly class="offer__input" type="number" value="1" min="1" max="40" step="1">
+                    <div class="offer__button offer__plus">+</div>
+                  </div>
+                  <div class="offer__card-footer-item">99.00 ₽</div>
+                  <div class="offer__card-footer-item"><a href="#"><img src="img/offer/basket1.png" alt="basket"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- /.section offer -->
+
+  </main>
+  
+
+  <footer class="footer section">
+    <div class="container">
+      <div class="footer__row row">
+        <div class="footer__wrap">
+          <div class="footer__box footer__box--left">
+            <a href="./index.html" class="footer__label"><img src="img/footer/label.png" alt="Кухня здоровья"></a>
+            <p class="footer__text text-white">Мы готовим и доставляем любые блюда: каши, блинчики, сырники, блюда из рыбы и мяса, десерты, супы, роллы, готовые сеты.</p>
+            <div class="footer__pay">
+              <div class="footer__logo"><img src="img/footer/logo.png" alt="Visa"></div>
+              <div class="footer__logo"><img src="img/footer/logo1.png" alt="MaserCard"></div>
+              <div class="footer__logo"><img src="img/footer/logo2.png" alt="Pay"></div>
+            </div>
+            <a href="#" class="footer__text--gray hover-text">Доставка и оплата</a>
+            <a href="#" class="footer__text--gray hover-text">Пользовательское соглашение</a>
+          </div>
+
+          <div class="footer__menu">
+            <div class="footer__menu-header">
+              <p class="footer__menu-header-title">Меню</p>
+              <div class="footer__menu-burger">
+                <div class="footer__menu-burger-line"></div>
+                <div class="footer__menu-burger-line"></div>
+                <div class="footer__menu-burger-line"></div>
+              </div>
+            </div>
+            <div class="footer__menu-wrap">
+              <a href="./element.html" class="footer__menu-link hover-text">Супы</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Салаты</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Горячее</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Сандвичи</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Десерты</a>
+              <a href="./element.html" class="footer__menu-link hover-text">Напитки</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__img"><img src="img/footer/girl.png" alt="girl"></div>
+
+        <div class="footer__box footer__box--right">
+          <div class="footer__block">
+            <div class="footer__block-box">
+              <a href="#" class="footer__block-link hover-text">Меню</a>
+              <a href="./promotions.html" class="footer__block-link hover-text">Акции</a>
+              <a href="#" class="footer__block-link hover-text">О нас</a>
+              <a href="./recipes.html" class="footer__block-link hover-text">Рецепты</a>
+            </div>
+            <div class="footer__block-box footer__block-box--right">
+              <a href="./questions.html" class="footer__block-link hover-text">Вопрос-Ответ</a>
+              <a href="#" class="footer__block-link hover-text">Команда</a>
+              <a href="#" class="footer__block-link hover-text">Вакансии</a>
+              <a href="./blog.html" class="footer__block-link hover-text">Блог</a>
+            </div>
+          </div>
+          <a href="#" class="footer__link hover-text">Подписаться на новости</a>
+          <form action="#" class="footer__form">
+            <input placeholder="Введите вашу почту" type="text" class="footer__input">
+            <button class="button button--green footer__button">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /.footer section -->
+
+  <script src="js/script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,60 @@
+.fabr {
+  padding-top: 70px;
+  padding-right: 20px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  &__box {
+
+    &__title {
+      font-family: 'Nunito-Bold';
+      font-size: 24px;
+      line-height: 130%;
+      margin-bottom: 45px;
+    }
+  }
+  &__photo {
+    margin-bottom: 10px;
+  }
+  &__row {
+    &--top {
+      align-items: center;
+      margin-bottom: 80px;
+    }
+  }
+  &__container {
+    max-width: 1600px;
+    &--micro {
+      padding-left: 20px;
+    }
+  }
+  &__name {
+    font-family: 'Nunito-Bold';
+    font-size: 30px;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 20px;
+    max-width: 821px;
+    &--name {
+      max-width: 370px;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    border: 1px solid #B9CCD3;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 1115px;
+    height: 444px;
+  }
+}

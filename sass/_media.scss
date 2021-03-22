@@ -70,6 +70,11 @@
 }
 
 @media screen and (max-width: 1550px) {
+  .fabr {
+    &__img {
+      width: 1035px;
+    }
+  }
   .basket {
     &__box {
       padding: 50px;
@@ -108,6 +113,11 @@
 }
 
 @media screen and (max-width: 1500px) {
+  .fabr {
+    &__img {
+      width: 980px;
+    }
+  }
   .prom1 {
     &__img {
       width: 800px;
@@ -168,6 +178,12 @@
   }
 }
 @media screen and (max-width: 1400px) {
+  .fabr {
+    &__img {
+      width: 885px;
+      height: 430px;
+    }
+  }
   .prom {
     &__box {
       grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
@@ -362,6 +378,15 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .fabr {
+    &__text:not(.fabr__text--name) {
+      max-width: 750px;
+    }
+    &__img {
+      width: 790px;
+      height: 380px;
+    }
+  }
   .prom1 {
     &__img {
       width: 700px;
@@ -462,6 +487,41 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .fabr {
+    &__img {
+      width: 625px;
+      height: 300px;
+      margin-right: 20px;
+    }
+    &__row {
+      &--top {
+        margin-bottom: 60px;
+        justify-content: flex-start;
+      }
+    }
+    &__name {
+      font-size: 24px;
+      max-width: 360px;
+    }
+    &__box {
+      &__title {
+        font-size: 20px;
+        margin-bottom: 35px;
+      }
+    }
+    &__text {
+      &:not(.fabr__text--name) {
+        font-size: 16px;
+        max-width: 640px;
+      }
+      &--name {
+        max-width: 325px;
+      }
+    }
+    &__card {
+      max-width: 275px;
+    }
+  }
   .prom1 {
     padding-bottom: 150px;
     &-offer__wrap {
@@ -925,8 +985,11 @@
     }
     &__row {
       &--stars {
-        flex-direction: column-reverse;
-        align-items: flex-start;
+        &:not(.fabr-offer__row--stars) {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+        }
+        
         .offer__card-block {
           margin-bottom: 10px;
           &:first-child {
@@ -1291,6 +1354,58 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .fabr {
+    padding-left: 10px;
+    padding-right: 10px;
+    &__text {
+      &--name {
+        max-width: 370px;
+      }
+    }
+    &__photo {
+      margin-right: 25px;
+    }
+    &__wrap {
+      display: flex;
+      align-items: flex-end;
+    }
+    &__box {
+      &--text {
+        margin-bottom: 60px;
+      }
+      &__title {
+        text-align: center;
+      }
+      &--name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &__container {
+      &--micro {
+        padding: 0;
+      }
+    }
+    &__img {
+      border-radius: 10px;
+      border: 1px solid #B9CCD3;
+      margin-bottom: 20px;
+      margin-right: 0;
+      max-width: 767px;
+      width: auto;
+    }
+    &__row {
+      &--bottom {
+        flex-direction: column;
+        align-items: center;
+      }
+      &--top {
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+    }
+  }
   .prom1 {
     padding-left: 10px !important;
     padding-bottom: 40px;
@@ -2072,6 +2187,11 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .fabr {
+    &__img {
+      height: 260px;
+    }
+  }
   .prom1 {
     &__img {
       height: 250px;
@@ -2665,6 +2785,43 @@
 }
 
 @media screen and (max-width: 575px) {
+  .fabr {
+    padding-top: 40px;
+    &__value {
+      display: flex !important;
+    }
+    &__row {
+      &--top {
+        align-items: flex-start;
+      }
+    }
+    &__text {
+      font-size: 14px;
+      margin-bottom: 10px;
+      &--name {
+        max-width: 300px;
+      }
+    }
+    &__name {
+      font-size: 18px;
+    }
+    &__box {
+      &__title {
+        font-size: 18px;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      &--name {
+        align-items: flex-start;
+      }      
+    }
+    &__photo {
+      width: 74px;
+    }
+    &__img {
+      height: 145px;
+    }
+  }
   .prom1 {
     padding-top: 40px;
     background-image: none;
@@ -3422,19 +3579,23 @@
       overflow: visible;
     }
     &__card {
-      display: none;
-      margin-right: 0;
-      margin-right: 10px;
-      height: 315px;
-      border-radius: 6px;
-      margin-bottom: 25px;
+      &:not(.fabr__card) {
+        display: none;
+        margin-right: 0;
+        margin-right: 10px;
+        height: 315px;
+        border-radius: 6px;
+        margin-bottom: 25px;
+      }
       &:nth-child(-n + 4) {
         display: flex;
       }
       &-footer {
         &-item {
-          font-size: 14px;
-          img {
+          &:not(.fabr-offer__card-footer-item) {
+            font-size: 14px;
+          }
+          img:not(.fabr__basket) {
             width: 16px;
             height: 16px;
           }
@@ -3444,28 +3605,30 @@
         }
       }
       &-wrap {
-        &--top {
+        &--top:not(.fabr-offer__card-wrap--top) {
           padding-left: 5px;
           padding-right: 5px;
         }
       }
       &-weight {
-        font-size: 10px;
-        margin-right: 5px;
-        img {
+        &:not(.fabr-offer__card-weight) {
+          font-size: 10px;
+          margin-right: 5px;
+        }
+        img:not(.fabr__logo) {
           width: 10px;
           height: 10px;
         }
       }
-      &-title {
+      &-title:not(.fabr-offer__card-title) {
         font-size: 12px;
         margin-bottom: 5px;
       }
-      &-text {
+      &-text:not(.fabr-offer__card-text) {
         font-size: 10px;
         max-width: 130px;
       }
-      &-img {
+      &-img:not(.fabr-offer__card-img) {
         margin-top: -8px;
         border-radius: 6px;
         width: 130px;
@@ -3473,19 +3636,19 @@
         margin-bottom: 10px;
       }
       &-block {
-        &>img {
+        &>img:not(.fabr__star) {
           width: 9px;
           height: 9px;
         }
       }
-      &-die {
+      &-die:not(.fabr-offer__card-die) {
         font-size: 9px;
         margin-right: 5px;
         padding: 2px 5px;
       }
     }
     &__row {
-      &--weight {
+      &--weight:not(.fabr-offer__row--weight) {
         padding-left: 5px;
         padding-right: 5px;
         margin-bottom: 10px;
@@ -3493,7 +3656,7 @@
       &--top {
         margin-bottom: 25px;
       }
-      &--stars {
+      &--stars:not(.fabr-offer__row--stars) {
         margin-bottom: 10px;
       }
     }
