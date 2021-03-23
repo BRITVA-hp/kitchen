@@ -3786,6 +3786,58 @@ input[type=number] {
     text-align: center;
     margin-bottom: 110px; }
 
+.vac {
+  padding-top: 70px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: -180px; }
+  .vac__button {
+    padding: 12px 35px; }
+  .vac__text {
+    display: inline; }
+  .vac__salary {
+    font-family: 'Nunito-900';
+    font-size: 18px;
+    line-height: 130%; }
+  .vac__post {
+    font-family: 'Nunito-Bold';
+    font-size: 20px;
+    line-height: 130%; }
+  .vac__date {
+    font-size: 14px;
+    line-height: 130%;
+    color: #98A3BC; }
+  .vac__logo {
+    margin-right: 20px; }
+  .vac__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 25px;
+    justify-items: center; }
+    .vac__row--post {
+      align-items: center;
+      margin-bottom: 35px; }
+    .vac__row--top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px; }
+  .vac__title {
+    text-align: center;
+    margin-bottom: 70px; }
+  .vac__card {
+    padding: 35px 35px 45px 45px;
+    background-color: #fff;
+    border: 1px solid #B9CCD3;
+    border-radius: 16px;
+    width: 500px;
+    height: 415px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; }
+
 * {
   margin: 0;
   padding: 0;
@@ -4170,6 +4222,24 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .vac__row {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 15px; }
+    .vac__row--post {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 25px; }
+  .vac__card {
+    width: 400px;
+    padding: 35px; }
+  .vac__date {
+    font-size: 12px; }
+  .vac__title {
+    margin-bottom: 50px; }
+  .vac__salary {
+    font-size: 16px; }
+  .vac__post {
+    font-size: 18px; }
   .team__title {
     margin-bottom: 60px; }
   .we-fr {
@@ -4722,30 +4792,59 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
-  .team__title {
-    font-size: 24px;
-    margin-bottom: 35px; }
-  .team__row {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    -moz-column-gap: 10px;
-    column-gap: 10px;
-    row-gap: 30px; }
-  .team__box {
-    padding: 6px 10px;
-    transform: translateY(-7px); }
-  .team__img {
-    width: 138px;
-    height: 130px;
-    transform: translateY(-7px); }
-    .team__img img {
-      max-width: 130%; }
-  .team__card {
-    width: 140px;
-    height: 170px; }
-  .team__post {
+  .vac br {
+    display: none; }
+  .vac__text {
+    font-size: 12px;
+    display: block; }
+    .vac__text--bold {
+      font-family: 'Nunito-Bold'; }
+  .vac__post {
+    font-size: 16px; }
+  .vac__title {
+    margin-bottom: 30px;
+    font-size: 24px; }
+  .vac__row {
+    grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+    grid-gap: 10px; }
+    .vac__row--post {
+      margin-bottom: 15px; }
+    .vac__row--top {
+      margin-bottom: 15px; }
+  .vac__logo {
+    margin-right: 10px;
+    width: 12px; }
+  .vac__date {
     font-size: 10px; }
-  .team__name {
-    font-size: 12px; }
+  .vac__card {
+    width: 288px;
+    padding: 25px; }
+  .team {
+    background-image: none; }
+    .team__title {
+      font-size: 24px;
+      margin-bottom: 35px; }
+    .team__row {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      -moz-column-gap: 10px;
+      column-gap: 10px;
+      row-gap: 30px; }
+    .team__box {
+      padding: 6px 10px;
+      transform: translateY(-7px); }
+    .team__img {
+      width: 138px;
+      height: 130px;
+      transform: translateY(-7px); }
+      .team__img img {
+        max-width: 130%; }
+    .team__card {
+      width: 140px;
+      height: 170px; }
+    .team__post {
+      font-size: 10px; }
+    .team__name {
+      font-size: 12px; }
   .we {
     padding-bottom: 100px; }
     .we__footer__title {
@@ -5674,6 +5773,9 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .vac {
+    padding-top: 40px;
+    background-image: none; }
   .team {
     background-image: none;
     padding-top: 40px; }

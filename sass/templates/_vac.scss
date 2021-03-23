@@ -1,0 +1,62 @@
+.vac {
+  padding-top: 70px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: -180px;
+  &__button {
+    padding: 12px 35px;
+  }
+  &__text {
+    display: inline;
+  }
+  &__salary {
+    font-family: 'Nunito-900';
+    font-size: 18px;
+    line-height: 130%;
+  }
+  &__post {
+    font-family: 'Nunito-Bold';
+    font-size: 20px;
+    line-height: 130%;
+  }
+  &__date {
+    font-size: 14px;
+    line-height: 130%;
+    color: #98A3BC;
+  }
+  &__logo {
+    margin-right: 20px;
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    column-gap: 20px;
+    row-gap: 25px;
+    justify-items: center;
+    &--post {
+      align-items: center;
+      margin-bottom: 35px;
+    }
+    &--top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  &__card {
+    padding: 35px 35px 45px 45px;
+    background-color: #fff;
+    border: 1px solid #B9CCD3;
+    border-radius: 16px;
+    width: 500px;
+    height: 415px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
