@@ -35,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let counterForSwipe = 0;
   let counter = 0;
   let offerCount = 0;
+  let paused;
   let dotsInBasket;
 
   // Функция для табов (универсальная) на странице questions.html
@@ -67,6 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => {
     sliderWidthInner('.other-recipe__inner', '.recipes__card', '.offer__tabs-arrow--prev', '.offer__tabs-arrow--next', 721, 288);
     slideDots('.basket__card', '.basket__box--right', '.basket__window', false, 'basket__dot--active', 'basket__dot', 320, 320);
+    slideDots('.headb__slider__card', '.headb__inner', '.headb__window', false, 'headb__dot--active', 'headb__dot', 155, 175);
   });
 
   // Программно устанавливаем высоту контента состава заказа в личном кабинете (для плавной анимации)
@@ -79,10 +81,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // слайдер с точками на странице basket.html
 
-  function slideDots(slidesDots, innerDot, windowDot, wrapDots, dotClassActive, dotClass, slideWidthDots, swipeWidthDots) {
+  function slideDots(slidesDots, innerDot, windowDot, wrapDots, dotClassActive, dotClass, slideWidthDots, swipeWidthDots, eventStart = 'touchstart', eventEnd = 'touchend') {
     const slidesDots_ = document.querySelectorAll(slidesDots),
           innerDot_ = document.querySelector(innerDot);
-
     if (wrapDots) {
       if (slidesDots_.length > 0) {
         slidesDots_.forEach((item, i) => {
@@ -105,11 +106,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
       }
     }
-    swipeProgress(windowDot, innerDot, slidesDots, '.hello', swipeWidthDots, dotClass, dotClassActive);
+    swipeProgress(windowDot, innerDot, slidesDots, '.hello', swipeWidthDots, dotClass, dotClassActive, true, eventStart, eventEnd);
   }
 
   slideDots('.basket__card', '.basket__box--right', '.basket__window','.basket__dots', 'basket__dot--active', 'basket__dot', 320, 320);
-  slideDots('.headb__slider__card', '.headb__inner', '.headb__window', '.headb__slider__dots', 'headb__dot--active', 'headb__dot', 155, 175);
+  slideDots('.headb__slider__card', '.headb__inner', '.headb__window', '.headb__slider__dots', 'headb__dot--active', 'headb__dot', 155, 175, 'mousedown', 'mouseup');
 
 
   // Функция для слайдера на странице recipe.html
@@ -554,7 +555,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //Свайп слайдера с прогрессом и точками
 
-  function swipeProgress(slWind, slField, slSlides, slProgress, slideWidth, dots, activeClassDot) {
+  function swipeProgress(slWind, slField, slSlides, slProgress, slideWidth, dots, activeClassDot, auto, eventStart = 'touchstart', eventEnd = 'touchend') {
     const sliderProgressWind = document.querySelector(slWind),
           sliderProgressField = document.querySelector(slField),
           sliderProgressSlides = document.querySelectorAll(slSlides),
@@ -563,17 +564,51 @@ window.addEventListener('DOMContentLoaded', () => {
           dots_ = document.querySelectorAll('.' + dots);
 
     if (sliderProgressWind) {
-      let sliderProgressFieldPos;
       let touchProgressStart;
       let touchProgressEnd;
       let counterSwipeProgress = 1;
+      let sliderProgressFieldPos = window.getComputedStyle(sliderProgressField).position;
+
+      const moveMouse = function (e) {
+        e.preventDefault();
+          let mouseProgressMove;
+          mouseProgressMove = e.pageX - touchProgressStart;
+          sliderProgressField.style.transform = `translateX(${mouseProgressMove - slideWidth * (counterSwipeProgress - 1)}px)`;
+      };
+
+      const sliderDots = function () {
+        if (dots_) {
+          dots_.forEach((item, i) => {
+            if (counterSwipeProgress - 1 == i) {
+              clearActiveClass(dots_, activeClassDot);
+              item.classList.add(activeClassDot);
+            }
+          });
+        }
+      };
+
+      window.addEventListener('resize', () => {
+        sliderProgressFieldPos = window.getComputedStyle(sliderProgressField).position;
+      });
   
       if (sliderProgress) {
         sliderProgress.style.width = `${progressStep}%`;
       }
   
-      sliderProgressWind.addEventListener('touchstart', (e) => {
-        touchProgressStart = e.changedTouches[0].pageX;
+      sliderProgressWind.addEventListener(eventStart, (e) => {
+        if (eventStart == 'touchstart') {
+          touchProgressStart = e.changedTouches[0].pageX;
+        } else {
+          touchProgressStart = e.pageX;
+          
+          sliderProgressWind.addEventListener('mousemove', moveMouse);
+          sliderProgressWind.addEventListener('mouseleave', () => {
+            sliderProgressField.style.transform = `translateX(-${slideWidth * (counterSwipeProgress - 1)}px)`;
+            sliderProgressWind.removeEventListener('mousemove', moveMouse);
+          });
+
+        }
+        clearInterval(paused);
       });
     
       sliderProgressWind.addEventListener('touchmove', (e) => {
@@ -587,9 +622,14 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
     
-      sliderProgressWind.addEventListener('touchend', (e) => {
+      sliderProgressWind.addEventListener(eventEnd, (e) => {
+        sliderProgressWind.removeEventListener('mousemove', moveMouse);
         if (sliderProgressFieldPos == 'absolute') {
-          touchProgressEnd = e.changedTouches[0].pageX - touchProgressStart;
+          if (eventEnd == 'touchend') {
+            touchProgressEnd = e.changedTouches[0].pageX - touchProgressStart;
+          } else {
+            touchProgressEnd = e.pageX - touchProgressStart;
+          }
           if (Math.abs(touchProgressEnd) > 100) {
             if (touchProgressEnd < 0) {
               sliderProgressField.style.transform = `translateX(-${slideWidth * counterSwipeProgress}px)`;
@@ -610,18 +650,36 @@ window.addEventListener('DOMContentLoaded', () => {
             sliderProgressField.style.transform = `translateX(-${slideWidth * (counterSwipeProgress - 1)}px)`;
           }
         }
-        // console.log(counterSwipeProgress);
-        if (dots_) {
-          dots_.forEach((item, i) => {
-            if (counterSwipeProgress - 1 == i) {
-              clearActiveClass(dots_, activeClassDot);
-              item.classList.add(activeClassDot);
-            }
-          });
-        }
+        sliderDots();
         if (sliderProgress) {
           sliderProgress.style.width = `${progressStep * counterSwipeProgress}%`;
         }
+        sliderAuto();
+      });
+
+      const sliderAuto = function () {
+        if (auto && sliderProgressFieldPos == 'absolute') {
+          clearInterval(paused);
+          paused = setInterval(function() {
+            if (counterSwipeProgress == sliderProgressSlides.length) {
+              sliderProgressField.style.transform = `translateX(0px)`;
+              counterSwipeProgress = 1;
+            } else {
+              sliderProgressField.style.transform = `translateX(-${slideWidth * counterSwipeProgress}px)`;
+              counterSwipeProgress++;
+            }
+            sliderDots();
+          }, 3000);
+        } else {
+          clearInterval(paused);
+        }
+      };
+      sliderAuto();
+      sliderProgressWind.addEventListener('mouseenter', () => {
+        clearInterval(paused);
+      });
+      sliderProgressWind.addEventListener('mouseleave', () => {
+        sliderAuto();
       });
     }
   }
