@@ -113,6 +113,14 @@
 }
 
 @media screen and (max-width: 1500px) {
+  .map {
+    &__box {
+      width: 400px;
+      &--bottom {
+        width: 400px;
+      }
+    }
+  }
   .we-fr {
     padding-left: 45px;
     &__card {
@@ -504,6 +512,28 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .map {
+    &__info {
+      font-size: 14px;
+    }
+    &__box {
+      padding: 30px 30px 0 30px;
+      width: 350px;
+      &__subtitle {
+        font-size: 16px;
+      }
+      &__title {
+        font-size: 18px;
+      }
+      &--bottom {
+        padding: 30px;
+        width: 350px;
+      }
+    }
+    &__title {
+      margin-bottom: 90px;
+    }
+  }
   .vac {
     &__row {
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -1438,6 +1468,43 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .map {
+    &__text {
+      text-align: center;
+    }
+    &__box {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      width: auto;
+      &--bottom {
+        padding: 0;
+        background: transparent;
+        border: none;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+      }
+      &__block {
+        padding: 0;
+        border: none;
+      }
+    }
+    &__map {
+      height: 400px;
+    }
+    &__row {
+      grid-template: auto auto auto / 1fr;
+      grid-gap: 15px;
+      grid-template-areas: 
+        'mapBox'
+        'mapMap'
+        'mapBoxBot'
+      ;
+    }
+  }
   .vac {
     br {
       display: none;
@@ -2385,7 +2452,11 @@
   }
 }
 @media screen and (max-width: 767px) {
-
+  .map {
+    &__map {
+      height: 300px;
+    }
+  }
   .fabr {
     background-image: none;
     &__img {
@@ -2985,6 +3056,36 @@
 }
 
 @media screen and (max-width: 575px) {
+  .map {
+    padding-top: 40px;
+    background-image: none;
+    &__text {
+      text-align: left;
+    }
+    &__text-block {
+      margin-bottom: 15px;
+    }
+    &__box {
+      &--bottom {
+        justify-self: start;
+        align-items: flex-start;
+        padding-top: 15px;
+      }
+      &__subtitle {
+        font-size: 14px;
+      }
+      &__title {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+    &__title {
+      margin-bottom: 60px;
+    }
+    &__map {
+      height: 200px;
+    }
+  }
   .vac {
     padding-top: 40px;
     background-image: none;

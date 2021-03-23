@@ -3790,7 +3790,7 @@ input[type=number] {
   padding-top: 70px;
   background-image: url(../img/advantages/bg.png);
   background-repeat: no-repeat;
-  background-position-y: -180px; }
+  background-position-y: -100px; }
   .vac__button {
     padding: 12px 35px; }
   .vac__text {
@@ -3837,6 +3837,71 @@ input[type=number] {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start; }
+
+.map {
+  padding-top: 70px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: -100px; }
+  .map__map {
+    border: 1px solid #D3E7EF;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-area: mapMap;
+    max-height: 600px; }
+  .map__button {
+    padding: 12px 55px; }
+  .map__text {
+    font-family: 'Nunito-Bold';
+    font-size: 20px;
+    line-height: 27px;
+    max-width: 315px;
+    margin-bottom: 30px; }
+  .map__wrap {
+    padding-left: 15px;
+    border-left: 1px solid #74029E; }
+  .map__info {
+    font-size: 16px;
+    line-height: 130%;
+    color: #6F6F6F; }
+  .map__text-block {
+    margin-bottom: 30px; }
+  .map__box {
+    background: #FFFFFF;
+    border: 1px solid #B9CCD3;
+    border-bottom: 0;
+    padding: 50px 50px 0 50px;
+    border-radius: 15px 15px 0 0;
+    width: 500px;
+    grid-area: mapBox; }
+    .map__box--bottom {
+      grid-area: mapBoxBot;
+      background: #FFFFFF;
+      border: 1px solid #B9CCD3;
+      border-top: 0;
+      padding: 50px;
+      border-radius: 0 0 15px 15px;
+      width: 500px; }
+    .map__box__block {
+      padding-bottom: 50px;
+      border-bottom: 1px solid #B9CCD3; }
+    .map__box__title {
+      font-family: 'Nunito-Bold';
+      font-size: 20px;
+      line-height: 130%;
+      margin-bottom: 5px; }
+      .map__box__title__subtitle {
+        font-size: 18px;
+        line-height: 25px; }
+  .map__title {
+    text-align: center;
+    margin-bottom: 130px; }
+  .map__row {
+    display: grid;
+    grid-template: auto auto/ auto auto;
+    grid-template-areas: 'mapBox mapMap' 'mapBoxBot mapMap';
+    -moz-column-gap: 20px;
+    column-gap: 20px; }
 
 * {
   margin: 0;
@@ -4014,6 +4079,10 @@ input {
       padding: 40px; } }
 
 @media screen and (max-width: 1500px) {
+  .map__box {
+    width: 400px; }
+    .map__box--bottom {
+      width: 400px; }
   .we-fr {
     padding-left: 45px; }
     .we-fr__card {
@@ -4222,6 +4291,20 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .map__info {
+    font-size: 14px; }
+  .map__box {
+    padding: 30px 30px 0 30px;
+    width: 350px; }
+    .map__box__subtitle {
+      font-size: 16px; }
+    .map__box__title {
+      font-size: 18px; }
+    .map__box--bottom {
+      padding: 30px;
+      width: 350px; }
+  .map__title {
+    margin-bottom: 90px; }
   .vac__row {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 15px; }
@@ -4792,6 +4875,31 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .map__text {
+    text-align: center; }
+  .map__box {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: auto; }
+    .map__box--bottom {
+      padding: 0;
+      background: transparent;
+      border: none;
+      justify-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto; }
+    .map__box__block {
+      padding: 0;
+      border: none; }
+  .map__map {
+    height: 400px; }
+  .map__row {
+    grid-template: auto auto auto / 1fr;
+    grid-gap: 15px;
+    grid-template-areas: 'mapBox' 'mapMap' 'mapBoxBot'; }
   .vac br {
     display: none; }
   .vac__text {
@@ -5407,6 +5515,8 @@ input {
       left: 25%; } }
 
 @media screen and (max-width: 767px) {
+  .map__map {
+    height: 300px; }
   .fabr {
     background-image: none; }
     .fabr__img {
@@ -5773,6 +5883,26 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .map {
+    padding-top: 40px;
+    background-image: none; }
+    .map__text {
+      text-align: left; }
+    .map__text-block {
+      margin-bottom: 15px; }
+    .map__box--bottom {
+      justify-self: start;
+      align-items: flex-start;
+      padding-top: 15px; }
+    .map__box__subtitle {
+      font-size: 14px; }
+    .map__box__title {
+      font-size: 16px;
+      margin-bottom: 0; }
+    .map__title {
+      margin-bottom: 60px; }
+    .map__map {
+      height: 200px; }
   .vac {
     padding-top: 40px;
     background-image: none; }

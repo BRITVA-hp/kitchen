@@ -1,0 +1,81 @@
+.map {
+  padding-top: 70px;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: -100px;
+  &__map {
+    border: 1px solid #D3E7EF;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-area: mapMap;
+    max-height: 600px;
+  }
+  &__button {
+    padding: 12px 55px;
+  }
+  &__text {
+    font-family: 'Nunito-Bold';
+    font-size: 20px;
+    line-height: 27px;
+    max-width: 315px;
+    margin-bottom: 30px;
+  }
+  &__wrap {
+    padding-left: 15px;
+    border-left: 1px solid #74029E;
+  }
+  &__info {
+    font-size: 16px;
+    line-height: 130%;
+    color: #6F6F6F;
+  }
+  &__text-block {
+    margin-bottom: 30px;
+  }
+  &__box {
+    background: #FFFFFF;
+    border: 1px solid #B9CCD3;
+    border-bottom: 0;
+    padding: 50px 50px 0 50px;
+    border-radius: 15px 15px 0 0;
+    width: 500px;
+    grid-area: mapBox;
+    &--bottom {
+      grid-area: mapBoxBot;
+      background: #FFFFFF;
+      border: 1px solid #B9CCD3;
+      border-top: 0;
+      padding: 50px;
+      border-radius:  0 0 15px 15px;
+      width: 500px;
+    }
+    &__block {
+      padding-bottom: 50px;
+      border-bottom: 1px solid #B9CCD3;
+    }
+    &__title {
+      font-family: 'Nunito-Bold';
+      font-size: 20px;
+      line-height: 130%;
+      margin-bottom: 5px;
+      &__subtitle {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 130px;
+  }
+  &__row {
+    display: grid;
+    grid-template: auto auto/ auto auto;
+    grid-template-areas: 
+      'mapBox mapMap'
+      'mapBoxBot mapMap'
+    ;
+    column-gap: 20px;
+  }
+
+}
