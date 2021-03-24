@@ -535,7 +535,7 @@ button:focus {
     .menu__link:first-of-type {
       position: relative;
       margin-top: 20px; }
-    .menu__link:nth-child(9) {
+    .menu__link:nth-child(10) {
       margin-bottom: 20px;
       font-family: 'Nunito-Bold';
       font-size: 20px;
@@ -3793,10 +3793,29 @@ input[type=number] {
   background-image: url(../img/advantages/bg.png);
   background-repeat: no-repeat;
   background-position-y: -100px; }
+  .vac__wrap {
+    grid-area: vacWrap; }
+  .vac__link {
+    font-size: 20px;
+    line-height: 130%;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #039E25;
+    grid-area: vacLink;
+    align-self: end;
+    justify-self: end; }
   .vac__button {
-    padding: 12px 35px; }
+    padding: 12px 35px;
+    grid-area: vacBtn;
+    align-self: end; }
   .vac__text {
     display: inline; }
+    .vac__text--modal {
+      display: block;
+      max-width: 810px;
+      margin-bottom: 20px; }
+      .vac__text--modal:last-of-type {
+        margin-bottom: 0; }
   .vac__salary {
     font-family: 'Nunito-900';
     font-size: 18px;
@@ -3835,10 +3854,49 @@ input[type=number] {
     border-radius: 16px;
     width: 500px;
     height: 415px;
+    display: grid;
+    grid-template: auto auto/ auto 1fr;
+    grid-template-areas: 'vacWrap vacWrap' 'vacBtn vacLink'; }
+  .vac__modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 45, 45, 0.6);
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start; }
+    align-items: center;
+    justify-content: center; }
+    .vac__modal__close {
+      font-family: 'Nunito-900';
+      font-size: 30px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      transition: 0.3s; }
+      .vac__modal__close:hover {
+        color: rgba(0, 0, 0, 0.6); }
+    .vac__modal--visible {
+      opacity: 1;
+      visibility: visible;
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s; }
+    .vac__modal__dialog {
+      position: relative;
+      padding: 40px;
+      background-color: #fff;
+      border: 1px solid #B9CCD3;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 520px; }
 
 .map {
   padding-top: 70px;
@@ -3904,6 +3962,152 @@ input[type=number] {
     grid-template-areas: 'mapBox mapMap' 'mapBoxBot mapMap';
     -moz-column-gap: 20px;
     column-gap: 20px; }
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 45, 45, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal__check {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: -39px;
+    top: 5px;
+    border: 2px solid #039E25; }
+  .modal__label {
+    cursor: pointer;
+    position: relative;
+    font-size: 12px;
+    max-width: 280px;
+    display: block;
+    margin: auto;
+    margin-bottom: 45px; }
+  .modal__button {
+    margin: auto;
+    display: block; }
+  .modal__input-group {
+    margin-bottom: 15px; }
+    .modal__input-group:last-of-type {
+      margin-bottom: 30px; }
+  .modal__input {
+    font-size: 18px;
+    line-height: 130%;
+    color: #929292;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    padding: 20px 30px;
+    width: 380px;
+    box-shadow: 0px 50px 50px -40px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    display: block;
+    margin: auto; }
+    .modal__input--check {
+      display: none; }
+      .modal__input--check:checked + .modal__check {
+        background-image: url(../img/checkbox.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #039E25; }
+  .modal__text {
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    max-width: 520px;
+    margin-bottom: 30px; }
+  .modal__title {
+    font-family: 'Nunito-900';
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: 15px; }
+  .modal__close {
+    font-size: 18px;
+    line-height: 21px;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: #B4B4B4;
+    position: absolute;
+    top: 25px;
+    right: 40px; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s; }
+  .modal__dialog {
+    position: relative;
+    padding: 60px;
+    background-color: #F3F6FD; }
+
+.success {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 45, 45, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .success__leaf {
+    position: absolute; }
+    .success__leaf--4 {
+      right: 30px;
+      top: 40px; }
+    .success__leaf--3 {
+      right: 50px;
+      top: 65px; }
+    .success__leaf--2 {
+      left: 70px;
+      bottom: 0; }
+    .success__leaf--1 {
+      left: -45px;
+      bottom: 0px; }
+  .success__text {
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    max-width: 275px; }
+  .success__title {
+    font-family: 'Nunito-900';
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+    color: #74029E;
+    max-width: 240px;
+    margin-bottom: 50px; }
+  .success--visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s; }
+  .success__dialog {
+    width: 450px;
+    height: 600px;
+    position: relative;
+    background: #F3F6FD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; }
 
 * {
   margin: 0;
@@ -4236,6 +4440,8 @@ input {
     right: 2%; } }
 
 @media screen and (max-width: 1300px) {
+  .nav__link {
+    margin-right: 30px; }
   .fabr__text:not(.fabr__text--name) {
     max-width: 750px; }
   .fabr__img {
@@ -4307,6 +4513,10 @@ input {
       width: 350px; }
   .map__title {
     margin-bottom: 90px; }
+  .vac__link {
+    justify-self: start;
+    font-size: 18px;
+    align-self: start; }
   .vac__row {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 15px; }
@@ -4316,7 +4526,11 @@ input {
       margin-bottom: 25px; }
   .vac__card {
     width: 400px;
-    padding: 35px; }
+    height: 455px;
+    padding: 35px;
+    grid-template: repeat(3, auto)/1fr;
+    grid-template-areas: 'vacWrap' 'vacLink' 'vacBtn';
+    justify-items: start; }
   .vac__date {
     font-size: 12px; }
   .vac__title {
@@ -4869,6 +5083,8 @@ input {
     .main__leafs--7 {
       width: 60px;
       bottom: 3%; }
+  .header__cabinet-text {
+    display: none; }
   .header__tel {
     margin-right: 20px; }
   .header__logo {
@@ -4877,6 +5093,46 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .success__leaf--3 {
+    width: 70px; }
+  .success__leaf--2 {
+    width: 40px;
+    left: 80px; }
+  .success__leaf--1 {
+    left: -20px;
+    width: 130px; }
+  .success__text {
+    font-size: 14px; }
+  .success__title {
+    margin-bottom: 30px; }
+  .success__dialog {
+    width: 320px;
+    height: 500px; }
+  .modal__close {
+    font-size: 14px;
+    top: 10px;
+    right: 10px; }
+  .modal__label {
+    max-width: 200px; }
+  .modal__button {
+    padding: 15px 35px;
+    width: 100%;
+    font-size: 14px; }
+  .modal__input {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 10px; }
+  .modal__text {
+    font-size: 14px;
+    text-align: left;
+    max-width: 270px; }
+  .modal__title {
+    font-size: 30px;
+    text-align: left; }
+  .modal__dialog {
+    padding: 25px; }
   .map__text {
     text-align: center; }
   .map__box {
@@ -4902,11 +5158,21 @@ input {
     grid-template: auto auto auto / 1fr;
     grid-gap: 15px;
     grid-template-areas: 'mapBox' 'mapMap' 'mapBoxBot'; }
+  .vac__modal {
+    align-items: flex-start;
+    overflow: auto; }
+    .vac__modal__dialog {
+      width: 288px;
+      height: auto; }
+  .vac__link {
+    font-size: 16px; }
   .vac br {
     display: none; }
   .vac__text {
     font-size: 12px;
     display: block; }
+    .vac__text--modal:last-of-type {
+      margin-bottom: 40px; }
     .vac__text--bold {
       font-family: 'Nunito-Bold'; }
   .vac__post {
@@ -5135,7 +5401,7 @@ input {
     background-color: transparent;
     margin: 0;
     padding: 0;
-    width: auto;
+    width: 300px;
     flex-direction: column;
     margin-bottom: 20px;
     margin: 0px 10px 30px 10px; }
@@ -5558,11 +5824,13 @@ input {
     .basket__window {
       overflow: hidden;
       flex-basis: auto;
-      width: 100%;
+      width: 300px;
       position: relative;
       height: 300px;
       display: flex;
-      align-items: flex-end; }
+      align-items: flex-end;
+      margin-left: auto;
+      margin-right: auto; }
     .basket__box--right {
       justify-content: flex-start;
       position: absolute;
@@ -6876,6 +7144,12 @@ input {
     max-height: 200px; } }
 
 @media screen and (max-height: 500px) {
+  .success {
+    align-items: flex-start;
+    overflow: auto; }
+  .modal {
+    align-items: flex-start;
+    overflow: auto; }
   .menu__inner a {
     margin-bottom: 5px; }
   .menu__button {
@@ -6884,8 +7158,8 @@ input {
     font-size: 16px; }
   .menu__link {
     font-size: 16px;
-    margin-bottom: 5px; }
-    .menu__link:nth-child(9) {
+    margin-bottom: 3px; }
+    .menu__link:nth-child(10) {
       margin-bottom: 5px;
       font-size: 16px; }
     .menu__link:first-of-type {

@@ -25,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
         menuLinkMenu = document.querySelector('.menu__link--menu'),
         menuInner = document.querySelector('.menu__inner'),
         cabHistAccordContents = document.querySelectorAll('.cab-hist__accord-content');
+        
 
         
 
@@ -35,8 +36,38 @@ window.addEventListener('DOMContentLoaded', () => {
   let counterForSwipe = 0;
   let counter = 0;
   let offerCount = 0;
-  let paused;
   let dotsInBasket;
+  let arrTimeout = [];
+
+  // вызов модалки в vacancies.html
+
+  function modal(triggers, modal, visibleClass, modalClose) {
+    const triggers_ = document.querySelectorAll(triggers),
+          modal_ = document.querySelector(modal),
+          modalClose_ = document.querySelector(modalClose);
+
+    if (triggers_.length > 0) {
+      triggers_.forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          modal_.classList.add(visibleClass);
+        });
+      });
+  
+      modalClose_.addEventListener('click', () => {
+        modal_.classList.remove(visibleClass);
+      });
+      modal_.addEventListener('click', (e) => {
+        if (e.target.classList.contains(visibleClass)) {
+          modal_.classList.remove(visibleClass);
+        }
+      });
+    }
+  }
+
+  modal('.vac__link', '.vac__modal', 'vac__modal--visible', '.vac__modal__close');
+  modal('#modal', '.modal', 'modal--visible', '.modal__close');
+
 
   // Функция для табов (универсальная) на странице questions.html
 
@@ -568,7 +599,12 @@ window.addEventListener('DOMContentLoaded', () => {
       let touchProgressEnd;
       let counterSwipeProgress = 1;
       let sliderProgressFieldPos = window.getComputedStyle(sliderProgressField).position;
+      let paused;
 
+      for (var i=0; i<arrTimeout.length - 2; i++) {
+        clearTimeout(arrTimeout[i]);
+      }
+      
       const moveMouse = function (e) {
         e.preventDefault();
           let mouseProgressMove;
@@ -654,33 +690,36 @@ window.addEventListener('DOMContentLoaded', () => {
         if (sliderProgress) {
           sliderProgress.style.width = `${progressStep * counterSwipeProgress}%`;
         }
-        sliderAuto();
+        checkAuto();
       });
 
       const sliderAuto = function () {
+        if (counterSwipeProgress == sliderProgressSlides.length) {
+          sliderProgressField.style.transform = `translateX(0px)`;
+          counterSwipeProgress = 1;
+        } else {
+          sliderProgressField.style.transform = `translateX(-${slideWidth * counterSwipeProgress}px)`;
+          counterSwipeProgress++;
+        }
+        sliderDots();
+      };
+
+      const checkAuto = function () {
         if (auto && sliderProgressFieldPos == 'absolute') {
-          clearInterval(paused);
-          paused = setInterval(function() {
-            if (counterSwipeProgress == sliderProgressSlides.length) {
-              sliderProgressField.style.transform = `translateX(0px)`;
-              counterSwipeProgress = 1;
-            } else {
-              sliderProgressField.style.transform = `translateX(-${slideWidth * counterSwipeProgress}px)`;
-              counterSwipeProgress++;
-            }
-            sliderDots();
-          }, 3000);
+          paused = setInterval(sliderAuto,3000);
+          arrTimeout.push(paused);
         } else {
           clearInterval(paused);
         }
       };
-      sliderAuto();
+      
       sliderProgressWind.addEventListener('mouseenter', () => {
         clearInterval(paused);
       });
       sliderProgressWind.addEventListener('mouseleave', () => {
-        sliderAuto();
+        checkAuto(); 
       });
+      checkAuto();
     }
   }
 

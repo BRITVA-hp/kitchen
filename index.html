@@ -19,6 +19,7 @@
           <a href="./promotions.html" class="hover-text nav__link">Акции</a>
           <a href="./we.html" class="hover-text nav__link">О нас</a>
           <a href="./questions.html" class="hover-text nav__link">Вопрос-Ответ</a>
+          <a href="./map.html" class="hover-text nav__link">Контакты</a>
         </nav>
 
         <a class="header__logo" href="./index.html"><img src="img/logo.png" alt="Кухня здоровья"></a>
@@ -192,6 +193,7 @@
       <a href="./recipes.html" class="menu__link">Рецепты</a>
       <a href="./vacancies.html" class="menu__link">Вакансии</a>
       <a href="./team.html" class="menu__link">Команда</a>
+      <a href="./map.html" class="menu__link">Контакты</a>
       <a href="#" class="menu__link">@kuhnyazdorovyaopt</a>
       <a href="#" class="button button--purple menu__button">Подписаться</a>
     </div>
@@ -218,7 +220,7 @@
             <div class="main__img--mobile"><img src="img/main/bg-mobile.png" alt="girl"></div>
             <div class="main__buttons">
               <a href="./categories.html" class="main__button main__button--left button button--green">Посмотреть меню</a>
-              <button class="main__button button button--white">Почему мы?</button>
+              <a href="./we.html" class="main__button button button--white">Почему мы?</a>
             </div>
           </div>
 
@@ -1439,7 +1441,7 @@
         <div class="open__row">
           <div class="open__box">
             <h3 class="section__title open__title text-white">ОТКРОЙТЕ НОВЫЕ горизонты <br><span>для своего бизнеса</span></h3>
-            <button class="button button--white open__button">Стать партнером</button>
+            <button id="modal" class="button button--white open__button">Стать партнером</button>
           </div>
         <img class="open__img open__img--1" src="img/open/img.png" alt="business">
         <img class="open__img open__img--2" src="img/open/img1.png" alt="business">
@@ -1614,7 +1616,7 @@
             <h3 class="faq__title section__title">Частые вопросы</h3>
             <p class="faq__text">Если вы не нашли ответа на ваш вопрос, наши менеджеры с радостью вам помогут</p>
             <p class="faq__text--bottom faq__text text-bold">Остались вопросы?</p>
-            <button class="button button--green faq__button">Получить консультацию</button>
+            <button id="modal" class="button button--green faq__button">Получить консультацию</button>
           </div>
 
           <div class="faq__box faq__box--tabs">
@@ -1772,6 +1774,38 @@
     </div>
   </footer>
   <!-- /.footer section -->
+
+  <div class="modal">
+    <form action="#" class="modal__dialog">
+      <p class="modal__close hover-text">Закрыть</p>
+      <p class="modal__title">Оставьте заявку</p>
+      <p class="modal__text">Для получения заявок, оставьте номер телефона и ваше имя. Наш менеджер расскажет вам все подробнее.</p>
+      <div class="modal__input-group">
+        <input placeholder="Как вас зовут?" type="text" class="modal__input">
+      </div>
+      <div class="modal__input-group">
+        <input placeholder="Введите номер телефона" type="tel" class="modal__input">
+      </div>
+      <label for="modalCheck" class="modal__label">
+        Согласие на обработку своих персональных данных
+        <input id="modalCheck" checked class="modal__input--check" type="checkbox">
+        <div class="modal__check">
+        </div>
+      </label>
+      <button class="button button--green modal__button">Записаться на консультацию</button>
+    </form>
+  </div>
+
+  <div class="success">
+    <div class="success__dialog">
+      <div class="success__leaf success__leaf--1"><img src="img/success/leaf.png" alt="leaf"></div>
+      <div class="success__leaf success__leaf--2"><img src="img/success/leaf1.png" alt="leaf"></div>
+      <div class="success__leaf success__leaf--3"><img src="img/success/leaf2.png" alt="leaf"></div>
+      <div class="success__leaf success__leaf--4"><img src="img/success/leaf3.png" alt="leaf"></div>
+      <p class="success__title">Заявка отправлена</p>
+      <p class="success__text">Мы получили вашу заявку. <br>Наш менеджер свяжится с вами.</p>
+    </div>
+  </div>
   
   <script src="js/script.js"></script>
 
