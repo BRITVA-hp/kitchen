@@ -1429,7 +1429,7 @@
       max-width: 460px;
     }
     &__img {
-      width: 400px;
+      width: 390px;
     }
     &__leafs {
       &--6 {
@@ -3029,7 +3029,7 @@
     }
     &__title {
       font-size: 30px;
-      max-width: 300px;
+      max-width: 304px;
       line-height: 50%;
     }
     &__button {
@@ -3991,6 +3991,7 @@
       max-width: 450px;
       margin-left: auto;
       margin-right: auto;
+      justify-content: space-around;
     }
     &__wrap {
       height: auto;

@@ -4853,7 +4853,7 @@ input {
       line-height: 70%;
       max-width: 460px; }
     .main__img {
-      width: 400px; }
+      width: 390px; }
     .main__leafs--6 {
       top: 10%; }
     .main__leafs--5 {
@@ -5865,7 +5865,7 @@ input {
     flex-direction: column; }
   .main__title {
     font-size: 30px;
-    max-width: 300px;
+    max-width: 304px;
     line-height: 50%; }
   .main__button {
     width: 275px;
@@ -6502,7 +6502,8 @@ input {
       flex-wrap: wrap;
       max-width: 450px;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      justify-content: space-around; }
     .offer__wrap {
       height: auto;
       overflow: visible; }
