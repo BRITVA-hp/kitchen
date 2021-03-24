@@ -20,6 +20,9 @@
     line-height: 110%;
     max-width: 600px;
     margin-bottom: 20px;
+    br {
+      display: none;
+    }
   }
   &__leaf {
     &--text {

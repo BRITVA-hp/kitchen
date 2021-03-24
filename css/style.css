@@ -797,6 +797,8 @@ button:focus {
     line-height: 110%;
     max-width: 600px;
     margin-bottom: 20px; }
+    .main__title br {
+      display: none; }
   .main__leaf--text {
     transform: translateY(20px); }
   .main__leafs {
@@ -5865,8 +5867,10 @@ input {
     flex-direction: column; }
   .main__title {
     font-size: 30px;
-    max-width: 304px;
+    max-width: 320px;
     line-height: 50%; }
+    .main__title br {
+      display: block; }
   .main__button {
     width: 275px;
     margin-left: 0;

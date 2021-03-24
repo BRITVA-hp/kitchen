@@ -3029,8 +3029,11 @@
     }
     &__title {
       font-size: 30px;
-      max-width: 304px;
+      max-width: 320px;
       line-height: 50%;
+      br {
+        display: block;
+      }
     }
     &__button {
       width: 275px;
