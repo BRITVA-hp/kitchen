@@ -60,6 +60,10 @@
     &__card {
       position: relative;
       margin-right: 35px;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.05);
+      }
       &:last-of-type {
         margin-right: 0;
       }

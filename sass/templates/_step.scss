@@ -36,5 +36,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+  &__circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    &__inner {
+      background-color: $purple;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      display: none;
+      &--active {
+        display: block;
+        animation: circle 1s cubic-bezier(.9,.24,.62,.79) forwards;
+      }
+    }
   }
 }

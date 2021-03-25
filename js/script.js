@@ -76,6 +76,8 @@ window.addEventListener('DOMContentLoaded', () => {
   paralax('.doubt', '.doubt__leafs');
   paralax('.faq__container', '.faq__leaf');
   paralax('.advantages', '.advantages__olives');
+  paralax('.questions__container', '.questions__leaf');
+  paralax('.we__box', '.we__leaf');
 
 
   // вызов модалки в vacancies.html

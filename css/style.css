@@ -408,6 +408,22 @@ button:focus {
   to {
     top: 0; } }
 
+@-webkit-keyframes circle {
+  from {
+    transform: scale(0);
+    opacity: 1; }
+  to {
+    transform: scale(1);
+    opacity: 0; } }
+
+@keyframes circle {
+  from {
+    transform: scale(0);
+    opacity: 1; }
+  to {
+    transform: scale(1);
+    opacity: 0; } }
+
 .header {
   background-color: #fff;
   padding-top: 20px;
@@ -866,7 +882,25 @@ button:focus {
     height: 190px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    position: relative; }
+  .step__circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    .step__circle__inner {
+      background-color: #74029E;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      display: none; }
+      .step__circle__inner--active {
+        display: block;
+        -webkit-animation: circle 1s cubic-bezier(0.9, 0.24, 0.62, 0.79) forwards;
+        animation: circle 1s cubic-bezier(0.9, 0.24, 0.62, 0.79) forwards; }
 
 .stock {
   margin-top: -110px; }
@@ -3683,7 +3717,10 @@ input[type=number] {
         color: #FFFFFF; }
     .we-fr__card {
       position: relative;
-      margin-right: 35px; }
+      margin-right: 35px;
+      transition: 0.3s; }
+      .we-fr__card:hover {
+        transform: scale(1.05); }
       .we-fr__card:last-of-type {
         margin-right: 0; }
     .we-fr__img {
