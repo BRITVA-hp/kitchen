@@ -39,6 +39,43 @@ window.addEventListener('DOMContentLoaded', () => {
   let dotsInBasket;
   let arrTimeout = [];
 
+  // анимация на (листиков) главной
+
+  function paralax(container, elements) {
+    const container_ = document.querySelector(container),
+          elements_ = document.querySelectorAll(elements);
+
+    if (container_) {
+      const containerWidth = container_.scrollWidth,
+            containerHeight = container_.scrollHeight;
+
+      container_.addEventListener('mousemove', (e) => {
+        let pos_x = e.pageX,
+            pos_y = e.pageY - (container_.getBoundingClientRect().top + document.documentElement.scrollTop),
+            left = containerWidth / 2 - pos_x,
+            top  = containerHeight / 2 - pos_y;
+  
+          elements_.forEach(item => {
+          item.style.cssText = `
+            transform: translate(${left / 12}px, ${top / 6}px);
+            transition-timing-function: ease-out;
+            -webkit-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            -moz-transition-timing-function: ease-out;
+            transition-duration: 0.5s;
+          `;
+        });
+  
+      });
+    }
+  }
+
+  paralax('.main', '.main__leafs');
+  paralax('.doubt', '.doubt__leafs');
+  paralax('.faq__container', '.faq__leaf');
+  paralax('.advantages', '.advantages__olives');
+
+
   // вызов модалки в vacancies.html
 
   function modal(triggers, modal, visibleClass, modalClose) {

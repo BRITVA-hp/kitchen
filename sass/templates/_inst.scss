@@ -38,6 +38,11 @@
     border: 4px solid #FFFFFF;
     border-radius: 10px;
     overflow: hidden;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
     &--last {
       width: 370px;
       height: 370px;

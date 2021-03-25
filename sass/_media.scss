@@ -1113,7 +1113,7 @@
       display: none;
     }
     &__wrap {
-      height: 485px;
+      height: 500px;
     }
     &__row {
       &--stars {
@@ -2177,6 +2177,11 @@
     }
   }
   .footer {
+    &__logo {
+      &:hover {
+        transform: none;
+      }
+    }
     &__box {
       &--left {
         margin-right: 30px;
@@ -2519,6 +2524,10 @@
       bottom: 0;
     }
     &__card {
+      &:hover {
+        box-shadow: none;
+        transform: none;
+      }
       &--last {
         display: none;
       }

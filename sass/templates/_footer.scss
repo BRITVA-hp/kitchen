@@ -24,6 +24,10 @@
     margin-right: 20px;
     display: flex;
     align-items: center;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
     &:last-child {
       margin-right: 0;
     }
