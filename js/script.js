@@ -53,17 +53,19 @@ window.addEventListener('DOMContentLoaded', () => {
         let pos_x = e.pageX,
             pos_y = e.pageY - (container_.getBoundingClientRect().top + document.documentElement.scrollTop),
             left = containerWidth / 2 - pos_x,
-            top  = containerHeight / 2 - pos_y;
-  
-          elements_.forEach(item => {
+            top  = containerHeight / 2 - pos_y,
+            x = 12;
+        
+        elements_.forEach(item => {
           item.style.cssText = `
-            transform: translate(${left / 12}px, ${top / 6}px);
+            transform: translate(${left / x}px, ${top / (x/2)}px);
             transition-timing-function: ease-out;
             -webkit-transition-timing-function: ease-out;
             -o-transition-timing-function: ease-out;
             -moz-transition-timing-function: ease-out;
             transition-duration: 0.5s;
           `;
+          x = x/1.3;
         });
   
       });

@@ -3317,6 +3317,12 @@
   }
   .fabr {
     padding-top: 40px;
+    &-offer {
+      &__title {
+        margin: auto;
+        text-align: center;
+      }
+    }
     &__value {
       display: flex !important;
     }
@@ -3355,6 +3361,12 @@
   .prom1 {
     padding-top: 40px;
     background-image: none;
+    &-offer {
+      &__title {
+        text-align: center;
+        margin: auto;
+      }
+    }
     &__sale {
       font-size: 10px;
       padding: 4px 10px;
@@ -3806,6 +3818,10 @@
     background-position-y: 125%;
     &-offer {
       margin-top: 0;
+      &__title {
+        text-align: center;
+        margin: auto;
+      }
     }
     &__tabs {
       padding-bottom: 0;
@@ -4037,9 +4053,14 @@
       margin-bottom: 30px;
     }
     &-offer {
+      &__title {
+        text-align: center;
+        margin: auto;
+      }
       &__row-top {
         display: flex !important;
         margin-bottom: 30px;
+        padding: 0;
       }
       &__arrows {
         display: none;
@@ -4097,13 +4118,18 @@
   }
   .offer {
     padding-left: 10px;
+    padding-right: 10px !important;
     padding-bottom: 60px;
     &__row {
       flex-wrap: wrap;
-      max-width: 450px;
+      max-width: 375px;
       margin-left: auto;
       margin-right: auto;
       justify-content: space-around;
+      padding-left: 0;
+      &--top {
+        padding-right: 0;
+      }
     }
     &__wrap {
       height: auto;
@@ -4113,7 +4139,6 @@
       &:not(.fabr__card) {
         display: none;
         margin-right: 0;
-        margin-right: 10px;
         height: 315px;
         border-radius: 6px;
         margin-bottom: 25px;
@@ -4194,8 +4219,11 @@
     padding-top: 60px;
     &__title {
       margin-bottom: 30px;
+      text-align: center;
     }
     &__tabs {
+      margin-left: auto;
+      margin-right: auto;
       &-block {
         display: none;
       }
