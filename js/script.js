@@ -39,6 +39,34 @@ window.addEventListener('DOMContentLoaded', () => {
   let dotsInBasket;
   let arrTimeout = [];
 
+  // функция для анимации при скролле
+
+  function animateScroll(section, elements, activeClass) {
+    const section_ = document.querySelector(section);
+          
+    
+    let delay = 0;
+
+    if (section_) {
+      const elements_ = section_.querySelectorAll(elements);
+      elements_.forEach(item => {
+        item.style.animationDelay = `${delay}s`;
+        delay += 0.5;
+      });
+      document.addEventListener('scroll', () => {
+        if (section_.getBoundingClientRect().top < 150) {
+          elements_.forEach(item => {
+            item.classList.add(activeClass);
+          });
+        }
+      });
+      console.log(delay);
+    }
+  }
+
+  animateScroll('.step', '.step__circle__inner', 'step__circle__inner--active');
+  animateScroll('.advantages', '.step__circle__inner', 'step__circle__inner--active');
+
   // анимация на (листиков) главной
 
   function paralax(container, elements) {
@@ -349,22 +377,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // фильтр на мобилке
 
-  if (filters.length > 0) {
-    filters.forEach(filter => {
-      filter.addEventListener('click', () => {
-        filters.forEach(filter_ => {
-          filter_.classList.toggle('filter__text--mobile-active');
-        });
-        if (filter.classList.contains('filter__text--mobile-active')) {
-          filtersWrap.style.maxHeight = `${filtersWrap.scrollHeight}px`;
-          filters[0].style.display = 'none';
-        } else {
-          filtersWrap.style.maxHeight = `50px`;
-          filters[0].style.display = 'block';
-        }
-      });
+  filters.forEach(item => {
+    item.addEventListener('click', () => {
+      filtersWrap.classList.toggle('filter--active');
     });
-  }
+  });
 
   // табы и слайдер в секции offer
 

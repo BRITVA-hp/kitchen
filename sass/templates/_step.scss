@@ -46,14 +46,14 @@
     top: 50%;
     transform: translate(-50%, -50%);
     &__inner {
-      background-color: $purple;
+      background-color: transparent;
       width: inherit;
       height: inherit;
       border-radius: 50%;
       display: none;
       &--active {
         display: block;
-        animation: circle 1s cubic-bezier(.9,.24,.62,.79) forwards;
+        animation: circle 1s cubic-bezier(.9,.24,.62,.79);
       }
     }
   }

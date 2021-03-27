@@ -18,10 +18,10 @@
 @keyframes circle {
   from {
       transform: scale(0);
-      opacity: 1;
+      background-color: darken(#A4AEC6, 20%);
   }
   to {
       transform: scale(1);
-      opacity: 0;
+      background-color: transparent;
   }
 }

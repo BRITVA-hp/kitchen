@@ -47,6 +47,12 @@
   height: 80px;
   margin-bottom: 40px;
   transition: 0.3s;
+  &--active {
+    max-height: 350px !important;
+    .filter__text--mobile{
+      display: none;
+    }
+  }
   &__option, &__select {
     cursor: pointer;
     font-size: 18px;
