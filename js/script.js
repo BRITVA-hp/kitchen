@@ -338,11 +338,13 @@ window.addEventListener('DOMContentLoaded', () => {
     if (headerBurger.classList.contains('header__burger--active')) {
       header.style.maxHeight = `${header.scrollHeight}px`;
       header.style.overflow = `auto`;
+      menu.style.maxHeight = `100%`;
     } else {
-      header.style.maxHeight = '57px';
+      header.style.maxHeight = '80px';
       header.style.overflow = 'hidden';
       menuLinkMenu.firstElementChild.classList.remove('menu__arrow--active');
       menuInner.style.maxHeight = `0px`;
+      menu.style.maxHeight = `0px`;
     }
   });
 

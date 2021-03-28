@@ -6,6 +6,7 @@
   width: 100%;
   overflow: hidden;
   transition: 0.3s;
+  max-height: 80px;
   &--active {
     position: fixed;
     left: 0;
@@ -98,11 +99,13 @@
 }
 
 .menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
   width: 100%;
+  transition: 0.3s;
+  max-height: 100%;
   &__inner {
     border-top: 1px solid #CEE5EE;
     border-bottom: 1px solid #CEE5EE;
