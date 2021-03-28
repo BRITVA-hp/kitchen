@@ -2472,6 +2472,9 @@
     display: none;
   }
   .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-height: 57px;
     &__tel {
       display: none;
     }
@@ -4069,6 +4072,8 @@
     }
     &__row {
       grid-template-columns: repeat(auto-fill, 142px);
+      justify-content: center;
+      column-gap: 10px;
       row-gap: 20px;
     }
   }
@@ -4662,8 +4667,6 @@
     }
   }
   .header {
-    padding-bottom: 10px;
-    padding-top: 10px;
     background-color: $light;
     &__logo {
       width: 120px;

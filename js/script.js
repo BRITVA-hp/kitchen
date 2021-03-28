@@ -336,10 +336,13 @@ window.addEventListener('DOMContentLoaded', () => {
   headerBurger.addEventListener('click', () => {
     headerBurger.classList.toggle('header__burger--active');
     if (headerBurger.classList.contains('header__burger--active')) {
-      menu.style.maxHeight = `${menu.scrollHeight}px`;
+      header.style.maxHeight = `${header.scrollHeight}px`;
+      header.style.overflow = `auto`;
     } else {
-      menu.style.maxHeight = '0px';
+      header.style.maxHeight = '57px';
+      header.style.overflow = 'hidden';
       menuLinkMenu.firstElementChild.classList.remove('menu__arrow--active');
+      menuInner.style.maxHeight = `0px`;
     }
   });
 

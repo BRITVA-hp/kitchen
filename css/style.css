@@ -430,7 +430,8 @@ button:focus {
   padding-bottom: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   width: 100%;
-  position: relative; }
+  overflow: hidden;
+  transition: 0.3s; }
   .header--active {
     position: fixed;
     left: 0;
@@ -499,19 +500,11 @@ button:focus {
       margin-right: 50px; }
 
 .menu {
-  height: 0;
-  position: absolute;
-  top: 99%;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  width: 100%;
-  transition: 0.3s;
-  max-height: 0;
-  overflow: hidden;
-  z-index: 500; }
+  width: 100%; }
   .menu__inner {
     border-top: 1px solid #CEE5EE;
     border-bottom: 1px solid #CEE5EE;
@@ -5788,16 +5781,20 @@ input {
     padding-left: 10px; }
   .nav {
     display: none; }
-  .header__tel {
-    display: none; }
-  .header__cabinet {
-    margin-right: 15px; }
-    .header__cabinet-text {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-height: 57px; }
+    .header__tel {
       display: none; }
-  .header__burger {
-    display: flex; }
-  .header__basket {
-    margin-right: 20px; } }
+    .header__cabinet {
+      margin-right: 15px; }
+      .header__cabinet-text {
+        display: none; }
+    .header__burger {
+      display: flex; }
+    .header__basket {
+      margin-right: 20px; } }
 
 @media screen and (max-width: 900px) {
   .inst {
@@ -6815,6 +6812,9 @@ input {
       display: none; }
     .element__row {
       grid-template-columns: repeat(auto-fill, 142px);
+      justify-content: center;
+      -moz-column-gap: 10px;
+      column-gap: 10px;
       row-gap: 20px; }
   .categories__block {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
@@ -7214,8 +7214,6 @@ input {
       top: 34%;
       right: 6%; }
   .header {
-    padding-bottom: 10px;
-    padding-top: 10px;
     background-color: #F3F6FD; }
     .header__logo {
       width: 120px; } }
