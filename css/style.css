@@ -432,7 +432,9 @@ button:focus {
   width: 100%;
   overflow: hidden;
   transition: 0.3s;
-  max-height: 80px; }
+  max-height: 80px;
+  position: relative;
+  z-index: 500; }
   .header--active {
     position: fixed;
     left: 0;
@@ -5538,6 +5540,8 @@ input {
     display: none; }
   .order__comment {
     width: 100%; }
+  .order__input--date::after {
+    display: none; }
   .order__input--address {
     width: 100%; }
   .order__box--left {

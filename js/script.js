@@ -43,9 +43,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Появление доп. меню
 
-  addMenuBurger.addEventListener('click', () => {
-    addMenu.classList.toggle('add-menu--active');
-  });
+  if (addMenuBurger) {
+    addMenuBurger.addEventListener('click', () => {
+      addMenu.classList.toggle('add-menu--active');
+    });
+  }
 
   // функция для анимации при скролле
 
