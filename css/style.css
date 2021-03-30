@@ -557,9 +557,9 @@ button:focus {
       color: #74029E; }
 
 .headb {
-  position: absolute;
-  top: 100%;
-  right: 0;
+  position: fixed;
+  top: 60px;
+  right: 140px;
   background: #FFFFFF;
   border: 1px solid #B9CCD3;
   border-radius: 20px;
@@ -6598,7 +6598,8 @@ input {
       font-size: 12px; }
       .order__input--date {
         font-size: 14px;
-        width: 100%; }
+        width: 100%;
+        min-width: 100%; }
     .order__step__title {
       font-size: 16px;
       max-width: 250px; }
