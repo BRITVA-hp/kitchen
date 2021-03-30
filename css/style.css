@@ -6597,7 +6597,8 @@ input {
     .order__input {
       font-size: 12px; }
       .order__input--date {
-        font-size: 14px; }
+        font-size: 14px;
+        width: 100%; }
     .order__step__title {
       font-size: 16px;
       max-width: 250px; }
