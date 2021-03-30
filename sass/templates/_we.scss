@@ -87,7 +87,15 @@
   }
   &-adv {
     margin-bottom: 160px;
+    &__wrap {
+      margin-right: auto;
+      margin-left: auto;
+    }
     &__card {
+      margin-right: 10px;
+      &:last-of-type {
+        margin-right: 0;
+      }
       &__text {
         max-width: 340px;
         font-size: 18px;
@@ -111,8 +119,13 @@
       }
     }
     &__title {
-      margin-bottom: 100px;
+      margin-bottom: 60px;
       text-align: center;
+    }
+    &__container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
     }
   }
   &__leaf {
@@ -149,5 +162,90 @@
   &__title {
     text-align: center;
     margin-bottom: 70px;
+  }
+}
+
+.add-menu {
+  min-width: 200px;
+  box-shadow: 30px 30px 30px rgba(0,0,0, .2);
+  background-color: $light;
+  border-radius: 4px;
+  transition: 0.3s;
+  &--active {
+    max-width: 200px !important;
+    min-width: 200px !important;
+    .add-menu__burger__line {
+      &:first-of-type {
+        width: 100%;
+        transform: rotate(-45deg);
+        transform-origin: right top;
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+      &:last-of-type {
+        transform-origin: right bottom;
+        transform: rotate(45deg);
+      }
+    }
+    .add-menu__ul {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__burger {
+    position: absolute;
+    right: -25px;
+    top: 10px;
+    width: 20px;
+    height: 15px;
+    z-index: 499;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    &__line {
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+      transition: 0.3s;
+      &:first-of-type {
+        width: 60%;
+      }
+      &:nth-child(2) {
+        width: 80%;
+      }
+    }
+  }
+  &__ul {
+    position: relative;
+    transition: 0.3s;
+  }
+  &__link {
+    font-family: 'Nunito';
+    font-size: 18px;
+    padding: 15px;
+    display: block;
+  }
+  &__li {
+    border: 1px solid rgba(0,0,0, .2);
+    border-bottom: none;
+    transition: 0.3s;
+    &--active {
+      background-color: rgba(0,0,0, .1);
+      &>.add-menu__link {
+        font-family: 'Nunito-Bold';
+      }
+    }
+    &:hover {
+      background-color: rgba(0,0,0, .1);
+    }
+    &:first-of-type {
+      border-radius: 4px 4px 0 0;
+    }
+    &:last-of-type {
+      border-bottom: 1px solid rgba(0,0,0, .2);
+      border-radius: 0 0 4px 4px;
+    }
   }
 }

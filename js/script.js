@@ -24,7 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
         menu = document.querySelector('.menu'),
         menuLinkMenu = document.querySelector('.menu__link--menu'),
         menuInner = document.querySelector('.menu__inner'),
-        cabHistAccordContents = document.querySelectorAll('.cab-hist__accord-content');
+        cabHistAccordContents = document.querySelectorAll('.cab-hist__accord-content'),
+        addMenu = document.querySelector('.add-menu'),
+        addMenuBurger = document.querySelector('.add-menu__burger');
         
 
         
@@ -38,6 +40,12 @@ window.addEventListener('DOMContentLoaded', () => {
   let offerCount = 0;
   let dotsInBasket;
   let arrTimeout = [];
+
+  // Появление доп. меню
+
+  addMenuBurger.addEventListener('click', () => {
+    addMenu.classList.toggle('add-menu--active');
+  });
 
   // функция для анимации при скролле
 
