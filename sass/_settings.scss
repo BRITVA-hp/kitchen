@@ -41,6 +41,9 @@ ul {
   &-alignR {
     text-align: right;
   }
+  &-dark {
+    color: $gray !important;
+  }
   &-red {
     color: #EB001B;
   }
@@ -54,7 +57,7 @@ ul {
     color: $purple;
   }
   &-gray {
-    color: #6F6F6F;
+    color: $gray;
   }
   &-bold {
     font-family: 'Nunito-Bold';

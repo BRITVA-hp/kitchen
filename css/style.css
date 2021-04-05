@@ -4284,6 +4284,9 @@ ul {
 .text-alignR {
   text-align: right; }
 
+.text-dark {
+  color: #6F6F6F !important; }
+
 .text-red {
   color: #EB001B; }
 
@@ -6599,7 +6602,7 @@ input {
       .order__input--date {
         font-size: 14px;
         width: 100%;
-        min-width: 100%; }
+        min-width: 200px; }
     .order__step__title {
       font-size: 16px;
       max-width: 250px; }
