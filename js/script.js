@@ -103,6 +103,28 @@ window.addEventListener('DOMContentLoaded', () => {
   let dotsInBasket;
   let arrTimeout = [];
 
+  // форма для отзыва на product.html
+
+  function comment(commentForm, commentFormActiveClass, triggers, commentFormClose) {
+    const form = document.querySelector(commentForm),
+          formTriggers = document.querySelectorAll(triggers),
+          commentFormClose_ = document.querySelector(commentFormClose);
+
+    if (formTriggers.length > 0) {
+      formTriggers.forEach(item => {
+        item.addEventListener('click', () => {
+          form.classList.add(commentFormActiveClass);
+        });
+      });
+
+      commentFormClose_.addEventListener('click', () => {
+        form.classList.remove(commentFormActiveClass);
+      });
+    }
+  }
+
+  comment('.comment', 'comment--active', '.product__tabs__button', '.comment__close');
+
   // Появление доп. меню
 
   if (addMenuBurger) {

@@ -2052,6 +2052,8 @@ input[type=number] {
     background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 106.03%);
     border-radius: 0 160px;
     padding-bottom: 500px; }
+    .product__tabs__button {
+      padding: 15px 30px; }
     .product__tabs__row {
       margin-bottom: 55px; }
     .product__tabs-comment {
@@ -2086,7 +2088,7 @@ input[type=number] {
             .product__tabs-comment__row--stars img:last-child {
               margin-right: 0; }
     .product__tabs-box {
-      flex-basis: 45%; }
+      flex-basis: 47%; }
     .product__tabs-container {
       margin-top: -50px; }
     .product__tabs-advice {
@@ -2176,12 +2178,16 @@ input[type=number] {
       line-height: 130%;
       max-width: 710px;
       display: none; }
+      .product__tabs-text span {
+        max-width: 355px; }
       .product__tabs-text--comment {
         font-family: 'Nunito-Bold';
         font-size: 24px;
         line-height: 130%; }
       .product__tabs-text--active {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         -webkit-animation-name: fadeIn;
         animation-name: fadeIn;
         -webkit-animation-duration: 0.5s;
@@ -2325,6 +2331,60 @@ input[type=number] {
     border: 1px solid #C4C4C4;
     border-radius: 10px;
     margin-right: 80px; }
+
+.comment {
+  position: fixed;
+  width: 800px;
+  left: 50%;
+  bottom: -100%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 20px 50px;
+  border: 1px solid #B9CCD3;
+  border-radius: 8px 8px 0 0;
+  background-image: url(../img/advantages/bg.png);
+  background-repeat: no-repeat;
+  background-position-y: -200px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.5s; }
+  .comment--active {
+    bottom: 0; }
+  .comment__close {
+    font-family: 'Nunito-900';
+    font-style: normal;
+    font-size: 18px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: 0.3s; }
+    .comment__close:hover {
+      text-shadow: 0 0 13px red; }
+  .comment__textarea {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 130%;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #B9CCD3;
+    border-radius: 8px; }
+    .comment__textarea:focus {
+      outline: none; }
+  .comment__title {
+    font-family: 'Nunito-900';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: #2D2D2D;
+    text-transform: uppercase;
+    margin-bottom: 10px; }
 
 .recipes {
   background-image: url(../img/advantages/bg.png);
@@ -4423,6 +4483,8 @@ input {
       padding: 40px; } }
 
 @media screen and (max-width: 1500px) {
+  .product__tabs-advice--say {
+    padding: 25px 40px; }
   .map__box {
     width: 400px; }
     .map__box--bottom {
@@ -4499,8 +4561,6 @@ input {
     column-gap: 30px; }
   .recipe__img {
     width: 700px; }
-  .product__tabs-advice--say {
-    padding: 25px 40px; }
   .product__box-text {
     margin-bottom: 35px; }
   .product__row--price {
@@ -4578,6 +4638,14 @@ input {
     right: 2%; } }
 
 @media screen and (max-width: 1300px) {
+  .product__tabs-text {
+    font-size: 20px; }
+    .product__tabs-text span {
+      max-width: 300px; }
+    .product__tabs-text--desc {
+      font-size: 16px; }
+  .product__tabs-advice--say {
+    padding: 25px; }
   .we-adv__card {
     margin-bottom: 40px; }
   .we-adv__row {
@@ -4910,6 +4978,9 @@ input {
       font-size: 14px; }
   .recipes__tabs-item {
     font-size: 20px; }
+  .product__tabs__button {
+    font-size: 14px;
+    padding: 5px 10px; }
   .product__tabs-advice {
     padding: 20px; }
     .product__tabs-advice-text {
@@ -4945,10 +5016,6 @@ input {
     margin-bottom: 15px; }
   .product__tabs-title {
     font-size: 20px; }
-  .product__tabs-text {
-    font-size: 20px; }
-    .product__tabs-text--desc {
-      font-size: 16px; }
   .product__price-text {
     margin: 0; }
   .product__title {
@@ -5234,6 +5301,8 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .comment {
+    width: 700px; }
   .add-menu {
     min-width: 0;
     max-width: 0;
@@ -5640,6 +5709,12 @@ input {
     display: flex; }
   .product {
     background-position-y: 100%; }
+    .product__tabs-text {
+      justify-content: flex-start; }
+      .product__tabs-text span {
+        margin-right: 30px; }
+    .product__tabs-box {
+      width: 100%; }
     .product__tabs-container {
       margin-top: 0; }
     .product__tabs-advice {
@@ -5951,6 +6026,16 @@ input {
       left: 25%; } }
 
 @media screen and (max-width: 767px) {
+  .comment {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0; }
+    .comment__button {
+      width: 100%; }
+    .comment__textarea {
+      font-size: 14px; }
+    .comment__title {
+      font-size: 16px; }
   .map__map {
     height: 300px; }
   .fabr {
@@ -6323,6 +6408,9 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .comment__button {
+    font-size: 18px;
+    padding: 10px 0; }
   .map {
     padding-top: 40px;
     background-image: none; }
@@ -6764,14 +6852,16 @@ input {
       background: #F3F6FD; }
       .product__tabs__row {
         margin-bottom: 20px; }
-      .product__tabs-text--desc {
-        font-size: 14px; }
+      .product__tabs-text {
+        justify-content: flex-end; }
+        .product__tabs-text span {
+          display: none; }
+        .product__tabs-text--desc {
+          font-size: 14px; }
       .product__tabs-header {
         margin-bottom: 20px; }
       .product__tabs-box {
         width: 100%; }
-      .product__tabs-text--comment {
-        display: none; }
       .product__tabs-comment {
         position: relative;
         padding-bottom: 20px;

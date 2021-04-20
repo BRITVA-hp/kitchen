@@ -304,7 +304,10 @@
             </div>
             <div class="product__tabs-content">
               <p class="product__tabs-text product__tabs-text--desc product__tabs-text--active">Томатный суп — суп, приготовленный из томатов. Часто используется как ингредиент в более сложных блюдах, и, в отличие от множества других острых супов, может подаваться как горячим, так и холодным. Его обычно делают из кусочков томата, или из пюре томата, или из того и другого.</p>
-              <p class="product__tabs-text product__tabs-text--comment">Ниже можете ознакомится с отзывами наших покупателей</p>
+              <p class="product__tabs-text product__tabs-text--comment">
+                <span>Ниже можете ознакомится с отзывами наших покупателей</span>
+                <button class="button button--green product__tabs__button">Оставить отзыв</button>
+              </p>
             </div>
           </div>
 
@@ -703,6 +706,13 @@
     </div>
   </footer>
   <!-- /.footer section -->
+
+  <form action="#" class="comment">
+    <div class="comment__close">&#10008;</div>
+    <h4 class="comment__title">Напишите Ваш отзыв</h4>
+    <textarea class="comment__textarea" name="comment" id="comment" cols="30" rows="3"></textarea>
+    <button class="button comment__button button--green">Отправить</button>
+  </form>
   
   <script src="js/script.js"></script>
 </body>
