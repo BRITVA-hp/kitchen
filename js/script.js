@@ -104,22 +104,24 @@ window.addEventListener('DOMContentLoaded', () => {
   localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts)}`);
 
   // Функция для занесения данных в LocalStorage (похожие товары)
-  
-    function similarProductsInLS(data) {
-      let similarProducts_ = JSON.parse(`${localStorage.getItem('similarProducts')}`);
-      
-      if (similarProducts_.indexOf(data) === -1) {
 
-        if (similarProducts_.length < 10) {
-          similarProducts_.push(data);
-          localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts_)}`);
-        } else {
-          similarProducts_.unshift(data);
-          similarProducts_.pop();
-          localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts_)}`);
-        }
+  function similarProductsInLS(data) {
+    const dataStr = JSON.stringify(data),
+          dataLS = localStorage.getItem('similarProducts');
+          
+    let similarProducts_ = JSON.parse(`${dataLS}`);
+
+    if (!dataLS.includes(dataStr)) {
+      if (similarProducts_.length < 10) {
+        similarProducts_.push(data);
+        localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts_)}`);
+      } else {
+        similarProducts_.unshift(data);
+        similarProducts_.pop();
+        localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts_)}`);
       }
     }
+  }
 
   // форма для отзыва на product.html
 
