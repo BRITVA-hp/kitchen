@@ -106,12 +106,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // Функция для занесения данных в LocalStorage (похожие товары)
 
   function similarProductsInLS(data) {
-    const dataStr = JSON.stringify(data),
-          dataLS = localStorage.getItem('similarProducts');
-          
-    let similarProducts_ = JSON.parse(`${dataLS}`);
+    let similarProducts_ = JSON.parse(`${localStorage.getItem('similarProducts')}`);
 
-    if (!dataLS.includes(dataStr)) {
+    const checkId = function(e) {
+      if (e.id) {
+        return e.id === data.id;
+      }
+    };
+
+    if (!similarProducts_.some(checkId)) {
       if (similarProducts_.length < 10) {
         similarProducts_.push(data);
         localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts_)}`);
