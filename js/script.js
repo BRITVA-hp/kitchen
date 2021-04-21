@@ -89,19 +89,37 @@ window.addEventListener('DOMContentLoaded', () => {
   // };
 
   // mask('[type="tel"]');
-        
-
-        
 
   //Вспомогательные переменные
 
-  let touchStart;
-  let touchEnd;
-  let counterForSwipe = 0;
-  let counter = 0;
-  let offerCount = 0;
-  let dotsInBasket;
-  let arrTimeout = [];
+  let touchStart,
+      touchEnd,
+      counterForSwipe = 0,
+      counter = 0,
+      offerCount = 0,
+      dotsInBasket,
+      arrTimeout = [],
+      similarProducts = [];
+
+  localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts)}`);
+
+  // Функция для занесения данных в LocalStorage (похожие товары)
+  
+    function similarProductsInLS(data) {
+      let similarProducts_ = JSON.parse(`${localStorage.getItem('similarProducts')}`);
+      
+      if (similarProducts_.indexOf(data) === -1) {
+
+        if (similarProducts_.length < 10) {
+          similarProducts_.push(data);
+          localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts_)}`);
+        } else {
+          similarProducts_.unshift(data);
+          similarProducts_.pop();
+          localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts_)}`);
+        }
+      }
+    }
 
   // форма для отзыва на product.html
 
