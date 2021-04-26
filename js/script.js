@@ -103,6 +103,42 @@ window.addEventListener('DOMContentLoaded', () => {
 
   localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts)}`);
 
+  // Функция для оценки на странице product
+
+  function review(stars, activeClass, activeClassClick, parentAttribute) {
+    const stars_ = document.querySelectorAll(stars);
+
+    if (stars_.length > 0) {
+
+      stars_.forEach((item, index) => {
+        item.addEventListener('mouseover', () => {
+          for (let i = 0; i < index + 1; i++) {
+            stars_[i].classList.add(activeClass);
+          }
+        });
+      });
+
+      stars_.forEach(item => {
+        item.addEventListener('mouseout', () => {
+          clearActiveClass(stars_, activeClass);
+        });
+      });
+
+      stars_.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          item.parentElement.setAttribute(parentAttribute, index + 1);
+          clearActiveClass(stars_, activeClassClick);
+
+          for (let i = 0; i < index + 1; i++) {
+            stars_[i].classList.add(activeClassClick);
+          }
+        });
+      });
+    }
+  }
+
+  review('.comment__stars__item', 'comment__stars__item--active', 'comment__stars__item--active--click', 'data-rating');
+
   // Функция для занесения данных в LocalStorage (похожие товары)
 
   function similarProductsInLS(data) {
