@@ -574,6 +574,18 @@
   .comment {
     height: calc(100% - 78px);
     top: 78px;
+    &__textarea {
+      height: 130px;
+    }
+    &__close {
+      width: 30px;
+    }
+    &__title {
+      font-size: 24px;
+      &--2, &--3 {
+        font-size: 18px;
+      }
+    }
   }
   .map {
     &__info {
@@ -1545,20 +1557,25 @@
 }
 @media screen and (max-width: 992px) {
   .comment {
+    &__wrap {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
     &__stars {
       &__item {
         width: 28px;
       }
     }
     &__title {
-      font-size: 16px;
-      &--rate {
-        font-size: 14px;
+      font-size: 20px;
+      &--2, &--3 {
+        font-size: 16px;
       }
     }
     &__button {
       font-size: 18px;
       padding: 10px 0;
+      width: 200px;
     }
     top: 56px;
     height: calc(100% - 56px);
@@ -2670,27 +2687,13 @@
 }
 @media screen and (max-width: 767px) {
   .comment {
-    padding: 50px 20px 20px 20px;
     width: auto;
-    &__stars {
-      justify-content: flex-start;
-    }
-    &__box {
-      align-items: flex-start;
-    }
-    &__label {
-      &__box {
-        justify-content: flex-start;
-      }
-    }
-    &__title {
-      text-align-last: left;;
-    }
     &__wrap {
-      align-items: flex-start;
+      padding-left: 20px;
+      padding-right: 20px;
     }
     &__button {
-      width: 100%;
+      width: 80%;
     }
     &__textarea {
       max-width: 280px;

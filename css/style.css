@@ -2339,7 +2339,7 @@ input[type=number] {
   right: -100%;
   top: 79px;
   background-color: #ffffff;
-  padding: 100px 30px 30px 30px;
+  padding: 100px 0 0 0;
   border-left: 1px solid #B9CCD3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
@@ -2351,33 +2351,15 @@ input[type=number] {
     flex-direction: column;
     align-items: center; }
   .comment__file {
-    display: none; }
-  .comment__label {
     cursor: pointer;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    color: #ffffff; }
-    .comment__label__box {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-    .comment__label img {
-      margin-right: 5px; }
-    .comment__label > span {
-      padding-left: 5px;
-      padding-right: 5px;
-      display: flex;
-      height: 32px;
-      align-items: center;
-      justify-content: center;
-      background-color: #00BCD4; }
+    display: block;
+    width: 235px; }
   .comment__stars {
     display: flex;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #B9CCD3;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     width: 100%;
     justify-content: center; }
     .comment__stars__item {
@@ -2404,24 +2386,28 @@ input[type=number] {
   .comment__wrap {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    padding-bottom: 20px;
+    flex-direction: column;
     border-bottom: 1px solid #B9CCD3;
-    margin-bottom: 30px; }
+    margin-bottom: 15px;
+    padding: 0 60px 25px; }
     .comment__wrap__box {
       flex-basis: 45%;
       height: 130px; }
+      .comment__wrap__box:first-of-type {
+        align-self: center;
+        margin-bottom: 15px;
+        width: 100%; }
+      .comment__wrap__box:last-of-type {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; }
   .comment__close {
-    font-family: 'Nunito-900';
-    font-style: normal;
-    font-size: 18px;
     position: absolute;
     top: 15px;
     left: 15px;
     cursor: pointer;
     transition: 0.3s; }
-    .comment__close:hover {
-      text-shadow: 0 0 13px red; }
   .comment__textarea {
     font-family: 'Nunito';
     font-style: normal;
@@ -2431,22 +2417,24 @@ input[type=number] {
     resize: none;
     width: 100%;
     border: 1px solid #B9CCD3;
-    border-radius: 8px; }
+    border-radius: 8px;
+    height: 180px; }
     .comment__textarea:focus {
       outline: none; }
   .comment__title {
     font-family: 'Nunito-900';
     font-style: normal;
-    font-size: 18px;
+    font-size: 36px;
     line-height: 130%;
     color: #2D2D2D;
-    text-transform: uppercase;
     margin-bottom: 10px;
     text-align: center; }
-    .comment__title--right {
-      margin-bottom: 30px; }
-    .comment__title--rate {
-      font-size: 14px; }
+    .comment__title--2 {
+      margin-bottom: 5px; }
+    .comment__title--2, .comment__title--3 {
+      font-size: 20px; }
+    .comment__title--3 {
+      margin-bottom: 10px; }
 
 .recipes {
   background-image: url(../img/advantages/bg.png);
@@ -4787,6 +4775,14 @@ input {
   .comment {
     height: calc(100% - 78px);
     top: 78px; }
+    .comment__textarea {
+      height: 130px; }
+    .comment__close {
+      width: 30px; }
+    .comment__title {
+      font-size: 24px; }
+      .comment__title--2, .comment__title--3 {
+        font-size: 18px; }
   .map__info {
     font-size: 14px; }
   .map__box {
@@ -5381,15 +5377,19 @@ input {
   .comment {
     top: 56px;
     height: calc(100% - 56px); }
+    .comment__wrap {
+      padding-left: 40px;
+      padding-right: 40px; }
     .comment__stars__item {
       width: 28px; }
     .comment__title {
-      font-size: 16px; }
-      .comment__title--rate {
-        font-size: 14px; }
+      font-size: 20px; }
+      .comment__title--2, .comment__title--3 {
+        font-size: 16px; }
     .comment__button {
       font-size: 18px;
-      padding: 10px 0; }
+      padding: 10px 0;
+      width: 200px; }
   .add-menu {
     min-width: 0;
     max-width: 0;
@@ -6114,21 +6114,12 @@ input {
 
 @media screen and (max-width: 767px) {
   .comment {
-    padding: 50px 20px 20px 20px;
     width: auto; }
-    .comment__stars {
-      justify-content: flex-start; }
-    .comment__box {
-      align-items: flex-start; }
-    .comment__label__box {
-      justify-content: flex-start; }
-    .comment__title {
-      -moz-text-align-last: left;
-      text-align-last: left; }
     .comment__wrap {
-      align-items: flex-start; }
+      padding-left: 20px;
+      padding-right: 20px; }
     .comment__button {
-      width: 100%; }
+      width: 80%; }
     .comment__textarea {
       max-width: 280px; }
   .map__map {

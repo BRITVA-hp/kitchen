@@ -390,7 +390,7 @@
   right: -100%;
   top: 79px;
   background-color: #ffffff;
-  padding: 100px 30px 30px 30px;
+  padding: 100px 0 0 0;
   border-left: 1px solid #B9CCD3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
@@ -404,38 +404,16 @@
     align-items: center;
   }
   &__file {
-    display: none;
-  }
-  &__label {
     cursor: pointer;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    color: #ffffff;
-    &__box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    img {
-      margin-right: 5px;
-    }
-    &>span {
-      padding-left: 5px;
-      padding-right: 5px;
-      display: flex;
-      height: 32px;
-      align-items: center;
-      justify-content: center;
-      background-color: #00BCD4;
-    }
+    display: block;
+    width: 235px;
   }
   &__stars {
     display: flex;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #B9CCD3;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     width: 100%;
     justify-content: center;
     &__item {
@@ -480,27 +458,32 @@
   &__wrap {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    padding-bottom: 20px;
+    flex-direction: column;
     border-bottom: 1px solid #B9CCD3;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    padding: 0 60px 25px;
     &__box {
       flex-basis: 45%;
       height: 130px;
+      &:first-of-type {
+        align-self: center;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+      &:last-of-type {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
     }
   }
   &__close {
-    font-family: 'Nunito-900';
-    font-style: normal;
-    font-size: 18px;
     position: absolute;
     top: 15px;
     left: 15px;
     cursor: pointer;
     transition: 0.3s;
-    &:hover {
-      text-shadow: 0 0 13px red;
-    }
   }
   &__textarea {
     font-family: 'Nunito';
@@ -512,6 +495,7 @@
     width: 100%;
     border: 1px solid #B9CCD3;
     border-radius: 8px;
+    height: 180px;
     &:focus {
       outline: none;
     }
@@ -519,17 +503,19 @@
   &__title {
     font-family: 'Nunito-900';
     font-style: normal;
-    font-size: 18px;
+    font-size: 36px;
     line-height: 130%;
     color: #2D2D2D;
-    text-transform: uppercase;
     margin-bottom: 10px;
     text-align: center;
-    &--right {
-      margin-bottom: 30px;
+    &--2 {
+      margin-bottom: 5px;
     }
-    &--rate {
-      font-size: 14px;
+    &--2, &--3 {
+      font-size: 20px;
+    }
+    &--3 {
+      margin-bottom: 10px;
     }
   }
 }
