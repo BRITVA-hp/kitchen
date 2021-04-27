@@ -6121,7 +6121,8 @@ input {
     .comment__button {
       width: 80%; }
     .comment__textarea {
-      max-width: 280px; }
+      max-width: 280px;
+      height: 90px; }
   .map__map {
     height: 300px; }
   .fabr {
