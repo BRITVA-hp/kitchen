@@ -86,15 +86,14 @@ window.addEventListener('DOMContentLoaded', () => {
         };
 
         const checkTime = () => {
+            const tomorrow = new Date(date.getTime() + 24 * 60 * 60 * 1000),
+                  afterTomorrow = new Date(tomorrow.getTime() + 24 * 60 * 60 * 1000);
             if (date.getHours() < 15) {
-                return `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${date.getDate()}`;
-            } else {
-                const tomorrow = new Date(date.getTime() + 24 * 60 * 60 * 1000);
                 return `${tomorrow.getFullYear()}-${addZero(tomorrow.getMonth() + 1)}-${addZero(tomorrow.getDate())}`;
+            } else {
+                return `${afterTomorrow.getFullYear()}-${addZero(afterTomorrow.getMonth() + 1)}-${addZero(afterTomorrow.getDate())}`;
             }
         };
-
-        console.log(checkTime());
 
         const today = `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${date.getDate()}`;
 
