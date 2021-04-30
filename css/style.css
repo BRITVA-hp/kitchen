@@ -3066,6 +3066,8 @@ input[type=number] {
 .order {
   padding-top: 70px;
   padding-bottom: 180px; }
+  .order__map {
+    display: none; }
   .order__select {
     font-family: 'Nunito';
     font-size: 14px;

@@ -1,6 +1,11 @@
 .order {
   padding-top: 70px;
   padding-bottom: 180px;
+  &__map {
+    display: none;
+    // width: 100%;
+    // height: 250px;
+  }
   &__select {
     font-family: 'Nunito';
     font-size: 14px;

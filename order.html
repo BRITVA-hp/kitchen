@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1f4de941-d40d-4eec-9452-0f2e6410755e&lang=ru_RU" type="text/javascript"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
@@ -225,9 +226,11 @@
                 <div class="order__step__number"><p>1</p></div>
                 <p class="order__step__title">Укажите адрес доставки</p>
               </div>
-              <input placeholder="Адрес доставки" class="order__input order__input--address" type="text">
+              <input placeholder="Адрес доставки" id="inputMap" class="order__input order__input--address" type="text">
             </div>
             <!-- /.order__step order__step--1 -->
+
+            <div id="mapOrder" class="order__map"></div>
   
             <div class="order__step order__step--2">
               <div class="order__step__header">
@@ -238,7 +241,7 @@
                 Доставка за МКАД осуществляется с 9.00 до 19.00 в течение дня (выбранный интервал времени в данном случае не работает). При заказе в Москву и Московскую область удаленностью до 10 км за МКАД доставка бесплатная. Свыше 10 км доставка составляет 30 Р за 1 км начиная от МКАД. Рассчет доставки будет произведен автоматически.
               </p>
               <div class="order__input-group order__input-group--time">
-                <input class="order__input order__input--date" type="date" name="calendar" value="2021-03-17" max="2022-03-17" min="2021-03-17">
+                <input class="order__input order__input--date" type="date" name="calendar" value="2021-04-30" max="2022-04-30" min="2021-05-01">
                 <label class="order__label order__label--day" for="day">09:00 - 19:00  (в течении дня)<input id="day" checked type="radio" name="time" class="order__radio"><div class="order__circle"><div class="order__dot"></div></div></label>
                 <label class="order__label order__label--9-12" for="9-12">09:00 - 12:00<input id="9-12" type="radio" name="time" class="order__radio"><div class="order__circle"><div class="order__dot"></div></div></label>
                 <label class="order__label order__label--12-15" for="12-15">12:00 - 15:00<input id="12-15" type="radio" name="time" class="order__radio"><div class="order__circle"><div class="order__dot"></div></div></label>
@@ -386,6 +389,7 @@
   <!-- /.footer section -->
 
   <script src="js/script.js"></script>
+  <script src="js/map.js"></script>
   
 </body>
 </html>
