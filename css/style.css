@@ -4356,6 +4356,192 @@ input[type=number] {
     justify-content: center;
     overflow: hidden; }
 
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 45, 45, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal__check {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: -39px;
+    top: 5px;
+    border: 2px solid #039E25; }
+  .modal__label {
+    cursor: pointer;
+    position: relative;
+    font-size: 12px;
+    max-width: 280px;
+    display: block;
+    margin: auto;
+    margin-bottom: 45px; }
+  .modal__button {
+    margin: auto;
+    display: block; }
+  .modal__input-group {
+    margin-bottom: 15px; }
+    .modal__input-group:last-of-type {
+      margin-bottom: 30px; }
+  .modal__input {
+    font-size: 18px;
+    line-height: 130%;
+    color: #929292;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    padding: 20px 30px;
+    width: 380px;
+    box-shadow: 0px 50px 50px -40px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    display: block;
+    margin: auto; }
+    .modal__input--check {
+      display: none; }
+      .modal__input--check:checked + .modal__check {
+        background-image: url(../img/checkbox.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #039E25; }
+  .modal__text {
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    max-width: 520px;
+    margin-bottom: 30px; }
+  .modal__title {
+    font-family: 'Nunito-900';
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: 15px; }
+  .modal__close {
+    font-size: 18px;
+    line-height: 21px;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: #B4B4B4;
+    position: absolute;
+    top: 25px;
+    right: 40px; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s; }
+  .modal__dialog {
+    position: relative;
+    padding: 60px;
+    background-color: #F3F6FD; }
+
+.success {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 45, 45, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .success__leaf {
+    position: absolute; }
+    .success__leaf--4 {
+      right: 30px;
+      top: 40px; }
+    .success__leaf--3 {
+      right: 50px;
+      top: 65px; }
+    .success__leaf--2 {
+      left: 70px;
+      bottom: 0; }
+    .success__leaf--1 {
+      left: -45px;
+      bottom: 0px; }
+  .success__text {
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    max-width: 275px; }
+  .success__title {
+    font-family: 'Nunito-900';
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+    color: #74029E;
+    max-width: 240px;
+    margin-bottom: 50px; }
+  .success--visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s; }
+  .success__dialog {
+    width: 450px;
+    height: 600px;
+    position: relative;
+    background: #F3F6FD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; }
+
+.error {
+  background-image: url(../img/404/img.png);
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 300px);
+  background-position-y: center;
+  height: 100vh; }
+  .error__container {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .error__title {
+    font-family: 'Nunito-Bold';
+    font-style: normal;
+    font-size: 144px;
+    line-height: 110%;
+    color: #2D2D2D; }
+  .error__subtitle {
+    font-family: 'Nunito-Bold';
+    font-style: normal;
+    font-size: 48px;
+    line-height: 110%;
+    color: #2D2D2D;
+    margin-bottom: 16px;
+    max-width: 685px; }
+  .error__link {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 140%;
+    color: #74029E;
+    display: block; }
+  .error__text {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: #2D2D2D; }
+    .error__text--top {
+      margin-bottom: 15px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -4535,6 +4721,10 @@ input {
       padding: 40px; } }
 
 @media screen and (max-width: 1500px) {
+  .error {
+    background-position-x: calc(100% - 100px); }
+    .error__subtitle {
+      max-width: 580px; }
   .product__tabs-advice--say {
     padding: 25px 40px; }
   .map__box {
@@ -4774,6 +4964,8 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .error {
+    background-position-x: 110%; }
   .comment {
     height: calc(100% - 78px);
     top: 78px; }
@@ -5376,6 +5568,18 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .error {
+    background-size: 300px;
+    background-position-x: calc(100% - 50px); }
+    .error__link {
+      font-size: 16px; }
+    .error__text {
+      font-size: 16px; }
+    .error__title {
+      font-size: 80px; }
+    .error__subtitle {
+      max-width: 430px;
+      font-size: 30px; }
   .comment {
     top: 56px;
     height: calc(100% - 56px); }
@@ -6115,6 +6319,17 @@ input {
       left: 25%; } }
 
 @media screen and (max-width: 767px) {
+  .error {
+    background-position-x: right; }
+    .error__text {
+      font-size: 14px; }
+    .error__link {
+      font-size: 14px; }
+    .error__title {
+      font-size: 60px; }
+    .error__subtitle {
+      max-width: 290px;
+      font-size: 24px; }
   .comment {
     width: auto; }
     .comment__wrap {
@@ -6497,6 +6712,9 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .error {
+    background-size: 150px;
+    background-position-y: calc(100% - 30px); }
   .map {
     padding-top: 40px;
     background-image: none; }
@@ -7512,6 +7730,10 @@ input {
     max-height: 200px; } }
 
 @media screen and (max-height: 500px) {
+  .error {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 80px; }
   .add-menu__link {
     padding: 12px; }
   .success {

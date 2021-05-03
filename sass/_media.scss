@@ -113,6 +113,12 @@
 }
 
 @media screen and (max-width: 1500px) {
+  .error {
+    background-position-x: calc(100% - 100px);
+    &__subtitle {
+      max-width: 580px;
+    }
+  }
   .product {
     &__tabs {
       &-advice {
@@ -571,6 +577,9 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .error {
+    background-position-x: 110%;
+  }
   .comment {
     height: calc(100% - 78px);
     top: 78px;
@@ -1556,6 +1565,23 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .error {
+    background-size: 300px;
+    background-position-x: calc(100% - 50px);
+    &__link {
+      font-size: 16px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__title {
+      font-size: 80px;
+    }
+    &__subtitle {
+      max-width: 430px;
+      font-size: 30px;
+    }
+  }
   .comment {
     &__wrap {
       padding-left: 40px;
@@ -2686,6 +2712,22 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .error {
+    background-position-x: right;
+    &__text {
+      font-size: 14px;
+    }
+    &__link {
+      font-size: 14px;
+    }
+    &__title {
+      font-size: 60px;
+    }
+    &__subtitle {
+      max-width: 290px;
+      font-size: 24px;
+    }
+  }
   .comment {
     width: auto;
     &__wrap {
@@ -3309,6 +3351,11 @@
 }
 
 @media screen and (max-width: 575px) {
+  .error {
+    background-size: 150px;
+    background-position-y: calc(100% - 30px);
+
+  }
   .map {
     padding-top: 40px;
     background-image: none;
@@ -4840,6 +4887,11 @@
   }
 }
 @media screen and (max-height: 500px) {
+  .error {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
   .add-menu {
     &__link {
       padding: 12px;

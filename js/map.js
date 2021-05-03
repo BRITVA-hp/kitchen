@@ -100,10 +100,8 @@ window.addEventListener('DOMContentLoaded', () => {
         calendar_.setAttribute('value', `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${addZero(date.getDate())}`);
         calendar_.setAttribute('min', checkTime());
         calendar_.setAttribute('max', `${date.getFullYear() + 1}-${addZero(date.getMonth() + 1)}-${addZero(date.getDate())}`);
-        
     };
 
     getTime('.order__input--date');
-
 
 });
