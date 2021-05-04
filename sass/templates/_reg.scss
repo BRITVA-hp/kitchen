@@ -1,6 +1,14 @@
 .reg {
     padding-top: 60px;
     padding-bottom: 60px;
+    &__close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-family: 'Nunito-600';
+        font-size: 18px;
+        line-height: 130%;
+    }
     &__button {
         display: block;
         margin: auto;
@@ -17,6 +25,7 @@
         margin: auto;
         padding: 20px 50px;
         background-color: #F3F6FD;
+        position: relative;
     }
     &__title {
         margin-bottom: 30px;
@@ -25,6 +34,10 @@
     &__input-group {
         margin-bottom: 15px;
         width: 100%;
+        position: relative;
+        &:last-of-type {
+            margin-bottom: 20px;
+        }
     }
     &__label {
         display: block;

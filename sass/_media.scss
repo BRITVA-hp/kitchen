@@ -3369,6 +3369,11 @@
 
 @media screen and (max-width: 575px) {
   .reg {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__input-group {
+      margin-bottom: 10px;
+    }
     &__box {
       padding: 20px;
     }

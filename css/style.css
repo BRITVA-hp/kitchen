@@ -4545,6 +4545,13 @@ input[type=number] {
 .reg {
   padding-top: 60px;
   padding-bottom: 60px; }
+  .reg__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-family: 'Nunito-600';
+    font-size: 18px;
+    line-height: 130%; }
   .reg__button {
     display: block;
     margin: auto;
@@ -4558,13 +4565,17 @@ input[type=number] {
     max-width: 600px;
     margin: auto;
     padding: 20px 50px;
-    background-color: #F3F6FD; }
+    background-color: #F3F6FD;
+    position: relative; }
   .reg__title {
     margin-bottom: 30px;
     text-align: center; }
   .reg__input-group {
     margin-bottom: 15px;
-    width: 100%; }
+    width: 100%;
+    position: relative; }
+    .reg__input-group:last-of-type {
+      margin-bottom: 20px; }
   .reg__label {
     display: block;
     font-family: 'Nunito-600';
@@ -6763,15 +6774,20 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
-  .reg__box {
-    padding: 20px; }
-  .reg__input {
-    font-size: 14px;
-    padding: 18px; }
-  .reg__label {
-    font-size: 14px; }
-  .reg__box {
-    max-width: none; }
+  .reg {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .reg__input-group {
+      margin-bottom: 10px; }
+    .reg__box {
+      padding: 20px; }
+    .reg__input {
+      font-size: 14px;
+      padding: 18px; }
+    .reg__label {
+      font-size: 14px; }
+    .reg__box {
+      max-width: none; }
   .error {
     background-size: 150px;
     background-position-y: calc(100% - 30px); }
