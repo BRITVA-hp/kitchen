@@ -577,6 +577,14 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .reg {
+    &__button {
+      width: 100%;
+    }
+    &__box {
+      max-width: 430px;
+    }
+  }
   .error {
     background-position-x: 110%;
   }
@@ -1565,6 +1573,15 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .reg {
+    &__input {
+      font-size: 16px;
+      padding: 20px;
+    }
+    &__label {
+      font-size: 16px;
+    }
+  }
   .error {
     background-size: 300px;
     background-position-x: calc(100% - 50px);
@@ -3351,6 +3368,21 @@
 }
 
 @media screen and (max-width: 575px) {
+  .reg {
+    &__box {
+      padding: 20px;
+    }
+    &__input {
+      font-size: 14px;
+      padding: 18px;
+    }
+    &__label {
+      font-size: 14px;
+    }
+    &__box {
+      max-width: none;
+    }
+  }
   .error {
     background-size: 150px;
     background-position-y: calc(100% - 30px);

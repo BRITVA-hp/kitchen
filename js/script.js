@@ -574,7 +574,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (offerPrev) {
     offerPrev.addEventListener('click', () => {
-      console.log(offerCount);
       offerCount--;
       if (offerTabItems.length > 0) {
         offerTabItems.forEach((offerTabItem, i) => {

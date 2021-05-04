@@ -1,0 +1,49 @@
+.reg {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__button {
+        display: block;
+        margin: auto;
+        width: 60%;
+    }
+    &__body {
+        background-color: #ffffff;
+    }
+    &__box {
+        border: 1px solid #B9CCD3;
+        box-sizing: border-box;
+        border-radius: 15px;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px 50px;
+        background-color: #F3F6FD;
+    }
+    &__title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &__input-group {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    &__label {
+        display: block;
+        font-family: 'Nunito-600';
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 5px;
+    }
+    &__input {
+        background: #ffffff;
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        box-shadow: 0px 50px 50px -40px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+        padding: 22px;
+        font-family: 'Nunito';
+        font-size: 18px;
+        line-height: 130%;
+        color: #929292;
+        width: 100%;
+    }
+}

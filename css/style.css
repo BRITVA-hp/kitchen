@@ -4542,6 +4542,48 @@ input[type=number] {
     .error__text--top {
       margin-bottom: 15px; }
 
+.reg {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .reg__button {
+    display: block;
+    margin: auto;
+    width: 60%; }
+  .reg__body {
+    background-color: #ffffff; }
+  .reg__box {
+    border: 1px solid #B9CCD3;
+    box-sizing: border-box;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px 50px;
+    background-color: #F3F6FD; }
+  .reg__title {
+    margin-bottom: 30px;
+    text-align: center; }
+  .reg__input-group {
+    margin-bottom: 15px;
+    width: 100%; }
+  .reg__label {
+    display: block;
+    font-family: 'Nunito-600';
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 5px; }
+  .reg__input {
+    background: #ffffff;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    box-shadow: 0px 50px 50px -40px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 22px;
+    font-family: 'Nunito';
+    font-size: 18px;
+    line-height: 130%;
+    color: #929292;
+    width: 100%; }
+
 * {
   margin: 0;
   padding: 0;
@@ -4964,6 +5006,10 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .reg__button {
+    width: 100%; }
+  .reg__box {
+    max-width: 430px; }
   .error {
     background-position-x: 110%; }
   .comment {
@@ -5568,6 +5614,11 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .reg__input {
+    font-size: 16px;
+    padding: 20px; }
+  .reg__label {
+    font-size: 16px; }
   .error {
     background-size: 300px;
     background-position-x: calc(100% - 50px); }
@@ -6712,6 +6763,15 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .reg__box {
+    padding: 20px; }
+  .reg__input {
+    font-size: 14px;
+    padding: 18px; }
+  .reg__label {
+    font-size: 14px; }
+  .reg__box {
+    max-width: none; }
   .error {
     background-size: 150px;
     background-position-y: calc(100% - 30px); }
