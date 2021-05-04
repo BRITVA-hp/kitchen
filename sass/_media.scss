@@ -1574,6 +1574,10 @@
 }
 @media screen and (max-width: 992px) {
   .reg {
+    &__close {
+      right: 30px;
+      width: 30px;
+    }
     &__input {
       font-size: 16px;
       padding: 20px;
@@ -3369,8 +3373,11 @@
 
 @media screen and (max-width: 575px) {
   .reg {
-    padding-top: 30px;
     padding-bottom: 30px;
+    &__close {
+      right: 20px;
+      top: 20px;
+    }
     &__input-group {
       margin-bottom: 10px;
     }
