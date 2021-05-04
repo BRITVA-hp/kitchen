@@ -577,6 +577,27 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .cabinet {
+    &__modal {
+      &__map {
+        height: 300px;
+      }
+      &__button {
+        padding: 16px 50px;
+      }
+      &__input {
+        width: 400px;
+        font-size: 16px;
+        padding: 20px;
+      }
+      &__dialog {
+        padding: 40px;
+      }
+      &__title {
+        font-size: 33px;
+      }
+    }
+  }
   .reg {
     &__button {
       width: 100%;
@@ -2733,6 +2754,27 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .cabinet {
+    &__modal {
+      padding-left: 20px;
+      padding-right: 20px;
+      &__close {
+        width: 30px;
+      }
+      &__input-group {
+        flex-direction: column;
+        display: flex;
+      }
+      &__input {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      &__dialog {
+        width: 100%;
+        padding: 30px;
+      }
+    }
+  }
   .error {
     background-position-x: right;
     &__text {
@@ -3372,6 +3414,27 @@
 }
 
 @media screen and (max-width: 575px) {
+  .cabinet {
+    &__modal {
+      &__dialog {
+        padding: 20px;
+      }
+      &__map {
+        height: 200px;
+      }
+      &__button {
+        padding: 14px 50px;
+        font-size: 18px;
+      }
+      &__input {
+        font-size: 14px;
+        padding: 18px;
+      }
+      &__title {
+        font-size: 30px;
+      }
+    }
+  }
   .reg {
     padding-bottom: 30px;
     &__close {
@@ -4967,6 +5030,16 @@
         margin-bottom: 5px;
         font-size: 16px;
       }
+    }
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .cabinet {
+    &__modal {
+      padding-top: 20px;
+      align-items: flex-start;
+      overflow: auto;
     }
   }
 }

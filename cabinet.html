@@ -256,6 +256,13 @@
     </section>
     <!-- /.section cab-info -->
 
+    <section class="section cab-address">
+      <div class="cab-address__container">
+        <button class="button button--green cab-address__button">Добавить алрес</button>
+      </div>
+    </section>
+    <!-- /.section cab-address -->
+
     <section class="section cab-hist">
       <div class="container">
         <h3 class="cab-hist__title section__title--small">История заказов</h3>
@@ -637,7 +644,24 @@
   </footer>
   <!-- /.footer section -->
 
+  <div class="cabinet__modal modal">
+    <form action="#" class="cabinet__modal__dialog">
+
+      <div class="cabinet__modal__close"><img src="img/close.png" alt="close"></div>
+      <p class="cabinet__modal__title">Укажите адрес</p>
+      <div class="cabinet__modal__input-group">
+        <input type="text" id="inputMap" placeholder="Укажите адрес доставки" class="cabinet__modal__input">
+        <button class="button button--green cabinet__modal__button">Добавить</button>
+      </div>
+
+      <div id="mapCab" class="cabinet__modal__map"></div>
+
+    </form>
+  </div>
+
   <script src="js/script.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1f4de941-d40d-4eec-9452-0f2e6410755e&lang=ru_RU" type="text/javascript"></script>
+  <script src="js/mapCab.js"></script>
   
 </body>
 </html>

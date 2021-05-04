@@ -288,6 +288,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   modal('.vac__link', '.vac__modal', 'vac__modal--visible', '.vac__modal__close');
   modal('#modal', '.modal', 'modal--visible', '.modal__close');
+  modal('.cab-address__button', '.cabinet__modal', 'modal--visible', '.cabinet__modal__close');
 
 
   // Функция для табов (универсальная) на странице questions.html

@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-
     const input = document.querySelector('#inputMap');
 
     input.addEventListener('keypress', function(e) {
@@ -20,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
             distance;
 
         // Создание карты.
-        const mapOrder = new ymaps.Map("mapOrder", {
+        const mapCab = new ymaps.Map("mapCab", {
             center: center_,
             zoom: 7
         });
@@ -39,8 +38,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 myGeocoder.then(
                     function (res) {
-                        mapOrder.geoObjects.removeAll();
-                        mapOrder.geoObjects.add(res.geoObjects);
+                        mapCab.geoObjects.removeAll();
+                        mapCab.geoObjects.add(res.geoObjects);
                         coords = res.geoObjects.getBounds()[0];
                     
                     // Создаём путь между 2-мя точками и считаем расстояние
@@ -61,6 +60,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         };
 
+        mapCab.behaviors.disable('scrollZoom');
+
         // Обработчик события на поле подсказки
 
         suggestView_.events.add('select', addPlacemark);
@@ -70,38 +71,4 @@ window.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('blur', addPlacemark);
 
     }
-
-    // Функция установкт даты
-
-    const getTime = (calendar) => {
-        const date = new Date(),
-              calendar_ = document.querySelector(calendar);
-
-        const addZero = (num) => {
-            if (num <= 9) {
-                return '0' + num;
-            } else {
-                return num;
-            }
-        };
-
-        const checkTime = () => {
-            const tomorrow = new Date(date.getTime() + 24 * 60 * 60 * 1000),
-                  afterTomorrow = new Date(tomorrow.getTime() + 24 * 60 * 60 * 1000);
-            if (date.getHours() < 15) {
-                return `${tomorrow.getFullYear()}-${addZero(tomorrow.getMonth() + 1)}-${addZero(tomorrow.getDate())}`;
-            } else {
-                return `${afterTomorrow.getFullYear()}-${addZero(afterTomorrow.getMonth() + 1)}-${addZero(afterTomorrow.getDate())}`;
-            }
-        };
-
-        const today = `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${date.getDate()}`;
-
-        calendar_.setAttribute('value', `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${addZero(date.getDate())}`);
-        calendar_.setAttribute('min', checkTime());
-        calendar_.setAttribute('max', `${date.getFullYear() + 1}-${addZero(date.getMonth() + 1)}-${addZero(date.getDate())}`);
-    };
-
-    getTime('.order__input--date');
-
 });
