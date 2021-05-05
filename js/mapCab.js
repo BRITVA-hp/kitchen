@@ -62,8 +62,16 @@ window.addEventListener('DOMContentLoaded', () => {
                 distance = Math.round(route.getLength()/1000);
                 console.log(distance);
 
+                // Добавляем путь на карту
+
                 mapCab.geoObjects.add(route);
 
+                // При изменении геометрии пути считается его длина
+
+                route.events.add('geometrychange', () => {
+                    distance = Math.round(route.getLength()/1000);
+                    console.log(distance);
+                });
             });
         };
 
