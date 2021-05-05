@@ -2657,13 +2657,52 @@ input[type=number] {
 
 .cab-address {
   padding-top: 30px; }
+  .cab-address__title {
+    font-family: 'Nunito-800';
+    font-style: normal;
+    font-size: 30px;
+    line-height: 130%;
+    margin-bottom: 20px; }
+  .cab-address__item {
+    font-family: 'Nunito-Bold';
+    font-size: 16px;
+    line-height: 130%;
+    color: #6F6F6F;
+    padding: 15px 20px;
+    border: 1px solid #6F6F6F;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%; }
+    .cab-address__item__close {
+      position: absolute;
+      top: 50%;
+      right: -50px;
+      transform: translateY(-50%);
+      cursor: pointer; }
+    .cab-address__item:last-of-type {
+      margin-bottom: 0; }
+  .cab-address__button {
+    text-align: center;
+    font-family: 'Nunito-Bold';
+    font-size: 16px;
+    line-height: 130%;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #039E25;
+    border-color: #039E25; }
+    .cab-address__button:hover {
+      opacity: 0.7; }
   .cab-address__container {
     background-color: #fff;
     border: 1px solid #B9CCD3;
     border-radius: 16px;
     padding: 20px 50px;
     max-width: 900px;
-    margin: auto; }
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
 
 .cab-info {
   padding-top: 70px; }
@@ -2844,7 +2883,8 @@ input[type=number] {
 .cabinet__modal__close {
   position: absolute;
   right: 15px;
-  top: 15px; }
+  top: 15px;
+  cursor: pointer; }
 
 .cabinet__modal__dialog {
   background: #F3F6FD;
@@ -5068,6 +5108,10 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .cab-address__title {
+    font-size: 24px; }
+  .cab-address__container {
+    max-width: none; }
   .cabinet__modal__map {
     height: 300px; }
   .cabinet__modal__button {
@@ -6854,6 +6898,13 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .cab-address__item {
+    font-size: 14px; }
+  .cab-address__title {
+    align-self: center; }
+  .cab-address__container {
+    padding: 20px;
+    align-items: flex-start; }
   .cabinet__modal__dialog {
     padding: 20px; }
   .cabinet__modal__map {

@@ -577,6 +577,14 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .cab-address {
+    &__title {
+      font-size: 24px;
+    }
+    &__container {
+      max-width: none;
+    }
+  }
   .cabinet {
     &__modal {
       &__map {
@@ -3414,6 +3422,18 @@
 }
 
 @media screen and (max-width: 575px) {
+  .cab-address {
+    &__item {
+      font-size: 14px;
+    }
+    &__title {
+      align-self: center;
+    }
+    &__container {
+      padding: 20px;
+      align-items: flex-start;
+    }
+  }
   .cabinet {
     &__modal {
       &__dialog {

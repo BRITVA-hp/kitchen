@@ -8,8 +8,11 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Инициализация карты
+
     ymaps.ready(init);
 
+    // Основная функция
 
     function init(){
 
@@ -21,15 +24,52 @@ window.addEventListener('DOMContentLoaded', () => {
         // Создание карты.
         const mapCab = new ymaps.Map("mapCab", {
             center: center_,
-            zoom: 7
+            zoom: 11
         });
-
 
         // Подсказки
 
         const suggestView_ = new ymaps.SuggestView('inputMap');
 
-        // Функция для добавления метки на карту и вычисления длины пути
+        // Функция для добавления маршрута на карту и вычисления его длины
+
+        const setRoute = (x, y) => {
+            mapCab.geoObjects.removeAll();
+            ymaps.route([x , y], {
+                mapStateAutoApply: true
+            })
+            .then(function (route) {
+
+                // Разрешаем перемещать конечные точки маршрута
+
+                route.editor.start();
+
+                // Перебираем точки конечные маршрута, для их стилизации и запрета перемещения начальной точки.
+
+                route.getWayPoints().each((point) => {
+                    point.options.set({
+                        preset: 'islands#blackStretchyIcon'
+                    });
+                    if (point.options._name == "startWayPoint") {
+                            point.options.set({
+                            draggable: false
+                        });
+                    }
+                });
+
+                // Считаем длину пути в км.
+
+                distance = Math.round(route.getLength()/1000);
+                console.log(distance);
+
+                mapCab.geoObjects.add(route);
+
+            });
+        };
+
+        setRoute(center_, [55.8, 37.7]);
+
+        // Функция для поиска координат адреса из инпута, с последующим построением соответствующего пути
 
         const addPlacemark = function () {
 
@@ -38,17 +78,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 myGeocoder.then(
                     function (res) {
-                        mapCab.geoObjects.removeAll();
                         mapCab.geoObjects.add(res.geoObjects);
                         coords = res.geoObjects.getBounds()[0];
+                        mapCab.geoObjects.removeAll();
                     
                     // Создаём путь между 2-мя точками и считаем расстояние
-                
-                    ymaps.route([center_, coords])
-                    .then(function (route) {
-                        distance = Math.round(route.getLength()/1000);
-                        console.log(distance);
-                    });
+
+                    setRoute(center_, coords);
 
                     },
                     function (err) {
@@ -60,9 +96,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
         };
 
+        // Отключаем скролл
+
         mapCab.behaviors.disable('scrollZoom');
 
-        // Обработчик события на поле подсказки
+        // При клике по карте
+
+        mapCab.events.add('click', (e) => {
+            setRoute(center_, e.get('coords'));
+        });
+
+        // Обработчик события на поле подсказок
 
         suggestView_.events.add('select', addPlacemark);
 

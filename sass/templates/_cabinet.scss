@@ -1,5 +1,47 @@
 .cab-address {
   padding-top: 30px;
+  &__title {
+    font-family: 'Nunito-800';
+    font-style: normal;
+    font-size: 30px;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+  &__item {
+    font-family: 'Nunito-Bold';
+    font-size: 16px;
+    line-height: 130%;
+    color: $gray;
+    padding: 15px 20px;
+    border: 1px solid $gray;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    &__close {
+      position: absolute;
+      top: 50%;
+      right: -50px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__button {
+    text-align: center;
+    font-family: 'Nunito-Bold';
+    font-size: 16px;
+    line-height: 130%;
+    cursor: pointer;
+    transition: 0.3s;
+    color: $green;
+    border-color: $green;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
   &__container {
     background-color: #fff;
     border: 1px solid #B9CCD3;
@@ -7,6 +49,9 @@
     padding: 20px 50px;
     max-width: 900px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .cab-info {
@@ -225,6 +270,7 @@
       position: absolute;
       right: 15px;
       top: 15px;
+      cursor: pointer;
     }
     &__dialog {
       background: #F3F6FD;
