@@ -580,11 +580,18 @@
   .data {
     padding-top: 70px;
     padding-bottom: 0px;
+    &__button {
+      &--photo {
+        width: 200px !important;
+        padding: 10px 0;
+      }
+    }
     &__title {
       margin-bottom: 40px;
     }
     &__photo {
       width: 200px;
+      margin-bottom: 15px;
     }
   }
   .cab-address {
@@ -1613,6 +1620,9 @@
 }
 @media screen and (max-width: 992px) {
   .data {
+    &__button {
+      width: 250px;
+    }
     &__wrap {
       margin-right: 20px;
     }
@@ -1667,13 +1677,22 @@
         }
       }
     }
+    &__file {
+      position: absolute;
+      left: 50%;
+      bottom: 80px;
+      transform: translateX(-50%);
+    }
     &__photo {
+      margin-bottom: 60px;
+    }
+    &__photo-wrap {
       margin-right: 0;
-      margin-bottom: 15px;
     }
     &__row {
       &--photo {
         flex-direction: column;
+        position: relative;
       }
     }
   }
@@ -3499,12 +3518,20 @@
 @media screen and (max-width: 575px) {
   .data {
     padding-top: 30px;
+    &__button {
+      padding: 10px 0;
+    }
     &__wrap {
       margin-right: 0;
+      margin-bottom: 10px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
     &__row {
       &--wrap {
         flex-direction: column;
+        margin-bottom: 20px;
       }
     }
     &__label {

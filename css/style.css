@@ -4689,11 +4689,19 @@ input[type=number] {
 .data {
   padding-top: 100px;
   padding-bottom: 100px; }
+  .data__button {
+    width: 300px;
+    padding: 15px 0; }
+    .data__button--photo {
+      display: block;
+      margin: auto; }
   .data__file {
     max-width: 240px; }
+  .data__photo-wrap {
+    margin-right: 30px; }
   .data__photo {
-    margin-right: 30px;
-    width: 400px; }
+    width: 400px;
+    margin-bottom: 30px; }
   .data__content {
     display: none; }
     .data__content--active {
@@ -4706,6 +4714,8 @@ input[type=number] {
     margin: auto; }
   .data__row {
     justify-content: flex-start; }
+    .data__row--wrap {
+      margin-bottom: 30px; }
     .data__row--photo {
       align-items: center; }
   .data__wrap {
@@ -5203,10 +5213,14 @@ input {
   .data {
     padding-top: 70px;
     padding-bottom: 0px; }
+    .data__button--photo {
+      width: 200px !important;
+      padding: 10px 0; }
     .data__title {
       margin-bottom: 40px; }
     .data__photo {
-      width: 200px; }
+      width: 200px;
+      margin-bottom: 15px; }
   .cab-address__title {
     font-size: 24px; }
   .cab-address__container {
@@ -5831,6 +5845,8 @@ input {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
+  .data__button {
+    width: 250px; }
   .data__wrap {
     margin-right: 20px; }
   .data__label {
@@ -5869,11 +5885,18 @@ input {
       .data__box--left--active .data__burger__line--3 {
         transform: rotate(45deg);
         transform-origin: right bottom; }
+  .data__file {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(-50%); }
   .data__photo {
-    margin-right: 0;
-    margin-bottom: 15px; }
+    margin-bottom: 60px; }
+  .data__photo-wrap {
+    margin-right: 0; }
   .data__row--photo {
-    flex-direction: column; }
+    flex-direction: column;
+    position: relative; }
   .reg__close {
     right: 30px;
     width: 30px; }
@@ -7042,10 +7065,16 @@ input {
 @media screen and (max-width: 575px) {
   .data {
     padding-top: 30px; }
+    .data__button {
+      padding: 10px 0; }
     .data__wrap {
-      margin-right: 0; }
+      margin-right: 0;
+      margin-bottom: 10px; }
+      .data__wrap:last-of-type {
+        margin-bottom: 0; }
     .data__row--wrap {
-      flex-direction: column; }
+      flex-direction: column;
+      margin-bottom: 20px; }
     .data__label {
       font-size: 14px; }
     .data__input {

@@ -225,13 +225,15 @@
                             <span class="data__burger__line data__burger__line--2"></span>
                             <span class="data__burger__line data__burger__line--3"></span>
                         </div>
-                        <p class="data__menu__text data__menu__text--active">Изменение данных</p>
-                        <p class="data__menu__text">Изменение фотографии</p>
+                        <p class="data__menu__text data__menu__text--active">Изменить данные</p>
+                        <p class="data__menu__text">Изменить пароль</p>
+                        <p class="data__menu__text">Изменить фотографию</p>
                     </div>
                 </div>
 
                 <div class="data__box">
-                    <div class="data__content data__content--active">
+
+                    <form action="#" class="data__content data__content--active">
                         <div class="data__row--wrap row">
                             <div class="data__wrap">
                                 <div class="data__input-group">
@@ -262,11 +264,6 @@
                                 </div>
 
                                 <div class="data__input-group">
-                                    <label for="password" class="data__label">Пароль</label>
-                                    <input type="password" value="123321" id="password" class="data__input">
-                                </div>
-
-                                <div class="data__input-group">
                                     <label for="tel" class="data__label">Номер телефона</label>
                                     <input type="tel" value="+7 911 000 00-00" id="tel" class="data__input">
                                 </div>
@@ -279,14 +276,45 @@
                             </div>
 
                         </div>
-                    </div>
 
-                    <div class="data__content">
+                        <button class="button button--green data__button">Обновить</button>
+                    </form>
+
+                    <form action="#" class="data__content">
+                        <div class="data__row--wrap row">
+    
+                            <div class="data__wrap">
+                                <div class="data__input-group">
+                                    <label for="oldPassword" class="data__label">Старый пароль</label>
+                                    <input type="password" value="" id="oldPassword" class="data__input">
+                                </div>
+
+                                <div class="data__input-group">
+                                    <label for="newPassword" class="data__label">Новый пароль</label>
+                                    <input type="password" value="" id="newPassword" class="data__input">
+                                </div>
+
+                                <div class="data__input-group">
+                                    <label for="confirmPassword" class="data__label">Повторите пароль</label>
+                                    <input type="password" value="" id="confirmPassword" class="data__input">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <button class="button button--green data__button">Обновить</button>
+                    </form>
+
+                    <form action="#" class="data__content">
                        <div class="data__row--photo row">
-                           <div class="data__photo"><img src="img/photo/photo.png" alt="photo"></div>
+                           <div class="data__photo-wrap">
+                                <div class="data__photo"><img src="img/photo/photo.png" alt="photo"></div>
+                                <button class="button button--green data__button data__button--photo">Обновить</button>
+                           </div>
                            <input class="data__file" type="file">
                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
