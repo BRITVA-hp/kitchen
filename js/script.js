@@ -24,9 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
         menu = document.querySelector('.menu'),
         menuLinkMenu = document.querySelector('.menu__link--menu'),
         menuInner = document.querySelector('.menu__inner'),
-        cabHistAccordContents = document.querySelectorAll('.cab-hist__accord-content'),
-        addMenu = document.querySelector('.add-menu'),
-        addMenuBurger = document.querySelector('.add-menu__burger');
+        cabHistAccordContents = document.querySelectorAll('.cab-hist__accord-content');
 
 
 
@@ -186,11 +184,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Появление доп. меню
 
-  if (addMenuBurger) {
-    addMenuBurger.addEventListener('click', () => {
-      addMenu.classList.toggle('add-menu--active');
-    });
+  function dropMenu(burger, addMenu, addMenuActiveClass) {
+    const burger_ =  document.querySelector(burger),
+          addMenu_ = document.querySelector(addMenu);
+          
+    if (burger_) {
+      burger_.addEventListener('click', () => {
+        addMenu_.classList.toggle(addMenuActiveClass);
+      });
+    }
   }
+
+  dropMenu('.add-menu__burger', '.add-menu', 'add-menu--active');
+  dropMenu('.data__burger', '.data__box--left', 'data__box--left--active');
 
   // функция для анимации при скролле
 
@@ -315,6 +321,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   tabsUni('.questions__header__item', '.questions__accord', 'questions__header__item--active', 'questions__accord--active');
   tabsUni('.blog__tabs__item', '.blog__box', 'blog__tabs__item--active', 'blog__box--active');
+  tabsUni('.data__menu__text', '.data__content', 'data__menu__text--active', 'data__content--active');
 
   // При изменении размера экрана
 

@@ -33,6 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    getTime('.order__input--date');
+    getTime('.order__input--calendar');
 
 });

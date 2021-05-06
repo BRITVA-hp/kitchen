@@ -1,0 +1,115 @@
+.data {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &__file {
+        max-width: 240px;
+    }
+    &__photo {
+        margin-right: 30px;
+        width: 400px;
+    }
+    &__content {
+        display: none;
+        &--active {
+            display: block;
+            animation-name: fadeIn;
+            animation-duration: 0.5s;
+        }
+    }
+    &__box {
+        &:last-of-type {
+            margin: auto;
+        }
+    }
+    &__row {
+        justify-content: flex-start;
+        &--photo {
+            align-items: center;
+        }
+    }
+    &__wrap {
+        margin-right: 40px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    &__input-group {
+        width: 300px;
+        margin-bottom: 20px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__label {
+        display: block;
+        font-family: 'Nunito-600';
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 5px;
+    }
+    &__input {
+        background: #ffffff;
+        padding: 15px 20px;
+        border: 1px solid #B9CCD3;
+        box-sizing: border-box;
+        box-shadow: 0px 50px 50px -40px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        font-family: 'Nunito';
+        font-size: 18px;
+        line-height: 130%;
+        color: #929292;
+        width: 100%;
+        &--calendar {
+            width: 100%;
+            color: #929292;
+            padding: 9px 10px 9px 20px;
+        }
+    }
+    &__burger {
+        position: absolute;
+        width: 30px;
+        height: 23px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        right: -60px;
+        top: -20px;
+        &__line {
+            width: 100%;
+            height: 3px;
+            background-color: $purple;
+            transition: 0.3s;
+            &--1 {
+                width: 60%;
+            }
+            &--2 {
+                width: 80%;
+            }
+        }
+    }
+    &__menu {
+        padding-right: 30px;
+        border-right: 1px solid #B9CCD3;
+        position: relative;
+        &__text {
+            font-family: 'Nunito-600';
+            font-style: normal;
+            font-size: 18px;
+            line-height: 130%;
+            color: #A1A8B9;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            &--active {
+                color: #2D2D2D;
+                border-bottom: 2px solid #74029E;
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 50px;
+    }
+}

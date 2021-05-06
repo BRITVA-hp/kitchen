@@ -16,12 +16,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function init(){
 
-
         let center_ = [55.76, 37.64],
             coords,
             distance;
 
         // Создание карты.
+        
         const mapCab = new ymaps.Map("mapCab", {
             center: center_,
             zoom: 11
@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // Функция для поиска координат адреса из инпута, с последующим построением соответствующего пути
 
-        const addPlacemark = function () {
+        const geocodeInput = function () {
 
             if (input.value.length > 0) {
                 let myGeocoder = ymaps.geocode(input.value);
@@ -116,11 +116,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // Обработчик события на поле подсказок
 
-        suggestView_.events.add('select', addPlacemark);
+        suggestView_.events.add('select', geocodeInput);
 
         // Обработчик события на инпут при потере фокуса
 
-        input.addEventListener('blur', addPlacemark);
+        input.addEventListener('blur', geocodeInput);
 
     }
 });
