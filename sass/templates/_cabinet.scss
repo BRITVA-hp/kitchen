@@ -18,6 +18,11 @@
     margin-bottom: 15px;
     position: relative;
     width: 100%;
+    &__text {
+      &--first {
+        color: tomato;
+      }
+    }
     &__close {
       position: absolute;
       top: 50%;
@@ -94,6 +99,7 @@
     padding: 15px 80px 15px 0;
     &-img {
       margin-right: 30px;
+      max-width: 90px;
     }
     &-name {
       margin-bottom: 10px;

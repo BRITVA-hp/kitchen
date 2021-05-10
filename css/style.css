@@ -2674,6 +2674,8 @@ input[type=number] {
     margin-bottom: 15px;
     position: relative;
     width: 100%; }
+    .cab-address__item__text--first {
+      color: tomato; }
     .cab-address__item__close {
       position: absolute;
       top: 50%;
@@ -2736,7 +2738,8 @@ input[type=number] {
     border-right: 1px solid #B9CCD3;
     padding: 15px 80px 15px 0; }
     .cab-info__user-img {
-      margin-right: 30px; }
+      margin-right: 30px;
+      max-width: 90px; }
     .cab-info__user-name {
       margin-bottom: 10px; }
 
