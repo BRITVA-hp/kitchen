@@ -2,7 +2,7 @@
   padding-top: 70px;
   background-image: url(../img/advantages/bg.png);
   background-repeat: no-repeat;
-  background-position-y: -185px;
+  background-position-y: -80px;
   &__post {
     transition: 0.3s;
   }
@@ -56,10 +56,17 @@
     justify-items: center;
     column-gap: 20px;
     row-gap: 85px;
+    &--menu {
+      margin-bottom: 110px;
+      position: relative;
+    }
   }
   &__title {
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 110px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
   }
 }

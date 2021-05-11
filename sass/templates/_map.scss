@@ -66,16 +66,23 @@
   }
   &__title {
     text-align: center;
-    margin-bottom: 130px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
   }
   &__row {
     display: grid;
-    grid-template: auto auto/ auto auto;
+    grid-template: auto auto/ auto 1fr;
     grid-template-areas: 
       'mapBox mapMap'
       'mapBoxBot mapMap'
     ;
     column-gap: 20px;
+    &--menu {
+      position: relative;
+      margin-bottom: 60px;
+    }
   }
 
 }

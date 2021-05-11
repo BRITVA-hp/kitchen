@@ -668,9 +668,6 @@
         width: 350px;
       }
     }
-    &__title {
-      margin-bottom: 90px;
-    }
   }
   .vac {
     &__link {
@@ -702,9 +699,6 @@
     &__date {
       font-size: 12px;
     }
-    &__title {
-      margin-bottom: 50px;
-    }
     &__salary {
       font-size: 16px;
     }
@@ -713,8 +707,10 @@
     }
   }
   .team {
-    &__title {
-      margin-bottom: 60px;
+    &__row {
+      &--menu {
+        margin-bottom: 60px;
+      }
     }
   }
   .we {
@@ -857,7 +853,7 @@
       }
     }
     &__title {
-      margin-bottom: 45px;
+      margin-bottom: 30px;
     }
     &__tabs {
       &__item {
@@ -896,9 +892,6 @@
       &__text {
         font-size: 16px;
       }
-    }
-    &__title {
-      margin-bottom: 45px;
     }
   }
   .order {
@@ -1838,6 +1831,10 @@
     &__text {
       text-align: center;
     }
+    &__title {
+      position: static;
+      transform: none;
+    }
     &__box {
       background-color: transparent;
       border: none;
@@ -1869,6 +1866,9 @@
         'mapMap'
         'mapBoxBot'
       ;
+      &--menu {
+        justify-content: center;
+      }
     }
   }
   .vac {
@@ -1902,7 +1902,8 @@
       font-size: 16px;
     }
     &__title {
-      margin-bottom: 30px;
+      position: static;
+      transform: none;
       font-size: 24px;
     }
     &__row {
@@ -1913,6 +1914,10 @@
       }
       &--top {
         margin-bottom: 15px;
+      }
+      &--menu {
+        justify-content: center;
+        margin-bottom: 30px;
       }
     }
     &__logo {
@@ -1931,12 +1936,17 @@
     background-image: none;
     &__title {
       font-size: 24px;
-      margin-bottom: 35px;
+      position: static;
+      transform: none;
     }
     &__row {
       grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       column-gap: 10px;
       row-gap: 30px;
+      &--menu {
+        margin-bottom: 30px;
+        justify-content: center;
+      }
     }
     &__box {
       padding: 6px 10px;
@@ -2122,6 +2132,14 @@
   }
   .blog {
     padding-top: 40px;
+    &__row {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    &__wrap {
+      position: static;
+      transform: none;
+    }
     &__link {
       font-size: 20px;
     }
@@ -2131,11 +2149,9 @@
       margin-bottom: 35px;
     }
     &__title {
-      margin-bottom: 30px;
       font-size: 24px;
     }
     &__tabs {
-      margin-bottom: 20px;
       &__item {
         font-size: 12px;
         padding: 7px 22px;
@@ -2187,6 +2203,16 @@
     }
   }
   .questions {
+    &__row {
+      &--menu {
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+    }
+    &__title {
+      position: static;
+      transform: none;
+    }
     &__header {
       justify-content: center;
       &__item {
@@ -2963,7 +2989,6 @@
     }
     &__title {
       font-size: 24px;
-      margin-bottom: 30px;
     }
   }
   .basket {
@@ -3629,6 +3654,11 @@
   .map {
     padding-top: 40px;
     background-image: none;
+    &__row {
+      &--menu {
+        margin-bottom: 30px;
+      }
+    }
     &__text {
       text-align: left;
     }
@@ -3648,9 +3678,6 @@
         font-size: 16px;
         margin-bottom: 0;
       }
-    }
-    &__title {
-      margin-bottom: 60px;
     }
     &__map {
       height: 200px;

@@ -1,6 +1,12 @@
 .questions {
   padding-top: 70px;
   padding-bottom: 110px;
+  &__row {
+    &--menu {
+      position: relative;
+      margin-bottom: 60px;
+    }
+  }
   &__leaf {
     position: absolute;
     &--1 {
@@ -147,7 +153,10 @@
   &__title {
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
   }
   &__box {
     background: #FFFFFF;

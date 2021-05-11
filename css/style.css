@@ -3369,6 +3369,9 @@ input[type=number] {
 .questions {
   padding-top: 70px;
   padding-bottom: 110px; }
+  .questions__row--menu {
+    position: relative;
+    margin-bottom: 60px; }
   .questions__leaf {
     position: absolute; }
     .questions__leaf--1 {
@@ -3483,7 +3486,10 @@ input[type=number] {
   .questions__title {
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 60px; }
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); }
   .questions__box {
     background: #FFFFFF;
     border: 1px solid #B9CCD3;
@@ -3518,7 +3524,17 @@ input[type=number] {
   padding-top: 70px;
   background-image: url(../img/advantages/bg.png);
   background-repeat: no-repeat;
-  background-position-y: -185px; }
+  background-position-y: -50px; }
+  .blog__row {
+    margin-bottom: 60px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative; }
+  .blog__wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); }
   .blog__link {
     font-size: 20px;
     line-height: 130%;
@@ -3589,11 +3605,10 @@ input[type=number] {
       color: #959595; }
   .blog__title {
     text-align: center;
-    margin-bottom: 60px; }
+    margin-bottom: 40px; }
   .blog__tabs {
     display: flex;
-    align-items: center;
-    margin-bottom: 30px; }
+    align-items: center; }
     .blog__tabs__item {
       font-family: 'Nunito-600';
       font-size: 18px;
@@ -4080,7 +4095,7 @@ input[type=number] {
   padding-top: 70px;
   background-image: url(../img/advantages/bg.png);
   background-repeat: no-repeat;
-  background-position-y: -185px; }
+  background-position-y: -80px; }
   .team__post {
     transition: 0.3s; }
   .team__name {
@@ -4125,16 +4140,22 @@ input[type=number] {
     -moz-column-gap: 20px;
     column-gap: 20px;
     row-gap: 85px; }
+    .team__row--menu {
+      margin-bottom: 110px;
+      position: relative; }
   .team__title {
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 110px; }
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); }
 
 .vac {
   padding-top: 70px;
   background-image: url(../img/advantages/bg.png);
   background-repeat: no-repeat;
-  background-position-y: -100px; }
+  background-position-y: -50px; }
   .vac__wrap {
     grid-area: vacWrap; }
   .vac__link {
@@ -4186,9 +4207,15 @@ input[type=number] {
       display: flex;
       align-items: center;
       margin-bottom: 20px; }
+    .vac__row--menu {
+      position: relative;
+      margin-bottom: 60px; }
   .vac__title {
     text-align: center;
-    margin-bottom: 70px; }
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); }
   .vac__card {
     padding: 35px 35px 45px 45px;
     background-color: #fff;
@@ -4297,13 +4324,19 @@ input[type=number] {
         line-height: 25px; }
   .map__title {
     text-align: center;
-    margin-bottom: 130px; }
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); }
   .map__row {
     display: grid;
-    grid-template: auto auto/ auto auto;
+    grid-template: auto auto/ auto 1fr;
     grid-template-areas: 'mapBox mapMap' 'mapBoxBot mapMap';
     -moz-column-gap: 20px;
     column-gap: 20px; }
+    .map__row--menu {
+      position: relative;
+      margin-bottom: 60px; }
 
 .modal {
   opacity: 0;
@@ -5270,8 +5303,6 @@ input {
     .map__box--bottom {
       padding: 30px;
       width: 350px; }
-  .map__title {
-    margin-bottom: 90px; }
   .vac__link {
     justify-self: start;
     font-size: 18px;
@@ -5292,13 +5323,11 @@ input {
     justify-items: start; }
   .vac__date {
     font-size: 12px; }
-  .vac__title {
-    margin-bottom: 50px; }
   .vac__salary {
     font-size: 16px; }
   .vac__post {
     font-size: 18px; }
-  .team__title {
+  .team__row--menu {
     margin-bottom: 60px; }
   .we-fr {
     justify-content: space-between; }
@@ -5382,7 +5411,7 @@ input {
     .blog__card__title {
       font-size: 16px; }
   .blog__title {
-    margin-bottom: 45px; }
+    margin-bottom: 30px; }
   .blog__tabs__item {
     font-size: 16px; }
   .questions__leaf--2 {
@@ -5404,8 +5433,6 @@ input {
     padding-bottom: 20px; }
   .questions__header__text {
     font-size: 16px; }
-  .questions__title {
-    margin-bottom: 45px; }
   .order {
     padding-bottom: 100px; }
     .order__title {
@@ -5999,6 +6026,9 @@ input {
     padding: 25px; }
   .map__text {
     text-align: center; }
+  .map__title {
+    position: static;
+    transform: none; }
   .map__box {
     background-color: transparent;
     border: none;
@@ -6022,6 +6052,8 @@ input {
     grid-template: auto auto auto / 1fr;
     grid-gap: 15px;
     grid-template-areas: 'mapBox' 'mapMap' 'mapBoxBot'; }
+    .map__row--menu {
+      justify-content: center; }
   .vac__modal {
     align-items: flex-start;
     overflow: auto; }
@@ -6042,7 +6074,8 @@ input {
   .vac__post {
     font-size: 16px; }
   .vac__title {
-    margin-bottom: 30px;
+    position: static;
+    transform: none;
     font-size: 24px; }
   .vac__row {
     grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
@@ -6051,6 +6084,9 @@ input {
       margin-bottom: 15px; }
     .vac__row--top {
       margin-bottom: 15px; }
+    .vac__row--menu {
+      justify-content: center;
+      margin-bottom: 30px; }
   .vac__logo {
     margin-right: 10px;
     width: 12px; }
@@ -6063,12 +6099,16 @@ input {
     background-image: none; }
     .team__title {
       font-size: 24px;
-      margin-bottom: 35px; }
+      position: static;
+      transform: none; }
     .team__row {
       grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       -moz-column-gap: 10px;
       column-gap: 10px;
       row-gap: 30px; }
+      .team__row--menu {
+        margin-bottom: 30px;
+        justify-content: center; }
     .team__box {
       padding: 6px 10px;
       transform: translateY(-7px); }
@@ -6188,6 +6228,12 @@ input {
     padding-bottom: 60px; }
   .blog {
     padding-top: 40px; }
+    .blog__row {
+      justify-content: center;
+      margin-bottom: 30px; }
+    .blog__wrap {
+      position: static;
+      transform: none; }
     .blog__link {
       font-size: 20px; }
     .blog__box {
@@ -6195,16 +6241,13 @@ input {
       grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
       margin-bottom: 35px; }
     .blog__title {
-      margin-bottom: 30px;
       font-size: 24px; }
-    .blog__tabs {
-      margin-bottom: 20px; }
-      .blog__tabs__item {
-        font-size: 12px;
-        padding: 7px 22px;
-        margin-right: 10px; }
-        .blog__tabs__item:last-of-type {
-          margin-right: 0; }
+    .blog__tabs__item {
+      font-size: 12px;
+      padding: 7px 22px;
+      margin-right: 10px; }
+      .blog__tabs__item:last-of-type {
+        margin-right: 0; }
     .blog__card {
       width: 288px;
       height: 317px; }
@@ -6233,6 +6276,12 @@ input {
       max-width: 700px;
       justify-content: space-around;
       margin: auto; }
+  .questions__row--menu {
+    justify-content: center;
+    margin-bottom: 30px; }
+  .questions__title {
+    position: static;
+    transform: none; }
   .questions__header {
     justify-content: center; }
     .questions__header__item {
@@ -6729,8 +6778,7 @@ input {
     .questions svg {
       width: 16px; }
     .questions__title {
-      font-size: 24px;
-      margin-bottom: 30px; }
+      font-size: 24px; }
   .basket {
     padding-top: 40px; }
     .basket__window {
@@ -7139,6 +7187,8 @@ input {
   .map {
     padding-top: 40px;
     background-image: none; }
+    .map__row--menu {
+      margin-bottom: 30px; }
     .map__text {
       text-align: left; }
     .map__text-block {
@@ -7152,8 +7202,6 @@ input {
     .map__box__title {
       font-size: 16px;
       margin-bottom: 0; }
-    .map__title {
-      margin-bottom: 60px; }
     .map__map {
       height: 200px; }
   .vac {

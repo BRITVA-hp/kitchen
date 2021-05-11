@@ -2,7 +2,19 @@
   padding-top: 70px;
   background-image: url(../img/advantages/bg.png);
   background-repeat: no-repeat;
-  background-position-y: -185px;
+  background-position-y: -50px;
+  &__row{
+    margin-bottom: 60px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+  }
+  &__wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
   &__link {
     font-size: 20px;
     line-height: 130%;
@@ -81,12 +93,11 @@
   }
   &__title {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   &__tabs {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
     &__item {
       font-family: 'Nunito-600';
       font-size: 18px;
