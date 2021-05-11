@@ -29,6 +29,33 @@
     align-items: center;
     margin-right: 20px;
     cursor: pointer;
+    position: relative;
+    &__menu {
+      background-color: #ffffff;
+      width: 158px;
+      padding: 20px;
+      border-radius: 0 0 5px 5px;
+      box-shadow:  0px 5px 5px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 80px;
+      overflow: hidden;
+      transition: 0.3;
+      display: none;
+      &--bg {
+        background-color: $light;
+      }
+      &--active {
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        display: block;
+      }
+      &__link {
+        font-family: 'Nunito-600';
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: block;
+      }
+    }
     &-text {
       font-family: 'Nunito-600';
       font-size: 16px;

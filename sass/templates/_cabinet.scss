@@ -69,16 +69,22 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 100px 0 30px;
+    position: relative;
   }
   &__item {
     &-change {
       margin-bottom: 5px;
-      cursor: pointer;
     }
   }
   &__change {
     display: flex;
     align-items: center;
+    &--abs {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      cursor: pointer;
+    }
     &-text {
       font-family: 'Nunito-Bold';
       font-size: 14px;
@@ -238,6 +244,9 @@
 }
 
 .cabinet {
+  &__lengthPath {
+    display: none;
+  }
   &__modal {
     &__map {
       width: 100%;

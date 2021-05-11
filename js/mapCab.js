@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     const input = document.querySelector('#inputMap'),
+          lengthPath = document.querySelector('.cabinet__lengthPath'),
           mkadPoints =  [
             [	37.842663,55.774543	],
             [	37.842663,55.774543	],
@@ -203,8 +204,11 @@ window.addEventListener('DOMContentLoaded', () => {
                             ])
                             .then(function (route1) {
                                 distance = Math.round(route1.getLength()/1000);     // Считаем путь
-                                console.log(distance);
+                                lengthPath.setAttribute('value', distance);
                             });
+                        } else {
+                            distance = 0;
+                            lengthPath.setAttribute('value', distance);
                         }
                     }
                 });
@@ -216,7 +220,6 @@ window.addEventListener('DOMContentLoaded', () => {
             
         };
 
-        setRoute(center_, [55.8, 37.7]);
 
         // Функция для поиска координат адреса из инпута, с последующим построением соответствующего пути
 

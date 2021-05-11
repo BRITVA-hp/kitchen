@@ -1594,6 +1594,9 @@
   }
   .header {
     &__cabinet {
+      &__menu {
+        top: 77px;
+      }
       &-text {
         display: none;
       }
@@ -2800,6 +2803,15 @@
     }
     &__cabinet {
       margin-right: 15px;
+      &__menu {
+        top: 57px;
+        width: 125px;
+        padding: 15px;
+        &__link {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+      }
       &-text {
         display: none;
       }
@@ -4203,6 +4215,10 @@
       border-radius: 10px;
     }
     &__change {
+      &--abs {
+        top: 8px;
+        right: 10px;
+      }
       &-text {
         font-size: 12px;
       }
@@ -5151,6 +5167,11 @@
   }
   .header {
     background-color: $light;
+    &__cabinet {
+      &__menu {
+        background-color: $light;
+      }
+    }
     &__logo {
       width: 120px;
     }

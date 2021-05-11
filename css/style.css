@@ -453,7 +453,32 @@ button:focus {
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative; }
+    .header__cabinet__menu {
+      background-color: #ffffff;
+      width: 158px;
+      padding: 20px;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 80px;
+      overflow: hidden;
+      transition: 0.3;
+      display: none; }
+      .header__cabinet__menu--bg {
+        background-color: #F3F6FD; }
+      .header__cabinet__menu--active {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+        display: block; }
+      .header__cabinet__menu__link {
+        font-family: 'Nunito-600';
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: block; }
     .header__cabinet-text {
       font-family: 'Nunito-600';
       font-size: 16px; }
@@ -2715,13 +2740,18 @@ input[type=number] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px 0 30px; }
+    padding: 0 100px 0 30px;
+    position: relative; }
   .cab-info__item-change {
-    margin-bottom: 5px;
-    cursor: pointer; }
+    margin-bottom: 5px; }
   .cab-info__change {
     display: flex;
     align-items: center; }
+    .cab-info__change--abs {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      cursor: pointer; }
     .cab-info__change-text {
       font-family: 'Nunito-Bold';
       font-size: 14px;
@@ -2849,6 +2879,9 @@ input[type=number] {
 
 #cabInfoName {
   max-width: 155px; }
+
+.cabinet__lengthPath {
+  display: none; }
 
 .cabinet__modal__map {
   width: 100%;
@@ -5866,6 +5899,8 @@ input {
     .main__leafs--7 {
       width: 60px;
       bottom: 3%; }
+  .header__cabinet__menu {
+    top: 77px; }
   .header__cabinet-text {
     display: none; }
   .header__tel {
@@ -6652,6 +6687,13 @@ input {
       display: none; }
     .header__cabinet {
       margin-right: 15px; }
+      .header__cabinet__menu {
+        top: 57px;
+        width: 125px;
+        padding: 15px; }
+        .header__cabinet__menu__link {
+          font-size: 14px;
+          margin-bottom: 5px; }
       .header__cabinet-text {
         display: none; }
     .header__burger {
@@ -7547,6 +7589,9 @@ input {
     padding-top: 40px; }
     .cab-info__container {
       border-radius: 10px; }
+    .cab-info__change--abs {
+      top: 8px;
+      right: 10px; }
     .cab-info__change-text {
       font-size: 12px; }
     .cab-info__user {
@@ -8185,6 +8230,8 @@ input {
       right: 6%; }
   .header {
     background-color: #F3F6FD; }
+    .header__cabinet__menu {
+      background-color: #F3F6FD; }
     .header__logo {
       width: 120px; } }
 

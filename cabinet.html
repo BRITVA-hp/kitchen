@@ -27,11 +27,18 @@
           <div class="align-center row">
             <a href="tel:+78002007762" class="header__tel hover-text">+7 (800) 200 77 62</a>
 
-            <a href="./cabinet.html" class="header__cabinet">
+            <div class="header__cabinet">
+
+              <div class="header__cabinet__menu header__cabinet__menu--bg">
+                <a href="./cabinet.html" class="header__cabinet__menu__link hover-text">Перейти В ЛК</a>
+                <a href="./data.html" class="header__cabinet__menu__link hover-text">Настройки</a>
+                <a href="#" class="header__cabinet__menu__link hover-text">Выйти</a>
+              </div>
+
               <img src="img/cabinet.png" alt="cabinet">
               &nbsp;&nbsp;
               <p class="header__cabinet-text text-purple hover-text">Личный кабинет</p>
-            </a>
+            </div>
 
             <div class="header__basket-wrap">
               <a href="./basket.html" class="header__basket">
@@ -213,43 +220,41 @@
 
     <section class="section cab-info">
       <div class="cab-info__container container">
+
+        <a href="./data.html" class="cab-info__change cab-info__change--abs">
+          <p class="cab-info__change-text">Редактировать</p>
+          <img src="img/pen.png" alt="pen">
+        </a>
+
         <div class="cab-info__user">
           <div class="cab-info__user-img"><img src="img/user.png" alt="photo"></div>
           <div class="cab-info__user-box">
             <p class="cab-info__user-name cab-info__text">Иванова Мария Викторовна</p>
-            <a href="./data.html" class="cab-info__change">
-              <p class="cab-info__change-text">Пароль</p>
-              <img src="img/pen.png" alt="pen">
-            </a>
           </div>
         </div>
 
         <div class="cab-info__item">
-          <a href="./data.html" class="cab-info__item-change cab-info__change">
+          <div class="cab-info__item-change cab-info__change">
             <p class="cab-info__change-text">Дата рождения</p>
-            <img src="img/pen.png" alt="pen">
-          </a>
+          </div>
           <input id="cabInfoDate" class="cab-info__text" type="text" value="23 февраля 1986 г.">
         </div>
         <div class="cab-info__item">
-          <a href="./data.html" class="cab-info__item-change cab-info__change">
+          <div class="cab-info__item-change cab-info__change">
             <p class="cab-info__change-text">Номер телефона</p>
-            <img src="img/pen.png" alt="pen">
-          </a>
+          </div>
           <input id="cabInfoTel" class="cab-info__text" type="text" value="+7 911 000 00-00">
         </div>
         <div class="cab-info__item">
-          <a href="./data.html" class="cab-info__item-change cab-info__change">
+          <div class="cab-info__item-change cab-info__change">
             <p class="cab-info__change-text">E-mail</p>
-            <img src="img/pen.png" alt="pen">
-          </a>
+          </div>
           <input id="cabInfoMail" class="cab-info__text" type="text" value="marina_ivanova@mail.com">
         </div>
         <div class="cab-info__item">
-          <a href="./data.html" class="cab-info__item-change cab-info__change">
+          <div class="cab-info__item-change cab-info__change">
             <p class="cab-info__change-text">Логин</p>
-            <img src="img/pen.png" alt="pen">
-          </a>
+          </div>
           <input id="cabInfoName" class="cab-info__text" type="text" value="marinaivanova">
         </div>
       </div>
@@ -662,7 +667,7 @@
       </div>
 
       <div id="mapCab" class="cabinet__modal__map"></div>
-
+      <input type="text" class="cabinet__lengthPath">
     </form>
   </div>
 
