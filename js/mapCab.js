@@ -196,18 +196,14 @@ window.addEventListener('DOMContentLoaded', () => {
                         geoDecod(pointCoords); // Получаем текстовый адрес конечной точки
                         
                         if (!polygon.geometry.contains(pointCoords)) {      // Если точка за пределами мкада
-                            // console.log(polygon.geometry.getClosest(pointCoords).position);
 
                             ymaps.route([       // Строим путь от ближайшей точки мкада до конечной (от начальной, до ближайшей)
-                                // center_,
                                 polygon.geometry.getClosest(pointCoords).position,      // Так находится ближайшая точка
                                 pointCoords
                             ])
                             .then(function (route1) {
-                                // distance = Math.round(route.getLength()/1000) - Math.round(route1.getLength()/1000);
                                 distance = Math.round(route1.getLength()/1000);     // Считаем путь
                                 console.log(distance);
-                                mapCab.geoObjects.add(route1);
                             });
                         }
                     }

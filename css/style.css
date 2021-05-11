@@ -3178,7 +3178,8 @@ input[type=number] {
     background-position-y: center;
     background-position-x: calc(100% - 20px);
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    cursor: pointer; }
     .order__select__wrap {
       position: relative;
       display: none; }
