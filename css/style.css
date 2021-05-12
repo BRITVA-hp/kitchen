@@ -455,6 +455,9 @@ button:focus {
     margin-right: 20px;
     cursor: pointer;
     position: relative; }
+    .header__cabinet:hover .header__cabinet__menu {
+      display: block;
+      opacity: 1; }
     .header__cabinet__menu {
       background-color: #ffffff;
       width: 158px;
@@ -464,16 +467,10 @@ button:focus {
       position: fixed;
       top: 80px;
       overflow: hidden;
-      transition: 0.3;
-      display: none; }
+      transition: 0.5s;
+      opacity: 0; }
       .header__cabinet__menu--bg {
         background-color: #F3F6FD; }
-      .header__cabinet__menu--active {
-        -webkit-animation-name: fadeIn;
-        animation-name: fadeIn;
-        -webkit-animation-duration: 0.5s;
-        animation-duration: 0.5s;
-        display: block; }
       .header__cabinet__menu__link {
         font-family: 'Nunito-600';
         font-size: 16px;
@@ -1024,6 +1021,8 @@ button:focus {
     line-height: 130%;
     color: #74029E;
     cursor: pointer; }
+    .offer__button--basket {
+      font-size: 18px; }
   .offer__card {
     background-color: #fff;
     border: 1px solid #B9CCD3;
@@ -1176,6 +1175,9 @@ button:focus {
     text-align: center;
     margin-left: 5px;
     margin-right: 5px; }
+    .offer__input--basket {
+      font-size: 18px;
+      width: 22px !important; }
 
 /* Для Chrome */
 input[type=number]::-webkit-inner-spin-button,
@@ -2368,7 +2370,8 @@ input[type=number] {
   border-left: 1px solid #B9CCD3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
-  overflow: auto; }
+  overflow: auto;
+  z-index: 500; }
   .comment--active {
     right: 0; }
   .comment__box {
@@ -2408,6 +2411,9 @@ input[type=number] {
   .comment__button {
     padding: 10px 0;
     width: 300px; }
+    .comment__button--map {
+      margin: auto;
+      display: block; }
   .comment__wrap {
     display: flex;
     align-items: flex-start;
@@ -3112,13 +3118,8 @@ input[type=number] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px; }
-    .basket__item-value {
-      display: none;
-      font-family: 'Nunito-Bold';
-      font-size: 14px;
-      line-height: 130%;
-      color: #6F6F6F; }
+    margin-bottom: 15px;
+    position: relative; }
     .basket__item:last-of-type {
       margin-bottom: 0; }
     .basket__item-price {
@@ -3191,6 +3192,9 @@ input[type=number] {
         font-family: 'Nunito-Bold';
         font-size: 24px;
         line-height: 130%; }
+
+.headb__number--basket {
+  margin-right: 0 !important; }
 
 .order {
   padding-top: 70px;
@@ -6751,6 +6755,11 @@ input {
       left: 25%; } }
 
 @media screen and (max-width: 767px) {
+  .offer__button--basket {
+    font-size: 16px; }
+  .offer__input--basket {
+    font-size: 16px;
+    width: 20px !important; }
   .cabinet__modal {
     padding-left: 20px;
     padding-right: 20px; }
@@ -7157,6 +7166,10 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .headb__number--basket {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
   .data {
     padding-top: 30px; }
     .data__button {

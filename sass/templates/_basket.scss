@@ -230,13 +230,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
-    &-value {
-      display: none;
-      font-family: 'Nunito-Bold';
-      font-size: 14px;
-      line-height: 130%;
-      color: #6F6F6F;
-    }
+    position: relative;
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -327,6 +321,12 @@
         line-height: 130%;
       }
     }
+  }
+}
+
+.headb__number {
+  &--basket {
+    margin-right: 0 !important;
   }
 }
 

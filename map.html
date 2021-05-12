@@ -266,7 +266,7 @@
 
           <div class="map__box--bottom">
             <p class="map__text">Если остались вопросы, можете нам написать!</p>
-            <button class="button button--green map__button">Написать</button>
+            <button data-comment class="button button--green map__button">Написать</button>
           </div>
 
           <div id="map" class="map__map">
@@ -372,6 +372,25 @@
     </div>
   </footer>
   <!-- /.footer section -->
+
+  <form action="#" class="comment">
+    <div class="comment__container">
+      <div class="comment__wrap">
+        <div class="comment__wrap__box">
+          <div class="comment__close"><img src="img/close.png" alt="close"></div>
+          <h4 class="comment__title comment__title--1">Напишите Ваш вопрос</h4>
+          <textarea class="comment__textarea" name="comment" id="comment" cols="30" rows="3"></textarea>
+        </div>
+
+        <div class="comment__wrap__box">
+          <h4 class="comment__title comment__title--2">Прикрепите файл</h4>
+          <input class="comment__file" id="comment__file" type="file">
+        </div>
+      </div>
+        <button class="button comment__button comment__button--map button--green">Отправить</button>
+      </div>
+    </div>
+  </form>
 
   <script src="js/script.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=5221e451-e8d3-4107-a120-5cca60c14adf&lang=ru_RU" type="text/javascript"></script>

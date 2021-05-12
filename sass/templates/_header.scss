@@ -30,6 +30,12 @@
     margin-right: 20px;
     cursor: pointer;
     position: relative;
+    &:hover {
+      .header__cabinet__menu {
+        display: block;
+        opacity: 1;
+      }
+    }
     &__menu {
       background-color: #ffffff;
       width: 158px;
@@ -39,15 +45,10 @@
       position: fixed;
       top: 80px;
       overflow: hidden;
-      transition: 0.3;
-      display: none;
+      transition: 0.5s;
+      opacity: 0;
       &--bg {
         background-color: $light;
-      }
-      &--active {
-        animation-name: fadeIn;
-        animation-duration: 0.5s;
-        display: block;
       }
       &__link {
         font-family: 'Nunito-600';

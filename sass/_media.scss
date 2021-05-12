@@ -2894,6 +2894,19 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .offer {
+    &__button {
+      &--basket {
+        font-size: 16px;
+      }
+    }
+    &__input {
+      &--basket {
+        font-size: 16px;
+        width: 20px !important;
+      }
+    }
+  }
   .cabinet {
     &__modal {
       padding-left: 20px;
@@ -3553,6 +3566,15 @@
 }
 
 @media screen and (max-width: 575px) {
+  .headb {
+    &__number {
+      &--basket {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
   .data {
     padding-top: 30px;
     &__button {

@@ -101,23 +101,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   localStorage.setItem('similarProducts', `${JSON.stringify(similarProducts)}`);
 
-  // Функция для доюавления активного класса по клику на триггер
-
-  function toleClass(triggers, item, itemActiveClass) {
-    const triggers_ = document.querySelectorAll(triggers),
-          item_ = document.querySelector(item);
-
-    if (item) {
-      triggers_.forEach(trigger => {
-        trigger.addEventListener('click', () => {
-          item_.classList.toggle(itemActiveClass);
-        });
-      });
-    }
-  }
-
-  toleClass('.header__cabinet', '.header__cabinet__menu', 'header__cabinet__menu--active');
-
   // Функция для оценки на странице product
 
   function review(stars, activeClass, activeClassClick, parentAttribute) {
@@ -197,7 +180,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  comment('.comment', 'comment--active', '.product__tabs__button', '.comment__close');
+  comment('.comment', 'comment--active', '[data-comment]', '.comment__close');
 
   // Появление доп. меню
 
