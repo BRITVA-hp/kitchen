@@ -2372,6 +2372,8 @@ input[type=number] {
   transition: 0.5s;
   overflow: auto;
   z-index: 500; }
+  .comment__rating {
+    display: none; }
   .comment--active {
     right: 0; }
   .comment__box {

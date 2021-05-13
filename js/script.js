@@ -104,8 +104,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Функция для оценки на странице product
 
-  function review(stars, activeClass, activeClassClick, parentAttribute) {
-    const stars_ = document.querySelectorAll(stars);
+  function review(stars, activeClass, activeClassClick, commentRating) {
+    const stars_ = document.querySelectorAll(stars),
+          commentRating_ = document.querySelector(commentRating);
 
     if (stars_.length > 0) {
 
@@ -125,7 +126,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
       stars_.forEach((item, index) => {
         item.addEventListener('click', () => {
-          item.parentElement.setAttribute(parentAttribute, index + 1);
+          commentRating_.setAttribute('value', index + 1);
           clearActiveClass(stars_, activeClassClick);
 
           for (let i = 0; i < index + 1; i++) {
@@ -136,7 +137,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  review('.comment__stars__item', 'comment__stars__item--active', 'comment__stars__item--active--click', 'data-rating');
+  review('.comment__stars__item', 'comment__stars__item--active', 'comment__stars__item--active--click', '.comment__rating');
 
   // Функция для занесения данных в LocalStorage (похожие товары)
 

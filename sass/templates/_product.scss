@@ -396,6 +396,9 @@
   transition: 0.5s;
   overflow: auto;
   z-index: 500;
+  &__rating {
+    display: none;
+  }
   &--active {
     right: 0;
   }
