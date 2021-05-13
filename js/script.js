@@ -87,6 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // };
 
   // mask('[type="tel"]');
+  
 
   //Вспомогательные переменные
 
