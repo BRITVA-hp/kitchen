@@ -637,6 +637,9 @@
   .comment {
     height: calc(100% - 78px);
     top: 78px;
+    &__input-group {
+      width: 100%;
+    }
     &__textarea {
       height: 130px;
     }
@@ -1723,6 +1726,16 @@
     }
   }
   .comment {
+    &__input-group {
+      margin-bottom: 10px;
+    }
+    &__input {
+      font-size: 16px;
+      padding: 10px;
+    }
+    &__textarea {
+      font-size: 16px;
+    }
     &__wrap {
       padding-left: 40px;
       padding-right: 40px;

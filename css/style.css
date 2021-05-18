@@ -2372,6 +2372,19 @@ input[type=number] {
   transition: 0.5s;
   overflow: auto;
   z-index: 500; }
+  .comment__input-group {
+    width: 400px;
+    margin-bottom: 15px; }
+  .comment__input {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 130%;
+    padding: 15px;
+    border: 1px solid #B9CCD3;
+    border-radius: 8px;
+    color: #929292;
+    width: 100%; }
   .comment__rating {
     display: none; }
   .comment--active {
@@ -2451,7 +2464,8 @@ input[type=number] {
     width: 100%;
     border: 1px solid #B9CCD3;
     border-radius: 8px;
-    height: 180px; }
+    height: 180px;
+    color: #929292; }
     .comment__textarea:focus {
       outline: none; }
   .comment__title {
@@ -2468,6 +2482,9 @@ input[type=number] {
       font-size: 20px; }
     .comment__title--3 {
       margin-bottom: 10px; }
+    .comment__title--map {
+      margin-bottom: 15px;
+      text-align: left; }
 
 .recipes {
   background-image: url(../img/advantages/bg.png);
@@ -5322,6 +5339,8 @@ input {
   .comment {
     height: calc(100% - 78px);
     top: 78px; }
+    .comment__input-group {
+      width: 100%; }
     .comment__textarea {
       height: 130px; }
     .comment__close {
@@ -5992,6 +6011,13 @@ input {
   .comment {
     top: 56px;
     height: calc(100% - 56px); }
+    .comment__input-group {
+      margin-bottom: 10px; }
+    .comment__input {
+      font-size: 16px;
+      padding: 10px; }
+    .comment__textarea {
+      font-size: 16px; }
     .comment__wrap {
       padding-left: 40px;
       padding-right: 40px; }
