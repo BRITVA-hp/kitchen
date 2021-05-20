@@ -196,7 +196,7 @@
 .headb {
   position: fixed;
   top: 60px;
-  right: 140px;
+  right: calc((100% - 1540px)/2);
   background: #FFFFFF;
   border: 1px solid #B9CCD3;
   border-radius: 20px;
@@ -243,6 +243,10 @@
     &:hover {
       background-color: darken($green, 10%)
     }
+    &-main {
+      max-width: 230px;
+      padding: 12px 0;
+    }
   }
   &__input {
     font-size: 12px;
@@ -260,6 +264,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    margin-bottom: 15px;
     &__price {
       font-family: 'Nunito-Bold';
       font-size: 30px;

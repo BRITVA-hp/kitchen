@@ -581,7 +581,7 @@ button:focus {
 .headb {
   position: fixed;
   top: 60px;
-  right: 140px;
+  right: calc((100% - 1540px)/2);
   background: #FFFFFF;
   border: 1px solid #B9CCD3;
   border-radius: 20px;
@@ -622,6 +622,9 @@ button:focus {
       outline: none; }
     .headb__button:hover {
       background-color: #026c19; }
+    .headb__button-main {
+      max-width: 230px;
+      padding: 12px 0; }
   .headb__input {
     font-size: 12px;
     line-height: 130%;
@@ -636,7 +639,8 @@ button:focus {
   .headb__footer {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 15px; }
     .headb__footer__price {
       font-family: 'Nunito-Bold';
       font-size: 30px;
@@ -5034,6 +5038,10 @@ input {
       width: 220px; }
     .stock__card--cashback .stock__img {
       width: 235px; } }
+
+@media screen and (max-width: 1580px) {
+  .headb {
+    right: 20px; } }
 
 @media screen and (max-width: 1550px) {
   .fabr__img {
