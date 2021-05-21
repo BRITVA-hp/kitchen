@@ -456,8 +456,8 @@ button:focus {
     cursor: pointer;
     position: relative; }
     .header__cabinet:hover .header__cabinet__menu {
-      display: block;
-      opacity: 1; }
+      opacity: 1;
+      visibility: visible; }
     .header__cabinet__menu {
       background-color: #ffffff;
       width: 158px;
@@ -467,8 +467,9 @@ button:focus {
       position: fixed;
       top: 80px;
       overflow: hidden;
-      transition: 0.5s;
-      opacity: 0; }
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s; }
       .header__cabinet__menu--bg {
         background-color: #F3F6FD; }
       .header__cabinet__menu__link {
@@ -2094,7 +2095,8 @@ input[type=number] {
       .product__tabs-comment:last-child {
         margin-bottom: 0; }
       .product__tabs-comment-img {
-        margin-right: 25px; }
+        margin-right: 25px;
+        max-width: 112px; }
       .product__tabs-comment-date {
         font-size: 18px;
         line-height: 130%;
@@ -3845,11 +3847,17 @@ input[type=number] {
     border-radius: 58px;
     right: 10%;
     top: 0; }
+    .prom1__sale--oldPrice {
+      top: 39px;
+      color: #6F6F6F;
+      background-color: #F3F6FD;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      text-decoration: line-through; }
   .prom1-offer__card {
     position: relative; }
   .prom1-offer__wrap {
     height: 1150px;
-    padding-top: 15px; }
+    padding-top: 25px; }
   .prom1__row {
     flex-direction: column;
     justify-content: space-between;
@@ -4921,6 +4929,9 @@ ul {
       font-family: 'Nunito-900';
       font-size: 36px;
       line-height: 130%; }
+
+.text-line {
+  text-decoration: line-through; }
 
 .text-alignR {
   text-align: right; }
@@ -7415,6 +7426,8 @@ input {
       font-size: 10px;
       padding: 4px 10px;
       right: 6%; }
+      .prom1__sale--oldPrice {
+        top: 25px; }
     .prom1-offer__wrap {
       height: auto !important; }
     .prom1__row--inner {

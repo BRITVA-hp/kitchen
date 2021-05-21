@@ -32,8 +32,8 @@
     position: relative;
     &:hover {
       .header__cabinet__menu {
-        display: block;
         opacity: 1;
+        visibility: visible;
       }
     }
     &__menu {
@@ -45,8 +45,9 @@
       position: fixed;
       top: 80px;
       overflow: hidden;
-      transition: 0.5s;
       opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
       &--bg {
         background-color: $light;
       }

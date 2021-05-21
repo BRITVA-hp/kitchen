@@ -18,13 +18,20 @@
     border-radius: 58px;
     right: 10%;
     top: 0;
+    &--oldPrice {
+      top: 39px;
+      color: $gray;
+      background-color: $light;
+      box-shadow: 0 0 5px rgba(0,0,0, 0.3);
+      text-decoration: line-through;
+    }
   }
   &-offer__card {
     position: relative;
   }
   &-offer__wrap {
     height: 1150px;
-    padding-top: 15px;
+    padding-top: 25px;
   }
   &__row {
     flex-direction: column;

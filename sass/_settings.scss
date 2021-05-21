@@ -38,6 +38,9 @@ ul {
   }
 }
 .text {
+  &-line {
+    text-decoration: line-through;
+  }
   &-alignR {
     text-align: right;
   }
