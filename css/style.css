@@ -682,7 +682,8 @@ button:focus {
       border: 1px solid #CEE5EE;
       box-sizing: border-box;
       border-radius: 61px;
-      overflow: hidden; }
+      overflow: hidden;
+      background-color: #A4AEC6; }
     .headb__progress__text {
       top: 50%;
       left: 15%;
@@ -1056,6 +1057,13 @@ button:focus {
         display: flex;
         align-items: center;
         justify-content: space-between; }
+        .offer__card-footer-item--oldPrice {
+          padding: 5px 30px;
+          flex-direction: column;
+          line-height: 100%;
+          justify-content: space-around; }
+          .offer__card-footer-item--oldPrice span:first-of-type {
+            color: #F11D76; }
         .offer__card-footer-item:nth-child(1) {
           border-right: 1px solid #B9CCD3; }
         .offer__card-footer-item:last-child {
@@ -3079,7 +3087,8 @@ input[type=number] {
     height: 32px;
     border: 1px solid #CEE5EE;
     border-radius: 61px;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #A4AEC6; }
     .basket__progress-wrap {
       position: relative;
       margin-bottom: 35px; }
@@ -5743,6 +5752,8 @@ input {
       .offer__card-footer-item {
         font-size: 18px;
         padding: 10px 15px; }
+        .offer__card-footer-item--oldPrice {
+          padding: 5px 15px; }
         .offer__card-footer-item img {
           width: 20px;
           height: 20px; }

@@ -299,7 +299,6 @@
     border-top: 1px solid #F0F0F0;
     border-bottom: 1px solid #F0F0F0;
     margin-bottom: 20px;
-    
     &__inner {
       width: 80%;
       transition: 0.3s;
@@ -313,6 +312,7 @@
       box-sizing: border-box;
       border-radius: 61px;
       overflow: hidden;
+      background-color: #A4AEC6;
     }
     &__text {
       top: 50%;
