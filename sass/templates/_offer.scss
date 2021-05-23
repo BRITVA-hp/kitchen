@@ -67,16 +67,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: #F11D76;
         &--oldPrice {
           padding: 5px 30px;
           flex-direction: column;
           line-height: 100%;
           justify-content: space-around;
           span {
-            &:first-of-type {
-              font-size: 18px;
-              color: #6F6F6F;
+            &:last-of-type {
+              color: #F11D76;
             }
           } 
         }
@@ -257,4 +255,12 @@ input[type=number]::-webkit-outer-spin-button {
 /* Для Firefox */
 input[type=number]{
   -moz-appearance: textfield;
+}
+
+.oldPrice {
+  font-size: 18px;
+  color: #6F6F6F;
+  &--product {
+    font-size: 18px !important;
+  }
 }

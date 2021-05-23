@@ -1056,16 +1056,14 @@ button:focus {
         text-align: center;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        color: #F11D76; }
+        justify-content: space-between; }
         .offer__card-footer-item--oldPrice {
           padding: 5px 30px;
           flex-direction: column;
           line-height: 100%;
           justify-content: space-around; }
-          .offer__card-footer-item--oldPrice span:first-of-type {
-            font-size: 18px;
-            color: #6F6F6F; }
+          .offer__card-footer-item--oldPrice span:last-of-type {
+            color: #F11D76; }
         .offer__card-footer-item:nth-child(1) {
           border-right: 1px solid #B9CCD3; }
         .offer__card-footer-item:last-child {
@@ -1205,6 +1203,12 @@ input[type=number]::-webkit-outer-spin-button {
 /* Для Firefox */
 input[type=number] {
   -moz-appearance: textfield; }
+
+.oldPrice {
+  font-size: 18px;
+  color: #6F6F6F; }
+  .oldPrice--product {
+    font-size: 18px !important; }
 
 .advantages {
   position: relative;
@@ -2294,6 +2298,8 @@ input[type=number] {
     line-height: 130%;
     margin-left: auto;
     margin-right: 70px; }
+    .product__price-text span:last-of-type {
+      color: #F11D76; }
   .product__box-text {
     font-size: 16px;
     line-height: 22px;
@@ -5333,6 +5339,8 @@ input {
     bottom: 0; } }
 
 @media screen and (max-width: 1200px) {
+  .oldPrice {
+    font-size: 16px; }
   .data {
     padding-top: 70px;
     padding-bottom: 0px; }
@@ -5756,8 +5764,6 @@ input {
         padding: 10px 15px; }
         .offer__card-footer-item--oldPrice {
           padding: 5px 15px; }
-          .offer__card-footer-item--oldPrice span:first-of-type {
-            font-size: 16px; }
         .offer__card-footer-item img {
           width: 20px;
           height: 20px; }
@@ -7228,6 +7234,8 @@ input {
     margin-bottom: 30px; } }
 
 @media screen and (max-width: 575px) {
+  .oldPrice {
+    font-size: 12px; }
   .headb__number--basket {
     position: absolute;
     bottom: 0;
@@ -7972,8 +7980,6 @@ input {
         height: 16px; }
       .offer__card-footer-item:first-child {
         display: none; }
-      .offer__card-footer-item--oldPrice span:first-of-type {
-        font-size: 12px; }
     .offer__card-wrap--top:not(.fabr-offer__card-wrap--top) {
       padding-left: 5px;
       padding-right: 5px; }

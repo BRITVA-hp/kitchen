@@ -275,6 +275,11 @@
       line-height: 130%;
       margin-left: auto;
       margin-right: 70px;
+      span {
+        &:last-of-type {
+          color: #F11D76;
+        }
+      }
     }
   }
   &__box {

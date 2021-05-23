@@ -582,6 +582,9 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .oldPrice {
+    font-size: 16px;
+  }
   .data {
     padding-top: 70px;
     padding-bottom: 0px;
@@ -1290,11 +1293,6 @@
           padding: 10px 15px;
           &--oldPrice {
             padding: 5px 15px;
-            span {
-              &:first-of-type {
-                font-size: 16px;
-              }
-            }
           }
           img {
             width: 20px;
@@ -3592,6 +3590,9 @@
 }
 
 @media screen and (max-width: 575px) {
+  .oldPrice {
+    font-size: 12px;
+  }
   .headb {
     &__number {
       &--basket {
@@ -4716,11 +4717,6 @@
             display: none;
           }
           &--oldPrice {
-            span {
-              &:first-of-type {
-                font-size: 12px;
-              }
-            }
           }
         }
       }
