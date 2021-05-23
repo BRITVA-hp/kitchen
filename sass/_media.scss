@@ -1290,6 +1290,11 @@
           padding: 10px 15px;
           &--oldPrice {
             padding: 5px 15px;
+            span {
+              &:first-of-type {
+                font-size: 16px;
+              }
+            }
           }
           img {
             width: 20px;
@@ -4699,6 +4704,7 @@
       }
       &-footer {
         &-item {
+          align-items: flex-start;
           &:not(.fabr-offer__card-footer-item) {
             font-size: 14px;
           }
@@ -4708,6 +4714,13 @@
           }
           &:first-child {
             display: none;
+          }
+          &--oldPrice {
+            span {
+              &:first-of-type {
+                font-size: 12px;
+              }
+            }
           }
         }
       }

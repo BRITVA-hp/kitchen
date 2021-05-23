@@ -67,6 +67,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: #F11D76;
         &--oldPrice {
           padding: 5px 30px;
           flex-direction: column;
@@ -74,7 +75,8 @@
           justify-content: space-around;
           span {
             &:first-of-type {
-              color: #F11D76;
+              font-size: 18px;
+              color: #6F6F6F;
             }
           } 
         }
