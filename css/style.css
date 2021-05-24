@@ -589,8 +589,6 @@ button:focus {
   overflow: hidden;
   display: flex;
   z-index: 500;
-  opacity: 0;
-  visibility: hidden;
   transition: 0.3s; }
   .headb__dot {
     width: 11px;
@@ -710,6 +708,10 @@ button:focus {
       font-size: 16px;
       line-height: 130%;
       margin-right: 12px; }
+      .headb__item__price span {
+        display: block; }
+        .headb__item__price span:last-of-type {
+          color: #F11D76; }
     .headb__item__box {
       display: flex;
       align-items: center; }
@@ -1209,6 +1211,10 @@ input[type=number] {
   color: #6F6F6F; }
   .oldPrice--product {
     font-size: 18px !important; }
+  .oldPrice--headb {
+    font-size: 14px;
+    color: #6F6F6F;
+    text-decoration: line-through; }
 
 .advantages {
   position: relative;

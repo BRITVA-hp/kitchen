@@ -263,4 +263,9 @@ input[type=number]{
   &--product {
     font-size: 18px !important;
   }
+  &--headb {
+    font-size: 14px;
+    color: #6F6F6F;
+    text-decoration: line-through;
+  }
 }
