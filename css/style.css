@@ -589,6 +589,8 @@ button:focus {
   overflow: hidden;
   display: flex;
   z-index: 500;
+  opacity: 0;
+  visibility: hidden;
   transition: 0.3s; }
   .headb__dot {
     width: 11px;
@@ -3203,13 +3205,15 @@ input[type=number] {
       line-height: 130%; }
       .basket__item-text--price {
         text-align: center; }
+        .basket__item-text--price span:last-of-type {
+          color: #F11D76; }
         .basket__item-text--price-old {
           font-family: 'Nunito-600';
           font-size: 12px;
           line-height: 130%;
           -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
-          color: #74029E; }
+          color: #6F6F6F; }
   .basket__title {
     text-align: center;
     margin-bottom: 60px;

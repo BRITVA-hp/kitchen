@@ -204,8 +204,8 @@
   overflow: hidden;
   display: flex;
   z-index: 500;
-  // opacity: 0;
-  // visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
   transition: 0.3s;
   &__dot {
     width: 11px; 
