@@ -82,6 +82,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-left: 10px;
     &--active {
       .header__burger-line {
         &:first-child {

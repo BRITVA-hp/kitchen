@@ -492,7 +492,8 @@ button:focus {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    margin-left: 10px; }
     .header__burger--active .header__burger-line:first-child {
       transform-origin: right top;
       transform: rotate(-45deg); }
@@ -1081,8 +1082,10 @@ button:focus {
       margin-right: 15px; }
       .offer__card-weight:last-child {
         margin-right: 0; }
-    .offer__card-wrap--top {
-      padding: 0 25px; }
+    .offer__card-wrap {
+      cursor: pointer; }
+      .offer__card-wrap--top {
+        padding: 0 25px; }
     .offer__card-title {
       font-family: 'Nunito-Bold';
       font-size: 18px;
@@ -5341,6 +5344,8 @@ input {
     flex-basis: 40%; }
   .contacts__map {
     flex-basis: 58%; }
+  .main__img {
+    max-width: 500px; }
   .main__leafs--6 {
     right: 2%; }
   .main__leafs--5 {
@@ -5960,7 +5965,7 @@ input {
       line-height: 70%;
       max-width: 460px; }
     .main__img {
-      width: 390px; }
+      width: 370px; }
     .main__leafs--6 {
       top: 10%; }
     .main__leafs--5 {
@@ -6781,7 +6786,7 @@ input {
     .header__burger {
       display: flex; }
     .header__basket {
-      margin-right: 20px; } }
+      margin-right: 10px; } }
 
 @media screen and (max-width: 900px) {
   .inst {

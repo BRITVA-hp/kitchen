@@ -568,6 +568,9 @@
     }
   }
   .main {
+    &__img {
+      max-width: 500px;
+    }
     &__leafs {
       &--6 {
         right: 2%;
@@ -1582,7 +1585,7 @@
       max-width: 460px;
     }
     &__img {
-      width: 390px;
+      width: 370px;
     }
     &__leafs {
       &--6 {
@@ -2844,7 +2847,7 @@
       display: flex;
     }
     &__basket {
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
 }
